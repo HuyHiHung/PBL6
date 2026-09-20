@@ -1,0 +1,53 @@
+{
+  "name": "pbl6-english-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "backend:start": "node scripts/backend-local.mjs",
+    "backend:test": "node --test --test-concurrency=1 tests/backend.test.mjs",
+    "db:start": "node scripts/supabase-local.mjs start",
+    "db:stop": "supabase stop",
+    "db:status": "node scripts/supabase-local.mjs status",
+    "db:reset": "supabase db reset --local",
+    "db:migrate": "supabase migration up --local",
+    "db:new": "supabase migration new",
+    "db:lint": "supabase db lint --local --schema identity,content,learning --fail-on error",
+    "db:test": "node --test --test-concurrency=1 tests/database.test.mjs",
+    "db:bootstrap": "node scripts/bootstrap-local.mjs",
+    "db:provision": "node scripts/provision-local.mjs",
+    "web:dev": "node scripts/frontend-local.mjs",
+    "web:build": "tsc -p apps/web/tsconfig.json && vite build apps/web",
+    "web:build:local": "tsc -p apps/web/tsconfig.json && node scripts/frontend-local.mjs build",
+    "web:typecheck": "tsc -p apps/web/tsconfig.json",
+    "web:test": "playwright test",
+    "web:format": "prettier --write apps/web scripts/frontend-local.mjs tests/web playwright.config.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "prettier": "3.9.8",
+    "supabase": "2.117.0",
+    "tsx": "4.23.13",
+    "typescript": "7.0.2",
+    "vite": "8.3.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.1.1",
+    "@supabase/supabase-js": "2.116.0",
+    "hono": "4.13.8",
+    "lucide-react": "1.47.0",
+    "postgres": "3.4.9",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.5"
+  }
+}
