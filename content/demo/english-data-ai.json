@@ -1,0 +1,1292 @@
+{
+  "schema_version": 1,
+  "status": "authored_demo_pack_not_imported",
+  "audio_status": "not_included",
+  "provenance": "Biên soạn mới cho Sprout ở mức ngôn ngữ mục tiêu A2–B1; chưa qua thẩm định độc lập của giáo viên/chuyên gia. Hội thoại, số liệu và thiết bị là giả lập để học tiếng Anh, không phải hướng dẫn vận hành hoặc thông số sản phẩm thật. Nguồn tham khảo chỉ dùng đối chiếu khái niệm; không sao chép bài học từ nguồn.",
+  "references": [
+    {
+      "title": "scikit-learn — Getting Started",
+      "url": "https://scikit-learn.org/stable/getting_started.html",
+      "note": "Đối chiếu khái niệm feature, huấn luyện, dự đoán và đánh giá trên tập tách riêng; các tình huống và số liệu do bộ học liệu tự soạn."
+    }
+  ],
+  "course": {
+    "level": "A2–B1",
+    "estimated_minutes": 150,
+    "key": "sprout-data-ai",
+    "title": "Data & AI English — Explain Your Results",
+    "description": "Tiếng Anh cho sinh viên dữ liệu và AI: đọc bảng, giải thích mô hình và trình bày kết quả có giới hạn.",
+    "objectives": "Mô tả dữ liệu, hỏi về chất lượng, trình bày quy trình mô hình và báo kết quả mà không khái quát quá mức.",
+    "topics": [
+      {
+        "key": "data-description-quality",
+        "title": "Describing Data",
+        "objectives": "Đọc bảng và trao đổi về chất lượng dữ liệu.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "data-describing-tables",
+            "title": "Describing a Dataset",
+            "objectives": "Gọi tên thành phần bảng dữ liệu và mô tả số lượng, đơn vị, trường dữ liệu.",
+            "vocabulary": [
+              {
+                "word": "dataset",
+                "part_of_speech": "noun",
+                "meaning": "tập dữ liệu",
+                "collocation": "describe a dataset",
+                "example": "This dataset contains 100 records.",
+                "example_vi": "Tập dữ liệu này có 100 bản ghi.",
+                "key": "data-describing-tables-vocab-dataset"
+              },
+              {
+                "word": "record",
+                "part_of_speech": "noun",
+                "meaning": "bản ghi về một đối tượng hoặc sự kiện",
+                "collocation": "a customer record",
+                "example": "Each record describes one order.",
+                "example_vi": "Mỗi bản ghi mô tả một đơn hàng.",
+                "key": "data-describing-tables-vocab-record"
+              },
+              {
+                "word": "row",
+                "part_of_speech": "noun",
+                "meaning": "hàng trong bảng",
+                "collocation": "read a row",
+                "example": "Each row shows one measurement.",
+                "example_vi": "Mỗi hàng hiển thị một phép đo.",
+                "key": "data-describing-tables-vocab-row"
+              },
+              {
+                "word": "column",
+                "part_of_speech": "noun",
+                "meaning": "cột trong bảng",
+                "collocation": "add a column",
+                "example": "The last column contains the date.",
+                "example_vi": "Cột cuối chứa ngày.",
+                "key": "data-describing-tables-vocab-column"
+              },
+              {
+                "word": "value",
+                "part_of_speech": "noun",
+                "meaning": "giá trị",
+                "collocation": "check a value",
+                "example": "This value is missing.",
+                "example_vi": "Giá trị này bị thiếu.",
+                "key": "data-describing-tables-vocab-value"
+              },
+              {
+                "word": "label",
+                "part_of_speech": "noun",
+                "meaning": "nhãn hoặc giá trị đích trong bài học có giám sát",
+                "collocation": "a class label",
+                "example": "The label is pass or fail.",
+                "example_vi": "Nhãn là đạt hoặc không đạt.",
+                "key": "data-describing-tables-vocab-label"
+              },
+              {
+                "word": "unit",
+                "part_of_speech": "noun",
+                "meaning": "đơn vị đo",
+                "collocation": "state the unit",
+                "example": "The unit is seconds.",
+                "example_vi": "Đơn vị là giây.",
+                "key": "data-describing-tables-vocab-unit"
+              },
+              {
+                "word": "source",
+                "part_of_speech": "noun",
+                "meaning": "nguồn dữ liệu",
+                "collocation": "check the source",
+                "example": "The source is a classroom survey.",
+                "example_vi": "Nguồn là khảo sát trong lớp.",
+                "key": "data-describing-tables-vocab-source"
+              }
+            ],
+            "grammar": "There are + số nhiều: There are 100 rows. Each row + động từ số ít: Each row describes a session. Dùng in seconds / in minutes để nêu đơn vị. Label trong phân loại là nhãn mục tiêu, không chỉ là tiêu đề cột.",
+            "reading": "This fictional dataset describes 100 study sessions. Each row represents one session. The columns are session_id, minutes, and completed. The unit for study time is minutes. The completed column contains yes or no labels. The source is a classroom survey; no names are included.",
+            "reading_task": "Ghi số hàng, đơn vị và nguồn. Đáp án: 100 hàng; phút; khảo sát lớp. Một hàng là một buổi học, không phải một sinh viên.",
+            "dialogue": "Mai: What does each row represent?\nNam: One study session.\nMai: What is the unit for time?\nNam: Minutes, not seconds.",
+            "practice": "Giới thiệu bảng giả lập trong 3 câu. Mẫu: There are 100 rows. Each row represents a study session. Time is measured in minutes. Tự kiểm: nêu số lượng, ý nghĩa hàng và đơn vị; không suy ra số người từ số buổi học.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What does one row represent?",
+                "options": [
+                  "One student",
+                  "One session",
+                  "One school"
+                ],
+                "answer": "B",
+                "explanation": "Mỗi hàng là một buổi học.",
+                "use_reading": true,
+                "key": "data-describing-tables-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose row or column: A vertical group of cells is a ___.",
+                "answers": [
+                  "column"
+                ],
+                "explanation": "Column là cột.",
+                "key": "data-describing-tables-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is the time unit?",
+                "options": [
+                  "Hours",
+                  "Minutes",
+                  "Seconds"
+                ],
+                "answer": "B",
+                "explanation": "Bài đọc ghi phút.",
+                "use_reading": true,
+                "key": "data-describing-tables-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose source or label: Where the data comes from is its ___.",
+                "answers": [
+                  "source"
+                ],
+                "explanation": "Source chỉ nguồn dữ liệu.",
+                "key": "data-describing-tables-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which statement is supported?",
+                "options": [
+                  "The table describes 100 sessions",
+                  "There are exactly 100 students",
+                  "The table includes student names"
+                ],
+                "answer": "A",
+                "explanation": "Số buổi không cho biết số sinh viên; tên không được đưa vào.",
+                "use_reading": true,
+                "key": "data-describing-tables-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "data-quality-questions",
+            "title": "Asking About Data Quality",
+            "objectives": "Trao đổi về dữ liệu thiếu, trùng và quy tắc kiểm tra trước khi phân tích.",
+            "vocabulary": [
+              {
+                "word": "missing",
+                "part_of_speech": "adjective",
+                "meaning": "bị thiếu",
+                "collocation": "a missing value",
+                "example": "We found a missing value in this row.",
+                "example_vi": "Chúng tôi tìm thấy một giá trị bị thiếu ở hàng này.",
+                "key": "data-quality-questions-vocab-missing"
+              },
+              {
+                "word": "duplicate",
+                "part_of_speech": "noun",
+                "meaning": "bản ghi trùng",
+                "collocation": "remove a duplicate",
+                "example": "This row may be a duplicate.",
+                "example_vi": "Hàng này có thể là bản ghi trùng.",
+                "key": "data-quality-questions-vocab-duplicate"
+              },
+              {
+                "word": "format",
+                "part_of_speech": "noun",
+                "meaning": "cách biểu diễn dữ liệu",
+                "collocation": "a date format",
+                "example": "Please confirm the date format.",
+                "example_vi": "Hãy xác nhận định dạng ngày.",
+                "key": "data-quality-questions-vocab-format"
+              },
+              {
+                "word": "valid",
+                "part_of_speech": "adjective",
+                "meaning": "hợp lệ theo quy tắc đã xác định",
+                "collocation": "a valid value",
+                "example": "This value is valid under our rule.",
+                "example_vi": "Giá trị này hợp lệ theo quy tắc của chúng tôi.",
+                "key": "data-quality-questions-vocab-valid"
+              },
+              {
+                "word": "range",
+                "part_of_speech": "noun",
+                "meaning": "khoảng giá trị",
+                "collocation": "an allowed range",
+                "example": "The allowed range is zero to sixty.",
+                "example_vi": "Khoảng cho phép là từ không đến sáu mươi.",
+                "key": "data-quality-questions-vocab-range"
+              },
+              {
+                "word": "clean",
+                "part_of_speech": "verb",
+                "meaning": "làm sạch dữ liệu",
+                "collocation": "clean a dataset",
+                "example": "We clean the dataset before analysis.",
+                "example_vi": "Chúng tôi làm sạch tập dữ liệu trước khi phân tích.",
+                "key": "data-quality-questions-vocab-clean"
+              },
+              {
+                "word": "check",
+                "part_of_speech": "verb",
+                "meaning": "kiểm tra",
+                "collocation": "check the records",
+                "example": "Please check these records first.",
+                "example_vi": "Hãy kiểm tra các bản ghi này trước.",
+                "key": "data-quality-questions-vocab-check"
+              },
+              {
+                "word": "confirm",
+                "part_of_speech": "verb",
+                "meaning": "xác nhận",
+                "collocation": "confirm a rule",
+                "example": "Can you confirm this rule with the owner?",
+                "example_vi": "Bạn có thể xác nhận quy tắc này với người phụ trách không?",
+                "key": "data-quality-questions-vocab-confirm"
+              }
+            ],
+            "grammar": "Could you confirm ...? xin xác nhận. We found ... báo điều quan sát được. Do not assume ... nhắc không suy đoán: Do not assume a blank means zero. Missing và zero có nghĩa khác nhau.",
+            "reading": "Lan reviews a fictional table of study minutes. Two rows have blank time values. Two other rows share the same session_id. Lan does not replace the blanks with zero or delete rows immediately. She asks the data owner to confirm the meaning of a blank and the rule for unique IDs.",
+            "reading_task": "Tìm hai vấn đề và việc Lan làm trước khi sửa. Đáp án: thiếu thời gian, trùng ID; hỏi chủ dữ liệu về ý nghĩa và quy tắc.",
+            "dialogue": "Lan: Do blank values mean zero minutes?\nOwner: No. They mean the time was not recorded.\nLan: Should each session_id be unique?\nOwner: Yes. Please check the repeated IDs.",
+            "practice": "Viết tin nhắn 3 câu báo vấn đề và xin xác nhận. Mẫu: Two time values are missing. Two rows share an ID. Could you confirm the rules before we change them? Tự kiểm: phân biệt phát hiện với quyết định xử lý; không mặc định ô trống bằng 0.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What does Lan do before changing the rows?",
+                "options": [
+                  "Asks the data owner",
+                  "Deletes all rows",
+                  "Sets blanks to zero"
+                ],
+                "answer": "A",
+                "explanation": "Lan xin xác nhận trước khi sửa.",
+                "use_reading": true,
+                "key": "data-quality-questions-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose missing or valid: A blank time value is ___ in this example.",
+                "answers": [
+                  "missing"
+                ],
+                "explanation": "Ô thời gian trống là giá trị bị thiếu.",
+                "key": "data-quality-questions-quiz-02",
+                "use_reading": true
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which problem involves repeated IDs?",
+                "options": [
+                  "A new unit",
+                  "Possible duplicates",
+                  "A chart title"
+                ],
+                "answer": "B",
+                "explanation": "ID lặp là dấu hiệu cần kiểm tra bản ghi trùng.",
+                "use_reading": true,
+                "key": "data-quality-questions-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose format or source: YYYY-MM-DD describes a date ___.",
+                "answers": [
+                  "format"
+                ],
+                "explanation": "Đây là cách biểu diễn ngày.",
+                "key": "data-quality-questions-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which request is clearest?",
+                "options": [
+                  "Fix everything",
+                  "Could you confirm what a blank time means?",
+                  "Data is interesting"
+                ],
+                "answer": "B",
+                "explanation": "Câu hỏi nêu đúng điểm chưa rõ.",
+                "key": "data-quality-questions-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional table has 60 rows. Each row is one practice session. Duration is measured in seconds. Three duration values are blank. Two rows have the same session_id. Minh asks the owner what blanks mean before changing them. The source is a class survey.",
+        "test": [
+          {
+            "lesson_key": "data-describing-tables",
+            "type": "single_choice",
+            "prompt": "What does each row describe?",
+            "options": [
+              "A student",
+              "A session",
+              "A school"
+            ],
+            "answer": "B",
+            "explanation": "Mỗi hàng là một buổi luyện tập.",
+            "use_reading": true,
+            "key": "data-description-quality-test-01"
+          },
+          {
+            "lesson_key": "data-describing-tables",
+            "type": "fill_blank",
+            "prompt": "What is the time unit? Copy one word from the passage.",
+            "answers": [
+              "seconds"
+            ],
+            "explanation": "Bài đọc dùng seconds.",
+            "use_reading": true,
+            "key": "data-description-quality-test-02"
+          },
+          {
+            "lesson_key": "data-describing-tables",
+            "type": "single_choice",
+            "prompt": "How many rows are in the table?",
+            "options": [
+              "60",
+              "3",
+              "2"
+            ],
+            "answer": "A",
+            "explanation": "Bảng có 60 hàng.",
+            "use_reading": true,
+            "key": "data-description-quality-test-03"
+          },
+          {
+            "lesson_key": "data-describing-tables",
+            "type": "fill_blank",
+            "prompt": "Choose column or source: The class survey is the data ___.",
+            "answers": [
+              "source"
+            ],
+            "explanation": "Khảo sát là nguồn dữ liệu.",
+            "use_reading": true,
+            "key": "data-description-quality-test-04"
+          },
+          {
+            "lesson_key": "data-describing-tables",
+            "type": "single_choice",
+            "prompt": "Which question clarifies a table structure?",
+            "options": [
+              "Who built the robot?",
+              "What does each row represent?",
+              "Where is the motor?"
+            ],
+            "answer": "B",
+            "explanation": "Câu hỏi làm rõ ý nghĩa hàng.",
+            "key": "data-description-quality-test-05"
+          },
+          {
+            "lesson_key": "data-quality-questions",
+            "type": "fill_blank",
+            "prompt": "Choose missing or valid: The three blank durations are ___ values.",
+            "answers": [
+              "missing"
+            ],
+            "explanation": "Ô thời gian trống là giá trị thiếu.",
+            "use_reading": true,
+            "key": "data-description-quality-test-06"
+          },
+          {
+            "lesson_key": "data-quality-questions",
+            "type": "single_choice",
+            "prompt": "What does Minh do before changing blanks?",
+            "options": [
+              "Asks the owner",
+              "Deletes the table",
+              "Sets all to zero"
+            ],
+            "answer": "A",
+            "explanation": "Minh hỏi chủ dữ liệu trước.",
+            "use_reading": true,
+            "key": "data-description-quality-test-07"
+          },
+          {
+            "lesson_key": "data-quality-questions",
+            "type": "fill_blank",
+            "prompt": "Choose duplicate or unit: A repeated record may be a ___.",
+            "answers": [
+              "duplicate"
+            ],
+            "explanation": "Duplicate là bản ghi trùng.",
+            "key": "data-description-quality-test-08"
+          },
+          {
+            "lesson_key": "data-quality-questions",
+            "type": "single_choice",
+            "prompt": "What needs clarification?",
+            "options": [
+              "The color of the table",
+              "The meaning of blanks",
+              "The price of a robot"
+            ],
+            "answer": "B",
+            "explanation": "Ý nghĩa ô trống cần xác nhận.",
+            "use_reading": true,
+            "key": "data-description-quality-test-09"
+          },
+          {
+            "lesson_key": "data-quality-questions",
+            "type": "single_choice",
+            "prompt": "Which conclusion is supported?",
+            "options": [
+              "Some session IDs are repeated",
+              "Every blank means zero",
+              "There are 60 unique students"
+            ],
+            "answer": "A",
+            "explanation": "Hai hàng có cùng ID; không suy ra số người.",
+            "use_reading": true,
+            "key": "data-description-quality-test-10"
+          }
+        ]
+      },
+      {
+        "key": "ai-workflow-evaluation",
+        "title": "Explaining a Model",
+        "objectives": "Giải thích huấn luyện và kiểm tra mô hình bằng số liệu đơn giản.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "ai-model-workflow",
+            "title": "Explaining a Model Workflow",
+            "objectives": "Mô tả bằng tiếng Anh bước huấn luyện, dự đoán và đánh giá trên dữ liệu tách riêng.",
+            "vocabulary": [
+              {
+                "word": "model",
+                "part_of_speech": "noun",
+                "meaning": "mô hình dùng để tạo dự đoán hoặc mô tả quan hệ",
+                "collocation": "train a model",
+                "example": "We train a model on examples.",
+                "example_vi": "Chúng tôi huấn luyện một mô hình trên các ví dụ.",
+                "key": "ai-model-workflow-vocab-model"
+              },
+              {
+                "word": "feature",
+                "part_of_speech": "noun",
+                "meaning": "đặc trưng đầu vào của mô hình",
+                "collocation": "an input feature",
+                "example": "Study time is an input feature.",
+                "example_vi": "Thời gian học là một đặc trưng đầu vào.",
+                "key": "ai-model-workflow-vocab-feature"
+              },
+              {
+                "word": "training set",
+                "part_of_speech": "noun",
+                "meaning": "tập dữ liệu dùng để huấn luyện",
+                "collocation": "use a training set",
+                "example": "The training set contains 80 examples.",
+                "example_vi": "Tập huấn luyện có 80 ví dụ.",
+                "key": "ai-model-workflow-vocab-training-set"
+              },
+              {
+                "word": "test set",
+                "part_of_speech": "noun",
+                "meaning": "tập dữ liệu tách riêng để đánh giá",
+                "collocation": "evaluate on a test set",
+                "example": "We keep the test set separate.",
+                "example_vi": "Chúng tôi giữ tập kiểm tra tách riêng.",
+                "key": "ai-model-workflow-vocab-test-set"
+              },
+              {
+                "word": "train",
+                "part_of_speech": "verb",
+                "meaning": "huấn luyện mô hình",
+                "collocation": "train on examples",
+                "example": "We train on the training set.",
+                "example_vi": "Chúng tôi huấn luyện trên tập huấn luyện.",
+                "key": "ai-model-workflow-vocab-train"
+              },
+              {
+                "word": "predict",
+                "part_of_speech": "verb",
+                "meaning": "dự đoán",
+                "collocation": "predict a label",
+                "example": "The model predicts a label.",
+                "example_vi": "Mô hình dự đoán một nhãn.",
+                "key": "ai-model-workflow-vocab-predict"
+              },
+              {
+                "word": "evaluate",
+                "part_of_speech": "verb",
+                "meaning": "đánh giá",
+                "collocation": "evaluate the model",
+                "example": "We evaluate the model on unseen examples.",
+                "example_vi": "Chúng tôi đánh giá mô hình trên ví dụ chưa dùng để huấn luyện.",
+                "key": "ai-model-workflow-vocab-evaluate"
+              },
+              {
+                "word": "split",
+                "part_of_speech": "verb",
+                "meaning": "chia dữ liệu thành các phần",
+                "collocation": "split the dataset",
+                "example": "We split the dataset before training.",
+                "example_vi": "Chúng tôi chia tập dữ liệu trước khi huấn luyện.",
+                "key": "ai-model-workflow-vocab-split"
+              }
+            ],
+            "grammar": "First / Next / Finally mô tả quy trình. We train on ...; we evaluate on ... Phân biệt feature ở đây là đầu vào mô hình, còn feature trong sản phẩm có thể là tính năng. Kết quả trên tập huấn luyện không tự chứng minh khả năng dự đoán dữ liệu mới.",
+            "reading": "In a simplified classroom example, the team has 100 labelled records. They split them into 80 training records and 20 test records. They train a model using the training set. Then they predict labels for the separate test set and compare the predictions with its labels. The test set is not used to train this model.",
+            "reading_task": "Nêu vai trò hai tập. Đáp án: 80 bản ghi dùng huấn luyện; 20 bản ghi tách riêng dùng đánh giá. Tỷ lệ này chỉ là ví dụ.",
+            "dialogue": "Tutor: Which records do you use for training?\nMai: The 80 training records.\nTutor: What about the other 20?\nMai: We use them to evaluate the model.",
+            "practice": "Mô tả quy trình trong 4 câu dùng First/Next/Then/Finally. Mẫu: First, split the data. Next, train the model. Then, predict test labels. Finally, compare predictions with labels. Tự kiểm: không trộn vai trò hai tập.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "How many records are used for training?",
+                "options": [
+                  "100",
+                  "20",
+                  "80"
+                ],
+                "answer": "C",
+                "explanation": "Bài đọc sử dụng 80 bản ghi huấn luyện.",
+                "use_reading": true,
+                "key": "ai-model-workflow-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose train or predict: To produce a label for a new example, the model will ___.",
+                "answers": [
+                  "predict"
+                ],
+                "explanation": "Predict là dự đoán.",
+                "key": "ai-model-workflow-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which set is kept out of training here?",
+                "options": [
+                  "The training set",
+                  "The test set",
+                  "Both sets"
+                ],
+                "answer": "B",
+                "explanation": "Tập kiểm tra không dùng huấn luyện.",
+                "use_reading": true,
+                "key": "ai-model-workflow-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose feature or folder: An input such as study time is a ___.",
+                "answers": [
+                  "feature"
+                ],
+                "explanation": "Feature ở ngữ cảnh này là đặc trưng.",
+                "key": "ai-model-workflow-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which statement is correct?",
+                "options": [
+                  "Good training results guarantee future success",
+                  "Every model needs exactly 100 records",
+                  "Training and testing have different roles"
+                ],
+                "answer": "C",
+                "explanation": "Bài phân biệt vai trò; số lượng chỉ là giả lập.",
+                "key": "ai-model-workflow-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "ai-model-review",
+            "title": "Discussing a Model Test",
+            "objectives": "Trao đổi kết quả kiểm tra, lỗi dự đoán và so sánh với mốc cơ sở.",
+            "vocabulary": [
+              {
+                "word": "prediction",
+                "part_of_speech": "noun",
+                "meaning": "kết quả dự đoán",
+                "collocation": "check a prediction",
+                "example": "This prediction is incorrect.",
+                "example_vi": "Dự đoán này không đúng.",
+                "key": "ai-model-review-vocab-prediction"
+              },
+              {
+                "word": "correct",
+                "part_of_speech": "adjective",
+                "meaning": "đúng",
+                "collocation": "a correct prediction",
+                "example": "Eighteen predictions are correct.",
+                "example_vi": "Mười tám dự đoán là đúng.",
+                "key": "ai-model-review-vocab-correct"
+              },
+              {
+                "word": "incorrect",
+                "part_of_speech": "adjective",
+                "meaning": "không đúng",
+                "collocation": "an incorrect label",
+                "example": "The model gives an incorrect label here.",
+                "example_vi": "Mô hình đưa ra nhãn không đúng ở đây.",
+                "key": "ai-model-review-vocab-incorrect"
+              },
+              {
+                "word": "accuracy",
+                "part_of_speech": "noun",
+                "meaning": "tỷ lệ dự đoán đúng trong tình huống phân loại",
+                "collocation": "report accuracy",
+                "example": "Accuracy is 90 percent on this test set.",
+                "example_vi": "Tỷ lệ dự đoán đúng là 90 phần trăm trên tập kiểm tra này.",
+                "key": "ai-model-review-vocab-accuracy"
+              },
+              {
+                "word": "baseline",
+                "part_of_speech": "noun",
+                "meaning": "mốc hoặc phương pháp cơ sở để so sánh",
+                "collocation": "compare with a baseline",
+                "example": "We compare the model with a baseline.",
+                "example_vi": "Chúng tôi so sánh mô hình với mốc cơ sở.",
+                "key": "ai-model-review-vocab-baseline"
+              },
+              {
+                "word": "metric",
+                "part_of_speech": "noun",
+                "meaning": "chỉ số dùng để đánh giá",
+                "collocation": "choose a metric",
+                "example": "Accuracy is one metric, not the only one.",
+                "example_vi": "Tỷ lệ đúng là một chỉ số, không phải chỉ số duy nhất.",
+                "key": "ai-model-review-vocab-metric"
+              },
+              {
+                "word": "compare",
+                "part_of_speech": "verb",
+                "meaning": "so sánh",
+                "collocation": "compare two models",
+                "example": "We compare both models on the same test set.",
+                "example_vi": "Chúng tôi so sánh hai mô hình trên cùng tập kiểm tra.",
+                "key": "ai-model-review-vocab-compare"
+              },
+              {
+                "word": "review",
+                "part_of_speech": "verb",
+                "meaning": "xem xét lại",
+                "collocation": "review the errors",
+                "example": "Let us review the errors together.",
+                "example_vi": "Chúng ta hãy cùng xem lại các lỗi.",
+                "key": "ai-model-review-vocab-review"
+              }
+            ],
+            "grammar": "On this test set giới hạn phạm vi kết luận. Model A has higher accuracy than the baseline on this set. Không viết always better khi chỉ có một lần đánh giá. Cần xem bối cảnh và loại lỗi, không chỉ một con số.",
+            "reading": "On a fictional test set of 20 records, Model A makes 18 correct predictions. A baseline makes 16 correct predictions on the same records. Model A has 90 percent accuracy on this set. The team reviews the two incorrect predictions. They do not claim that Model A will always perform better on all future data.",
+            "reading_task": "Ghi số đúng và số sai của Model A, rồi nêu giới hạn kết luận. Đáp án: 18 đúng, 2 sai; chỉ kết quả trên tập này.",
+            "dialogue": "Nam: Is Model A perfect?\nLan: No. Two predictions are incorrect.\nNam: What should we do next?\nLan: Review those errors and test more examples.",
+            "practice": "Viết báo cáo 3 câu. Mẫu: Model A got 18 of 20 predictions correct. It outperformed the baseline on this set. We still need to review errors. Tự kiểm: có số liệu, đối tượng so sánh và giới hạn.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "How many predictions from Model A are incorrect?",
+                "options": [
+                  "2",
+                  "18",
+                  "16"
+                ],
+                "answer": "A",
+                "explanation": "20 trừ 18 bằng 2.",
+                "use_reading": true,
+                "key": "ai-model-review-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose baseline or feature: A reference method for comparison is a ___.",
+                "answers": [
+                  "baseline"
+                ],
+                "explanation": "Baseline là mốc cơ sở.",
+                "key": "ai-model-review-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which claim is supported?",
+                "options": [
+                  "Model A always beats every model",
+                  "Model A is perfect",
+                  "Model A beats the baseline on this set"
+                ],
+                "answer": "C",
+                "explanation": "Kết luận chỉ áp dụng cho tập được mô tả.",
+                "use_reading": true,
+                "key": "ai-model-review-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose review or install: The team will ___ the incorrect predictions.",
+                "answers": [
+                  "review"
+                ],
+                "explanation": "Review là xem xét lại lỗi.",
+                "key": "ai-model-review-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which number is the accuracy of Model A here?",
+                "options": [
+                  "100 percent",
+                  "80 percent",
+                  "90 percent"
+                ],
+                "answer": "C",
+                "explanation": "18/20 là 90 phần trăm.",
+                "use_reading": true,
+                "key": "ai-model-review-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "In a fictional exercise, a team uses 40 records to train a classifier and a separate set of 10 records to test it. Model B predicts 8 test labels correctly. A baseline predicts 7 correctly on the same test set. The team reviews the two errors and plans more testing.",
+        "test": [
+          {
+            "lesson_key": "ai-model-workflow",
+            "type": "fill_blank",
+            "prompt": "How many records are used to train the classifier? Write digits.",
+            "answers": [
+              "40"
+            ],
+            "explanation": "Tập huấn luyện có 40 bản ghi.",
+            "use_reading": true,
+            "key": "ai-workflow-evaluation-test-01"
+          },
+          {
+            "lesson_key": "ai-model-workflow",
+            "type": "single_choice",
+            "prompt": "Which data is separate from training?",
+            "options": [
+              "The 10 test records",
+              "All 40 training records",
+              "No data"
+            ],
+            "answer": "A",
+            "explanation": "10 bản ghi kiểm tra được tách riêng.",
+            "use_reading": true,
+            "key": "ai-workflow-evaluation-test-02"
+          },
+          {
+            "lesson_key": "ai-model-workflow",
+            "type": "fill_blank",
+            "prompt": "Choose train or predict: A classifier will ___ a label for an input.",
+            "answers": [
+              "predict"
+            ],
+            "explanation": "Predict là dự đoán nhãn.",
+            "key": "ai-workflow-evaluation-test-03"
+          },
+          {
+            "lesson_key": "ai-model-workflow",
+            "type": "single_choice",
+            "prompt": "What is a model input called in this course?",
+            "options": [
+              "A feature",
+              "A folder",
+              "A deadline"
+            ],
+            "answer": "A",
+            "explanation": "Feature là đặc trưng đầu vào.",
+            "key": "ai-workflow-evaluation-test-04"
+          },
+          {
+            "lesson_key": "ai-model-workflow",
+            "type": "single_choice",
+            "prompt": "Why keep a separate test set?",
+            "options": [
+              "To evaluate on records not used for training",
+              "To guarantee perfect results",
+              "To avoid making predictions"
+            ],
+            "answer": "A",
+            "explanation": "Tập riêng giúp đánh giá ngoài dữ liệu huấn luyện.",
+            "key": "ai-workflow-evaluation-test-05"
+          },
+          {
+            "lesson_key": "ai-model-review",
+            "type": "fill_blank",
+            "prompt": "How many test predictions from Model B are wrong? Write digits.",
+            "answers": [
+              "2"
+            ],
+            "explanation": "10 trừ 8 bằng 2.",
+            "use_reading": true,
+            "key": "ai-workflow-evaluation-test-06"
+          },
+          {
+            "lesson_key": "ai-model-review",
+            "type": "single_choice",
+            "prompt": "Which comparison is supported?",
+            "options": [
+              "Model B always wins",
+              "The baseline is perfect",
+              "Model B gets one more correct than the baseline"
+            ],
+            "answer": "C",
+            "explanation": "8 so với 7 trên cùng tập.",
+            "use_reading": true,
+            "key": "ai-workflow-evaluation-test-07"
+          },
+          {
+            "lesson_key": "ai-model-review",
+            "type": "fill_blank",
+            "prompt": "Choose accuracy or source: The proportion of correct predictions is called ___.",
+            "answers": [
+              "accuracy"
+            ],
+            "explanation": "Trong phân loại, accuracy là tỷ lệ dự đoán đúng.",
+            "key": "ai-workflow-evaluation-test-08"
+          },
+          {
+            "lesson_key": "ai-model-review",
+            "type": "single_choice",
+            "prompt": "What will the team review?",
+            "options": [
+              "Two training folders",
+              "All universities",
+              "The two prediction errors"
+            ],
+            "answer": "C",
+            "explanation": "Nhóm xem lại hai dự đoán sai.",
+            "use_reading": true,
+            "key": "ai-workflow-evaluation-test-09"
+          },
+          {
+            "lesson_key": "ai-model-review",
+            "type": "single_choice",
+            "prompt": "Which report is most precise?",
+            "options": [
+              "The model is always correct",
+              "Training proves future success",
+              "Eight of ten test predictions are correct"
+            ],
+            "answer": "C",
+            "explanation": "Câu giữ đúng số liệu và phạm vi.",
+            "use_reading": true,
+            "key": "ai-workflow-evaluation-test-10"
+          }
+        ]
+      },
+      {
+        "key": "data-results-limits",
+        "title": "Presenting Results and Limits",
+        "objectives": "Mô tả xu hướng và kết luận có giới hạn.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "data-presenting-trends",
+            "title": "Describing Results and Trends",
+            "objectives": "Đọc số liệu dạng bảng và nói về tăng, giảm, đơn vị và thời kỳ so sánh.",
+            "vocabulary": [
+              {
+                "word": "chart",
+                "part_of_speech": "noun",
+                "meaning": "biểu đồ",
+                "collocation": "describe a chart",
+                "example": "This chart shows weekly usage.",
+                "example_vi": "Biểu đồ này thể hiện lượng sử dụng hằng tuần.",
+                "key": "data-presenting-trends-vocab-chart"
+              },
+              {
+                "word": "axis",
+                "part_of_speech": "noun",
+                "meaning": "trục của biểu đồ",
+                "collocation": "label an axis",
+                "example": "The horizontal axis shows the week.",
+                "example_vi": "Trục ngang thể hiện tuần.",
+                "key": "data-presenting-trends-vocab-axis"
+              },
+              {
+                "word": "trend",
+                "part_of_speech": "noun",
+                "meaning": "xu hướng",
+                "collocation": "describe a trend",
+                "example": "The trend is upward in this example.",
+                "example_vi": "Xu hướng đi lên trong ví dụ này.",
+                "key": "data-presenting-trends-vocab-trend"
+              },
+              {
+                "word": "increase",
+                "part_of_speech": "verb",
+                "meaning": "tăng",
+                "collocation": "increase from twenty to thirty",
+                "example": "Usage increased from twenty to thirty sessions.",
+                "example_vi": "Lượng sử dụng tăng từ hai mươi lên ba mươi buổi.",
+                "key": "data-presenting-trends-vocab-increase"
+              },
+              {
+                "word": "decrease",
+                "part_of_speech": "verb",
+                "meaning": "giảm",
+                "collocation": "decrease by five",
+                "example": "The count decreased by five.",
+                "example_vi": "Số lượng giảm năm đơn vị.",
+                "key": "data-presenting-trends-vocab-decrease"
+              },
+              {
+                "word": "average",
+                "part_of_speech": "noun",
+                "meaning": "giá trị trung bình",
+                "collocation": "calculate an average",
+                "example": "The average is ten minutes.",
+                "example_vi": "Giá trị trung bình là mười phút.",
+                "key": "data-presenting-trends-vocab-average"
+              },
+              {
+                "word": "percentage",
+                "part_of_speech": "noun",
+                "meaning": "tỷ lệ phần trăm",
+                "collocation": "report a percentage",
+                "example": "Please report the percentage clearly.",
+                "example_vi": "Hãy báo tỷ lệ phần trăm rõ ràng.",
+                "key": "data-presenting-trends-vocab-percentage"
+              },
+              {
+                "word": "sample",
+                "part_of_speech": "noun",
+                "meaning": "mẫu dữ liệu được khảo sát",
+                "collocation": "describe the sample",
+                "example": "The sample includes one class.",
+                "example_vi": "Mẫu khảo sát gồm một lớp.",
+                "key": "data-presenting-trends-vocab-sample"
+              }
+            ],
+            "grammar": "Increase from A to B khác increase by C. From 20 to 30 là tăng 10, không phải tăng 30. Khi nói xu hướng, nêu đại lượng, đơn vị và thời gian; không suy ra nguyên nhân chỉ từ xu hướng.",
+            "reading": "A fictional table shows completed study sessions: Week 1, 20; Week 2, 30; Week 3, 25. The count increases by ten in Week 2, then decreases by five in Week 3. These are session counts, not percentages. The data comes from one class and does not explain why the counts changed.",
+            "reading_task": "Nói hai thay đổi bằng from/to và by. Đáp án: 20 lên 30, tăng 10; 30 xuống 25, giảm 5.",
+            "dialogue": "Mai: Did usage keep increasing?\nNam: No. It fell from 30 to 25 in Week 3.\nMai: Do we know why?\nNam: Not from this table alone.",
+            "practice": "Viết 3 câu mô tả bảng. Mẫu: The count rose from 20 to 30. Then it fell by five. The table does not explain the cause. Tự kiểm: số, chiều thay đổi và giới hạn đều đúng.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "How many sessions are shown for Week 3?",
+                "options": [
+                  "25",
+                  "30",
+                  "20"
+                ],
+                "answer": "A",
+                "explanation": "Tuần 3 có 25 buổi.",
+                "use_reading": true,
+                "key": "data-presenting-trends-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Complete with from or by: The count increased ___ ten, from 20 to 30.",
+                "answers": [
+                  "by"
+                ],
+                "explanation": "By chỉ lượng thay đổi.",
+                "key": "data-presenting-trends-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which unit is used?",
+                "options": [
+                  "Sessions",
+                  "Percentages",
+                  "Students"
+                ],
+                "answer": "A",
+                "explanation": "Dữ liệu đếm buổi học.",
+                "use_reading": true,
+                "key": "data-presenting-trends-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose axis or sample: A labelled reference line on a chart is an ___.",
+                "answers": [
+                  "axis"
+                ],
+                "explanation": "Axis là trục biểu đồ.",
+                "key": "data-presenting-trends-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What can the table alone explain?",
+                "options": [
+                  "The counts over three weeks",
+                  "The results for all universities",
+                  "Why every student studied less"
+                ],
+                "answer": "A",
+                "explanation": "Bảng chỉ cho số lượng trong một lớp qua ba tuần.",
+                "use_reading": true,
+                "key": "data-presenting-trends-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "ai-communicating-limits",
+            "title": "Explaining Limits and Next Steps",
+            "objectives": "Nêu giới hạn mẫu, sự chưa chắc chắn và đề xuất kiểm tra thêm một cách thận trọng.",
+            "vocabulary": [
+              {
+                "word": "limitation",
+                "part_of_speech": "noun",
+                "meaning": "giới hạn của dữ liệu hoặc kết luận",
+                "collocation": "state a limitation",
+                "example": "A small sample is a limitation of this study.",
+                "example_vi": "Mẫu nhỏ là một giới hạn của nghiên cứu này.",
+                "key": "ai-communicating-limits-vocab-limitation"
+              },
+              {
+                "word": "uncertainty",
+                "part_of_speech": "noun",
+                "meaning": "sự chưa chắc chắn",
+                "collocation": "express uncertainty",
+                "example": "We explain the uncertainty in the report.",
+                "example_vi": "Chúng tôi giải thích sự chưa chắc chắn trong báo cáo.",
+                "key": "ai-communicating-limits-vocab-uncertainty"
+              },
+              {
+                "word": "representative",
+                "part_of_speech": "adjective",
+                "meaning": "có tính đại diện cho nhóm được xét",
+                "collocation": "a representative sample",
+                "example": "This sample may not be representative.",
+                "example_vi": "Mẫu này có thể không có tính đại diện.",
+                "key": "ai-communicating-limits-vocab-representative"
+              },
+              {
+                "word": "bias",
+                "part_of_speech": "noun",
+                "meaning": "sự thiên lệch",
+                "collocation": "sampling bias",
+                "example": "Sampling bias may affect the result.",
+                "example_vi": "Thiên lệch lấy mẫu có thể ảnh hưởng kết quả.",
+                "key": "ai-communicating-limits-vocab-bias"
+              },
+              {
+                "word": "evidence",
+                "part_of_speech": "noun",
+                "meaning": "bằng chứng hỗ trợ nhận định",
+                "collocation": "collect evidence",
+                "example": "We need more evidence for this claim.",
+                "example_vi": "Chúng tôi cần thêm bằng chứng cho nhận định này.",
+                "key": "ai-communicating-limits-vocab-evidence"
+              },
+              {
+                "word": "claim",
+                "part_of_speech": "noun",
+                "meaning": "nhận định được đưa ra",
+                "collocation": "support a claim",
+                "example": "The current data does not support that claim.",
+                "example_vi": "Dữ liệu hiện có không hỗ trợ nhận định đó.",
+                "key": "ai-communicating-limits-vocab-claim"
+              },
+              {
+                "word": "recommend",
+                "part_of_speech": "verb",
+                "meaning": "đề xuất",
+                "collocation": "recommend further testing",
+                "example": "We recommend further testing.",
+                "example_vi": "Chúng tôi đề xuất kiểm tra thêm.",
+                "key": "ai-communicating-limits-vocab-recommend"
+              },
+              {
+                "word": "next step",
+                "part_of_speech": "noun",
+                "meaning": "bước tiếp theo",
+                "collocation": "agree on the next step",
+                "example": "The next step is to collect more examples.",
+                "example_vi": "Bước tiếp theo là thu thập thêm ví dụ.",
+                "key": "ai-communicating-limits-vocab-next-step"
+              }
+            ],
+            "grammar": "May / might nêu điều có thể xảy ra. Our results apply to ... xác định phạm vi. We recommend + danh từ/V-ing: We recommend testing another class. Giới hạn mẫu không tự chứng minh kết quả sai; nó giới hạn mức khái quát.",
+            "reading": "A team tests a study app with twelve volunteers from one class. Most volunteers like it. The team says the feedback is useful, but it may not represent all students. They do not claim that everyone will like the app. They recommend collecting feedback from other classes before making a wider claim.",
+            "reading_task": "Tìm mẫu khảo sát, giới hạn và bước tiếp. Đáp án: 12 tình nguyện viên một lớp; chưa đại diện mọi sinh viên; lấy phản hồi lớp khác.",
+            "dialogue": "Tutor: Can we say all students like the app?\nLan: No. We only asked twelve volunteers in one class.\nTutor: What do you recommend?\nLan: Collect feedback from other classes.",
+            "practice": "Viết kết luận 3 câu. Mẫu: Most of our twelve volunteers liked the app. This sample may not represent all students. We recommend testing with other classes. Tự kiểm: không đổi most thành all; nêu rõ mẫu và bước tiếp.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "How many volunteers gave feedback?",
+                "options": [
+                  "All students",
+                  "Twelve",
+                  "One hundred"
+                ],
+                "answer": "B",
+                "explanation": "Bài đọc có 12 tình nguyện viên.",
+                "use_reading": true,
+                "key": "ai-communicating-limits-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose limitation or prediction: A factor that restricts a conclusion is a ___.",
+                "answers": [
+                  "limitation"
+                ],
+                "explanation": "Limitation là giới hạn kết luận.",
+                "key": "ai-communicating-limits-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which next step is recommended?",
+                "options": [
+                  "Delete all feedback",
+                  "Claim everyone likes the app",
+                  "Collect feedback from other classes"
+                ],
+                "answer": "C",
+                "explanation": "Nhóm muốn mở rộng thu thập phản hồi.",
+                "use_reading": true,
+                "key": "ai-communicating-limits-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose evidence or axis: Information that supports a claim is ___.",
+                "answers": [
+                  "evidence"
+                ],
+                "explanation": "Evidence là bằng chứng.",
+                "key": "ai-communicating-limits-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which conclusion matches the passage?",
+                "options": [
+                  "Every student likes the app",
+                  "Most volunteers in this sample like it",
+                  "No volunteer likes the app"
+                ],
+                "answer": "B",
+                "explanation": "Giữ đúng từ most và phạm vi mẫu.",
+                "use_reading": true,
+                "key": "ai-communicating-limits-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional study records 10, 15, and 12 completed sessions in Weeks 1, 2, and 3. The study covers one class. Six volunteers also give feedback; five like the app. The team reports the session counts and says the feedback may not represent all students. It recommends asking other classes.",
+        "test": [
+          {
+            "lesson_key": "data-presenting-trends",
+            "type": "single_choice",
+            "prompt": "How many sessions are completed in Week 2?",
+            "options": [
+              "10",
+              "12",
+              "15"
+            ],
+            "answer": "C",
+            "explanation": "Tuần 2 có 15 buổi.",
+            "use_reading": true,
+            "key": "data-results-limits-test-01"
+          },
+          {
+            "lesson_key": "data-presenting-trends",
+            "type": "fill_blank",
+            "prompt": "From Week 2 to Week 3, the count decreases by how many? Write digits.",
+            "answers": [
+              "3"
+            ],
+            "explanation": "15 xuống 12 là giảm 3.",
+            "use_reading": true,
+            "key": "data-results-limits-test-02"
+          },
+          {
+            "lesson_key": "data-presenting-trends",
+            "type": "single_choice",
+            "prompt": "What do 10, 15, and 12 measure?",
+            "options": [
+              "Percentages",
+              "Session counts",
+              "Model accuracy"
+            ],
+            "answer": "B",
+            "explanation": "Đây là số buổi, không phải phần trăm.",
+            "use_reading": true,
+            "key": "data-results-limits-test-03"
+          },
+          {
+            "lesson_key": "data-presenting-trends",
+            "type": "fill_blank",
+            "prompt": "Complete with by or to: The count rises from 10 ___ 15.",
+            "answers": [
+              "to"
+            ],
+            "explanation": "From A to B chỉ hai mốc.",
+            "key": "data-results-limits-test-04"
+          },
+          {
+            "lesson_key": "data-presenting-trends",
+            "type": "single_choice",
+            "prompt": "Which trend is shown?",
+            "options": [
+              "Always decreasing",
+              "Always constant",
+              "Increasing, then decreasing"
+            ],
+            "answer": "C",
+            "explanation": "10 → 15 → 12.",
+            "use_reading": true,
+            "key": "data-results-limits-test-05"
+          },
+          {
+            "lesson_key": "ai-communicating-limits",
+            "type": "fill_blank",
+            "prompt": "How many volunteers like the app? Write digits.",
+            "answers": [
+              "5"
+            ],
+            "explanation": "5 trong 6 tình nguyện viên thích ứng dụng.",
+            "use_reading": true,
+            "key": "data-results-limits-test-06"
+          },
+          {
+            "lesson_key": "ai-communicating-limits",
+            "type": "single_choice",
+            "prompt": "Which limitation is stated?",
+            "options": [
+              "The app is broken",
+              "The sample may not represent all students",
+              "There is no data"
+            ],
+            "answer": "B",
+            "explanation": "Bài nêu giới hạn tính đại diện.",
+            "use_reading": true,
+            "key": "data-results-limits-test-07"
+          },
+          {
+            "lesson_key": "ai-communicating-limits",
+            "type": "fill_blank",
+            "prompt": "Choose recommend or guarantee: The team can ___ asking other classes.",
+            "answers": [
+              "recommend"
+            ],
+            "explanation": "Recommend là đề xuất, không bảo đảm.",
+            "key": "data-results-limits-test-08"
+          },
+          {
+            "lesson_key": "ai-communicating-limits",
+            "type": "single_choice",
+            "prompt": "Which claim is too broad?",
+            "options": [
+              "Five volunteers like the app",
+              "All students like the app",
+              "The study covers one class"
+            ],
+            "answer": "B",
+            "explanation": "Không thể khái quát 5 người thành mọi sinh viên.",
+            "use_reading": true,
+            "key": "data-results-limits-test-09"
+          },
+          {
+            "lesson_key": "ai-communicating-limits",
+            "type": "single_choice",
+            "prompt": "What is the next step?",
+            "options": [
+              "Ask other classes",
+              "Claim certainty",
+              "Ignore all feedback"
+            ],
+            "answer": "A",
+            "explanation": "Thu thập phản hồi lớp khác.",
+            "use_reading": true,
+            "key": "data-results-limits-test-10"
+          }
+        ]
+      }
+    ]
+  }
+}

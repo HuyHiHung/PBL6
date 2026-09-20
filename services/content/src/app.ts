@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { ApiError,baseApp,json,id,page,permission,internal,protect,principal,text,uuid,version,type Config,type DB,type Query } from '../../../packages/backend/src/http.js';
 import type { AssessmentSnapshot,Catalog } from '../../../packages/backend/src/contracts.js';
 import { draftRoutes } from './drafts.js';
+import { expansionRoutes } from './expansion.js';
 
 const block=z.discriminatedUnion('type',[
   z.object({id:text,type:z.literal('text'),body:text}).strict(),z.object({id:text,type:z.literal('grammar'),body:text}).strict(),
@@ -85,6 +86,7 @@ export function createContent(cfg:Config,sql:DB) {
     else permission(p,/\/(publish|status)$/.test(c.req.path)?'content.publish':'content.write');
     await next();
   });
+  expansionRoutes(app,cfg,sql,signed);
   app.get('/v1/admin/catalog',async c=>c.json({courses:await sql`SELECT * FROM content.courses ORDER BY position,id`,topics:await sql`SELECT * FROM content.topics ORDER BY position,id`,lessons:await sql`SELECT * FROM content.lessons ORDER BY position,id`}));
   app.get('/v1/admin/vocabulary',async c=>c.json({items:await sql`SELECT * FROM content.vocabulary_entries ORDER BY word,id`}));
   app.get('/v1/admin/media',async c=>c.json({items:await sql`SELECT id,object_key,mime_type,size_bytes,status FROM content.media_assets WHERE status='ready' ORDER BY created_at DESC LIMIT 100`}));

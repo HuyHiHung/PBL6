@@ -20,6 +20,8 @@ import {
   Menu,
   X,
   ArrowUpRight,
+  Headphones,
+  StickyNote,
 } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
 import { auth, api, go, ApiError, type Row } from "./api";
@@ -38,6 +40,14 @@ import {
   Progress,
 } from "./learning";
 import "./style.css";
+import {
+  SearchBox,
+  SearchPage,
+  NotesPage,
+  DictationPage,
+  DictationAttempt,
+} from "./expansion";
+import { canNavigate } from "./navigation";
 const Admin = lazy(() => import("./admin"));
 export const UserContext = createContext<Row | null>(null);
 export const useUser = () => useContext(UserContext);
@@ -49,12 +59,44 @@ function App() {
     [menu, setMenu] = useState(false),
     [authError, setAuthError] = useState("");
   useEffect(() => {
+    let approvedClick = false;
+    const onLink = (event: MouseEvent) => {
+      if (
+        event.button !== 0 ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey ||
+        event.altKey
+      )
+        return;
+      const link =
+        event.target instanceof Element
+          ? event.target.closest('a[href^="#/"]')
+          : null;
+      if (!link || link.getAttribute("href") === location.hash) return;
+      if (!canNavigate()) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        return;
+      }
+      approvedClick = true;
+    };
+    let previous = location.hash.startsWith("#/")
+      ? location.hash.slice(1)
+      : "/";
     const listener = () => {
+      if (!approvedClick && !canNavigate()) {
+        history.replaceState(null, "", "#" + previous);
+        return;
+      }
+      approvedClick = false;
+      previous = location.hash.startsWith("#/") ? location.hash.slice(1) : "/";
       setRoute(location.hash.startsWith("#/") ? location.hash.slice(1) : "/");
       setMenu(false);
       window.scrollTo(0, 0);
     };
     addEventListener("hashchange", listener);
+    addEventListener("click", onLink, true);
     auth.auth.getSession().then(({ data, error }) => {
       setSession(data.session);
       if (error) setAuthError(error.message);
@@ -74,6 +116,7 @@ function App() {
     }
     return () => {
       removeEventListener("hashchange", listener);
+      removeEventListener("click", onLink, true);
       subscription.unsubscribe();
     };
   }, []);
@@ -82,11 +125,12 @@ function App() {
     [session?.access_token],
   );
   const me = profile.data ?? null;
-  const part = route.split("/").filter(Boolean);
+  const part = route.split("?")[0].split("/").filter(Boolean);
   const screen = part[0] ?? "home";
   const publicScreens = [
     "home",
     "catalog",
+    "search",
     "lesson",
     "login",
     "signup",
@@ -95,6 +139,7 @@ function App() {
   ];
   const protectedScreen = !publicScreens.includes(screen);
   async function logout() {
+    if (!canNavigate()) return;
     try {
       await api("identity", "/v1/logout", "POST");
     } catch (e) {
@@ -110,6 +155,8 @@ function App() {
   const nav = [
     ["/", "Học hôm nay", LayoutDashboard],
     ["/catalog", "Lộ trình học", BookOpen],
+    ["/dictation", "Nghe & chép lại", Headphones],
+    ["/notes", "Ghi chú", StickyNote],
     ["/cards", "Thẻ từ vựng", Layers],
     ["/mistakes", "Ôn câu sai", ChartNoAxesCombined],
     ["/favorites", "Bài yêu thích", Bookmark],
@@ -157,6 +204,18 @@ function App() {
         break;
       case "catalog":
         page = <Catalog />;
+        break;
+      case "search":
+        page = <SearchPage query={route.split("?")[1] ?? ""} />;
+        break;
+      case "notes":
+        page = <NotesPage />;
+        break;
+      case "dictation":
+        page = <DictationPage />;
+        break;
+      case "dictation-attempt":
+        page = <DictationAttempt key={part[1]} id={part[1]} />;
         break;
       case "lesson":
         page = <Lesson key={part[1]} id={part[1]} />;
@@ -286,7 +345,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="topbar">
-            <span>Không gian tiếng Anh của bạn</span>
+            <SearchBox />
             <span className="top-pill">
               <span />
               Học một chút, mỗi ngày

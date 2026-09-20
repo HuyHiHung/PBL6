@@ -32,6 +32,8 @@ const messages: Record<string, string> = {
   CONFIRM_BLANK_REQUIRED:
     "Vẫn còn câu chưa trả lời. Xác nhận bỏ trống để nộp bài.",
   DRAFT_REQUIRED: "Chỉ có thể sửa bản nháp chưa xuất bản.",
+  INVALID_TRANSCRIPT_LENGTH: "Transcript cần có từ 1 đến 200 từ.",
+  INVALID_ANSWER_LENGTH: "Bản chép cần có từ 1 đến 1.000 từ.",
   UPSTREAM_UNAVAILABLE: "Dịch vụ đang gián đoạn. Vui lòng thử lại.",
   EMAIL_NOT_VERIFIED: "Hãy xác minh email trước khi tiếp tục.",
 };
@@ -51,6 +53,7 @@ export async function api<T = Row>(
   method = "GET",
   body?: unknown,
   key?: string,
+  signal?: AbortSignal,
 ): Promise<T> {
   const {
     data: { session },
@@ -74,7 +77,9 @@ export async function api<T = Row>(
           : body instanceof FormData || body instanceof Blob
             ? body
             : JSON.stringify(body),
-      signal: AbortSignal.timeout(20000),
+      signal: signal
+        ? AbortSignal.any([signal, AbortSignal.timeout(20000)])
+        : AbortSignal.timeout(20000),
     });
   } catch {
     throw new Error("Không kết nối được máy chủ. Kiểm tra mạng rồi thử lại.");

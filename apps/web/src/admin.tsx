@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DictationAdmin } from "./dictation-admin";
 import { api, statusText, type Row } from "./api";
 import { Title, Load, Notice, Empty, Pager, useLoad, useAction } from "./ui";
 const can = (me: Row, p: string) =>
@@ -1181,6 +1182,12 @@ function LessonEditor({
           </div>
         )}
         <Questions lesson={lesson} media={s.data?.media ?? []} write={write} />
+        <DictationAdmin
+          lessonId={lesson.id}
+          media={s.data?.media ?? []}
+          write={write}
+          publish={publish}
+        />
         <Assessments
           lesson={lesson}
           catalog={catalog}

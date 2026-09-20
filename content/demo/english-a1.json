@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "status": "authored_demo_pack_not_imported",
+  "provenance": "Nội dung biên soạn mới cho Sprout; không trích nguyên văn giáo trình bên ngoài. A1 là mức mục tiêu biên soạn, chưa được thẩm định độc lập.",
+  "audio_status": "scripts_only",
+  "course": {
+    "key": "sprout-campus-a1",
+    "title": "Campus English — First Steps",
+    "level": "A1",
+    "description": "Tiếng Anh cơ bản cho sinh viên: làm quen, giới thiệu bạn, lịch học và gọi món.",
+    "objectives": "Giới thiệu bản thân trong 3–4 câu; hỏi thông tin đơn giản; mô tả lịch sinh hoạt; gọi đồ uống lịch sự.",
+    "estimated_minutes": 100,
+    "topics": [
+      {
+        "key": "meeting-people",
+        "title": "Meeting People",
+        "objectives": "Chào hỏi, giới thiệu bản thân và một người bạn.",
+        "lessons": [
+          {
+            "key": "introductions",
+            "title": "Hello, I'm Linh",
+            "estimated_minutes": 20,
+            "objectives": "Dùng I am / you are và my / your để giới thiệu tên, quê quán và vai trò.",
+            "vocabulary": [
+              {"word":"hello","meaning":"xin chào","example":"Hello, I'm Linh."},
+              {"word":"name","meaning":"tên","example":"My name is Linh."},
+              {"word":"student","meaning":"sinh viên; học sinh","example":"I am a student."},
+              {"word":"from","meaning":"đến từ","example":"I am from Hue."},
+              {"word":"meet","meaning":"gặp; làm quen","example":"Nice to meet you."},
+              {"word":"classmate","meaning":"bạn cùng lớp","example":"You are my classmate."}
+            ],
+            "grammar": "I am = I'm; you are = you're. Dùng am với I, are với you. My name is ... = Tên tôi là ...; What's your name? = Bạn tên gì? Where are you from? = Bạn đến từ đâu? Trả lời: I'm from + địa danh.",
+            "reading": "Hello! My name is Linh. I am from Hue. I am a student in Da Nang. This is Alex. Alex is from London. We are classmates. Alex says, 'Nice to meet you, Linh!'",
+            "reading_task": "Đọc và gạch chân tên hai người, quê quán và nơi Linh đang học.",
+            "listening": {
+              "title": "A new classmate",
+              "transcript": "Linh: Hello. I'm Linh. What's your name?\nBen: My name is Ben.\nLinh: Nice to meet you, Ben. Where are you from?\nBen: I'm from Leeds. Are you a student?\nLinh: Yes, I am.\nBen: I'm a student, too.",
+              "task": "Nghe hai lần: lần một xác định người nói; lần hai ghi tên thành phố Ben đến từ.",
+              "answer": "Ben đến từ Leeds. Cả Linh và Ben đều là sinh viên."
+            },
+            "practice": "Viết 3 câu về tên, quê quán và vai trò của bạn. Mẫu: I'm Mai. I'm from Hanoi. I'm a student. Sau đó nói với một người bạn; hoạt động này không chấm tự động.",
+            "quiz": [
+              {"type":"single_choice","prompt":"Which sentence is a greeting?","options":["I'm from Hue.","Hello!","I'm a student."],"answer":"B","explanation":"Hello dùng để chào hỏi."},
+              {"type":"fill_blank","prompt":"Complete with am or are: I ___ a student.","answers":["am"],"explanation":"Chủ ngữ I đi với am."},
+              {"type":"single_choice","prompt":"Where is Linh from?","use_reading":true,"options":["London","Da Nang","Hue"],"answer":"C","explanation":"Linh nói I am from Hue; Da Nang là nơi đang học."},
+              {"type":"single_choice","prompt":"Choose the reply to 'What's your name?'","options":["My name is Mai.","I'm from Hue.","Nice to meet you, too."],"answer":"A","explanation":"Câu hỏi hỏi tên nên trả lời bằng My name is ..."},
+              {"type":"fill_blank","prompt":"Complete with my or your: What's ___ name?","answers":["your"],"explanation":"Khi hỏi tên người đối diện, dùng your name."}
+            ]
+          },
+          {
+            "key": "my-friend",
+            "title": "This Is My Friend",
+            "estimated_minutes": 20,
+            "objectives": "Dùng he / she, his / her và is để giới thiệu người khác; hỏi và trả lời tuổi.",
+            "vocabulary": [
+              {"word":"friend","meaning":"người bạn","example":"This is my friend, Nam."},
+              {"word":"teacher","meaning":"giáo viên","example":"She is a teacher."},
+              {"word":"year","meaning":"năm","example":"He is nineteen years old."},
+              {"word":"old","meaning":"tuổi; già","example":"How old are you?"},
+              {"word":"kind","meaning":"tốt bụng","example":"My friend is kind."},
+              {"word":"helpful","meaning":"hay giúp đỡ","example":"Our teacher is helpful."}
+            ],
+            "grammar": "He is = He's; she is = She's. His name = tên của anh ấy; her name = tên của cô ấy. Hỏi tuổi: How old is he/she? Trả lời: He/She is nineteen (years old). Tiếng Anh dùng be để nói tuổi: I am nineteen.",
+            "reading": "This is my friend, Nam. He is nineteen years old. He is from Hanoi. He is a student. His teacher is Ms Hoa. She is thirty years old. She is kind and helpful. Nam likes her class.",
+            "reading_task": "Lập hai dòng thông tin cho Nam và Ms Hoa: tuổi, vai trò.",
+            "listening": {
+              "title": "Meet Sara",
+              "transcript": "Mai: This is my friend, Sara.\nTom: Hello, Sara. Are you a student?\nSara: Yes, I am.\nTom: How old are you?\nSara: I'm twenty.\nMai: Sara is very helpful.",
+              "task": "Nghe và ghi tuổi, vai trò của Sara.",
+              "answer": "Sara 20 tuổi và là sinh viên."
+            },
+            "practice": "Viết 4 câu giới thiệu một người bạn với tên giả: tên, tuổi, quê quán, tính cách. Mẫu: This is Lan. She is twenty. She is from Hue. She is kind.",
+            "quiz": [
+              {"type":"single_choice","prompt":"How old is Nam?","use_reading":true,"options":["Thirty","Twenty","Nineteen"],"answer":"C","explanation":"Bài đọc nêu He is nineteen years old."},
+              {"type":"fill_blank","prompt":"Complete with am, is or are: She ___ a teacher.","answers":["is"],"explanation":"She đi với is."},
+              {"type":"single_choice","prompt":"Nam is my friend. ___ name is Nam.","options":["Her","His","Your"],"answer":"B","explanation":"Bài đọc dùng he cho Nam; tính từ sở hữu tương ứng là his."},
+              {"type":"single_choice","prompt":"Which question asks about age?","options":["How old are you?","What's your name?","Where are you from?"],"answer":"A","explanation":"How old ...? dùng để hỏi tuổi."},
+              {"type":"fill_blank","prompt":"Write the missing word: She is twenty years ___.","answers":["old"],"explanation":"Cụm nói tuổi là số + years old."}
+            ]
+          }
+        ],
+        "test_passage": "My name is Emma. I'm eighteen years old. I'm from Bristol. I'm a student in Hanoi. My friend is Minh. He is nineteen. He is from Hue. Our teacher is Ms Lan. She is kind.",
+        "test": [
+          {"lesson_key":"introductions","type":"single_choice","prompt":"Where is Emma from?","use_reading":true,"options":["Hanoi","Bristol","Hue"],"answer":"B","explanation":"Emma đến từ Bristol; cô đang học ở Hanoi."},
+          {"lesson_key":"my-friend","type":"fill_blank","prompt":"How old is Emma? Write a number.","use_reading":true,"answers":["18"],"explanation":"Eighteen nghĩa là 18."},
+          {"lesson_key":"my-friend","type":"single_choice","prompt":"Who is nineteen?","use_reading":true,"options":["Ms Lan","Emma","Minh"],"answer":"C","explanation":"Sau khi giới thiệu Minh, đoạn văn nêu He is nineteen."},
+          {"lesson_key":"introductions","type":"fill_blank","prompt":"Complete with am, is or are: You ___ my classmate.","answers":["are"],"explanation":"You đi với are."},
+          {"lesson_key":"introductions","type":"single_choice","prompt":"Choose a polite reply to 'Nice to meet you.'","options":["Nice to meet you, too.","I'm nineteen.","She's from Hue."],"answer":"A","explanation":"Nice to meet you, too đáp lại lời làm quen."},
+          {"lesson_key":"my-friend","type":"fill_blank","prompt":"Complete with his or her: Ms Lan is a teacher. ___ class is fun.","answers":["her"],"explanation":"Ms Lan được nhắc đến bằng she; dùng her class."},
+          {"lesson_key":"introductions","type":"single_choice","prompt":"Which sentence is correct?","options":["I is Emma.","I are Emma.","I am Emma."],"answer":"C","explanation":"I đi với am."},
+          {"lesson_key":"my-friend","type":"single_choice","prompt":"What is Ms Lan like?","use_reading":true,"options":["She is kind.","She is eighteen.","She is from Bristol."],"answer":"A","explanation":"Thông tin tính cách trong bài là She is kind."},
+          {"lesson_key":"introductions","type":"fill_blank","prompt":"Complete with from or name: I'm ___ Hue.","answers":["from"],"explanation":"Be from + nơi chốn chỉ quê quán hoặc xuất xứ."},
+          {"lesson_key":"my-friend","type":"single_choice","prompt":"Choose the correct sentence about age.","options":["He has nineteen years old.","He is nineteen years old.","He are nineteen years old."],"answer":"B","explanation":"Dùng he is + tuổi + years old."}
+        ]
+      },
+      {
+        "key": "daily-campus-life",
+        "title": "Daily Campus Life",
+        "objectives": "Nói về sinh hoạt, đọc giờ và gọi món đơn giản.",
+        "lessons": [
+          {
+            "key": "daily-routine",
+            "title": "My Study Day",
+            "estimated_minutes": 20,
+            "objectives": "Dùng hiện tại đơn với I và at + giờ để mô tả một ngày học.",
+            "vocabulary": [
+              {"word":"get up","meaning":"thức dậy; ra khỏi giường","example":"I get up at six."},
+              {"word":"breakfast","meaning":"bữa sáng","example":"I have breakfast at seven."},
+              {"word":"study","meaning":"học","example":"I study English every day."},
+              {"word":"library","meaning":"thư viện","example":"I study in the library."},
+              {"word":"lunch","meaning":"bữa trưa","example":"I have lunch at twelve."},
+              {"word":"go to bed","meaning":"đi ngủ","example":"I go to bed at ten."}
+            ],
+            "grammar": "Nói thói quen với I + động từ nguyên mẫu: I study English. Dùng at trước giờ: at seven, at eight thirty (8:30). Câu phủ định: I do not / don't study at night. Hỏi: What time do you get up? Trả lời: I get up at six.",
+            "reading": "I am Mai. I get up at six thirty. I have breakfast at seven. My English class starts at eight. I have lunch at twelve. In the afternoon, I study in the library. I go to bed at ten. I don't study at night.",
+            "reading_task": "Viết dòng thời gian của Mai: thức dậy, ăn sáng, vào lớp, ăn trưa và đi ngủ.",
+            "listening": {
+              "title": "A morning class",
+              "transcript": "Ben: What time do you get up, Mai?\nMai: I get up at six thirty.\nBen: What time is your English class?\nMai: At eight.\nBen: Do you study in the library at night?\nMai: No. I study there in the afternoon.",
+              "task": "Nghe và ghi giờ thức dậy, giờ vào lớp của Mai.",
+              "answer": "Mai thức dậy lúc 6:30; lớp tiếng Anh bắt đầu lúc 8:00."
+            },
+            "practice": "Viết 4 câu về lịch của bạn với at + giờ. Mẫu: I get up at seven. I have breakfast at seven thirty. I study at eight. I go to bed at ten.",
+            "quiz": [
+              {"type":"single_choice","prompt":"What time does Mai get up?","use_reading":true,"options":["At seven","At eight","At six thirty"],"answer":"C","explanation":"Câu thứ hai ghi I get up at six thirty."},
+              {"type":"fill_blank","prompt":"Complete with at or from: I have lunch ___ twelve.","answers":["at"],"explanation":"Dùng at trước giờ cụ thể."},
+              {"type":"single_choice","prompt":"Where does Mai study in the afternoon?","use_reading":true,"options":["In the library","In a café","At home"],"answer":"A","explanation":"Bài đọc ghi In the afternoon, I study in the library."},
+              {"type":"single_choice","prompt":"Which time means 'eight thirty'?","options":["8:13","8:30","3:08"],"answer":"B","explanation":"Eight là giờ 8 và thirty là 30 phút."},
+              {"type":"fill_blank","prompt":"Complete with do or does: What time ___ you get up?","answers":["do"],"explanation":"Câu hỏi hiện tại đơn với you dùng do."}
+            ]
+          },
+          {
+            "key": "campus-cafe",
+            "title": "At the Campus Café",
+            "estimated_minutes": 20,
+            "objectives": "Gọi đồ uống bằng I'd like ... please; hỏi giá bằng How much ...?",
+            "vocabulary": [
+              {"word":"water","meaning":"nước","example":"I'd like some water, please."},
+              {"word":"tea","meaning":"trà","example":"A cup of tea, please."},
+              {"word":"coffee","meaning":"cà phê","example":"I'd like a coffee, please."},
+              {"word":"sandwich","meaning":"bánh mì kẹp","example":"I'd like a sandwich."},
+              {"word":"please","meaning":"từ dùng để yêu cầu lịch sự","example":"A tea, please."},
+              {"word":"price","meaning":"giá","example":"The price is two dollars."}
+            ],
+            "grammar": "I'd like = I would like, dùng để gọi món lịch sự. Ví dụ: I'd like a sandwich, please. How much is it? = Món đó giá bao nhiêu? How much is that? có thể hỏi tổng tiền. Trong gọi món, a tea / a coffee có thể chỉ một suất; a cup of tea / coffee nói rõ một cốc. Dùng some water hoặc a bottle of water.",
+            "reading": "Campus Café menu: a cup of tea — two dollars; a cup of coffee — three dollars; a sandwich — four dollars; a bottle of water — one dollar. Linh orders a cup of tea and a sandwich. The total is six dollars. She says, 'Thank you!'",
+            "reading_task": "Tìm món Linh gọi và cộng tổng tiền. Giá dùng cho tình huống giả lập, không phải giá bán thực tế.",
+            "listening": {
+              "title": "One coffee, please",
+              "transcript": "Server: Hello. What would you like?\nBen: I'd like a cup of coffee and a bottle of water, please.\nServer: Of course.\nBen: How much is that?\nServer: Four dollars, please.\nBen: Here you are. Thank you.\nServer: You're welcome.",
+              "task": "Nghe và ghi hai món Ben gọi cùng tổng tiền.",
+              "answer": "Một cốc cà phê, một chai nước; tổng 4 đô la."
+            },
+            "practice": "Đóng vai khách và nhân viên với thực đơn trong bài; đổi vai sau một lượt. Mẫu: I'd like a tea, please. / Two dollars, please. / Here you are. / Thank you.",
+            "quiz": [
+              {"type":"single_choice","prompt":"Which is a polite order?","options":["I'd like a tea, please.","How old is tea?","I am a tea."],"answer":"A","explanation":"I'd like ... please là mẫu gọi món lịch sự."},
+              {"type":"fill_blank","prompt":"Complete: How ___ is it?","answers":["much"],"explanation":"How much is it? dùng để hỏi giá."},
+              {"type":"single_choice","prompt":"How much is a sandwich?","use_reading":true,"options":["Two dollars","Three dollars","Four dollars"],"answer":"C","explanation":"Thực đơn ghi sandwich — four dollars."},
+              {"type":"single_choice","prompt":"What does Linh order?","use_reading":true,"options":["Coffee and water","Tea and a sandwich","Tea and coffee"],"answer":"B","explanation":"Linh orders a cup of tea and a sandwich."},
+              {"type":"fill_blank","prompt":"Complete the polite order: A cup of tea, ___.","answers":["please"],"explanation":"Thêm please để lời gọi món lịch sự."}
+            ]
+          }
+        ],
+        "test_passage": "Tom gets up at seven. He has breakfast at seven thirty. His class starts at nine. In the afternoon, he studies in the library. At the café, a tea is two dollars, a coffee is three dollars, and a sandwich is four dollars. Tom orders a tea and a sandwich.",
+        "test": [
+          {"lesson_key":"daily-routine","type":"single_choice","prompt":"What time does Tom get up?","use_reading":true,"options":["At nine","At seven","At seven thirty"],"answer":"B","explanation":"Tom gets up at seven."},
+          {"lesson_key":"daily-routine","type":"fill_blank","prompt":"What time does Tom have breakfast? Use digits in H:MM format.","use_reading":true,"answers":["7:30"],"explanation":"Seven thirty viết dạng H:MM là 7:30."},
+          {"lesson_key":"daily-routine","type":"single_choice","prompt":"Where does Tom study in the afternoon?","use_reading":true,"options":["In the library","At the café","At home"],"answer":"A","explanation":"Đoạn văn ghi he studies in the library."},
+          {"lesson_key":"daily-routine","type":"fill_blank","prompt":"Complete with at or in: My class starts ___ nine.","answers":["at"],"explanation":"Dùng at trước giờ cụ thể."},
+          {"lesson_key":"daily-routine","type":"single_choice","prompt":"Which question asks about a routine's time?","options":["Where are you from?","How much is it?","What time do you get up?"],"answer":"C","explanation":"What time ...? hỏi thời điểm của hoạt động."},
+          {"lesson_key":"campus-cafe","type":"single_choice","prompt":"How much is Tom's order in total?","use_reading":true,"options":["Seven dollars","Six dollars","Five dollars"],"answer":"B","explanation":"Trà 2 đô la + sandwich 4 đô la = 6 đô la."},
+          {"lesson_key":"campus-cafe","type":"fill_blank","prompt":"Complete: I'd ___ a coffee, please.","answers":["like"],"explanation":"Mẫu gọi món là I'd like ... please."},
+          {"lesson_key":"campus-cafe","type":"single_choice","prompt":"Choose a reply to 'Thank you.'","options":["You're welcome.","How much?","I'm from Hue."],"answer":"A","explanation":"You're welcome dùng để đáp lại lời cảm ơn."},
+          {"lesson_key":"campus-cafe","type":"fill_blank","prompt":"How much is a coffee? Write the number of dollars.","use_reading":true,"answers":["3"],"explanation":"Thực đơn ghi coffee is three dollars."},
+          {"lesson_key":"campus-cafe","type":"single_choice","prompt":"Which phrase asks for water?","options":["I'm water.","How old is water?","I'd like some water, please."],"answer":"C","explanation":"I'd like some water, please là lời xin nước lịch sự."}
+        ]
+      }
+    ]
+  }
+}

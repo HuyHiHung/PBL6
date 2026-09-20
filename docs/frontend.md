@@ -79,3 +79,8 @@ Browser tests: guest/preview/audio/mobile menu; đăng nhập và quiz 100% gi�
 Google thật chưa kiểm thử vì chưa có credential. Chưa deploy Cloud/AWS hoặc chạy cross-browser Safari/Firefox, kiểm thử tải, audit accessibility đầy đủ. Bộ Playwright chưa phủ toàn bộ form CMS, topic test trên UI, mọi trường hợp cạnh tranh nhiều tab hoặc liên kết Google/email. Backend có kiểm thử topic test và cạnh tranh database riêng.
 
 Chưa có xóa nháp và mời Editor qua email (backend chưa hỗ trợ). Danh sách quản trị lớn cần tiếp tục bổ sung phân trang/tìm kiếm; lựa chọn media hiện đọc 100 tệp gần nhất. Nội dung local gồm fixture và dữ liệu test, audio bootstrap im lặng; chưa phải bộ học liệu nghiệm thu. Đây là frontend hoạt động trên local, chưa đánh dấu toàn bộ MVP sẵn sàng phát hành.
+
+
+## Mở rộng ngày 20/09/2026
+
+Đã thêm tìm kiếm học liệu, ghi chú cá nhân và Dictation. [Plan và hợp đồng endpoint](feature-expansion-plan.md), [kết quả kiểm chứng](feature-expansion-verification.md). Local nâng cấp bằng `npm run db:migrate`, `npm run db:dictation-demo`, `npm run build` rồi khởi động lại backend. Route web: `#/search`, `#/notes`, `#/dictation`, `#/dictation-attempt/:id`; CMS Dictation nằm trong màn hình sửa bài. Audio mẫu có lời đọc riêng, không dùng fixture im lặng của quiz.

@@ -12,6 +12,7 @@ npm run db:start
 npm run db:migrate
 npm run db:provision
 npm run db:bootstrap
+npm run db:dictation-demo
 npm run build
 npm run backend:start
 ```
@@ -41,9 +42,12 @@ Giữ terminal backend mở; Ctrl+C dừng ba service. Sau khi sửa TypeScript,
 
 Bootstrap tạo ba tài khoản `admin@pbl6.local.test`, `editor@pbl6.local.test`, `learner@pbl6.local.test`; mật khẩu ngẫu nhiên nằm trong `.local/bootstrap.json`. Thông tin kết nối riêng cho ba runtime role nằm trong `.local/runtime.json`. Cả hai file đều bị loại khỏi Git. Tài khoản thử được xác minh qua Auth Admin API để dùng local, không thay thế kiểm thử luồng đăng ký/xác minh email.
 
-Học liệu bootstrap gồm một bài và quiz 5 câu. Audio là **fixture im lặng để kiểm tra Storage**, chưa phải học liệu nghiệm thu. Google OAuth có cấu hình mẫu nhưng chưa bật vì cần Client ID/Secret.
+Học liệu bootstrap gồm một bài và quiz 5 câu. Audio quiz cũ là fixture im lặng để kiểm tra Storage. Dictation có MP3 lời đọc riêng: chạy `npm run db:dictation-demo`; [nguồn audio](content/dictation/README.md). Google OAuth có cấu hình mẫu nhưng chưa bật vì cần Client ID/Secret.
 
 ## Tài liệu
+
+- [Demo tiếng Anh cho 5 nhóm ngành kỹ thuật: danh mục, đánh giá nhu cầu và học liệu](content/demo/technical-demo.md) — gói Markdown/JSON, chưa nhập CMS.
+- [Audit học liệu kỹ thuật và công cụ import bản nháp](content/demo/technical-audit.md) — đã kiểm chứng DB bằng transaction rollback, chưa import vĩnh viễn.
 
 - [Hướng dẫn Docker, database, migration và Google local](docs/local-development.md)
 - [Frontend: chạy, cấu trúc, cấu hình và kiểm thử](docs/frontend.md)
@@ -52,6 +56,17 @@ Học liệu bootstrap gồm một bài và quiz 5 câu. Audio là **fixture im 
 - [Kết quả kiểm thử database](docs/database-verification.md)
 - [Thiết kế database và ERD](docs/database-design.md)
 - [Plan MVP web](web-mvp-plan.md)
+- [Plan MVP mobile: Android, chức năng, tích hợp và nghiệm thu](mobile-mvp-plan.md)
+- [Đề xuất cải thiện MVP và tiêu chí hoàn thành](docs/mvp-improvements.md)
 - [SRS](srs.md)
 
 Chỉ dùng stack và tài khoản bootstrap này để phát triển local. Deploy public dùng Supabase Cloud với cùng migration và cấu hình/secret riêng.
+
+## Ba tính năng bổ sung
+
+Tìm kiếm học liệu tại `#/search`, ghi chú riêng tại `#/notes`, luyện nghe chép chính tả tại `#/dictation`. CMS bài học có mục biên soạn/xuất bản Dictation. Tất cả dùng API thật; transcript chỉ hiện sau nộp.
+
+- [Plan, quy tắc và API](docs/feature-expansion-plan.md)
+- [Bằng chứng kiểm thử](docs/feature-expansion-verification.md)
+
+Sau nâng cấp chạy `npm run db:migrate`, build và khởi động lại backend. Kiểm thử thêm: `npm run features:test`, `npm run web:test`, `npm run db:test:clean` (database tạm, không reset dữ liệu đang dùng).

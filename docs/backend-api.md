@@ -119,3 +119,8 @@ Frontend không gọi `/internal/*`. Identity cung cấp verify và danh sách l
 Local supervisor tự cấu hình. Khi triển khai độc lập cần `DATABASE_URL` đúng runtime role, `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `IDENTITY_URL`, `CONTENT_URL`, `IDENTITY_INTERNAL_TOKEN`, `CORS_ORIGINS`; Content/Learning cần `CONTENT_INTERNAL_TOKEN`; Identity/Content cần `SUPABASE_SERVICE_ROLE_KEY`. Không đưa các secret này vào biến frontend `VITE_*`.
 
 Node entrypoint: `dist/services/<service>/src/index.js`, HOST mặc định loopback, PORT mặc định 4001/4002/4003. Lambda handler: `dist/services/<service>/src/lambda.handler`. Các adapter Lambda mới được biên dịch, chưa deploy/kiểm thử AWS. Cloud phải cấu hình mạng nội bộ/TLS và secret riêng trước khi public.
+
+
+## Mở rộng ngày 20/09/2026
+
+Đã thêm tìm kiếm học liệu, ghi chú cá nhân và Dictation. [Plan và hợp đồng endpoint](feature-expansion-plan.md), [kết quả kiểm chứng](feature-expansion-verification.md). Local nâng cấp bằng `npm run db:migrate`, `npm run db:dictation-demo`, `npm run build` rồi khởi động lại backend. Route web: `#/search`, `#/notes`, `#/dictation`, `#/dictation-attempt/:id`; CMS Dictation nằm trong màn hình sửa bài. Audio mẫu có lời đọc riêng, không dùng fixture im lặng của quiz.

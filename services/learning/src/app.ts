@@ -2,10 +2,12 @@ import { z } from 'zod';
 import { ApiError,baseApp,json,jsonValue,id,key,page,protect,permission,contentCall,text,uuid,version,type Config,type DB,type Query } from '../../../packages/backend/src/http.js';
 import type { AssessmentSnapshot,Availability,Catalog,LessonInfo,SnapshotItem,VocabularySnapshot } from '../../../packages/backend/src/contracts.js';
 import { reportRoutes } from './reports.js';
+import { expansionRoutes } from './expansion.js';
 const answerSchema=z.union([z.object({option_key:z.string().min(1).max(10)}).strict(),z.object({text:z.string().max(1000)}).strict()]);
 
 export function createLearning(cfg:Config,sql:DB) {
   const app=baseApp(cfg,sql);app.use('/v1/*',protect(cfg));
+  expansionRoutes(app,cfg,sql);
   async function dedup(user:string,operation:string,k:string,payload:unknown,fn:(tx:Query)=>Promise<Record<string,unknown>>) {
     return sql.begin(async tx=>{
       const [old]=await tx`SELECT learning.claim_request(${user},${operation},${k},${tx.json(jsonValue(payload))}) AS result`;

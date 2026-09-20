@@ -1,0 +1,1296 @@
+{
+  "schema_version": 1,
+  "status": "authored_demo_pack_not_imported",
+  "audio_status": "not_included",
+  "provenance": "Biên soạn mới cho Sprout ở mức ngôn ngữ mục tiêu A2–B1; chưa qua thẩm định độc lập của giáo viên/chuyên gia. Hội thoại, số liệu và thiết bị là giả lập để học tiếng Anh, không phải hướng dẫn vận hành hoặc thông số sản phẩm thật. Nguồn tham khảo chỉ dùng đối chiếu khái niệm; không sao chép bài học từ nguồn.",
+  "references": [
+    {
+      "title": "Universal Robots — Payload",
+      "url": "https://www.universal-robots.com/manuals/EN/HTML/SW10_12_1/Content/prod-usr-man/software/PolyScopeX/polyx-basic/polyx-payload.htm",
+      "note": "Đối chiếu việc khai báo payload gồm các thành phần gắn vào mặt bích công cụ. Khối lượng giả lập trong bài không dùng để đánh giá tải cho robot thật."
+    }
+  ],
+  "course": {
+    "level": "A2–B1",
+    "estimated_minutes": 150,
+    "key": "sprout-robotics",
+    "title": "Automation & Robotics English — Describe the System",
+    "description": "Tiếng Anh cho Tự động hóa/Robot qua thiết bị, chu trình mô phỏng và bàn giao sự cố.",
+    "objectives": "Mô tả vai trò sensor/controller/actuator, đọc thông tin công cụ, trình bày chu trình và báo sự cố có dữ kiện.",
+    "topics": [
+      {
+        "key": "robotics-sensing-actuation",
+        "title": "Sensors and Actuators",
+        "objectives": "Phân biệt vai trò thiết bị và làm rõ thông tin công cụ robot.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "robotics-devices",
+            "title": "Sensors, Controllers, and Actuators",
+            "objectives": "Gọi tên các phần tử của hệ tự động và mô tả vai trò cảm nhận, xử lý, tác động.",
+            "vocabulary": [
+              {
+                "word": "sensor",
+                "part_of_speech": "noun",
+                "meaning": "cảm biến",
+                "collocation": "a position sensor",
+                "example": "The sensor detects a part.",
+                "example_vi": "Cảm biến phát hiện một chi tiết.",
+                "key": "robotics-devices-vocab-sensor"
+              },
+              {
+                "word": "actuator",
+                "part_of_speech": "noun",
+                "meaning": "cơ cấu chấp hành tạo tác động vật lý",
+                "collocation": "control an actuator",
+                "example": "The actuator moves the arm in the animation.",
+                "example_vi": "Cơ cấu chấp hành di chuyển tay máy trong hoạt hình.",
+                "key": "robotics-devices-vocab-actuator"
+              },
+              {
+                "word": "controller",
+                "part_of_speech": "noun",
+                "meaning": "bộ điều khiển",
+                "collocation": "a machine controller",
+                "example": "The controller receives the sensor signal.",
+                "example_vi": "Bộ điều khiển nhận tín hiệu cảm biến.",
+                "key": "robotics-devices-vocab-controller"
+              },
+              {
+                "word": "motor",
+                "part_of_speech": "noun",
+                "meaning": "động cơ",
+                "collocation": "an electric motor",
+                "example": "The motor turns the conveyor roller.",
+                "example_vi": "Động cơ quay con lăn băng tải.",
+                "key": "robotics-devices-vocab-motor"
+              },
+              {
+                "word": "switch",
+                "part_of_speech": "noun",
+                "meaning": "công tắc",
+                "collocation": "a limit switch",
+                "example": "The diagram includes a limit switch.",
+                "example_vi": "Sơ đồ có một công tắc hành trình.",
+                "key": "robotics-devices-vocab-switch"
+              },
+              {
+                "word": "detect",
+                "part_of_speech": "verb",
+                "meaning": "phát hiện",
+                "collocation": "detect an object",
+                "example": "This sensor detects an object at the station.",
+                "example_vi": "Cảm biến này phát hiện vật tại trạm.",
+                "key": "robotics-devices-vocab-detect"
+              },
+              {
+                "word": "command",
+                "part_of_speech": "noun",
+                "meaning": "lệnh điều khiển",
+                "collocation": "send a command",
+                "example": "The controller sends a command to the drive.",
+                "example_vi": "Bộ điều khiển gửi lệnh tới bộ truyền động.",
+                "key": "robotics-devices-vocab-command"
+              },
+              {
+                "word": "feedback",
+                "part_of_speech": "noun",
+                "meaning": "thông tin phản hồi về trạng thái hệ thống",
+                "collocation": "position feedback",
+                "example": "Position feedback tells the controller where the axis is.",
+                "example_vi": "Phản hồi vị trí cho bộ điều khiển biết trục đang ở đâu.",
+                "key": "robotics-devices-vocab-feedback"
+              }
+            ],
+            "grammar": "The sensor detects ...; the controller receives ...; the actuator moves ... Phân biệt bộ cảm nhận với cơ cấu tác động. Feedback ở đây là tín hiệu trạng thái, không phải nhận xét của khách hàng.",
+            "reading": "In a classroom animation, a sensor detects a box at a station. A controller receives the signal and sends a command to a motor drive. The motor moves a conveyor. A position signal returns to the controller as feedback. The animation is used to practise describing the system in English.",
+            "reading_task": "Ghép vai trò với thiết bị. Đáp án: sensor phát hiện; controller nhận và gửi lệnh; motor tạo chuyển động; tín hiệu vị trí là phản hồi.",
+            "dialogue": "Mai: Does the sensor move the box?\nNam: No. It detects the box.\nMai: What creates the movement?\nNam: The motor drives the conveyor in this animation.",
+            "practice": "Nói 3 câu về vai trò thiết bị. Mẫu: The sensor detects the box. The controller sends a command. The motor moves the conveyor. Tự kiểm: không gán việc tạo chuyển động cho cảm biến.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What detects the box?",
+                "options": [
+                  "The sensor",
+                  "The motor",
+                  "The English report"
+                ],
+                "answer": "A",
+                "explanation": "Sensor phát hiện hộp.",
+                "use_reading": true,
+                "key": "robotics-devices-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose actuator or feedback: Information returned about position is ___.",
+                "answers": [
+                  "feedback"
+                ],
+                "explanation": "Feedback là thông tin phản hồi.",
+                "key": "robotics-devices-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What sends the command?",
+                "options": [
+                  "The controller",
+                  "The box",
+                  "The conveyor roller"
+                ],
+                "answer": "A",
+                "explanation": "Controller gửi lệnh.",
+                "use_reading": true,
+                "key": "robotics-devices-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose motor or sensor: The device producing rotation in this example is a ___.",
+                "answers": [
+                  "motor"
+                ],
+                "explanation": "Motor tạo chuyển động quay.",
+                "key": "robotics-devices-quiz-04",
+                "use_reading": true
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What kind of activity is described?",
+                "options": [
+                  "Live machine commissioning",
+                  "A real emergency",
+                  "A classroom animation"
+                ],
+                "answer": "C",
+                "explanation": "Bài sử dụng hoạt hình lớp học.",
+                "use_reading": true,
+                "key": "robotics-devices-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "robotics-tool-specs",
+            "title": "Clarifying Robot Tool Information",
+            "objectives": "Hỏi rõ tên công cụ, khối lượng và đơn vị khi trao đổi tài liệu robot.",
+            "vocabulary": [
+              {
+                "word": "robot arm",
+                "part_of_speech": "noun",
+                "meaning": "tay máy robot",
+                "collocation": "a robot arm",
+                "example": "The drawing shows a robot arm.",
+                "example_vi": "Bản vẽ thể hiện một tay máy robot.",
+                "key": "robotics-tool-specs-vocab-robot-arm"
+              },
+              {
+                "word": "end effector",
+                "part_of_speech": "noun",
+                "meaning": "công cụ hoặc thiết bị ở đầu làm việc của robot",
+                "collocation": "attach an end effector",
+                "example": "The gripper is the end effector in this example.",
+                "example_vi": "Tay kẹp là công cụ đầu cuối trong ví dụ này.",
+                "key": "robotics-tool-specs-vocab-end-effector"
+              },
+              {
+                "word": "gripper",
+                "part_of_speech": "noun",
+                "meaning": "tay kẹp",
+                "collocation": "a two-finger gripper",
+                "example": "The gripper holds a sample part.",
+                "example_vi": "Tay kẹp giữ một chi tiết mẫu.",
+                "key": "robotics-tool-specs-vocab-gripper"
+              },
+              {
+                "word": "payload",
+                "part_of_speech": "noun",
+                "meaning": "tải gắn trên robot, tính cả công cụ và vật mang theo cách định nghĩa đang dùng",
+                "collocation": "state the payload",
+                "example": "Please state what the payload figure includes.",
+                "example_vi": "Hãy nêu con số tải bao gồm những gì.",
+                "key": "robotics-tool-specs-vocab-payload"
+              },
+              {
+                "word": "reach",
+                "part_of_speech": "noun",
+                "meaning": "tầm với",
+                "collocation": "robot reach",
+                "example": "The brochure lists the robot reach.",
+                "example_vi": "Tài liệu giới thiệu ghi tầm với robot.",
+                "key": "robotics-tool-specs-vocab-reach"
+              },
+              {
+                "word": "mass",
+                "part_of_speech": "noun",
+                "meaning": "khối lượng",
+                "collocation": "tool mass",
+                "example": "The fictional tool mass is one kilogram.",
+                "example_vi": "Khối lượng công cụ giả lập là một kilôgam.",
+                "key": "robotics-tool-specs-vocab-mass"
+              },
+              {
+                "word": "specification",
+                "part_of_speech": "noun",
+                "meaning": "thông số hoặc yêu cầu kỹ thuật",
+                "collocation": "check a specification",
+                "example": "We check the specification before comparing products.",
+                "example_vi": "Chúng tôi kiểm tra thông số trước khi so sánh sản phẩm.",
+                "key": "robotics-tool-specs-vocab-specification"
+              },
+              {
+                "word": "confirm",
+                "part_of_speech": "verb",
+                "meaning": "xác nhận",
+                "collocation": "confirm the units",
+                "example": "Could you confirm the units in this table?",
+                "example_vi": "Bạn có thể xác nhận đơn vị trong bảng này không?",
+                "key": "robotics-tool-specs-vocab-confirm"
+              }
+            ],
+            "grammar": "Does this include ...? hỏi con số bao gồm thành phần nào. The mass is ... kg. Khối lượng ghi kg, không đổi sang đơn vị lực. Không dùng tổng khối lượng đơn giản để kết luận robot thực tế phù hợp: còn cần định nghĩa và điều kiện của nhà sản xuất.",
+            "reading": "A fictional tool note lists a gripper mass of 1 kg and a sample part mass of 0.5 kg. In this exercise, the attached mass includes both items, so it totals 1.5 kg. Lan asks whether the cable mass is included; the note does not say. She records that question instead of claiming the setup is suitable for a real robot.",
+            "reading_task": "Ghi tổng đã biết và điều chưa rõ. Đáp án: 1.5 kg gồm kẹp và vật; chưa rõ cáp có được tính không.",
+            "dialogue": "Lan: Does 1.5 kg include the cable?\nSupplier: The sample note does not specify that.\nLan: Please confirm the included items.\nSupplier: I will check the full specification.",
+            "practice": "Viết email 3 câu. Mẫu: The listed mass is 1.5 kg. Does this include the cable? Please confirm the included items and units. Tự kiểm: hỏi phần thiếu, không kết luận chọn robot từ số liệu giả lập.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is the total of the two listed masses?",
+                "options": [
+                  "1 kg",
+                  "0.5 kg",
+                  "1.5 kg"
+                ],
+                "answer": "C",
+                "explanation": "1 + 0.5 = 1.5 kg.",
+                "use_reading": true,
+                "key": "robotics-tool-specs-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose gripper or reach: A tool used to hold a part is a ___.",
+                "answers": [
+                  "gripper"
+                ],
+                "explanation": "Gripper là tay kẹp.",
+                "key": "robotics-tool-specs-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What remains unclear?",
+                "options": [
+                  "Whether a gripper is listed",
+                  "The unit of the two values",
+                  "Whether the cable mass is included"
+                ],
+                "answer": "C",
+                "explanation": "Đề chưa nói về khối lượng cáp.",
+                "use_reading": true,
+                "key": "robotics-tool-specs-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose mass or command: A value in kilograms describes ___.",
+                "answers": [
+                  "mass"
+                ],
+                "explanation": "Kilôgam là đơn vị khối lượng.",
+                "key": "robotics-tool-specs-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which request is useful?",
+                "options": [
+                  "Ignore the missing detail",
+                  "Please confirm what the listed mass includes",
+                  "Guarantee every robot works"
+                ],
+                "answer": "B",
+                "explanation": "Cần làm rõ thành phần của con số.",
+                "key": "robotics-tool-specs-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A classroom animation shows a sensor detecting a part. A controller sends a command to a motor. A tool note lists a gripper of 2 kg and a part of 1 kg. The sum of those two masses is 3 kg. The note does not say whether cables are included and does not approve any real robot setup.",
+        "test": [
+          {
+            "lesson_key": "robotics-devices",
+            "type": "single_choice",
+            "prompt": "Which device detects the part?",
+            "options": [
+              "Sensor",
+              "Motor",
+              "Gripper"
+            ],
+            "answer": "A",
+            "explanation": "Sensor phát hiện vật.",
+            "use_reading": true,
+            "key": "robotics-sensing-actuation-test-01"
+          },
+          {
+            "lesson_key": "robotics-devices",
+            "type": "fill_blank",
+            "prompt": "Choose command or mass: The controller sends a ___ to the drive.",
+            "answers": [
+              "command"
+            ],
+            "explanation": "Command là lệnh điều khiển.",
+            "key": "robotics-sensing-actuation-test-02"
+          },
+          {
+            "lesson_key": "robotics-devices",
+            "type": "single_choice",
+            "prompt": "Which word describes returned position information?",
+            "options": [
+              "Payload",
+              "Deadline",
+              "Feedback"
+            ],
+            "answer": "C",
+            "explanation": "Feedback là thông tin trạng thái trả về.",
+            "key": "robotics-sensing-actuation-test-03"
+          },
+          {
+            "lesson_key": "robotics-devices",
+            "type": "fill_blank",
+            "prompt": "Choose actuator or log: A device that creates physical motion is an ___.",
+            "answers": [
+              "actuator"
+            ],
+            "explanation": "Actuator là cơ cấu chấp hành.",
+            "key": "robotics-sensing-actuation-test-04"
+          },
+          {
+            "lesson_key": "robotics-devices",
+            "type": "single_choice",
+            "prompt": "What is the context?",
+            "options": [
+              "A manufacturer approval",
+              "A classroom animation",
+              "A real repair"
+            ],
+            "answer": "B",
+            "explanation": "Đề mô tả hoạt hình lớp học.",
+            "use_reading": true,
+            "key": "robotics-sensing-actuation-test-05"
+          },
+          {
+            "lesson_key": "robotics-tool-specs",
+            "type": "fill_blank",
+            "prompt": "What is the sum of the two listed masses in kg? Write digits only.",
+            "answers": [
+              "3"
+            ],
+            "explanation": "2 + 1 = 3 kg.",
+            "use_reading": true,
+            "key": "robotics-sensing-actuation-test-06"
+          },
+          {
+            "lesson_key": "robotics-tool-specs",
+            "type": "single_choice",
+            "prompt": "What has not been specified?",
+            "options": [
+              "Whether cable mass is included",
+              "The gripper mass",
+              "The part mass"
+            ],
+            "answer": "A",
+            "explanation": "Khối lượng cáp chưa rõ.",
+            "use_reading": true,
+            "key": "robotics-sensing-actuation-test-07"
+          },
+          {
+            "lesson_key": "robotics-tool-specs",
+            "type": "fill_blank",
+            "prompt": "Choose reach or gripper: A robot tool that holds a part is a ___.",
+            "answers": [
+              "gripper"
+            ],
+            "explanation": "Gripper là công cụ giữ vật.",
+            "key": "robotics-sensing-actuation-test-08"
+          },
+          {
+            "lesson_key": "robotics-tool-specs",
+            "type": "single_choice",
+            "prompt": "Which question should be asked?",
+            "options": [
+              "Is every robot approved?",
+              "Does the total include cables?",
+              "Can we ignore every condition?"
+            ],
+            "answer": "B",
+            "explanation": "Cần làm rõ thành phần khối lượng.",
+            "use_reading": true,
+            "key": "robotics-sensing-actuation-test-09"
+          },
+          {
+            "lesson_key": "robotics-tool-specs",
+            "type": "single_choice",
+            "prompt": "Which conclusion is supported?",
+            "options": [
+              "The two listed masses total 3 kg",
+              "Every robot can carry this setup",
+              "The real setup is approved"
+            ],
+            "answer": "A",
+            "explanation": "Chỉ tổng hai khối lượng được xác nhận.",
+            "use_reading": true,
+            "key": "robotics-sensing-actuation-test-10"
+          }
+        ]
+      },
+      {
+        "key": "robotics-cycle-workflow",
+        "title": "Describing a Cycle",
+        "objectives": "Trình bày trình tự và trao đổi về thời lượng chu trình mô phỏng.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "robotics-cycle-description",
+            "title": "Describing an Automatic Cycle",
+            "objectives": "Dùng từ chỉ trình tự để mô tả chu trình trong mô phỏng.",
+            "vocabulary": [
+              {
+                "word": "sequence",
+                "part_of_speech": "noun",
+                "meaning": "trình tự các bước",
+                "collocation": "describe a sequence",
+                "example": "The sequence has four steps.",
+                "example_vi": "Trình tự có bốn bước.",
+                "key": "robotics-cycle-description-vocab-sequence"
+              },
+              {
+                "word": "cycle",
+                "part_of_speech": "noun",
+                "meaning": "chu kỳ hoặc một lượt hoạt động",
+                "collocation": "complete a cycle",
+                "example": "One cycle ends when the part reaches the tray.",
+                "example_vi": "Một chu kỳ kết thúc khi chi tiết tới khay.",
+                "key": "robotics-cycle-description-vocab-cycle"
+              },
+              {
+                "word": "conveyor",
+                "part_of_speech": "noun",
+                "meaning": "băng tải",
+                "collocation": "a conveyor belt",
+                "example": "The conveyor carries the part to the station.",
+                "example_vi": "Băng tải đưa chi tiết tới trạm.",
+                "key": "robotics-cycle-description-vocab-conveyor"
+              },
+              {
+                "word": "position",
+                "part_of_speech": "noun",
+                "meaning": "vị trí",
+                "collocation": "a target position",
+                "example": "The arm moves to the target position in the simulation.",
+                "example_vi": "Tay máy tới vị trí đích trong mô phỏng.",
+                "key": "robotics-cycle-description-vocab-position"
+              },
+              {
+                "word": "pick",
+                "part_of_speech": "verb",
+                "meaning": "gắp hoặc nhấc lấy",
+                "collocation": "pick a part",
+                "example": "The animated robot picks a part.",
+                "example_vi": "Robot trong hoạt hình gắp một chi tiết.",
+                "key": "robotics-cycle-description-vocab-pick"
+              },
+              {
+                "word": "place",
+                "part_of_speech": "verb",
+                "meaning": "đặt",
+                "collocation": "place a part",
+                "example": "It places the part in a tray.",
+                "example_vi": "Nó đặt chi tiết vào khay.",
+                "key": "robotics-cycle-description-vocab-place"
+              },
+              {
+                "word": "station",
+                "part_of_speech": "noun",
+                "meaning": "trạm làm việc",
+                "collocation": "an inspection station",
+                "example": "The part arrives at the inspection station.",
+                "example_vi": "Chi tiết đến trạm kiểm tra.",
+                "key": "robotics-cycle-description-vocab-station"
+              },
+              {
+                "word": "tray",
+                "part_of_speech": "noun",
+                "meaning": "khay",
+                "collocation": "an empty tray",
+                "example": "The tray holds the finished parts.",
+                "example_vi": "Khay chứa các chi tiết đã hoàn thành.",
+                "key": "robotics-cycle-description-vocab-tray"
+              }
+            ],
+            "grammar": "First / Next / Then / Finally đánh dấu trình tự. After + mệnh đề: After the part arrives, the robot picks it. Mô tả chu trình trong bài không phải lệnh vận hành robot thật.",
+            "reading": "In a fictional animation, a conveyor brings one part to a station. Next, the robot picks the part. Then it places the part in a tray. Finally, the display records one completed cycle. The scene repeats with the next part. Students describe the sequence without operating a real machine.",
+            "reading_task": "Nêu 4 bước. Đáp án: băng tải đưa chi tiết → robot gắp → đặt khay → ghi nhận một chu kỳ.",
+            "dialogue": "Tutor: What happens after the part reaches the station?\nMai: The robot picks it.\nTutor: Where does it place the part?\nMai: In the tray.",
+            "practice": "Kể lại chu trình trong 4 câu có từ nối. Mẫu: First, the conveyor brings the part. Next, the robot picks it. Then, it places it in a tray. Finally, the display counts the cycle. Tự kiểm: đúng thứ tự, phân biệt pick và place.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What brings the part to the station?",
+                "options": [
+                  "A conveyor",
+                  "A tray label",
+                  "A report"
+                ],
+                "answer": "A",
+                "explanation": "Conveyor đưa chi tiết đến.",
+                "use_reading": true,
+                "key": "robotics-cycle-description-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose pick or place: To take hold of a part for transfer is to ___ it.",
+                "answers": [
+                  "pick"
+                ],
+                "explanation": "Pick là gắp hoặc lấy lên.",
+                "key": "robotics-cycle-description-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Where is the part placed?",
+                "options": [
+                  "In a tray",
+                  "On the keyboard",
+                  "In a database"
+                ],
+                "answer": "A",
+                "explanation": "Đặt vào khay.",
+                "use_reading": true,
+                "key": "robotics-cycle-description-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose cycle or mass: One complete repetition of the sequence is a ___.",
+                "answers": [
+                  "cycle"
+                ],
+                "explanation": "Cycle là một chu kỳ.",
+                "key": "robotics-cycle-description-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What happens last in the described cycle?",
+                "options": [
+                  "The conveyor is manufactured",
+                  "The display records completion",
+                  "The student operates real hardware"
+                ],
+                "answer": "B",
+                "explanation": "Màn hình ghi một chu kỳ hoàn tất.",
+                "use_reading": true,
+                "key": "robotics-cycle-description-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "robotics-cycle-review",
+            "title": "Reviewing a Cycle with a Teammate",
+            "objectives": "Trao đổi thời gian, thứ tự và điểm cần xác nhận của chu trình giả lập.",
+            "vocabulary": [
+              {
+                "word": "duration",
+                "part_of_speech": "noun",
+                "meaning": "thời lượng",
+                "collocation": "cycle duration",
+                "example": "The cycle duration is twelve seconds.",
+                "example_vi": "Thời lượng chu kỳ là mười hai giây.",
+                "key": "robotics-cycle-review-vocab-duration"
+              },
+              {
+                "word": "delay",
+                "part_of_speech": "noun",
+                "meaning": "độ trễ; sự chậm",
+                "collocation": "a short delay",
+                "example": "There is a delay before the final step.",
+                "example_vi": "Có một độ trễ trước bước cuối.",
+                "key": "robotics-cycle-review-vocab-delay"
+              },
+              {
+                "word": "repeat",
+                "part_of_speech": "verb",
+                "meaning": "lặp lại",
+                "collocation": "repeat the animation",
+                "example": "Please repeat the animation for the presentation.",
+                "example_vi": "Hãy phát lại hoạt hình để thuyết trình.",
+                "key": "robotics-cycle-review-vocab-repeat"
+              },
+              {
+                "word": "order",
+                "part_of_speech": "noun",
+                "meaning": "thứ tự",
+                "collocation": "the correct order",
+                "example": "The steps must be described in the correct order.",
+                "example_vi": "Các bước cần được mô tả đúng thứ tự.",
+                "key": "robotics-cycle-review-vocab-order"
+              },
+              {
+                "word": "before",
+                "part_of_speech": "preposition",
+                "meaning": "trước",
+                "collocation": "before the final step",
+                "example": "The robot picks the part before placement.",
+                "example_vi": "Robot gắp chi tiết trước khi đặt.",
+                "key": "robotics-cycle-review-vocab-before"
+              },
+              {
+                "word": "after",
+                "part_of_speech": "preposition",
+                "meaning": "sau",
+                "collocation": "after the first step",
+                "example": "The display changes after the first step.",
+                "example_vi": "Màn hình thay đổi sau bước đầu.",
+                "key": "robotics-cycle-review-vocab-after"
+              },
+              {
+                "word": "handover",
+                "part_of_speech": "noun",
+                "meaning": "việc bàn giao thông tin hoặc công việc",
+                "collocation": "a handover note",
+                "example": "The handover note lists the remaining questions.",
+                "example_vi": "Ghi chú bàn giao liệt kê câu hỏi còn lại.",
+                "key": "robotics-cycle-review-vocab-handover"
+              },
+              {
+                "word": "clarify",
+                "part_of_speech": "verb",
+                "meaning": "làm rõ",
+                "collocation": "clarify the timing",
+                "example": "Could you clarify the timing of this step?",
+                "example_vi": "Bạn có thể làm rõ thời điểm của bước này không?",
+                "key": "robotics-cycle-review-vocab-clarify"
+              }
+            ],
+            "grammar": "Before/after + danh từ hoặc mệnh đề xác định thứ tự. The cycle takes twelve seconds nói thời lượng, không phải giờ trong ngày. I observed ... phân biệt quan sát với mục tiêu thiết kế.",
+            "reading": "A team reviews an animation of a pick-and-place cycle. The recorded cycle takes twelve seconds. The target in the classroom brief is ten seconds. There is a visible delay before placement, but its cause is unknown. The handover note reports the difference and asks the next reviewer to clarify the timing.",
+            "reading_task": "Ghi thời lượng thực tế, mục tiêu và điều chưa rõ. Đáp án: 12 giây, 10 giây; chưa rõ nguyên nhân trễ trước bước đặt.",
+            "dialogue": "Mai: Is the cycle two seconds longer than the target?\nNam: Yes, in this recording.\nMai: Do we know the cause?\nNam: No. We should record the observation and ask for a review.",
+            "practice": "Viết bàn giao 3 câu. Mẫu: The recorded cycle takes 12 seconds. The target is 10 seconds. Please review the delay before placement. Tự kiểm: giữ số và đơn vị, không tự chẩn đoán hỏng động cơ.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "How long is the recorded cycle?",
+                "options": [
+                  "Twelve seconds",
+                  "Two seconds",
+                  "Ten seconds"
+                ],
+                "answer": "A",
+                "explanation": "Thời lượng ghi nhận là 12 giây.",
+                "use_reading": true,
+                "key": "robotics-cycle-review-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose before or after: The visible delay occurs ___ placement.",
+                "answers": [
+                  "before"
+                ],
+                "explanation": "Trễ xảy ra trước bước đặt.",
+                "use_reading": true,
+                "key": "robotics-cycle-review-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is unknown?",
+                "options": [
+                  "The target duration",
+                  "The recorded duration",
+                  "The cause of the delay"
+                ],
+                "answer": "C",
+                "explanation": "Nguyên nhân chưa rõ.",
+                "use_reading": true,
+                "key": "robotics-cycle-review-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose handover or payload: A note transferring work information is a ___ note.",
+                "answers": [
+                  "handover"
+                ],
+                "explanation": "Handover note là ghi chú bàn giao.",
+                "key": "robotics-cycle-review-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which report is accurate?",
+                "options": [
+                  "The motor is definitely broken",
+                  "The recorded cycle is two seconds over the target",
+                  "Every cycle always takes ten seconds"
+                ],
+                "answer": "B",
+                "explanation": "12 trừ 10 bằng 2, chỉ áp dụng lần ghi nhận.",
+                "use_reading": true,
+                "key": "robotics-cycle-review-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "In a fictional animation, a conveyor brings a part to a station. The robot picks it and places it in a tray. The display counts the completed cycle. One recorded cycle lasts 9 seconds, while the target is 8 seconds. A delay appears before placement; its cause has not been identified.",
+        "test": [
+          {
+            "lesson_key": "robotics-cycle-description",
+            "type": "single_choice",
+            "prompt": "Where is the part placed?",
+            "options": [
+              "In a report",
+              "In a tray",
+              "On an axis label"
+            ],
+            "answer": "B",
+            "explanation": "Chi tiết được đặt vào khay.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-01"
+          },
+          {
+            "lesson_key": "robotics-cycle-description",
+            "type": "fill_blank",
+            "prompt": "Choose conveyor or controller: The ___ carries the part to the station.",
+            "answers": [
+              "conveyor"
+            ],
+            "explanation": "Conveyor là băng tải.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-02"
+          },
+          {
+            "lesson_key": "robotics-cycle-description",
+            "type": "single_choice",
+            "prompt": "Which action comes before placement?",
+            "options": [
+              "Replacing a sensor",
+              "Picking the part",
+              "Writing a handover"
+            ],
+            "answer": "B",
+            "explanation": "Pick diễn ra trước place.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-03"
+          },
+          {
+            "lesson_key": "robotics-cycle-description",
+            "type": "fill_blank",
+            "prompt": "Choose cycle or cable: One full sequence is a ___.",
+            "answers": [
+              "cycle"
+            ],
+            "explanation": "Cycle là một chu kỳ.",
+            "key": "robotics-cycle-workflow-test-04"
+          },
+          {
+            "lesson_key": "robotics-cycle-description",
+            "type": "single_choice",
+            "prompt": "What happens at the end?",
+            "options": [
+              "The motor is repaired",
+              "The target changes",
+              "The display counts a completed cycle"
+            ],
+            "answer": "C",
+            "explanation": "Màn hình ghi nhận chu kỳ hoàn tất.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-05"
+          },
+          {
+            "lesson_key": "robotics-cycle-review",
+            "type": "fill_blank",
+            "prompt": "How many seconds longer than the target is the recorded cycle? Write digits.",
+            "answers": [
+              "1"
+            ],
+            "explanation": "9 trừ 8 bằng 1 giây.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-06"
+          },
+          {
+            "lesson_key": "robotics-cycle-review",
+            "type": "single_choice",
+            "prompt": "What is not known?",
+            "options": [
+              "The recorded duration",
+              "The target duration",
+              "The cause of the delay"
+            ],
+            "answer": "C",
+            "explanation": "Nguyên nhân trễ chưa được xác định.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-07"
+          },
+          {
+            "lesson_key": "robotics-cycle-review",
+            "type": "fill_blank",
+            "prompt": "Choose before or after: The delay occurs ___ placement.",
+            "answers": [
+              "before"
+            ],
+            "explanation": "Trước bước đặt.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-08"
+          },
+          {
+            "lesson_key": "robotics-cycle-review",
+            "type": "single_choice",
+            "prompt": "Which handover is precise?",
+            "options": [
+              "The motor is broken",
+              "All cycles are perfect",
+              "The recorded cycle is 9 seconds; target 8 seconds"
+            ],
+            "answer": "C",
+            "explanation": "Câu nêu số quan sát và mục tiêu, không suy đoán.",
+            "use_reading": true,
+            "key": "robotics-cycle-workflow-test-09"
+          },
+          {
+            "lesson_key": "robotics-cycle-review",
+            "type": "single_choice",
+            "prompt": "Which question asks about timing?",
+            "options": [
+              "Who made the keyboard?",
+              "Could you clarify the duration of this step?",
+              "What color is the tray?"
+            ],
+            "answer": "B",
+            "explanation": "Duration là thời lượng.",
+            "key": "robotics-cycle-workflow-test-10"
+          }
+        ]
+      },
+      {
+        "key": "robotics-status-incidents",
+        "title": "Status and Incident Communication",
+        "objectives": "Đọc trạng thái và viết bàn giao sự cố có người phụ trách.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "robotics-status-reading",
+            "title": "Reading Status and Alarm Messages",
+            "objectives": "Đọc trạng thái và mã báo động, mô tả hiện tượng mà không suy đoán nguyên nhân.",
+            "vocabulary": [
+              {
+                "word": "status",
+                "part_of_speech": "noun",
+                "meaning": "trạng thái hiện tại",
+                "collocation": "read the status",
+                "example": "The screen shows the current status.",
+                "example_vi": "Màn hình hiển thị trạng thái hiện tại.",
+                "key": "robotics-status-reading-vocab-status"
+              },
+              {
+                "word": "idle",
+                "part_of_speech": "adjective",
+                "meaning": "đang chờ; chưa chạy tác vụ",
+                "collocation": "an idle system",
+                "example": "The simulated system is idle.",
+                "example_vi": "Hệ mô phỏng đang chờ.",
+                "key": "robotics-status-reading-vocab-idle"
+              },
+              {
+                "word": "running",
+                "part_of_speech": "adjective",
+                "meaning": "đang chạy",
+                "collocation": "a running cycle",
+                "example": "The status changes to running.",
+                "example_vi": "Trạng thái chuyển sang đang chạy.",
+                "key": "robotics-status-reading-vocab-running"
+              },
+              {
+                "word": "stopped",
+                "part_of_speech": "adjective",
+                "meaning": "đã dừng",
+                "collocation": "a stopped cycle",
+                "example": "The display reports a stopped cycle.",
+                "example_vi": "Màn hình báo chu kỳ đã dừng.",
+                "key": "robotics-status-reading-vocab-stopped"
+              },
+              {
+                "word": "alarm",
+                "part_of_speech": "noun",
+                "meaning": "cảnh báo hoặc báo động của hệ thống",
+                "collocation": "an alarm message",
+                "example": "An alarm message appears on the display.",
+                "example_vi": "Một thông báo báo động xuất hiện trên màn hình.",
+                "key": "robotics-status-reading-vocab-alarm"
+              },
+              {
+                "word": "fault",
+                "part_of_speech": "noun",
+                "meaning": "lỗi hoặc tình trạng bất thường được ghi nhận",
+                "collocation": "a fault code",
+                "example": "The note records a fault code.",
+                "example_vi": "Ghi chú ghi lại một mã lỗi.",
+                "key": "robotics-status-reading-vocab-fault"
+              },
+              {
+                "word": "timestamp",
+                "part_of_speech": "noun",
+                "meaning": "mốc thời gian của sự kiện",
+                "collocation": "an event timestamp",
+                "example": "The timestamp is 09:15.",
+                "example_vi": "Mốc thời gian là 09:15.",
+                "key": "robotics-status-reading-vocab-timestamp"
+              },
+              {
+                "word": "log",
+                "part_of_speech": "noun",
+                "meaning": "bản ghi sự kiện",
+                "collocation": "read the log",
+                "example": "The log lists three status changes.",
+                "example_vi": "Bản ghi liệt kê ba lần đổi trạng thái.",
+                "key": "robotics-status-reading-vocab-log"
+              }
+            ],
+            "grammar": "The display shows ... báo điều nhìn thấy. At 09:15, ... gắn thời điểm với sự kiện. A code appears không đủ để kết luận hỏng một bộ phận nếu chưa tra tài liệu đúng hệ thống.",
+            "reading": "A fictional simulator log shows idle at 09:00, running at 09:02, and stopped at 09:15. At 09:15, the screen also shows code X17. The exercise does not define that code. Lan records the exact code and timestamp, and asks for the simulator documentation instead of guessing the cause.",
+            "reading_task": "Ghi trạng thái lúc 09:15, mã và điều chưa biết. Đáp án: stopped, X17; chưa có định nghĩa mã.",
+            "dialogue": "Lan: The simulator shows X17 at 09:15.\nNam: Does that mean the motor is broken?\nLan: We cannot tell from this exercise.\nNam: Let us ask for the code definition.",
+            "practice": "Viết thông báo 3 câu. Mẫu: The simulator stopped at 09:15. It displayed X17. Could you provide the definition of this code? Tự kiểm: mã và giờ chính xác, không tự diễn giải lỗi.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is the status at 09:15?",
+                "options": [
+                  "Stopped",
+                  "Running",
+                  "Idle"
+                ],
+                "answer": "A",
+                "explanation": "Lúc 09:15 là stopped.",
+                "use_reading": true,
+                "key": "robotics-status-reading-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Copy the exact alarm code from the passage.",
+                "answers": [
+                  "X17"
+                ],
+                "explanation": "Mã được ghi là X17.",
+                "use_reading": true,
+                "key": "robotics-status-reading-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What should Lan request?",
+                "options": [
+                  "A new motor without checking",
+                  "The simulator documentation",
+                  "An unrelated chart"
+                ],
+                "answer": "B",
+                "explanation": "Cần định nghĩa mã trong tài liệu đúng hệ.",
+                "use_reading": true,
+                "key": "robotics-status-reading-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose timestamp or mass: The recorded time of an event is its ___.",
+                "answers": [
+                  "timestamp"
+                ],
+                "explanation": "Timestamp là mốc thời gian.",
+                "key": "robotics-status-reading-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which claim is unsupported?",
+                "options": [
+                  "A code appears",
+                  "The simulator stopped",
+                  "The motor is definitely broken"
+                ],
+                "answer": "C",
+                "explanation": "Không có định nghĩa mã để chẩn đoán hỏng động cơ.",
+                "use_reading": true,
+                "key": "robotics-status-reading-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "robotics-incident-handover",
+            "title": "Writing an Incident Handover",
+            "objectives": "Bàn giao sự cố bằng quan sát, phần chưa rõ, người phụ trách và hành động tiếp theo.",
+            "vocabulary": [
+              {
+                "word": "incident",
+                "part_of_speech": "noun",
+                "meaning": "sự cố hoặc sự kiện cần ghi nhận",
+                "collocation": "report an incident",
+                "example": "We report the simulator incident.",
+                "example_vi": "Chúng tôi báo sự cố mô phỏng.",
+                "key": "robotics-incident-handover-vocab-incident"
+              },
+              {
+                "word": "observation",
+                "part_of_speech": "noun",
+                "meaning": "điều quan sát được",
+                "collocation": "record an observation",
+                "example": "The observation is a blank status field.",
+                "example_vi": "Điều quan sát được là ô trạng thái trống.",
+                "key": "robotics-incident-handover-vocab-observation"
+              },
+              {
+                "word": "unknown",
+                "part_of_speech": "adjective",
+                "meaning": "chưa biết",
+                "collocation": "an unknown cause",
+                "example": "The cause is still unknown.",
+                "example_vi": "Nguyên nhân vẫn chưa biết.",
+                "key": "robotics-incident-handover-vocab-unknown"
+              },
+              {
+                "word": "pending",
+                "part_of_speech": "adjective",
+                "meaning": "đang chờ xử lý hoặc xác nhận",
+                "collocation": "a pending review",
+                "example": "The review is pending.",
+                "example_vi": "Việc xem xét đang chờ xử lý.",
+                "key": "robotics-incident-handover-vocab-pending"
+              },
+              {
+                "word": "responsible",
+                "part_of_speech": "adjective",
+                "meaning": "chịu trách nhiệm",
+                "collocation": "be responsible for the review",
+                "example": "Lan is responsible for the review.",
+                "example_vi": "Lan chịu trách nhiệm xem xét.",
+                "key": "robotics-incident-handover-vocab-responsible"
+              },
+              {
+                "word": "escalate",
+                "part_of_speech": "verb",
+                "meaning": "chuyển vấn đề lên người có trách nhiệm phù hợp",
+                "collocation": "escalate an issue",
+                "example": "We escalate the issue to the supervisor.",
+                "example_vi": "Chúng tôi chuyển vấn đề cho người giám sát.",
+                "key": "robotics-incident-handover-vocab-escalate"
+              },
+              {
+                "word": "acknowledge",
+                "part_of_speech": "verb",
+                "meaning": "xác nhận đã nhận thông tin",
+                "collocation": "acknowledge a message",
+                "example": "Please acknowledge this handover message.",
+                "example_vi": "Hãy xác nhận đã nhận thông tin bàn giao này.",
+                "key": "robotics-incident-handover-vocab-acknowledge"
+              },
+              {
+                "word": "follow-up",
+                "part_of_speech": "noun",
+                "meaning": "việc theo dõi hoặc trao đổi tiếp",
+                "collocation": "a follow-up meeting",
+                "example": "The follow-up meeting is tomorrow.",
+                "example_vi": "Buổi trao đổi tiếp theo diễn ra ngày mai.",
+                "key": "robotics-incident-handover-vocab-follow-up"
+              }
+            ],
+            "grammar": "Observed: ...; Unknown: ...; Next action: ... tách dữ kiện khỏi giả thuyết. Please acknowledge receipt xin xác nhận đã nhận, không có nghĩa vấn đề đã xử lý. Không coi việc bàn giao là cho phép khởi động lại thiết bị.",
+            "reading": "In a classroom simulator, the status field becomes blank after a cycle. Minh writes a handover note: the cycle ended at 14:10, the field is blank, and the cause is unknown. Lan is responsible for reviewing the simulator log tomorrow. Minh requests acknowledgement. The issue remains pending; the note does not claim a fix.",
+            "reading_task": "Nêu quan sát, người phụ trách và trạng thái. Đáp án: ô trạng thái trống; Lan; chờ xem xét.",
+            "dialogue": "Minh: Have you received the handover?\nLan: Yes. I will review the log tomorrow.\nMinh: Can I mark the issue as fixed?\nLan: No. The review is still pending.",
+            "practice": "Viết bàn giao 4 dòng. Mẫu: Observed: Blank status after the cycle. Time: 14:10. Owner: Lan. Next action: Review the log tomorrow; cause unknown. Tự kiểm: xác nhận nhận việc không bị diễn đạt thành đã sửa xong.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Who will review the log?",
+                "options": [
+                  "Minh",
+                  "Every student",
+                  "Lan"
+                ],
+                "answer": "C",
+                "explanation": "Lan chịu trách nhiệm.",
+                "use_reading": true,
+                "key": "robotics-incident-handover-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose pending or resolved: An issue waiting for review is ___.",
+                "answers": [
+                  "pending"
+                ],
+                "explanation": "Pending là đang chờ.",
+                "key": "robotics-incident-handover-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is the observed problem?",
+                "options": [
+                  "A confirmed broken motor",
+                  "A blank status field",
+                  "A missing gripper"
+                ],
+                "answer": "B",
+                "explanation": "Quan sát là ô trạng thái trống.",
+                "use_reading": true,
+                "key": "robotics-incident-handover-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose acknowledge or repair: To confirm receipt of a message is to ___ it.",
+                "answers": [
+                  "acknowledge"
+                ],
+                "explanation": "Acknowledge là xác nhận đã nhận.",
+                "key": "robotics-incident-handover-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Does the handover say the issue is fixed?",
+                "options": [
+                  "Yes, the cause is known",
+                  "No, review is still pending",
+                  "Yes, acknowledgement proves a fix"
+                ],
+                "answer": "B",
+                "explanation": "Chưa có kết quả sửa; vẫn chờ xem xét.",
+                "use_reading": true,
+                "key": "robotics-incident-handover-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional simulator is idle at 10:00, running at 10:03, and stopped at 10:08. Code Q4 appears at 10:08. Its meaning is not supplied. An records the code and asks Binh to review the documentation tomorrow. Binh acknowledges receipt. The review is pending and no fix has been confirmed.",
+        "test": [
+          {
+            "lesson_key": "robotics-status-reading",
+            "type": "single_choice",
+            "prompt": "What is the status at 10:08?",
+            "options": [
+              "Running",
+              "Stopped",
+              "Idle"
+            ],
+            "answer": "B",
+            "explanation": "10:08 trạng thái stopped.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-01"
+          },
+          {
+            "lesson_key": "robotics-status-reading",
+            "type": "fill_blank",
+            "prompt": "Copy the displayed code.",
+            "answers": [
+              "Q4"
+            ],
+            "explanation": "Mã Q4 được nêu trong bài.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-02"
+          },
+          {
+            "lesson_key": "robotics-status-reading",
+            "type": "single_choice",
+            "prompt": "Can the cause be inferred from the undefined code alone?",
+            "options": [
+              "Yes, always",
+              "No",
+              "Yes, it must be the motor"
+            ],
+            "answer": "B",
+            "explanation": "Mã chưa có định nghĩa.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-03"
+          },
+          {
+            "lesson_key": "robotics-status-reading",
+            "type": "fill_blank",
+            "prompt": "Choose timestamp or payload: 10:08 is the event ___.",
+            "answers": [
+              "timestamp"
+            ],
+            "explanation": "Đây là mốc thời gian.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-04"
+          },
+          {
+            "lesson_key": "robotics-status-reading",
+            "type": "single_choice",
+            "prompt": "What should be consulted for the code meaning?",
+            "options": [
+              "An unrelated drawing",
+              "A random price list",
+              "The simulator documentation"
+            ],
+            "answer": "C",
+            "explanation": "Cần tài liệu của mô phỏng.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-05"
+          },
+          {
+            "lesson_key": "robotics-incident-handover",
+            "type": "fill_blank",
+            "prompt": "Who will review the documentation? Copy the name.",
+            "answers": [
+              "Binh"
+            ],
+            "explanation": "Binh nhận việc xem tài liệu.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-06"
+          },
+          {
+            "lesson_key": "robotics-incident-handover",
+            "type": "single_choice",
+            "prompt": "What does acknowledgement establish?",
+            "options": [
+              "A confirmed repair",
+              "A known cause",
+              "Receipt of the message"
+            ],
+            "answer": "C",
+            "explanation": "Chỉ xác nhận đã nhận thông tin.",
+            "key": "robotics-status-incidents-test-07"
+          },
+          {
+            "lesson_key": "robotics-incident-handover",
+            "type": "fill_blank",
+            "prompt": "Choose pending or fixed: The review is still ___.",
+            "answers": [
+              "pending"
+            ],
+            "explanation": "Review còn chờ.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-08"
+          },
+          {
+            "lesson_key": "robotics-incident-handover",
+            "type": "single_choice",
+            "prompt": "Which claim would be premature?",
+            "options": [
+              "Q4 appeared",
+              "Binh received the message",
+              "The issue has been fixed"
+            ],
+            "answer": "C",
+            "explanation": "Chưa xác nhận bản sửa.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-09"
+          },
+          {
+            "lesson_key": "robotics-incident-handover",
+            "type": "single_choice",
+            "prompt": "Which note separates facts from unknowns?",
+            "options": [
+              "Everything is solved",
+              "Q4 at 10:08; cause unknown; review pending",
+              "Q4 proves a broken motor"
+            ],
+            "answer": "B",
+            "explanation": "Câu tách quan sát, điều chưa biết và trạng thái.",
+            "use_reading": true,
+            "key": "robotics-status-incidents-test-10"
+          }
+        ]
+      }
+    ]
+  }
+}

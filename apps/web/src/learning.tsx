@@ -22,6 +22,7 @@ import {
   useAction,
 } from "./ui";
 import { useUser } from "./main";
+import { NoteEditor, LessonDictations } from "./expansion";
 const start = async (id: string) => {
   const r = await mutate("learning", "/v1/attempts", { assessment_id: id });
   go("/attempt/" + r.attempt_id);
@@ -203,6 +204,7 @@ function Stat({
   );
 }
 export function Catalog() {
+  const params = new URLSearchParams(location.hash.split("?")[1]);
   const s = useLoad(() => api("content", "/v1/catalog")),
     a = useAction(),
     me = useUser();
@@ -224,7 +226,11 @@ export function Catalog() {
       <Notice>{a.error}</Notice>
       <Load state={s}>
         {s.data?.courses
-          .filter((c: Row) => c.title.toLowerCase().includes(q.toLowerCase()))
+          .filter(
+            (c: Row) =>
+              c.title.toLowerCase().includes(q.toLowerCase()) &&
+              (!params.get("course_id") || c.id === params.get("course_id")),
+          )
           .map((course: Row, n: number) => (
             <section className="card catalog-course" key={course.id}>
               <div className="course-head">
@@ -254,41 +260,47 @@ export function Catalog() {
                   Chọn lộ trình <ArrowRight size={16} />
                 </button>
               </div>
-              {course.topics.map((topic: Row) => (
-                <div className="topic" key={topic.id}>
-                  <h3>
-                    {topic.title}
-                    <span>{topic.lessons.length} bài học</span>
-                  </h3>
-                  {topic.lessons.map((lesson: Row, i: number) => (
-                    <a
-                      className="lesson-row"
-                      key={lesson.id}
-                      href={"#/lesson/" + lesson.id}
-                    >
-                      <span className="lesson-index">{i + 1}</span>
-                      <span>{lesson.title}</span>
-                      {lesson.is_preview && (
-                        <span className="tag">Học thử</span>
-                      )}
-                      <ArrowRight size={18} />
-                    </a>
-                  ))}
-                  {topic.assessment_id && (
-                    <button
-                      className="text-link"
-                      disabled={a.busy}
-                      onClick={() =>
-                        me
-                          ? a.run(() => start(topic.assessment_id))
-                          : go("/login")
-                      }
-                    >
-                      Làm kiểm tra chủ đề <ArrowRight size={16} />
-                    </button>
-                  )}
-                </div>
-              ))}
+              {course.topics
+                .filter(
+                  (topic: Row) =>
+                    !params.get("topic_id") ||
+                    topic.id === params.get("topic_id"),
+                )
+                .map((topic: Row) => (
+                  <div className="topic" key={topic.id}>
+                    <h3>
+                      {topic.title}
+                      <span>{topic.lessons.length} bài học</span>
+                    </h3>
+                    {topic.lessons.map((lesson: Row, i: number) => (
+                      <a
+                        className="lesson-row"
+                        key={lesson.id}
+                        href={"#/lesson/" + lesson.id}
+                      >
+                        <span className="lesson-index">{i + 1}</span>
+                        <span>{lesson.title}</span>
+                        {lesson.is_preview && (
+                          <span className="tag">Học thử</span>
+                        )}
+                        <ArrowRight size={18} />
+                      </a>
+                    ))}
+                    {topic.assessment_id && (
+                      <button
+                        className="text-link"
+                        disabled={a.busy}
+                        onClick={() =>
+                          me
+                            ? a.run(() => start(topic.assessment_id))
+                            : go("/login")
+                        }
+                      >
+                        Làm kiểm tra chủ đề <ArrowRight size={16} />
+                      </button>
+                    )}
+                  </div>
+                ))}
             </section>
           ))}
         {s.data?.courses.length === 0 && (
@@ -428,6 +440,12 @@ export function Lesson({ id }: { id: string }) {
               <p>Bài luyện tập đang được chuẩn bị.</p>
             )}
           </div>
+          {me && (
+            <>
+              <LessonDictations lessonId={id} />
+              <NoteEditor lessonId={id} />
+            </>
+          )}
         </>
       )}
     </Load>

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "title": "Technical English — Demo Catalog",
+  "audience": "Sinh viên đại học Việt Nam trong các nhóm ngành kỹ thuật; học tiếng Anh phục vụ học tập, thực tập và làm việc quốc tế.",
+  "level": "A2–B1",
+  "status": "authored_demo_pack_not_imported",
+  "assessment_note": "Điểm 1–5 là nhận định để phân bổ trọng tâm biên soạn, không phải khảo sát tuyển dụng hoặc chuẩn đầu ra. Bối cảnh xét gồm đọc tài liệu quốc tế và trao đổi trong nhóm/đối tác quốc tế. Các nhóm không phải danh mục mã ngành chính thức.",
+  "sources": [
+    {"title": "Cambridge — Workplace English Tool", "url": "https://englishatwork.cambridgeenglish.org/", "note": "Tham khảo cách xét nhu cầu theo kỹ năng và vai trò; nguồn không cung cấp điểm số nhóm ngành trong danh mục này."},
+    {"title": "IEEE — Guide to Technology Roadmaps", "url": "https://roadmaps.ieee.org/guide-to-technology-roadmaps/", "note": "Ví dụ về hệ sinh thái lộ trình công nghệ quốc tế trong điện tử/vi mạch; không phải dự báo tuyển dụng."}
+  ],
+  "courses": [
+    {"slug": "english-it", "course_key": "sprout-it-vocabulary", "field": "CNTT / Phần mềm", "scores": {"reading": 5, "communication": 4, "writing": 4}, "outcome": "Giới thiệu project, trao đổi nhóm và viết báo cáo lỗi.", "require_dialogue": false, "vocabulary_per_lesson": [8,10], "expected": {"topics": 4, "lessons": 12, "vocabulary_entries": 102, "questions": 100, "minutes": 280}},
+    {"slug": "english-data-ai", "course_key": "sprout-data-ai", "field": "Dữ liệu / AI", "scores": {"reading": 5, "communication": 4, "writing": 4}, "outcome": "Mô tả bảng và kết quả mô hình, nêu giới hạn và bước tiếp theo.", "require_dialogue": true, "vocabulary_per_lesson": [8,8], "expected": {"topics": 3, "lessons": 6, "vocabulary_entries": 48, "questions": 60, "minutes": 150}},
+    {"slug": "english-electronics", "course_key": "sprout-electronics", "field": "Điện tử / Vi mạch", "scores": {"reading": 5, "communication": 3, "writing": 4}, "outcome": "Đọc thông số mẫu, mô tả đường tín hiệu và báo cáo đo/kiểm tra.", "require_dialogue": true, "vocabulary_per_lesson": [8,8], "expected": {"topics": 3, "lessons": 6, "vocabulary_entries": 48, "questions": 60, "minutes": 150}},
+    {"slug": "english-robotics", "course_key": "sprout-robotics", "field": "Tự động hóa / Robot", "scores": {"reading": 5, "communication": 4, "writing": 4}, "outcome": "Mô tả vai trò thiết bị, chu trình và bàn giao sự cố có dữ kiện.", "require_dialogue": true, "vocabulary_per_lesson": [8,8], "expected": {"topics": 3, "lessons": 6, "vocabulary_entries": 48, "questions": 60, "minutes": 150}},
+    {"slug": "english-mechanical", "course_key": "sprout-mechanical", "field": "Cơ khí / Ô tô", "scores": {"reading": 4, "communication": 4, "writing": 4}, "outcome": "Nhận diện bộ phận, đọc kích thước và viết ghi chú kiểm tra/bàn giao.", "require_dialogue": true, "vocabulary_per_lesson": [8,8], "expected": {"topics": 3, "lessons": 6, "vocabulary_entries": 48, "questions": 60, "minutes": 150}}
+  ]
+}

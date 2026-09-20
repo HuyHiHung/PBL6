@@ -31,7 +31,7 @@ Các quy tắc sản phẩm lấy từ SRS; tài liệu này không định ngh�
 | Nội dung quản trị | Lộ trình/chủ đề/bài/câu hỏi/từ vựng/media; nháp, xem trước, xuất bản, ẩn | CMS-01–04 |
 | Vận hành quản trị | Học viên, Editor, cấp/thu hồi quyền, khóa tài khoản, tìm kiếm, thống kê | ADM-01–03 |
 
-**Chưa thuộc bản web MVP:** app native, Dictation, mục tiêu/chuỗi ngày học, sắp xếp từ, nhiều bộ thẻ tùy chỉnh, AI, offline, bảng xếp hạng, thanh toán/VIP, bình luận và thông báo nhắc học. Các phần có trong đề cương gốc vẫn cần xác nhận việc hoãn với giảng viên theo CONF-01 của SRS.
+**Chưa thuộc bản web MVP:** app native, mục tiêu/chuỗi ngày học, sắp xếp từ, nhiều bộ thẻ tùy chỉnh, AI, offline, bảng xếp hạng, thanh toán/VIP, bình luận và thông báo nhắc học. Các phần có trong đề cương gốc vẫn cần xác nhận việc hoãn với giảng viên theo CONF-01 của SRS.
 
 Web người học phải dùng được trên màn hình điện thoại; đây là web responsive, không thay thế yêu cầu bàn giao app mobile. Web Admin ưu tiên thao tác trên máy tính, các trang không bị mất chức năng do tràn nội dung trên màn hình nhỏ.
 
@@ -290,3 +290,8 @@ Tự động hóa các kiểm tra nghiệp vụ dễ sai: chấm điểm/chuẩn
 | 1.4 | Frontend React người học/Admin nối API, 7 test trình duyệt; email/callback/reset đã kiểm thử thật local, Google và Cloud còn lại |
 
 Bản trước được giữ tại [web-mvp-plan-v1.0.md](docs/archive/web-mvp-plan-v1.0.md).
+
+
+## Bổ sung phạm vi ngày 20/09/2026
+
+Tìm kiếm học liệu, ghi chú cá nhân và Dictation đã được đưa vào triển khai web theo [kế hoạch mở rộng](docs/feature-expansion-plan.md), SRS 0.5 và [bằng chứng kiểm thử](docs/feature-expansion-verification.md). Phần Dictation hoãn trong các bản kế hoạch trước được thay bằng phạm vi này.

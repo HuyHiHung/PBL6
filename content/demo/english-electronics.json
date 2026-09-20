@@ -1,0 +1,1291 @@
+{
+  "schema_version": 1,
+  "status": "authored_demo_pack_not_imported",
+  "audio_status": "not_included",
+  "provenance": "Biên soạn mới cho Sprout ở mức ngôn ngữ mục tiêu A2–B1; chưa qua thẩm định độc lập của giáo viên/chuyên gia. Hội thoại, số liệu và thiết bị là giả lập để học tiếng Anh, không phải hướng dẫn vận hành hoặc thông số sản phẩm thật. Nguồn tham khảo chỉ dùng đối chiếu khái niệm; không sao chép bài học từ nguồn.",
+  "references": [
+    {
+      "title": "Texas Instruments — Understanding Motor Driver Current Ratings",
+      "url": "https://www.ti.com/lit/an/slva505/slva505.pdf",
+      "note": "Đối chiếu sự khác nhau giữa thông số, điều kiện khuyến nghị và giới hạn tuyệt đối. Không dùng số liệu hay quy trình thiết bị của nguồn để tạo hướng dẫn vận hành."
+    }
+  ],
+  "course": {
+    "level": "A2–B1",
+    "estimated_minutes": 150,
+    "key": "sprout-electronics",
+    "title": "Electronics English — Components to Reports",
+    "description": "Tiếng Anh nhập môn cho Điện tử/Vi mạch qua tên linh kiện, sơ đồ và báo cáo kiểm tra giả lập.",
+    "objectives": "Đọc thông số có đơn vị, mô tả đường tín hiệu, phân biệt mô phỏng với đo thật và viết báo cáo có tiêu chí.",
+    "topics": [
+      {
+        "key": "electronics-parts-specs",
+        "title": "Components and Specifications",
+        "objectives": "Gọi tên linh kiện và đọc bảng thông số mẫu.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "electronics-components",
+            "title": "Naming Electronic Components",
+            "objectives": "Gọi tên linh kiện và nói chức năng cơ bản trong sơ đồ đơn giản.",
+            "vocabulary": [
+              {
+                "word": "component",
+                "part_of_speech": "noun",
+                "meaning": "linh kiện hoặc phần tử của mạch",
+                "collocation": "identify a component",
+                "example": "Each component has a name on the diagram.",
+                "example_vi": "Mỗi linh kiện có một tên trên sơ đồ.",
+                "key": "electronics-components-vocab-component"
+              },
+              {
+                "word": "resistor",
+                "part_of_speech": "noun",
+                "meaning": "điện trở",
+                "collocation": "a fixed resistor",
+                "example": "This resistor limits current in the example circuit.",
+                "example_vi": "Điện trở này hạn chế dòng điện trong mạch ví dụ.",
+                "key": "electronics-components-vocab-resistor"
+              },
+              {
+                "word": "capacitor",
+                "part_of_speech": "noun",
+                "meaning": "tụ điện",
+                "collocation": "a small capacitor",
+                "example": "The capacitor stores energy in an electric field.",
+                "example_vi": "Tụ điện lưu năng lượng trong điện trường.",
+                "key": "electronics-components-vocab-capacitor"
+              },
+              {
+                "word": "diode",
+                "part_of_speech": "noun",
+                "meaning": "điốt",
+                "collocation": "a semiconductor diode",
+                "example": "A diode conducts mainly in one direction.",
+                "example_vi": "Điốt dẫn điện chủ yếu theo một chiều.",
+                "key": "electronics-components-vocab-diode"
+              },
+              {
+                "word": "transistor",
+                "part_of_speech": "noun",
+                "meaning": "bóng bán dẫn",
+                "collocation": "a switching transistor",
+                "example": "This transistor works as a switch in the example.",
+                "example_vi": "Bóng bán dẫn này hoạt động như công tắc trong ví dụ.",
+                "key": "electronics-components-vocab-transistor"
+              },
+              {
+                "word": "integrated circuit",
+                "part_of_speech": "noun",
+                "meaning": "mạch tích hợp; IC",
+                "collocation": "an integrated circuit",
+                "example": "The integrated circuit contains many components.",
+                "example_vi": "Mạch tích hợp chứa nhiều linh kiện.",
+                "key": "electronics-components-vocab-integrated-circuit"
+              },
+              {
+                "word": "pin",
+                "part_of_speech": "noun",
+                "meaning": "chân kết nối của linh kiện",
+                "collocation": "a power pin",
+                "example": "The diagram labels each pin.",
+                "example_vi": "Sơ đồ ghi nhãn từng chân.",
+                "key": "electronics-components-vocab-pin"
+              },
+              {
+                "word": "connector",
+                "part_of_speech": "noun",
+                "meaning": "đầu nối",
+                "collocation": "a board connector",
+                "example": "The connector links the board to a cable.",
+                "example_vi": "Đầu nối nối bo mạch với cáp.",
+                "key": "electronics-components-vocab-connector"
+              }
+            ],
+            "grammar": "This component is a ... gọi tên. It is used to + động từ nói chức năng. An integrated circuit dùng an trước âm nguyên âm. Chỉ mô tả chức năng trong ví dụ, không suy ra mọi cách mắc từ một câu ngắn.",
+            "reading": "A fictional board diagram labels R1 as a resistor, C1 as a capacitor, and U1 as an integrated circuit. J1 is a connector for a cable. The diagram also numbers the pins of U1. Mai prepares a short English description of the four components for her project presentation.",
+            "reading_task": "Ghép R1, C1, U1, J1 với tên. Đáp án: resistor, capacitor, integrated circuit, connector.",
+            "dialogue": "Mai: What is U1?\nNam: It is an integrated circuit.\nMai: What does J1 connect to?\nNam: A cable, according to this diagram.",
+            "practice": "Giới thiệu 3 linh kiện trong sơ đồ giả lập. Mẫu: R1 is a resistor. U1 is an integrated circuit. J1 connects the board to a cable. Tự kiểm: tên và ký hiệu khớp bài; không thêm thông số chưa cho.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which label identifies the capacitor?",
+                "options": [
+                  "C1",
+                  "J1",
+                  "R1"
+                ],
+                "answer": "A",
+                "explanation": "C1 được mô tả là tụ điện.",
+                "use_reading": true,
+                "key": "electronics-components-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose pin or connector: A numbered terminal on U1 is a ___.",
+                "answers": [
+                  "pin"
+                ],
+                "explanation": "Pin là chân kết nối của linh kiện.",
+                "key": "electronics-components-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is U1?",
+                "options": [
+                  "An integrated circuit",
+                  "A cable",
+                  "A resistor"
+                ],
+                "answer": "A",
+                "explanation": "U1 là IC.",
+                "use_reading": true,
+                "key": "electronics-components-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose resistor or capacitor: A component that stores energy in an electric field is a ___.",
+                "answers": [
+                  "capacitor"
+                ],
+                "explanation": "Tụ điện lưu năng lượng trong điện trường.",
+                "key": "electronics-components-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What does J1 connect the board to?",
+                "options": [
+                  "A drawing title",
+                  "A test report",
+                  "A cable"
+                ],
+                "answer": "C",
+                "explanation": "Đoạn văn ghi connector for a cable.",
+                "use_reading": true,
+                "key": "electronics-components-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "electronics-specifications",
+            "title": "Reading a Simplified Datasheet",
+            "objectives": "Đọc tên đại lượng, đơn vị và khoảng thông số; phân biệt giá trị điển hình với giới hạn.",
+            "vocabulary": [
+              {
+                "word": "datasheet",
+                "part_of_speech": "noun",
+                "meaning": "tài liệu thông số của linh kiện",
+                "collocation": "read a datasheet",
+                "example": "Please read the datasheet for this part.",
+                "example_vi": "Hãy đọc tài liệu thông số của linh kiện này.",
+                "key": "electronics-specifications-vocab-datasheet"
+              },
+              {
+                "word": "voltage",
+                "part_of_speech": "noun",
+                "meaning": "điện áp",
+                "collocation": "supply voltage",
+                "example": "The example supply voltage is three volts.",
+                "example_vi": "Điện áp nguồn trong ví dụ là ba vôn.",
+                "key": "electronics-specifications-vocab-voltage"
+              },
+              {
+                "word": "current",
+                "part_of_speech": "noun",
+                "meaning": "dòng điện",
+                "collocation": "supply current",
+                "example": "The table reports supply current in milliamps.",
+                "example_vi": "Bảng ghi dòng nguồn bằng miliampe.",
+                "key": "electronics-specifications-vocab-current"
+              },
+              {
+                "word": "resistance",
+                "part_of_speech": "noun",
+                "meaning": "điện trở; đại lượng đo bằng ôm",
+                "collocation": "measure resistance",
+                "example": "Resistance is expressed in ohms.",
+                "example_vi": "Điện trở được biểu diễn bằng ôm.",
+                "key": "electronics-specifications-vocab-resistance"
+              },
+              {
+                "word": "minimum",
+                "part_of_speech": "noun",
+                "meaning": "giá trị nhỏ nhất được nêu",
+                "collocation": "minimum and maximum values",
+                "example": "The minimum in the example table is two volts.",
+                "example_vi": "Giá trị nhỏ nhất trong bảng ví dụ là hai vôn.",
+                "key": "electronics-specifications-vocab-minimum"
+              },
+              {
+                "word": "maximum",
+                "part_of_speech": "noun",
+                "meaning": "giá trị lớn nhất được nêu",
+                "collocation": "a maximum value",
+                "example": "Please check the maximum value in the correct table.",
+                "example_vi": "Hãy kiểm tra giá trị lớn nhất trong đúng bảng.",
+                "key": "electronics-specifications-vocab-maximum"
+              },
+              {
+                "word": "typical",
+                "part_of_speech": "adjective",
+                "meaning": "điển hình; không tự là giới hạn bảo đảm",
+                "collocation": "a typical value",
+                "example": "A typical value is not always a guaranteed limit.",
+                "example_vi": "Giá trị điển hình không phải lúc nào cũng là giới hạn bảo đảm.",
+                "key": "electronics-specifications-vocab-typical"
+              },
+              {
+                "word": "operating range",
+                "part_of_speech": "noun",
+                "meaning": "khoảng điều kiện hoạt động được nêu",
+                "collocation": "a recommended operating range",
+                "example": "This table shows a recommended operating range.",
+                "example_vi": "Bảng này thể hiện khoảng hoạt động khuyến nghị.",
+                "key": "electronics-specifications-vocab-operating-range"
+              }
+            ],
+            "grammar": "From two to four volts / between two and four volts mô tả khoảng. Typical khác maximum. Bảng absolute maximum ratings không phải bảng khuyến nghị vận hành; học liệu chỉ luyện đọc thông số giả lập, không dùng để chọn điều kiện cho thiết bị thật.",
+            "reading": "A made-up datasheet for classroom reading lists a recommended supply range of 2 to 4 V. A typical supply current of 5 mA is listed under a stated test condition. Lan records both the number and the unit. She does not call the typical value a guaranteed maximum. These values do not describe a real component.",
+            "reading_task": "Ghi khoảng điện áp và dòng điển hình. Đáp án: 2–4 V, 5 mA ở điều kiện nêu trong bảng; không phải thông số linh kiện thật.",
+            "dialogue": "Lan: Is 5 mA a guaranteed maximum?\nNam: No. It is labelled typical.\nLan: What else should I include?\nNam: The unit and the stated test condition.",
+            "practice": "Viết 3 câu đọc bảng. Mẫu: The recommended range is 2 to 4 V. The typical current is 5 mA under the stated condition. This is a fictional example. Tự kiểm: giữ đơn vị và từ typical; không đổi thành maximum.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is the recommended voltage range in the example?",
+                "options": [
+                  "2 to 4 V",
+                  "2 to 4 mA",
+                  "5 to 10 V"
+                ],
+                "answer": "A",
+                "explanation": "Khoảng điện áp giả lập là 2–4 V.",
+                "use_reading": true,
+                "key": "electronics-specifications-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose voltage or current: A value measured in amperes describes ___.",
+                "answers": [
+                  "current"
+                ],
+                "explanation": "Ampe là đơn vị dòng điện.",
+                "key": "electronics-specifications-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "How is 5 mA labelled?",
+                "options": [
+                  "Minimum voltage",
+                  "Guaranteed maximum",
+                  "Typical"
+                ],
+                "answer": "C",
+                "explanation": "Giá trị được ghi typical.",
+                "use_reading": true,
+                "key": "electronics-specifications-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose datasheet or connector: A document listing component specifications is a ___.",
+                "answers": [
+                  "datasheet"
+                ],
+                "explanation": "Datasheet là tài liệu thông số.",
+                "key": "electronics-specifications-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which statement is correct?",
+                "options": [
+                  "Number, unit, and condition should be reported",
+                  "Typical always means maximum",
+                  "The values apply to every IC"
+                ],
+                "answer": "A",
+                "explanation": "Báo thông số cần giữ bối cảnh và đơn vị.",
+                "key": "electronics-specifications-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional project sheet identifies R2 as a resistor and U2 as an integrated circuit. J2 connects a cable to the board. A made-up datasheet lists a recommended supply range of 1 to 3 V and a typical current of 2 mA under one test condition. These are classroom values only.",
+        "test": [
+          {
+            "lesson_key": "electronics-components",
+            "type": "single_choice",
+            "prompt": "What is U2?",
+            "options": [
+              "An integrated circuit",
+              "A resistor",
+              "A cable"
+            ],
+            "answer": "A",
+            "explanation": "U2 được nêu là integrated circuit.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-01"
+          },
+          {
+            "lesson_key": "electronics-components",
+            "type": "fill_blank",
+            "prompt": "Choose connector or capacitor: J2 is a ___.",
+            "answers": [
+              "connector"
+            ],
+            "explanation": "J2 dùng để nối cáp.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-02"
+          },
+          {
+            "lesson_key": "electronics-components",
+            "type": "single_choice",
+            "prompt": "Which component is R2?",
+            "options": [
+              "A diode",
+              "A resistor",
+              "A transistor"
+            ],
+            "answer": "B",
+            "explanation": "R2 là resistor.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-03"
+          },
+          {
+            "lesson_key": "electronics-components",
+            "type": "fill_blank",
+            "prompt": "Choose pin or source: A terminal on an IC is a ___.",
+            "answers": [
+              "pin"
+            ],
+            "explanation": "Pin là chân linh kiện.",
+            "key": "electronics-parts-specs-test-04"
+          },
+          {
+            "lesson_key": "electronics-components",
+            "type": "single_choice",
+            "prompt": "Which component stores energy in an electric field?",
+            "options": [
+              "A report",
+              "A connector",
+              "A capacitor"
+            ],
+            "answer": "C",
+            "explanation": "Tụ điện lưu năng lượng trong điện trường.",
+            "key": "electronics-parts-specs-test-05"
+          },
+          {
+            "lesson_key": "electronics-specifications",
+            "type": "fill_blank",
+            "prompt": "What unit follows the typical current value? Copy the abbreviation.",
+            "answers": [
+              "mA"
+            ],
+            "explanation": "Dòng được ghi bằng mA.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-06"
+          },
+          {
+            "lesson_key": "electronics-specifications",
+            "type": "single_choice",
+            "prompt": "What is the recommended supply range?",
+            "options": [
+              "2 to 5 V",
+              "1 to 3 V",
+              "1 to 3 A"
+            ],
+            "answer": "B",
+            "explanation": "Bảng giả lập ghi 1–3 V.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-07"
+          },
+          {
+            "lesson_key": "electronics-specifications",
+            "type": "fill_blank",
+            "prompt": "Choose typical or maximum: The 2 mA current is labelled ___.",
+            "answers": [
+              "typical"
+            ],
+            "explanation": "Giá trị điển hình, không phải maximum.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-08"
+          },
+          {
+            "lesson_key": "electronics-specifications",
+            "type": "single_choice",
+            "prompt": "Which information should accompany a number?",
+            "options": [
+              "Its unit and test condition",
+              "Only the file color",
+              "Only the author name"
+            ],
+            "answer": "A",
+            "explanation": "Đơn vị và điều kiện làm rõ ý nghĩa thông số.",
+            "key": "electronics-parts-specs-test-09"
+          },
+          {
+            "lesson_key": "electronics-specifications",
+            "type": "single_choice",
+            "prompt": "Can these classroom values be assumed for a real component?",
+            "options": [
+              "No, they are fictional",
+              "Yes, for every IC",
+              "Yes, without a datasheet"
+            ],
+            "answer": "A",
+            "explanation": "Đề nêu rõ thông số giả lập.",
+            "use_reading": true,
+            "key": "electronics-parts-specs-test-10"
+          }
+        ]
+      },
+      {
+        "key": "electronics-circuits-chips",
+        "title": "Circuits and Chip Projects",
+        "objectives": "Mô tả đường tín hiệu và tiến độ thiết kế vi mạch.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "electronics-circuit-description",
+            "title": "Describing a Signal Path",
+            "objectives": "Nói về các khối mạch, tín hiệu đầu vào và đầu ra theo thứ tự.",
+            "vocabulary": [
+              {
+                "word": "circuit",
+                "part_of_speech": "noun",
+                "meaning": "mạch điện",
+                "collocation": "describe a circuit",
+                "example": "This circuit has three functional blocks.",
+                "example_vi": "Mạch này có ba khối chức năng.",
+                "key": "electronics-circuit-description-vocab-circuit"
+              },
+              {
+                "word": "input",
+                "part_of_speech": "noun",
+                "meaning": "đầu vào",
+                "collocation": "an input signal",
+                "example": "The input comes from a sensor.",
+                "example_vi": "Đầu vào đến từ cảm biến.",
+                "key": "electronics-circuit-description-vocab-input"
+              },
+              {
+                "word": "output",
+                "part_of_speech": "noun",
+                "meaning": "đầu ra",
+                "collocation": "an output signal",
+                "example": "The output goes to the next block.",
+                "example_vi": "Đầu ra đi tới khối tiếp theo.",
+                "key": "electronics-circuit-description-vocab-output"
+              },
+              {
+                "word": "signal",
+                "part_of_speech": "noun",
+                "meaning": "tín hiệu mang thông tin",
+                "collocation": "process a signal",
+                "example": "The circuit processes the signal.",
+                "example_vi": "Mạch xử lý tín hiệu.",
+                "key": "electronics-circuit-description-vocab-signal"
+              },
+              {
+                "word": "analog",
+                "part_of_speech": "adjective",
+                "meaning": "tương tự; biểu diễn bằng đại lượng biến thiên liên tục",
+                "collocation": "an analog signal",
+                "example": "This block receives an analog signal.",
+                "example_vi": "Khối này nhận tín hiệu tương tự.",
+                "key": "electronics-circuit-description-vocab-analog"
+              },
+              {
+                "word": "digital",
+                "part_of_speech": "adjective",
+                "meaning": "số; biểu diễn bằng các mức hoặc giá trị rời rạc",
+                "collocation": "digital data",
+                "example": "The next block processes digital data.",
+                "example_vi": "Khối tiếp theo xử lý dữ liệu số.",
+                "key": "electronics-circuit-description-vocab-digital"
+              },
+              {
+                "word": "block diagram",
+                "part_of_speech": "noun",
+                "meaning": "sơ đồ khối",
+                "collocation": "draw a block diagram",
+                "example": "A block diagram shows the main functions.",
+                "example_vi": "Sơ đồ khối thể hiện các chức năng chính.",
+                "key": "electronics-circuit-description-vocab-block-diagram"
+              },
+              {
+                "word": "convert",
+                "part_of_speech": "verb",
+                "meaning": "chuyển đổi",
+                "collocation": "convert a signal",
+                "example": "This block converts the signal into digital values.",
+                "example_vi": "Khối này chuyển tín hiệu thành các giá trị số.",
+                "key": "electronics-circuit-description-vocab-convert"
+              }
+            ],
+            "grammar": "The signal goes from A to B. After that, ... mô tả luồng. Input/output tùy khối đang xét: đầu ra của khối trước có thể là đầu vào khối sau. Sơ đồ khối mô tả chức năng, không thay sơ đồ nối dây.",
+            "reading": "A fictional block diagram has a sensor, a converter, and a processor. The sensor sends an analog signal to the converter. The converter produces digital values. The processor uses those values to update a display. This diagram explains the signal path, not the physical wiring.",
+            "reading_task": "Nêu thứ tự và dạng tín hiệu. Đáp án: sensor → converter → processor; trước converter là analog, sau là digital values.",
+            "dialogue": "Mai: Where does the input come from?\nNam: From the sensor.\nMai: What does the converter produce?\nNam: Digital values for the processor.",
+            "practice": "Mô tả sơ đồ bằng 3 câu. Mẫu: The sensor produces an analog signal. The converter produces digital values. The processor updates the display. Tự kiểm: đúng thứ tự và không gọi sơ đồ khối là hướng dẫn nối dây.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which block receives the analog signal from the sensor?",
+                "options": [
+                  "Converter",
+                  "Display",
+                  "Processor"
+                ],
+                "answer": "A",
+                "explanation": "Converter nhận tín hiệu analog.",
+                "use_reading": true,
+                "key": "electronics-circuit-description-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose input or output: A signal entering a block is its ___.",
+                "answers": [
+                  "input"
+                ],
+                "explanation": "Input là đầu vào của khối.",
+                "key": "electronics-circuit-description-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What does the converter produce?",
+                "options": [
+                  "A cable",
+                  "An English report",
+                  "Digital values"
+                ],
+                "answer": "C",
+                "explanation": "Bài đọc nói digital values.",
+                "use_reading": true,
+                "key": "electronics-circuit-description-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose block diagram or datasheet: A drawing of main functional blocks is a ___.",
+                "answers": [
+                  "block diagram"
+                ],
+                "explanation": "Sơ đồ khối mô tả các khối chức năng.",
+                "key": "electronics-circuit-description-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What does this diagram explain?",
+                "options": [
+                  "The signal path",
+                  "Exact wiring instructions",
+                  "The real price of the processor"
+                ],
+                "answer": "A",
+                "explanation": "Bài đọc phân biệt đường tín hiệu với nối dây.",
+                "use_reading": true,
+                "key": "electronics-circuit-description-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "electronics-chip-project",
+            "title": "Discussing a Chip Design Project",
+            "objectives": "Phân biệt thiết kế, mô phỏng và chế tạo khi báo tiến độ một project vi mạch.",
+            "vocabulary": [
+              {
+                "word": "design",
+                "part_of_speech": "noun",
+                "meaning": "bản thiết kế",
+                "collocation": "review a design",
+                "example": "The team reviews the design before the demo.",
+                "example_vi": "Nhóm xem lại bản thiết kế trước demo.",
+                "key": "electronics-chip-project-vocab-design"
+              },
+              {
+                "word": "layout",
+                "part_of_speech": "noun",
+                "meaning": "bố trí hình học của cấu trúc trên vi mạch trong ngữ cảnh này",
+                "collocation": "a chip layout",
+                "example": "The layout shows where structures are placed.",
+                "example_vi": "Bản bố trí cho biết vị trí các cấu trúc.",
+                "key": "electronics-chip-project-vocab-layout"
+              },
+              {
+                "word": "simulate",
+                "part_of_speech": "verb",
+                "meaning": "mô phỏng",
+                "collocation": "simulate a circuit",
+                "example": "We simulate the circuit on a computer.",
+                "example_vi": "Chúng tôi mô phỏng mạch trên máy tính.",
+                "key": "electronics-chip-project-vocab-simulate"
+              },
+              {
+                "word": "prototype",
+                "part_of_speech": "noun",
+                "meaning": "mẫu thử",
+                "collocation": "build a prototype",
+                "example": "A prototype helps the team test an idea.",
+                "example_vi": "Mẫu thử giúp nhóm kiểm tra một ý tưởng.",
+                "key": "electronics-chip-project-vocab-prototype"
+              },
+              {
+                "word": "wafer",
+                "part_of_speech": "noun",
+                "meaning": "phiến vật liệu bán dẫn dùng trong chế tạo vi mạch",
+                "collocation": "a silicon wafer",
+                "example": "Many dies can be formed on a wafer.",
+                "example_vi": "Nhiều khuôn chip có thể được tạo trên một phiến.",
+                "key": "electronics-chip-project-vocab-wafer"
+              },
+              {
+                "word": "die",
+                "part_of_speech": "noun",
+                "meaning": "một khuôn chip bán dẫn riêng lẻ",
+                "collocation": "a semiconductor die",
+                "example": "This drawing shows one die.",
+                "example_vi": "Bản vẽ này thể hiện một khuôn chip.",
+                "key": "electronics-chip-project-vocab-die"
+              },
+              {
+                "word": "package",
+                "part_of_speech": "noun",
+                "meaning": "vỏ và cấu trúc đóng gói linh kiện",
+                "collocation": "an IC package",
+                "example": "The package provides external connections.",
+                "example_vi": "Vỏ đóng gói cung cấp các kết nối ra ngoài.",
+                "key": "electronics-chip-project-vocab-package"
+              },
+              {
+                "word": "manufacture",
+                "part_of_speech": "verb",
+                "meaning": "chế tạo; sản xuất",
+                "collocation": "manufacture a chip",
+                "example": "This team does not manufacture chips in the classroom.",
+                "example_vi": "Nhóm này không chế tạo chip trong lớp học.",
+                "key": "electronics-chip-project-vocab-manufacture"
+              }
+            ],
+            "grammar": "We have simulated ... báo việc đã làm. We have not manufactured ... yet nói phần chưa làm. Simulation result và physical measurement là hai loại bằng chứng khác nhau; không gọi mô phỏng là đo trên chip thật.",
+            "reading": "A student team presents a fictional chip design project. They have prepared a layout and simulated one circuit function. They have not manufactured a wafer or packaged a die. Their demo shows simulation results only. They ask a mentor to review the design before planning a physical prototype.",
+            "reading_task": "Tách việc đã làm và chưa làm. Đáp án: layout, mô phỏng một chức năng; chưa chế tạo wafer hoặc đóng gói die.",
+            "dialogue": "Mentor: Are these measurements from a real chip?\nLan: No. They are simulation results.\nMentor: What is your next step?\nLan: Ask for a design review before planning a prototype.",
+            "practice": "Báo tiến độ 3 câu. Mẫu: We have prepared a layout. We have simulated one function. We have not manufactured a chip yet. Tự kiểm: không biến kết quả mô phỏng thành kết quả đo thật.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What does the demo show?",
+                "options": [
+                  "Simulation results",
+                  "Packaged wafers",
+                  "Mass-produced chips"
+                ],
+                "answer": "A",
+                "explanation": "Demo chỉ có kết quả mô phỏng.",
+                "use_reading": true,
+                "key": "electronics-chip-project-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose simulate or manufacture: To model a circuit on a computer is to ___ it.",
+                "answers": [
+                  "simulate"
+                ],
+                "explanation": "Simulate là mô phỏng.",
+                "key": "electronics-chip-project-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What has not been done?",
+                "options": [
+                  "Manufacturing a wafer",
+                  "Preparing a layout",
+                  "Simulating a function"
+                ],
+                "answer": "A",
+                "explanation": "Nhóm chưa chế tạo wafer.",
+                "use_reading": true,
+                "key": "electronics-chip-project-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose die or layout: One individual semiconductor chip is called a ___.",
+                "answers": [
+                  "die"
+                ],
+                "explanation": "Die là khuôn chip riêng lẻ.",
+                "key": "electronics-chip-project-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What should the report make clear?",
+                "options": [
+                  "That a layout is a finished product",
+                  "Whether evidence is simulated or physically measured",
+                  "That every simulation proves hardware works"
+                ],
+                "answer": "B",
+                "explanation": "Cần nói rõ loại bằng chứng.",
+                "key": "electronics-chip-project-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional system sends an analog sensor signal to a converter. The converter sends digital values to a processor. A student team has simulated this path and prepared a chip layout. It has not manufactured a chip. The next step is a mentor review.",
+        "test": [
+          {
+            "lesson_key": "electronics-circuit-description",
+            "type": "single_choice",
+            "prompt": "Where does the analog signal go first after the sensor?",
+            "options": [
+              "To a report",
+              "To a package",
+              "To a converter"
+            ],
+            "answer": "C",
+            "explanation": "Đầu tiên đến converter.",
+            "use_reading": true,
+            "key": "electronics-circuits-chips-test-01"
+          },
+          {
+            "lesson_key": "electronics-circuit-description",
+            "type": "fill_blank",
+            "prompt": "Choose analog or digital: The converter sends ___ values to the processor.",
+            "answers": [
+              "digital"
+            ],
+            "explanation": "Đầu ra converter là giá trị số.",
+            "use_reading": true,
+            "key": "electronics-circuits-chips-test-02"
+          },
+          {
+            "lesson_key": "electronics-circuit-description",
+            "type": "single_choice",
+            "prompt": "What is a signal entering a block called?",
+            "options": [
+              "Layout",
+              "Input",
+              "Output"
+            ],
+            "answer": "B",
+            "explanation": "Input là đầu vào.",
+            "key": "electronics-circuits-chips-test-03"
+          },
+          {
+            "lesson_key": "electronics-circuit-description",
+            "type": "fill_blank",
+            "prompt": "Choose convert or manufacture: To change a signal into another form is to ___ it.",
+            "answers": [
+              "convert"
+            ],
+            "explanation": "Convert là chuyển đổi.",
+            "key": "electronics-circuits-chips-test-04"
+          },
+          {
+            "lesson_key": "electronics-circuit-description",
+            "type": "single_choice",
+            "prompt": "What does a block diagram mainly show?",
+            "options": [
+              "A guaranteed wiring procedure",
+              "Shipping dates",
+              "Functional blocks and paths"
+            ],
+            "answer": "C",
+            "explanation": "Sơ đồ khối thể hiện chức năng và đường liên hệ.",
+            "key": "electronics-circuits-chips-test-05"
+          },
+          {
+            "lesson_key": "electronics-chip-project",
+            "type": "fill_blank",
+            "prompt": "Choose simulation or measurement: The team's computer-based test is a ___.",
+            "answers": [
+              "simulation"
+            ],
+            "explanation": "Nhóm mô phỏng, chưa chế tạo.",
+            "use_reading": true,
+            "key": "electronics-circuits-chips-test-06"
+          },
+          {
+            "lesson_key": "electronics-chip-project",
+            "type": "single_choice",
+            "prompt": "What has the team not done?",
+            "options": [
+              "Simulated the path",
+              "Manufactured a chip",
+              "Prepared a layout"
+            ],
+            "answer": "B",
+            "explanation": "Chưa chế tạo chip.",
+            "use_reading": true,
+            "key": "electronics-circuits-chips-test-07"
+          },
+          {
+            "lesson_key": "electronics-chip-project",
+            "type": "fill_blank",
+            "prompt": "Choose wafer or connector: A semiconductor slice used to form many dies is a ___.",
+            "answers": [
+              "wafer"
+            ],
+            "explanation": "Wafer là phiến vật liệu dùng chế tạo.",
+            "key": "electronics-circuits-chips-test-08"
+          },
+          {
+            "lesson_key": "electronics-chip-project",
+            "type": "single_choice",
+            "prompt": "What is the next step?",
+            "options": [
+              "Shipping all chips",
+              "A mentor review",
+              "Claiming production success"
+            ],
+            "answer": "B",
+            "explanation": "Bài đọc nêu mentor review.",
+            "use_reading": true,
+            "key": "electronics-circuits-chips-test-09"
+          },
+          {
+            "lesson_key": "electronics-chip-project",
+            "type": "single_choice",
+            "prompt": "Which statement is precise?",
+            "options": [
+              "The hardware has passed every test",
+              "The signal path has been simulated",
+              "All chips are manufactured"
+            ],
+            "answer": "B",
+            "explanation": "Chỉ mô phỏng đường tín hiệu đã được thực hiện.",
+            "use_reading": true,
+            "key": "electronics-circuits-chips-test-10"
+          }
+        ]
+      },
+      {
+        "key": "electronics-measurement-reporting",
+        "title": "Measurements and Test Reports",
+        "objectives": "Báo số đo, tiêu chí và phạm vi kiểm chứng.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "electronics-measurement-notes",
+            "title": "Reading Measurement Notes",
+            "objectives": "Đọc giá trị và đơn vị, nêu thiết bị đo và phân biệt số đo với giá trị tham chiếu.",
+            "vocabulary": [
+              {
+                "word": "measurement",
+                "part_of_speech": "noun",
+                "meaning": "phép đo hoặc kết quả đo",
+                "collocation": "record a measurement",
+                "example": "Please record the measurement with its unit.",
+                "example_vi": "Hãy ghi kết quả đo cùng đơn vị.",
+                "key": "electronics-measurement-notes-vocab-measurement"
+              },
+              {
+                "word": "multimeter",
+                "part_of_speech": "noun",
+                "meaning": "đồng hồ đo điện đa năng",
+                "collocation": "a digital multimeter",
+                "example": "The note names a digital multimeter.",
+                "example_vi": "Ghi chú nêu một đồng hồ đo điện đa năng.",
+                "key": "electronics-measurement-notes-vocab-multimeter"
+              },
+              {
+                "word": "oscilloscope",
+                "part_of_speech": "noun",
+                "meaning": "máy hiện sóng",
+                "collocation": "an oscilloscope trace",
+                "example": "The oscilloscope trace shows voltage over time.",
+                "example_vi": "Vệt hiện sóng thể hiện điện áp theo thời gian.",
+                "key": "electronics-measurement-notes-vocab-oscilloscope"
+              },
+              {
+                "word": "reading",
+                "part_of_speech": "noun",
+                "meaning": "số đọc từ thiết bị đo",
+                "collocation": "a meter reading",
+                "example": "The fictional meter reading is 3.2 V.",
+                "example_vi": "Số đọc giả lập trên đồng hồ là 3,2 V.",
+                "key": "electronics-measurement-notes-vocab-reading"
+              },
+              {
+                "word": "reference",
+                "part_of_speech": "noun",
+                "meaning": "giá trị hoặc đối tượng tham chiếu",
+                "collocation": "a reference value",
+                "example": "The reference value is 3.3 V.",
+                "example_vi": "Giá trị tham chiếu là 3,3 V.",
+                "key": "electronics-measurement-notes-vocab-reference"
+              },
+              {
+                "word": "difference",
+                "part_of_speech": "noun",
+                "meaning": "độ chênh lệch",
+                "collocation": "calculate a difference",
+                "example": "The difference is 0.1 V.",
+                "example_vi": "Độ chênh lệch là 0,1 V.",
+                "key": "electronics-measurement-notes-vocab-difference"
+              },
+              {
+                "word": "frequency",
+                "part_of_speech": "noun",
+                "meaning": "tần số; số chu kỳ trong một đơn vị thời gian",
+                "collocation": "signal frequency",
+                "example": "Frequency is expressed in hertz.",
+                "example_vi": "Tần số được biểu diễn bằng héc.",
+                "key": "electronics-measurement-notes-vocab-frequency"
+              },
+              {
+                "word": "waveform",
+                "part_of_speech": "noun",
+                "meaning": "dạng sóng",
+                "collocation": "describe a waveform",
+                "example": "The report includes a waveform image.",
+                "example_vi": "Báo cáo có ảnh dạng sóng.",
+                "key": "electronics-measurement-notes-vocab-waveform"
+              }
+            ],
+            "grammar": "The reading is ...; the reference is ...; the difference is ... Giữ đơn vị cùng số. A difference of 0.1 V không tự nghĩa là fail nếu chưa có tiêu chí chấp nhận. Phần này luyện đọc ghi chú, không hướng dẫn thao tác thiết bị.",
+            "reading": "A fictional lab note lists a voltage reading of 3.2 V from a multimeter and a reference of 3.3 V. The reading is 0.1 V lower than the reference. Another page contains an oscilloscope waveform. The note does not provide an acceptance range, so Mai reports the difference without marking the result pass or fail.",
+            "reading_task": "Ghi số đo, tham chiếu và chênh lệch. Đáp án: 3.2 V; 3.3 V; thấp hơn 0.1 V. Chưa đủ tiêu chí để kết luận đạt.",
+            "dialogue": "Mai: Can I mark the reading as a failure?\nNam: Do we have an acceptance range?\nMai: No.\nNam: Then report the value and the difference first.",
+            "practice": "Viết một ghi chú 3 câu. Mẫu: The reading is 3.2 V. It is 0.1 V below the reference. No acceptance range is provided. Tự kiểm: đúng số và đơn vị, chưa kết luận đạt/trượt khi thiếu tiêu chí.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is the reading?",
+                "options": [
+                  "0.1 A",
+                  "3.2 V",
+                  "3.3 V"
+                ],
+                "answer": "B",
+                "explanation": "Bài cho số đo 3.2 V.",
+                "use_reading": true,
+                "key": "electronics-measurement-notes-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose reference or frequency: A value used for comparison is a ___.",
+                "answers": [
+                  "reference"
+                ],
+                "explanation": "Reference là giá trị tham chiếu.",
+                "key": "electronics-measurement-notes-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "How does the reading compare with the reference?",
+                "options": [
+                  "It is lower by 0.1 V",
+                  "It is equal",
+                  "It is higher by 0.1 V"
+                ],
+                "answer": "A",
+                "explanation": "3.2 thấp hơn 3.3 là 0.1.",
+                "use_reading": true,
+                "key": "electronics-measurement-notes-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose oscilloscope or connector: An instrument that displays voltage over time is an ___.",
+                "answers": [
+                  "oscilloscope"
+                ],
+                "explanation": "Máy hiện sóng thể hiện điện áp theo thời gian.",
+                "key": "electronics-measurement-notes-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Why is pass/fail not assigned?",
+                "options": [
+                  "No acceptance range is given",
+                  "The note has no numbers",
+                  "All low readings fail"
+                ],
+                "answer": "A",
+                "explanation": "Thiếu tiêu chí chấp nhận.",
+                "use_reading": true,
+                "key": "electronics-measurement-notes-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "electronics-test-report",
+            "title": "Reporting Test Conditions and Results",
+            "objectives": "Viết kết quả kiểm tra có phiên bản, điều kiện, tiêu chí và giới hạn.",
+            "vocabulary": [
+              {
+                "word": "condition",
+                "part_of_speech": "noun",
+                "meaning": "điều kiện khi kiểm tra",
+                "collocation": "a test condition",
+                "example": "Please state the test condition.",
+                "example_vi": "Hãy nêu điều kiện kiểm tra.",
+                "key": "electronics-test-report-vocab-condition"
+              },
+              {
+                "word": "procedure",
+                "part_of_speech": "noun",
+                "meaning": "quy trình đã xác định",
+                "collocation": "follow a procedure",
+                "example": "The report names the approved procedure.",
+                "example_vi": "Báo cáo nêu quy trình đã được phê duyệt.",
+                "key": "electronics-test-report-vocab-procedure"
+              },
+              {
+                "word": "repeat",
+                "part_of_speech": "verb",
+                "meaning": "lặp lại",
+                "collocation": "repeat a test",
+                "example": "The team repeats the simulated test.",
+                "example_vi": "Nhóm lặp lại bài kiểm tra mô phỏng.",
+                "key": "electronics-test-report-vocab-repeat"
+              },
+              {
+                "word": "consistent",
+                "part_of_speech": "adjective",
+                "meaning": "nhất quán giữa các kết quả trong ngữ cảnh này",
+                "collocation": "consistent results",
+                "example": "The three results are consistent.",
+                "example_vi": "Ba kết quả nhất quán với nhau.",
+                "key": "electronics-test-report-vocab-consistent"
+              },
+              {
+                "word": "acceptance range",
+                "part_of_speech": "noun",
+                "meaning": "khoảng giá trị được chấp nhận theo tiêu chí",
+                "collocation": "an acceptance range",
+                "example": "The acceptance range is stated in the exercise.",
+                "example_vi": "Khoảng chấp nhận được nêu trong bài tập.",
+                "key": "electronics-test-report-vocab-acceptance-range"
+              },
+              {
+                "word": "within",
+                "part_of_speech": "preposition",
+                "meaning": "nằm trong",
+                "collocation": "within the range",
+                "example": "All three values are within the range.",
+                "example_vi": "Cả ba giá trị đều nằm trong khoảng.",
+                "key": "electronics-test-report-vocab-within"
+              },
+              {
+                "word": "outside",
+                "part_of_speech": "preposition",
+                "meaning": "nằm ngoài",
+                "collocation": "outside the range",
+                "example": "This value is outside the range.",
+                "example_vi": "Giá trị này nằm ngoài khoảng.",
+                "key": "electronics-test-report-vocab-outside"
+              },
+              {
+                "word": "conclusion",
+                "part_of_speech": "noun",
+                "meaning": "kết luận",
+                "collocation": "write a conclusion",
+                "example": "The conclusion applies only to this test.",
+                "example_vi": "Kết luận chỉ áp dụng cho bài kiểm tra này.",
+                "key": "electronics-test-report-vocab-conclusion"
+              }
+            ],
+            "grammar": "Under these conditions ... giới hạn kết luận. All three values are within ... mô tả so sánh. Consistent không tự nghĩa là accurate; các số giống nhau vẫn có thể cùng sai lệch. Ghi tiêu chí trước khi kết luận.",
+            "reading": "In a fictional simulation, the acceptance range is 3.0 to 3.4 V, including both endpoints. Version B gives readings of 3.1, 3.2, and 3.1 V under the same stated condition. All three are within the range. The report says this simulated check passed. It does not claim that real hardware has been verified.",
+            "reading_task": "Đối chiếu ba số với khoảng. Đáp án: cả ba thuộc [3.0, 3.4] V; chỉ kiểm tra mô phỏng đạt.",
+            "dialogue": "Lan: Can we say the hardware is verified?\nNam: No. This was a simulation.\nLan: What can we report?\nNam: All three simulated readings met the stated range.",
+            "practice": "Viết báo cáo 4 dòng: Version, Condition, Result, Limitation. Mẫu: Version B. Same simulated condition. Three readings within 3.0–3.4 V. Real hardware not tested. Tự kiểm: đủ phạm vi và tiêu chí; không khẳng định quá kết quả.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which value would be outside the example range?",
+                "options": [
+                  "3.0 V",
+                  "3.5 V",
+                  "3.4 V"
+                ],
+                "answer": "B",
+                "explanation": "Khoảng bao gồm 3.0 và 3.4; 3.5 ở ngoài.",
+                "use_reading": true,
+                "key": "electronics-test-report-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose within or outside: A reading of 3.2 V is ___ the stated range.",
+                "answers": [
+                  "within"
+                ],
+                "explanation": "3.2 nằm trong 3.0–3.4.",
+                "use_reading": true,
+                "key": "electronics-test-report-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What was tested?",
+                "options": [
+                  "Every real chip",
+                  "A simulation of Version B",
+                  "All hardware versions"
+                ],
+                "answer": "B",
+                "explanation": "Chỉ mô phỏng bản B.",
+                "use_reading": true,
+                "key": "electronics-test-report-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose condition or conclusion: The circumstances of a test are its test ___.",
+                "answers": [
+                  "condition"
+                ],
+                "explanation": "Condition là điều kiện kiểm tra.",
+                "key": "electronics-test-report-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which report matches the evidence?",
+                "options": [
+                  "No reading met the range",
+                  "All hardware is guaranteed correct",
+                  "The simulated check passed under the stated condition"
+                ],
+                "answer": "C",
+                "explanation": "Kết luận đúng giới hạn mô phỏng.",
+                "use_reading": true,
+                "key": "electronics-test-report-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional simulation report lists Version C. The reference is 2.0 V and the acceptance range is 1.9 to 2.1 V, including both endpoints. The three readings are 2.0, 2.1, and 2.2 V under the same condition. The last reading is outside the range. No real hardware was measured.",
+        "test": [
+          {
+            "lesson_key": "electronics-measurement-notes",
+            "type": "single_choice",
+            "prompt": "What is the reference value?",
+            "options": [
+              "2.2 V",
+              "1.0 A",
+              "2.0 V"
+            ],
+            "answer": "C",
+            "explanation": "Tham chiếu là 2.0 V.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-01"
+          },
+          {
+            "lesson_key": "electronics-measurement-notes",
+            "type": "fill_blank",
+            "prompt": "How far above the reference is 2.2 V? Write the number only.",
+            "answers": [
+              "0.2"
+            ],
+            "explanation": "2.2 trừ 2.0 là 0.2 V.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-02"
+          },
+          {
+            "lesson_key": "electronics-measurement-notes",
+            "type": "single_choice",
+            "prompt": "Which word means a displayed measurement value?",
+            "options": [
+              "Reading",
+              "Layout",
+              "Wafer"
+            ],
+            "answer": "A",
+            "explanation": "Reading là số đọc.",
+            "key": "electronics-measurement-reporting-test-03"
+          },
+          {
+            "lesson_key": "electronics-measurement-notes",
+            "type": "fill_blank",
+            "prompt": "Choose frequency or voltage: A quantity expressed in hertz is ___.",
+            "answers": [
+              "frequency"
+            ],
+            "explanation": "Hertz là đơn vị tần số.",
+            "key": "electronics-measurement-reporting-test-04"
+          },
+          {
+            "lesson_key": "electronics-measurement-notes",
+            "type": "single_choice",
+            "prompt": "Which detail must be kept when reporting 2.2?",
+            "options": [
+              "The unit V",
+              "Only the page color",
+              "Only a name"
+            ],
+            "answer": "A",
+            "explanation": "Giá trị cần đơn vị.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-05"
+          },
+          {
+            "lesson_key": "electronics-test-report",
+            "type": "fill_blank",
+            "prompt": "Choose within or outside: The final reading is ___ the acceptance range.",
+            "answers": [
+              "outside"
+            ],
+            "explanation": "2.2 lớn hơn giới hạn trên 2.1.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-06"
+          },
+          {
+            "lesson_key": "electronics-test-report",
+            "type": "single_choice",
+            "prompt": "How many readings meet the stated range?",
+            "options": [
+              "Three",
+              "None",
+              "Two"
+            ],
+            "answer": "C",
+            "explanation": "2.0 và 2.1 thuộc khoảng; 2.2 không.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-07"
+          },
+          {
+            "lesson_key": "electronics-test-report",
+            "type": "fill_blank",
+            "prompt": "Which version is reported? Copy its letter.",
+            "answers": [
+              "C"
+            ],
+            "explanation": "Báo cáo là Version C.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-08"
+          },
+          {
+            "lesson_key": "electronics-test-report",
+            "type": "single_choice",
+            "prompt": "Which conclusion is supported?",
+            "options": [
+              "Every result is within the range",
+              "Real hardware passed",
+              "One simulated reading is outside the range"
+            ],
+            "answer": "C",
+            "explanation": "Kết luận phản ánh số liệu mô phỏng.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-09"
+          },
+          {
+            "lesson_key": "electronics-test-report",
+            "type": "single_choice",
+            "prompt": "Which limitation should remain in the report?",
+            "options": [
+              "Real hardware was not measured",
+              "No reference exists",
+              "No values were recorded"
+            ],
+            "answer": "A",
+            "explanation": "Đề nêu chưa đo phần cứng thật.",
+            "use_reading": true,
+            "key": "electronics-measurement-reporting-test-10"
+          }
+        ]
+      }
+    ]
+  }
+}

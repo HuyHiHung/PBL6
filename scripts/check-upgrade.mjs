@@ -12,10 +12,13 @@ try {
   }
   snapshot.authUserIds=(await sql`SELECT id FROM auth.users ORDER BY id`).map(r=>r.id);
   if(process.argv[2]==='capture') {
-    writeLocal(`${checkpoint}-before.json`,snapshot);console.log(`Captured ${checkpoint}: 33-table data fingerprints and Auth user IDs.`);
+    writeLocal(`${checkpoint}-before.json`,snapshot);console.log(`Captured ${checkpoint}: ${tables.length}-table data fingerprints and Auth user IDs.`);
   } else if(process.argv[2]==='verify') {
     const before=readLocal(`${checkpoint}-before.json`);
-    if(JSON.stringify(before)!==JSON.stringify(snapshot)) throw new Error(`Data changed; inspect .local/${checkpoint}-before.json`);
-    console.log(`PASS (${checkpoint}): all 33 tables and Auth user IDs unchanged.`);
+    for(const [name,value] of Object.entries(before)) {
+      if(JSON.stringify(value)!==JSON.stringify(snapshot[name])) throw new Error(`Data changed in ${name}; inspect .local/${checkpoint}-before.json`);
+    }
+    if(checkpoint==='bootstrap' && Object.keys(before).length!==Object.keys(snapshot).length) throw new Error('Bootstrap changed the table inventory');
+    console.log(`PASS (${checkpoint}): all ${Object.keys(before).length-1} captured tables and Auth user IDs unchanged; ${tables.length} current tables.`);
   } else throw new Error('Expected capture or verify');
 } finally {await sql.end();}

@@ -1,0 +1,1294 @@
+{
+  "schema_version": 1,
+  "status": "authored_demo_pack_not_imported",
+  "audio_status": "not_included",
+  "provenance": "Biên soạn mới cho Sprout ở mức ngôn ngữ mục tiêu A2–B1; chưa qua thẩm định độc lập của giáo viên/chuyên gia. Hội thoại, số liệu và thiết bị là giả lập để học tiếng Anh, không phải hướng dẫn vận hành hoặc thông số sản phẩm thật. Nguồn tham khảo chỉ dùng đối chiếu khái niệm; không sao chép bài học từ nguồn.",
+  "references": [
+    {
+      "title": "Autodesk — Geometric Dimensioning and Tolerancing",
+      "url": "https://www.autodesk.com/solutions/geometric-dimensioning-and-tolerancing",
+      "note": "Đối chiếu vai trò kích thước/dung sai trong trao đổi yêu cầu thiết kế. Bài chỉ dùng dung sai chiều dài đơn giản tự soạn, không thay thế tiêu chuẩn GD&T hay hướng dẫn bảo trì."
+    }
+  ],
+  "course": {
+    "level": "A2–B1",
+    "estimated_minutes": 150,
+    "key": "sprout-mechanical",
+    "title": "Mechanical & Automotive English — Parts to Handover",
+    "description": "Tiếng Anh cho Cơ khí/Ô tô qua bộ phận, kích thước, nguyên lý và báo cáo kiểm tra giả lập.",
+    "objectives": "Mô tả bộ phận và đơn vị, đọc dung sai mẫu, giải thích vai trò hệ thống và viết bàn giao có dữ kiện.",
+    "topics": [
+      {
+        "key": "mechanical-parts-drawings",
+        "title": "Parts and Drawings",
+        "objectives": "Gọi tên bộ phận và diễn đạt kích thước có dung sai.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "mechanical-parts",
+            "title": "Naming Mechanical Parts",
+            "objectives": "Nhận diện các bộ phận cơ khí và dùng câu ngắn mô tả chức năng.",
+            "vocabulary": [
+              {
+                "word": "shaft",
+                "part_of_speech": "noun",
+                "meaning": "trục truyền chuyển động hoặc mômen trong ngữ cảnh này",
+                "collocation": "a rotating shaft",
+                "example": "The shaft rotates in the animation.",
+                "example_vi": "Trục quay trong hoạt hình.",
+                "key": "mechanical-parts-vocab-shaft"
+              },
+              {
+                "word": "bearing",
+                "part_of_speech": "noun",
+                "meaning": "ổ đỡ; bộ phận đỡ và dẫn hướng chuyển động tương đối",
+                "collocation": "a shaft bearing",
+                "example": "The bearing supports the rotating shaft.",
+                "example_vi": "Ổ đỡ đỡ trục quay.",
+                "key": "mechanical-parts-vocab-bearing"
+              },
+              {
+                "word": "gear",
+                "part_of_speech": "noun",
+                "meaning": "bánh răng",
+                "collocation": "a pair of gears",
+                "example": "The two gears transfer rotation.",
+                "example_vi": "Hai bánh răng truyền chuyển động quay.",
+                "key": "mechanical-parts-vocab-gear"
+              },
+              {
+                "word": "belt",
+                "part_of_speech": "noun",
+                "meaning": "dây đai",
+                "collocation": "a drive belt",
+                "example": "The belt connects two pulleys.",
+                "example_vi": "Dây đai nối hai puli.",
+                "key": "mechanical-parts-vocab-belt"
+              },
+              {
+                "word": "pulley",
+                "part_of_speech": "noun",
+                "meaning": "puli; bánh đai",
+                "collocation": "a drive pulley",
+                "example": "The pulley turns with the belt.",
+                "example_vi": "Puli quay cùng dây đai.",
+                "key": "mechanical-parts-vocab-pulley"
+              },
+              {
+                "word": "bolt",
+                "part_of_speech": "noun",
+                "meaning": "bu lông",
+                "collocation": "a mounting bolt",
+                "example": "The bolt fastens the bracket in the drawing.",
+                "example_vi": "Bu lông giữ giá đỡ trong bản vẽ.",
+                "key": "mechanical-parts-vocab-bolt"
+              },
+              {
+                "word": "nut",
+                "part_of_speech": "noun",
+                "meaning": "đai ốc",
+                "collocation": "a matching nut",
+                "example": "The nut fits the bolt in the model.",
+                "example_vi": "Đai ốc khớp với bu lông trong mô hình.",
+                "key": "mechanical-parts-vocab-nut"
+              },
+              {
+                "word": "housing",
+                "part_of_speech": "noun",
+                "meaning": "vỏ bao hoặc thân chứa cụm chi tiết",
+                "collocation": "a gearbox housing",
+                "example": "The housing covers the gears.",
+                "example_vi": "Vỏ bao che các bánh răng.",
+                "key": "mechanical-parts-vocab-housing"
+              }
+            ],
+            "grammar": "The bearing supports the shaft. The housing covers the gears. Dùng hiện tại đơn mô tả chức năng. A gear là bánh răng; gears trong hộp số là các bánh răng, không tự đồng nghĩa mọi loại số truyền.",
+            "reading": "A fictional gearbox drawing shows two gears inside a housing. A shaft carries one gear, and a bearing supports the shaft. Four bolts hold a cover in place. The drawing is used for a vocabulary exercise, not for assembling a real gearbox.",
+            "reading_task": "Nêu chi tiết đỡ trục và chi tiết bao các bánh răng. Đáp án: bearing; housing.",
+            "dialogue": "Mai: Which part supports the shaft?\nNam: The bearing.\nMai: What is around the gears?\nNam: The housing.",
+            "practice": "Mô tả 3 quan hệ bộ phận. Mẫu: The bearing supports the shaft. The housing covers the gears. Bolts hold the cover. Tự kiểm: tên bộ phận và động từ đúng sơ đồ; không viết thành quy trình lắp máy.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What supports the shaft?",
+                "options": [
+                  "The bearing",
+                  "The drawing title",
+                  "The housing label"
+                ],
+                "answer": "A",
+                "explanation": "Bearing đỡ trục.",
+                "use_reading": true,
+                "key": "mechanical-parts-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose belt or nut: A flexible drive element connecting pulleys is a ___.",
+                "answers": [
+                  "belt"
+                ],
+                "explanation": "Belt là dây đai.",
+                "key": "mechanical-parts-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Where are the two gears?",
+                "options": [
+                  "Inside a housing",
+                  "Inside a cable",
+                  "On a keyboard"
+                ],
+                "answer": "A",
+                "explanation": "Bánh răng nằm trong housing.",
+                "use_reading": true,
+                "key": "mechanical-parts-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose bolt or pulley: A threaded fastener used with a nut is a ___.",
+                "answers": [
+                  "bolt"
+                ],
+                "explanation": "Bu lông dùng cùng đai ốc.",
+                "key": "mechanical-parts-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "How many bolts hold the cover in the example?",
+                "options": [
+                  "Four",
+                  "Two",
+                  "Six"
+                ],
+                "answer": "A",
+                "explanation": "Bốn bu lông được nêu.",
+                "use_reading": true,
+                "key": "mechanical-parts-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "mechanical-drawing-notes",
+            "title": "Reading Dimensions and Tolerances",
+            "objectives": "Đọc kích thước, đơn vị và dung sai đơn giản trong ghi chú bản vẽ giả lập.",
+            "vocabulary": [
+              {
+                "word": "drawing",
+                "part_of_speech": "noun",
+                "meaning": "bản vẽ",
+                "collocation": "a technical drawing",
+                "example": "The drawing shows a small plate.",
+                "example_vi": "Bản vẽ thể hiện một tấm nhỏ.",
+                "key": "mechanical-drawing-notes-vocab-drawing"
+              },
+              {
+                "word": "dimension",
+                "part_of_speech": "noun",
+                "meaning": "kích thước được ghi",
+                "collocation": "check a dimension",
+                "example": "Please check the dimension and its unit.",
+                "example_vi": "Hãy kiểm tra kích thước và đơn vị.",
+                "key": "mechanical-drawing-notes-vocab-dimension"
+              },
+              {
+                "word": "length",
+                "part_of_speech": "noun",
+                "meaning": "chiều dài",
+                "collocation": "plate length",
+                "example": "The nominal length is fifty millimetres.",
+                "example_vi": "Chiều dài danh nghĩa là năm mươi milimét.",
+                "key": "mechanical-drawing-notes-vocab-length"
+              },
+              {
+                "word": "diameter",
+                "part_of_speech": "noun",
+                "meaning": "đường kính",
+                "collocation": "hole diameter",
+                "example": "The drawing gives the hole diameter.",
+                "example_vi": "Bản vẽ cho đường kính lỗ.",
+                "key": "mechanical-drawing-notes-vocab-diameter"
+              },
+              {
+                "word": "tolerance",
+                "part_of_speech": "noun",
+                "meaning": "dung sai; độ biến thiên được cho phép theo yêu cầu",
+                "collocation": "a dimensional tolerance",
+                "example": "The tolerance is stated next to the dimension.",
+                "example_vi": "Dung sai được ghi cạnh kích thước.",
+                "key": "mechanical-drawing-notes-vocab-tolerance"
+              },
+              {
+                "word": "nominal",
+                "part_of_speech": "adjective",
+                "meaning": "danh nghĩa; giá trị dùng làm mốc",
+                "collocation": "a nominal dimension",
+                "example": "The nominal dimension is not a measured result.",
+                "example_vi": "Kích thước danh nghĩa không phải kết quả đo.",
+                "key": "mechanical-drawing-notes-vocab-nominal"
+              },
+              {
+                "word": "millimetre",
+                "part_of_speech": "noun",
+                "meaning": "milimét; mm",
+                "collocation": "one millimetre",
+                "example": "All dimensions are given in millimetres.",
+                "example_vi": "Tất cả kích thước được ghi bằng milimét.",
+                "key": "mechanical-drawing-notes-vocab-millimetre"
+              },
+              {
+                "word": "revision",
+                "part_of_speech": "noun",
+                "meaning": "lần sửa đổi hoặc phiên bản của tài liệu",
+                "collocation": "drawing revision",
+                "example": "Please confirm the drawing revision.",
+                "example_vi": "Hãy xác nhận phiên bản bản vẽ.",
+                "key": "mechanical-drawing-notes-vocab-revision"
+              }
+            ],
+            "grammar": "The length is 50 mm with a tolerance of ±0.2 mm. Trong ví dụ đối xứng này, khoảng là 49.8–50.2 mm. Nominal là giá trị mốc; measured là kết quả đo. Không suy ra mọi yêu cầu hình học chỉ từ một dung sai chiều dài.",
+            "reading": "A fictional plate drawing, revision B, gives a nominal length of 50 mm with a tolerance of plus or minus 0.2 mm. For this exercise, the allowed length is 49.8 to 50.2 mm, including both endpoints. Mai checks the revision and unit before describing the requirement in English.",
+            "reading_task": "Ghi phiên bản, danh nghĩa và hai giới hạn. Đáp án: B; 50 mm; 49.8 và 50.2 mm.",
+            "dialogue": "Mai: Is 50 mm the measured length?\nNam: No. It is the nominal length on the drawing.\nMai: Which revision are we using?\nNam: Revision B.",
+            "practice": "Viết 3 câu mô tả yêu cầu. Mẫu: We use revision B. The nominal length is 50 mm. The allowed range is 49.8 to 50.2 mm. Tự kiểm: không bỏ đơn vị hoặc nhầm danh nghĩa với số đo.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which drawing revision is used?",
+                "options": [
+                  "B",
+                  "A",
+                  "C"
+                ],
+                "answer": "A",
+                "explanation": "Bài nêu revision B.",
+                "use_reading": true,
+                "key": "mechanical-drawing-notes-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose nominal or measured: The 50 mm value on the drawing is the ___ length.",
+                "answers": [
+                  "nominal"
+                ],
+                "explanation": "Đây là kích thước danh nghĩa.",
+                "use_reading": true,
+                "key": "mechanical-drawing-notes-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which length is outside the stated range?",
+                "options": [
+                  "50.3 mm",
+                  "49.8 mm",
+                  "50.0 mm"
+                ],
+                "answer": "A",
+                "explanation": "50.3 lớn hơn 50.2.",
+                "use_reading": true,
+                "key": "mechanical-drawing-notes-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose diameter or length: The distance across a circular hole through its centre is its ___.",
+                "answers": [
+                  "diameter"
+                ],
+                "explanation": "Diameter là đường kính.",
+                "key": "mechanical-drawing-notes-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What should be checked before comparing measurements?",
+                "options": [
+                  "Revision and unit",
+                  "Only the author name",
+                  "Only the document color"
+                ],
+                "answer": "A",
+                "explanation": "Đúng phiên bản và đơn vị giúp tránh so sánh sai.",
+                "use_reading": true,
+                "key": "mechanical-drawing-notes-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional assembly drawing, revision D, shows a shaft supported by two bearings inside a housing. A separate plate has nominal length 20 mm with a tolerance of plus or minus 0.1 mm. For this exercise, its allowed length is 19.9 to 20.1 mm, including both endpoints.",
+        "test": [
+          {
+            "lesson_key": "mechanical-parts",
+            "type": "single_choice",
+            "prompt": "What supports the shaft?",
+            "options": [
+              "Two belts",
+              "Two bearings",
+              "Two report titles"
+            ],
+            "answer": "B",
+            "explanation": "Hai ổ đỡ đỡ trục.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-01"
+          },
+          {
+            "lesson_key": "mechanical-parts",
+            "type": "fill_blank",
+            "prompt": "Choose housing or nut: The enclosure around the assembly is the ___.",
+            "answers": [
+              "housing"
+            ],
+            "explanation": "Housing là vỏ bao.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-02"
+          },
+          {
+            "lesson_key": "mechanical-parts",
+            "type": "single_choice",
+            "prompt": "Which part connects pulleys in a belt drive?",
+            "options": [
+              "A drawing revision",
+              "A label",
+              "A belt"
+            ],
+            "answer": "C",
+            "explanation": "Belt là dây đai nối các puli.",
+            "key": "mechanical-parts-drawings-test-03"
+          },
+          {
+            "lesson_key": "mechanical-parts",
+            "type": "fill_blank",
+            "prompt": "Choose bolt or gear: A wheel with teeth used to transfer rotation is a ___.",
+            "answers": [
+              "gear"
+            ],
+            "explanation": "Gear là bánh răng.",
+            "key": "mechanical-parts-drawings-test-04"
+          },
+          {
+            "lesson_key": "mechanical-parts",
+            "type": "single_choice",
+            "prompt": "Which pair consists of threaded fastening parts?",
+            "options": [
+              "Shaft and bearing",
+              "Bolt and nut",
+              "Belt and pulley"
+            ],
+            "answer": "B",
+            "explanation": "Bu lông và đai ốc là cặp chi tiết ghép ren.",
+            "key": "mechanical-parts-drawings-test-05"
+          },
+          {
+            "lesson_key": "mechanical-drawing-notes",
+            "type": "fill_blank",
+            "prompt": "Which drawing revision is used? Copy the letter.",
+            "answers": [
+              "D"
+            ],
+            "explanation": "Bài nêu revision D.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-06"
+          },
+          {
+            "lesson_key": "mechanical-drawing-notes",
+            "type": "single_choice",
+            "prompt": "Which length is outside the stated range?",
+            "options": [
+              "20.2 mm",
+              "19.9 mm",
+              "20.0 mm"
+            ],
+            "answer": "A",
+            "explanation": "20.2 vượt 20.1.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-07"
+          },
+          {
+            "lesson_key": "mechanical-drawing-notes",
+            "type": "fill_blank",
+            "prompt": "Choose nominal or measured: The 20 mm requirement is a ___ length.",
+            "answers": [
+              "nominal"
+            ],
+            "explanation": "Đây là giá trị danh nghĩa.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-08"
+          },
+          {
+            "lesson_key": "mechanical-drawing-notes",
+            "type": "single_choice",
+            "prompt": "What is the lower allowed length?",
+            "options": [
+              "19.0 mm",
+              "20.1 mm",
+              "19.9 mm"
+            ],
+            "answer": "C",
+            "explanation": "Giới hạn dưới là 19.9.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-09"
+          },
+          {
+            "lesson_key": "mechanical-drawing-notes",
+            "type": "single_choice",
+            "prompt": "Which detail must accompany the length?",
+            "options": [
+              "The page color",
+              "The student age",
+              "The unit mm"
+            ],
+            "answer": "C",
+            "explanation": "Cần giữ đơn vị milimét.",
+            "use_reading": true,
+            "key": "mechanical-parts-drawings-test-10"
+          }
+        ]
+      },
+      {
+        "key": "mechanical-system-principles",
+        "title": "Explaining System Functions",
+        "objectives": "Mô tả truyền chuyển động và vai trò các bộ phận ô tô trong sơ đồ mẫu.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "mechanical-motion",
+            "title": "Explaining Motion and Power Transfer",
+            "objectives": "Mô tả chuyển động quay, đường truyền và khác biệt giữa tốc độ với mômen.",
+            "vocabulary": [
+              {
+                "word": "rotation",
+                "part_of_speech": "noun",
+                "meaning": "chuyển động quay",
+                "collocation": "describe rotation",
+                "example": "The arrow shows the direction of rotation.",
+                "example_vi": "Mũi tên chỉ chiều quay.",
+                "key": "mechanical-motion-vocab-rotation"
+              },
+              {
+                "word": "torque",
+                "part_of_speech": "noun",
+                "meaning": "mômen lực; tác dụng làm quay",
+                "collocation": "transmit torque",
+                "example": "The shaft transmits torque to the next part.",
+                "example_vi": "Trục truyền mômen tới bộ phận tiếp theo.",
+                "key": "mechanical-motion-vocab-torque"
+              },
+              {
+                "word": "speed",
+                "part_of_speech": "noun",
+                "meaning": "tốc độ",
+                "collocation": "rotational speed",
+                "example": "The display shows rotational speed.",
+                "example_vi": "Màn hình hiển thị tốc độ quay.",
+                "key": "mechanical-motion-vocab-speed"
+              },
+              {
+                "word": "rpm",
+                "part_of_speech": "abbreviation",
+                "meaning": "vòng trên phút; đơn vị tốc độ quay",
+                "collocation": "a speed in rpm",
+                "example": "The fictional speed is 300 rpm.",
+                "example_vi": "Tốc độ giả lập là 300 vòng trên phút.",
+                "key": "mechanical-motion-vocab-rpm"
+              },
+              {
+                "word": "drive",
+                "part_of_speech": "verb",
+                "meaning": "dẫn động",
+                "collocation": "drive a shaft",
+                "example": "The motor drives the input shaft.",
+                "example_vi": "Động cơ dẫn động trục đầu vào.",
+                "key": "mechanical-motion-vocab-drive"
+              },
+              {
+                "word": "transfer",
+                "part_of_speech": "verb",
+                "meaning": "truyền từ nơi này sang nơi khác",
+                "collocation": "transfer motion",
+                "example": "The belt transfers motion between pulleys.",
+                "example_vi": "Dây đai truyền chuyển động giữa các puli.",
+                "key": "mechanical-motion-vocab-transfer"
+              },
+              {
+                "word": "input shaft",
+                "part_of_speech": "noun",
+                "meaning": "trục đầu vào",
+                "collocation": "an input shaft",
+                "example": "The input shaft receives motion from the motor.",
+                "example_vi": "Trục đầu vào nhận chuyển động từ động cơ.",
+                "key": "mechanical-motion-vocab-input-shaft"
+              },
+              {
+                "word": "output shaft",
+                "part_of_speech": "noun",
+                "meaning": "trục đầu ra",
+                "collocation": "an output shaft",
+                "example": "The output shaft drives the next mechanism.",
+                "example_vi": "Trục đầu ra dẫn động cơ cấu tiếp theo.",
+                "key": "mechanical-motion-vocab-output-shaft"
+              }
+            ],
+            "grammar": "Motion is transferred from A to B. Dùng from/to cho đường truyền. Speed mô tả nhanh/chậm; torque mô tả tác dụng làm quay, không dùng thay nhau. Các con số trong bài chỉ dùng đọc và so sánh.",
+            "reading": "In a fictional gearbox animation, a motor drives an input shaft at 600 rpm. Gears transfer motion to an output shaft at 300 rpm. The output speed is lower in this example. No torque values are provided, so the student report does not give a numerical torque result.",
+            "reading_task": "Nêu tốc độ hai trục và dữ kiện thiếu. Đáp án: đầu vào 600 rpm, đầu ra 300 rpm; không có giá trị mômen.",
+            "dialogue": "Nam: Is the output faster than the input?\nMai: No. It is 300 rpm compared with 600 rpm.\nNam: Can we report an exact torque value?\nMai: Not from the information in this exercise.",
+            "practice": "Viết mô tả 3 câu. Mẫu: The motor drives the input shaft at 600 rpm. The output runs at 300 rpm. No torque value is given. Tự kiểm: đơn vị tốc độ đúng và không tự tạo dữ kiện mômen.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is the output speed?",
+                "options": [
+                  "600 rpm",
+                  "300 volts",
+                  "300 rpm"
+                ],
+                "answer": "C",
+                "explanation": "Đầu ra có 300 rpm.",
+                "use_reading": true,
+                "key": "mechanical-motion-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose speed or torque: The turning effect of a force is called ___.",
+                "answers": [
+                  "torque"
+                ],
+                "explanation": "Torque là mômen lực.",
+                "key": "mechanical-motion-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "How does output speed compare with input speed here?",
+                "options": [
+                  "It is equal",
+                  "It is lower",
+                  "It is higher"
+                ],
+                "answer": "B",
+                "explanation": "300 nhỏ hơn 600.",
+                "use_reading": true,
+                "key": "mechanical-motion-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Expand the final word: rpm means revolutions per ___.",
+                "answers": [
+                  "minute"
+                ],
+                "explanation": "Rpm là vòng trên phút.",
+                "key": "mechanical-motion-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which information is missing?",
+                "options": [
+                  "Numerical torque values",
+                  "Output speed",
+                  "Input speed"
+                ],
+                "answer": "A",
+                "explanation": "Bài không cho giá trị mômen.",
+                "use_reading": true,
+                "key": "mechanical-motion-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "automotive-system-explanation",
+            "title": "Explaining a Vehicle System",
+            "objectives": "Giới thiệu các bộ phận và vai trò cơ bản trong sơ đồ hệ làm mát giả lập.",
+            "vocabulary": [
+              {
+                "word": "engine",
+                "part_of_speech": "noun",
+                "meaning": "động cơ; trong bài là động cơ đốt trong",
+                "collocation": "a vehicle engine",
+                "example": "The engine produces heat while running.",
+                "example_vi": "Động cơ sinh nhiệt khi chạy.",
+                "key": "automotive-system-explanation-vocab-engine"
+              },
+              {
+                "word": "coolant",
+                "part_of_speech": "noun",
+                "meaning": "chất lỏng làm mát",
+                "collocation": "coolant flow",
+                "example": "The diagram shows coolant flow.",
+                "example_vi": "Sơ đồ thể hiện dòng chất làm mát.",
+                "key": "automotive-system-explanation-vocab-coolant"
+              },
+              {
+                "word": "radiator",
+                "part_of_speech": "noun",
+                "meaning": "két tản nhiệt trong hệ làm mát",
+                "collocation": "a vehicle radiator",
+                "example": "The radiator transfers heat to the surrounding air.",
+                "example_vi": "Két tản nhiệt truyền nhiệt ra không khí xung quanh.",
+                "key": "automotive-system-explanation-vocab-radiator"
+              },
+              {
+                "word": "pump",
+                "part_of_speech": "noun",
+                "meaning": "bơm",
+                "collocation": "a coolant pump",
+                "example": "The pump circulates coolant in this diagram.",
+                "example_vi": "Bơm tuần hoàn chất làm mát trong sơ đồ này.",
+                "key": "automotive-system-explanation-vocab-pump"
+              },
+              {
+                "word": "fan",
+                "part_of_speech": "noun",
+                "meaning": "quạt",
+                "collocation": "a cooling fan",
+                "example": "The fan moves air through the radiator.",
+                "example_vi": "Quạt đưa không khí qua két tản nhiệt.",
+                "key": "automotive-system-explanation-vocab-fan"
+              },
+              {
+                "word": "hose",
+                "part_of_speech": "noun",
+                "meaning": "ống mềm",
+                "collocation": "a coolant hose",
+                "example": "The hose connects two parts of the system.",
+                "example_vi": "Ống mềm nối hai bộ phận của hệ thống.",
+                "key": "automotive-system-explanation-vocab-hose"
+              },
+              {
+                "word": "temperature",
+                "part_of_speech": "noun",
+                "meaning": "nhiệt độ",
+                "collocation": "coolant temperature",
+                "example": "The display shows coolant temperature.",
+                "example_vi": "Màn hình hiển thị nhiệt độ chất làm mát.",
+                "key": "automotive-system-explanation-vocab-temperature"
+              },
+              {
+                "word": "flow",
+                "part_of_speech": "noun",
+                "meaning": "dòng chảy",
+                "collocation": "describe the flow",
+                "example": "Arrows show the direction of flow.",
+                "example_vi": "Mũi tên thể hiện chiều dòng chảy.",
+                "key": "automotive-system-explanation-vocab-flow"
+              }
+            ],
+            "grammar": "The pump circulates ...; the fan moves ... mô tả vai trò. This diagram shows ... giới hạn vào sơ đồ đang xét. Không dùng mô tả ngôn ngữ ngắn để suy ra quy trình tháo lắp hoặc kiểm tra hệ thật.",
+            "reading": "A simplified fictional diagram shows a vehicle cooling system. A pump circulates coolant through the illustrated path. A radiator transfers heat to air, and a fan helps move air through the radiator. Hoses connect the parts. The students explain these roles; the diagram is not a service procedure.",
+            "reading_task": "Ghép pump/radiator/fan với vai trò. Đáp án: tuần hoàn chất làm mát / truyền nhiệt ra không khí / đưa không khí qua két.",
+            "dialogue": "Tutor: What does the pump move in this diagram?\nLan: Coolant.\nTutor: What does the fan move?\nLan: Air through the radiator.",
+            "practice": "Giải thích 3 vai trò cho bạn học. Mẫu: The pump circulates coolant. The radiator transfers heat to air. The fan moves air through the radiator. Tự kiểm: phân biệt không khí và chất làm mát; không đưa bước sửa chữa.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What does the pump circulate?",
+                "options": [
+                  "Coolant",
+                  "Engine bolts",
+                  "Air only"
+                ],
+                "answer": "A",
+                "explanation": "Pump tuần hoàn coolant trong sơ đồ.",
+                "use_reading": true,
+                "key": "automotive-system-explanation-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose radiator or hose: The component described as transferring heat to air is the ___.",
+                "answers": [
+                  "radiator"
+                ],
+                "explanation": "Radiator là két tản nhiệt.",
+                "use_reading": true,
+                "key": "automotive-system-explanation-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What connects the parts in the passage?",
+                "options": [
+                  "Keyboard keys",
+                  "Report titles",
+                  "Hoses"
+                ],
+                "answer": "C",
+                "explanation": "Ống mềm nối các bộ phận.",
+                "use_reading": true,
+                "key": "automotive-system-explanation-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose temperature or torque: How hot something is is described by its ___.",
+                "answers": [
+                  "temperature"
+                ],
+                "explanation": "Temperature là nhiệt độ.",
+                "key": "automotive-system-explanation-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is the purpose of this diagram in the lesson?",
+                "options": [
+                  "To replace a service manual",
+                  "To authorize real servicing",
+                  "To practise explaining component roles"
+                ],
+                "answer": "C",
+                "explanation": "Bài dùng để luyện mô tả vai trò.",
+                "use_reading": true,
+                "key": "automotive-system-explanation-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional animation shows an input shaft at 400 rpm and an output shaft at 200 rpm. No torque values are listed. A separate cooling diagram shows a pump circulating coolant and a fan moving air through a radiator. Students explain the roles; they do not service real equipment.",
+        "test": [
+          {
+            "lesson_key": "mechanical-motion",
+            "type": "single_choice",
+            "prompt": "What is the output speed?",
+            "options": [
+              "400 V",
+              "200 rpm",
+              "400 rpm"
+            ],
+            "answer": "B",
+            "explanation": "Đầu ra là 200 rpm.",
+            "use_reading": true,
+            "key": "mechanical-system-principles-test-01"
+          },
+          {
+            "lesson_key": "mechanical-motion",
+            "type": "fill_blank",
+            "prompt": "Choose speed or torque: The value expressed in rpm is rotational ___.",
+            "answers": [
+              "speed"
+            ],
+            "explanation": "Rpm đo tốc độ quay.",
+            "key": "mechanical-system-principles-test-02"
+          },
+          {
+            "lesson_key": "mechanical-motion",
+            "type": "single_choice",
+            "prompt": "Which statement is supported?",
+            "options": [
+              "Output torque is exactly 10 units",
+              "Every gearbox behaves this way",
+              "Output speed is half the input speed"
+            ],
+            "answer": "C",
+            "explanation": "200 bằng một nửa 400; đây là ví dụ.",
+            "use_reading": true,
+            "key": "mechanical-system-principles-test-03"
+          },
+          {
+            "lesson_key": "mechanical-motion",
+            "type": "fill_blank",
+            "prompt": "Choose input or output: The shaft receiving motion from the motor is the ___ shaft.",
+            "answers": [
+              "input"
+            ],
+            "explanation": "Input shaft là trục nhận chuyển động đầu vào.",
+            "key": "mechanical-system-principles-test-04"
+          },
+          {
+            "lesson_key": "mechanical-motion",
+            "type": "single_choice",
+            "prompt": "What is not provided?",
+            "options": [
+              "Torque values",
+              "Both speeds",
+              "The animation context"
+            ],
+            "answer": "A",
+            "explanation": "Không có giá trị mômen.",
+            "use_reading": true,
+            "key": "mechanical-system-principles-test-05"
+          },
+          {
+            "lesson_key": "automotive-system-explanation",
+            "type": "fill_blank",
+            "prompt": "What does the pump circulate? Copy one word.",
+            "answers": [
+              "coolant"
+            ],
+            "explanation": "Pump tuần hoàn coolant.",
+            "use_reading": true,
+            "key": "mechanical-system-principles-test-06"
+          },
+          {
+            "lesson_key": "automotive-system-explanation",
+            "type": "single_choice",
+            "prompt": "What does the fan move?",
+            "options": [
+              "A shaft",
+              "Coolant through a hose",
+              "Air through the radiator"
+            ],
+            "answer": "C",
+            "explanation": "Quạt đưa không khí qua két.",
+            "use_reading": true,
+            "key": "mechanical-system-principles-test-07"
+          },
+          {
+            "lesson_key": "automotive-system-explanation",
+            "type": "fill_blank",
+            "prompt": "Choose hose or gear: A flexible tube connecting parts is a ___.",
+            "answers": [
+              "hose"
+            ],
+            "explanation": "Hose là ống mềm.",
+            "key": "mechanical-system-principles-test-08"
+          },
+          {
+            "lesson_key": "automotive-system-explanation",
+            "type": "single_choice",
+            "prompt": "What is the purpose of the activity?",
+            "options": [
+              "Approve a service procedure",
+              "Explain component roles in English",
+              "Perform a real repair"
+            ],
+            "answer": "B",
+            "explanation": "Đây là luyện diễn đạt vai trò.",
+            "use_reading": true,
+            "key": "mechanical-system-principles-test-09"
+          },
+          {
+            "lesson_key": "automotive-system-explanation",
+            "type": "single_choice",
+            "prompt": "Which quantity describes how hot the coolant is?",
+            "options": [
+              "Torque",
+              "Temperature",
+              "Diameter"
+            ],
+            "answer": "B",
+            "explanation": "Temperature là nhiệt độ.",
+            "key": "mechanical-system-principles-test-10"
+          }
+        ]
+      },
+      {
+        "key": "mechanical-inspection-handover",
+        "title": "Inspection and Maintenance Communication",
+        "objectives": "Báo dấu hiệu và bàn giao công việc mà không khẳng định nguyên nhân hoặc sửa chữa chưa kiểm chứng.",
+        "lessons": [
+          {
+            "estimated_minutes": 20,
+            "key": "mechanical-inspection-observations",
+            "title": "Reporting Inspection Observations",
+            "objectives": "Mô tả dấu hiệu quan sát được và phân biệt chúng với nguyên nhân chưa xác định.",
+            "vocabulary": [
+              {
+                "word": "inspection",
+                "part_of_speech": "noun",
+                "meaning": "việc kiểm tra hoặc quan sát theo tiêu chí",
+                "collocation": "an inspection note",
+                "example": "The inspection note describes the visible mark.",
+                "example_vi": "Ghi chú kiểm tra mô tả vết nhìn thấy.",
+                "key": "mechanical-inspection-observations-vocab-inspection"
+              },
+              {
+                "word": "wear",
+                "part_of_speech": "noun",
+                "meaning": "sự mòn",
+                "collocation": "signs of wear",
+                "example": "The photo may show signs of wear.",
+                "example_vi": "Ảnh có thể cho thấy dấu hiệu mòn.",
+                "key": "mechanical-inspection-observations-vocab-wear"
+              },
+              {
+                "word": "crack",
+                "part_of_speech": "noun",
+                "meaning": "vết nứt",
+                "collocation": "a visible crack",
+                "example": "The training image shows a visible crack.",
+                "example_vi": "Ảnh huấn luyện thể hiện một vết nứt nhìn thấy.",
+                "key": "mechanical-inspection-observations-vocab-crack"
+              },
+              {
+                "word": "leak",
+                "part_of_speech": "noun",
+                "meaning": "sự rò rỉ",
+                "collocation": "a suspected leak",
+                "example": "The note reports a suspected leak.",
+                "example_vi": "Ghi chú báo nghi có rò rỉ.",
+                "key": "mechanical-inspection-observations-vocab-leak"
+              },
+              {
+                "word": "noise",
+                "part_of_speech": "noun",
+                "meaning": "tiếng ồn",
+                "collocation": "an unusual noise",
+                "example": "The recording contains an unusual noise.",
+                "example_vi": "Bản ghi có một tiếng ồn bất thường.",
+                "key": "mechanical-inspection-observations-vocab-noise"
+              },
+              {
+                "word": "vibration",
+                "part_of_speech": "noun",
+                "meaning": "sự rung",
+                "collocation": "excessive vibration",
+                "example": "The report mentions vibration during the demonstration.",
+                "example_vi": "Báo cáo nhắc đến rung trong buổi minh họa.",
+                "key": "mechanical-inspection-observations-vocab-vibration"
+              },
+              {
+                "word": "symptom",
+                "part_of_speech": "noun",
+                "meaning": "dấu hiệu hoặc biểu hiện của vấn đề",
+                "collocation": "describe a symptom",
+                "example": "Describe the symptom before suggesting a cause.",
+                "example_vi": "Mô tả biểu hiện trước khi gợi ý nguyên nhân.",
+                "key": "mechanical-inspection-observations-vocab-symptom"
+              },
+              {
+                "word": "cause",
+                "part_of_speech": "noun",
+                "meaning": "nguyên nhân",
+                "collocation": "confirm the cause",
+                "example": "The cause has not been confirmed.",
+                "example_vi": "Nguyên nhân chưa được xác nhận.",
+                "key": "mechanical-inspection-observations-vocab-cause"
+              }
+            ],
+            "grammar": "There is ... mô tả dấu hiệu. There may be ... nêu nghi ngờ. A symptom is not a confirmed cause. Dùng on the left side / near the housing để vị trí rõ hơn thay vì chỉ nói something is wrong.",
+            "reading": "A fictional training photo shows a dark wet mark near a housing. An audio clip contains an unusual noise. Mai reports the mark and the noise, but she does not identify the fluid or claim a confirmed leak. The cause is unknown. She asks the supervisor to review the evidence.",
+            "reading_task": "Tách quan sát và điều chưa rõ. Đáp án: vết ướt tối, tiếng ồn; chưa biết chất lỏng, có thật là rò rỉ không và nguyên nhân.",
+            "dialogue": "Mai: I can see a wet mark near the housing.\nSupervisor: Can you confirm a leak from this photo alone?\nMai: No. I can only describe the mark.\nSupervisor: Please record that limitation.",
+            "practice": "Viết 3 câu quan sát. Mẫu: There is a wet mark near the housing. The recording has an unusual noise. The cause is not confirmed. Tự kiểm: không tự xác định loại chất lỏng hoặc bộ phận hỏng chỉ từ ảnh.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is visible in the photo?",
+                "options": [
+                  "A wet mark near a housing",
+                  "A confirmed broken pump",
+                  "A new engine"
+                ],
+                "answer": "A",
+                "explanation": "Ảnh cho vết ướt gần vỏ.",
+                "use_reading": true,
+                "key": "mechanical-inspection-observations-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose symptom or cause: An observed sign of a problem is a ___.",
+                "answers": [
+                  "symptom"
+                ],
+                "explanation": "Symptom là dấu hiệu, chưa phải nguyên nhân.",
+                "key": "mechanical-inspection-observations-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which information is still unknown?",
+                "options": [
+                  "That there is a mark",
+                  "That there is a noise",
+                  "The cause"
+                ],
+                "answer": "C",
+                "explanation": "Nguyên nhân chưa xác nhận.",
+                "use_reading": true,
+                "key": "mechanical-inspection-observations-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose crack or vibration: A split visible in a material is a ___.",
+                "answers": [
+                  "crack"
+                ],
+                "explanation": "Crack là vết nứt.",
+                "key": "mechanical-inspection-observations-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which sentence is appropriately cautious?",
+                "options": [
+                  "The pump is definitely broken",
+                  "The photo shows a wet mark; the cause is unknown",
+                  "Every wet mark proves a leak"
+                ],
+                "answer": "B",
+                "explanation": "Câu giữ đúng điều quan sát được và giới hạn.",
+                "use_reading": true,
+                "key": "mechanical-inspection-observations-quiz-05"
+              }
+            ]
+          },
+          {
+            "estimated_minutes": 20,
+            "key": "mechanical-maintenance-report",
+            "title": "Writing a Maintenance Handover",
+            "objectives": "Viết ghi chú công việc có mã tài sản, phát hiện, người phụ trách và trạng thái.",
+            "vocabulary": [
+              {
+                "word": "maintenance",
+                "part_of_speech": "noun",
+                "meaning": "bảo trì",
+                "collocation": "a maintenance report",
+                "example": "The maintenance report lists the open issues.",
+                "example_vi": "Báo cáo bảo trì liệt kê các vấn đề còn mở.",
+                "key": "mechanical-maintenance-report-vocab-maintenance"
+              },
+              {
+                "word": "asset",
+                "part_of_speech": "noun",
+                "meaning": "thiết bị hoặc tài sản được quản lý",
+                "collocation": "an asset ID",
+                "example": "The asset ID is M12 in this exercise.",
+                "example_vi": "Mã thiết bị là M12 trong bài tập này.",
+                "key": "mechanical-maintenance-report-vocab-asset"
+              },
+              {
+                "word": "finding",
+                "part_of_speech": "noun",
+                "meaning": "điều phát hiện sau kiểm tra",
+                "collocation": "record a finding",
+                "example": "Please record each finding clearly.",
+                "example_vi": "Hãy ghi rõ từng phát hiện.",
+                "key": "mechanical-maintenance-report-vocab-finding"
+              },
+              {
+                "word": "recommendation",
+                "part_of_speech": "noun",
+                "meaning": "đề xuất",
+                "collocation": "a review recommendation",
+                "example": "The recommendation is a supervisor review.",
+                "example_vi": "Đề xuất là để người giám sát xem xét.",
+                "key": "mechanical-maintenance-report-vocab-recommendation"
+              },
+              {
+                "word": "replacement",
+                "part_of_speech": "noun",
+                "meaning": "việc thay thế hoặc bộ phận thay thế",
+                "collocation": "a replacement request",
+                "example": "The replacement request is not yet approved.",
+                "example_vi": "Yêu cầu thay thế chưa được duyệt.",
+                "key": "mechanical-maintenance-report-vocab-replacement"
+              },
+              {
+                "word": "pending",
+                "part_of_speech": "adjective",
+                "meaning": "đang chờ",
+                "collocation": "pending review",
+                "example": "The issue is pending review.",
+                "example_vi": "Vấn đề đang chờ xem xét.",
+                "key": "mechanical-maintenance-report-vocab-pending"
+              },
+              {
+                "word": "supervisor",
+                "part_of_speech": "noun",
+                "meaning": "người giám sát",
+                "collocation": "inform the supervisor",
+                "example": "Please inform the supervisor of this finding.",
+                "example_vi": "Hãy thông báo phát hiện này cho người giám sát.",
+                "key": "mechanical-maintenance-report-vocab-supervisor"
+              },
+              {
+                "word": "follow-up",
+                "part_of_speech": "noun",
+                "meaning": "việc theo dõi tiếp",
+                "collocation": "plan a follow-up",
+                "example": "A follow-up is planned for Monday.",
+                "example_vi": "Một lần theo dõi tiếp được lên lịch vào thứ Hai.",
+                "key": "mechanical-maintenance-report-vocab-follow-up"
+              }
+            ],
+            "grammar": "Asset: ...; Finding: ...; Recommendation: ...; Status: ... giúp viết ngắn và rõ. Recommended khác completed; pending khác approved. Báo cáo ngôn ngữ không cấp phép sửa chữa hoặc thay bộ phận.",
+            "reading": "A fictional maintenance note identifies asset M12. It records an unusual noise from a training recording. The recommendation is a supervisor review on Monday. No replacement has been approved and no repair has been confirmed. The status is pending review. Linh sends the note to the supervisor for follow-up.",
+            "reading_task": "Tìm mã, phát hiện, đề xuất và trạng thái. Đáp án: M12; tiếng ồn; giám sát xem xét thứ Hai; pending review.",
+            "dialogue": "Linh: Can I write that the part was replaced?\nNam: Has a replacement been approved and completed?\nLinh: No. The review is pending.\nNam: Then report the pending review, not a completed repair.",
+            "practice": "Viết 4 dòng. Mẫu: Asset: M12. Finding: Unusual noise in recording. Recommendation: Supervisor review on Monday. Status: Pending; no confirmed repair. Tự kiểm: không biến đề xuất thành việc đã hoàn thành.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which asset is identified?",
+                "options": [
+                  "M21",
+                  "L12",
+                  "M12"
+                ],
+                "answer": "C",
+                "explanation": "Mã M12 được nêu.",
+                "use_reading": true,
+                "key": "mechanical-maintenance-report-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose pending or completed: A review that has not yet happened is ___.",
+                "answers": [
+                  "pending"
+                ],
+                "explanation": "Pending là đang chờ.",
+                "key": "mechanical-maintenance-report-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is recommended?",
+                "options": [
+                  "Deleting the finding",
+                  "Immediate confirmed replacement",
+                  "Supervisor review on Monday"
+                ],
+                "answer": "C",
+                "explanation": "Đề xuất là review vào thứ Hai.",
+                "use_reading": true,
+                "key": "mechanical-maintenance-report-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose finding or shaft: An observation recorded after inspection is a ___.",
+                "answers": [
+                  "finding"
+                ],
+                "explanation": "Finding là phát hiện được ghi lại.",
+                "key": "mechanical-maintenance-report-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which statement matches the note?",
+                "options": [
+                  "A repair is confirmed",
+                  "No replacement has been approved",
+                  "All work is complete"
+                ],
+                "answer": "B",
+                "explanation": "Chưa duyệt thay thế hoặc xác nhận sửa.",
+                "use_reading": true,
+                "key": "mechanical-maintenance-report-quiz-05"
+              }
+            ]
+          }
+        ],
+        "test_passage": "A fictional note for asset K7 describes vibration in a training video and a dark mark near a cover. The cause and the type of mark are not confirmed. Hoa recommends a supervisor review on Friday. The review is pending. No part replacement or completed repair is recorded.",
+        "test": [
+          {
+            "lesson_key": "mechanical-inspection-observations",
+            "type": "single_choice",
+            "prompt": "What is observed in the video?",
+            "options": [
+              "A completed replacement",
+              "Vibration",
+              "A confirmed motor failure"
+            ],
+            "answer": "B",
+            "explanation": "Video có rung được ghi nhận.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-01"
+          },
+          {
+            "lesson_key": "mechanical-inspection-observations",
+            "type": "fill_blank",
+            "prompt": "Choose cause or symptom: An observed sign of a problem is a ___.",
+            "answers": [
+              "symptom"
+            ],
+            "explanation": "Symptom là biểu hiện.",
+            "key": "mechanical-inspection-handover-test-02"
+          },
+          {
+            "lesson_key": "mechanical-inspection-observations",
+            "type": "single_choice",
+            "prompt": "Which information is unknown?",
+            "options": [
+              "The review day",
+              "The cause",
+              "The asset ID"
+            ],
+            "answer": "B",
+            "explanation": "Nguyên nhân chưa xác nhận.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-03"
+          },
+          {
+            "lesson_key": "mechanical-inspection-observations",
+            "type": "fill_blank",
+            "prompt": "Choose wear or drawing: Gradual material loss through use can be described as ___.",
+            "answers": [
+              "wear"
+            ],
+            "explanation": "Wear là sự mòn.",
+            "key": "mechanical-inspection-handover-test-04"
+          },
+          {
+            "lesson_key": "mechanical-inspection-observations",
+            "type": "single_choice",
+            "prompt": "Which sentence stays within the evidence?",
+            "options": [
+              "The pump is broken",
+              "A dark mark is visible; its type is unconfirmed",
+              "The mark is certainly oil"
+            ],
+            "answer": "B",
+            "explanation": "Giữ đúng quan sát, chưa kết luận loại vết.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-05"
+          },
+          {
+            "lesson_key": "mechanical-maintenance-report",
+            "type": "fill_blank",
+            "prompt": "Copy the asset ID.",
+            "answers": [
+              "K7"
+            ],
+            "explanation": "Mã là K7.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-06"
+          },
+          {
+            "lesson_key": "mechanical-maintenance-report",
+            "type": "single_choice",
+            "prompt": "What does Hoa recommend?",
+            "options": [
+              "Claiming a completed repair",
+              "Ignoring the note",
+              "A supervisor review on Friday"
+            ],
+            "answer": "C",
+            "explanation": "Đề xuất review thứ Sáu.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-07"
+          },
+          {
+            "lesson_key": "mechanical-maintenance-report",
+            "type": "fill_blank",
+            "prompt": "Choose pending or repaired: The review status is ___.",
+            "answers": [
+              "pending"
+            ],
+            "explanation": "Đang chờ xem xét.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-08"
+          },
+          {
+            "lesson_key": "mechanical-maintenance-report",
+            "type": "single_choice",
+            "prompt": "Which entry would be inaccurate?",
+            "options": [
+              "Replacement completed",
+              "Cause unconfirmed",
+              "Vibration observed"
+            ],
+            "answer": "A",
+            "explanation": "Không có thay thế hoàn thành được ghi nhận.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-09"
+          },
+          {
+            "lesson_key": "mechanical-maintenance-report",
+            "type": "single_choice",
+            "prompt": "Which handover is clearest?",
+            "options": [
+              "Something is wrong",
+              "Everything is fixed",
+              "K7: vibration observed; cause unknown; review Friday"
+            ],
+            "answer": "C",
+            "explanation": "Câu có mã, phát hiện, giới hạn và bước tiếp.",
+            "use_reading": true,
+            "key": "mechanical-inspection-handover-test-10"
+          }
+        ]
+      }
+    ]
+  }
+}

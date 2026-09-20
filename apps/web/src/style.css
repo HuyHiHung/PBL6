@@ -1639,3 +1639,79 @@ td:last-child {
     scroll-behavior: auto !important;
   }
 }
+.global-search {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: center;
+  width: min(420px, 100%);
+  margin: 0;
+}
+.global-search input {
+  border-radius: 8px 0 0 8px;
+  font-size: 12px;
+  padding: 9px 12px;
+}
+.global-search button {
+  border-radius: 0 8px 8px 0;
+  padding: 10px;
+}
+.topbar {
+  gap: 20px;
+}
+.word-diff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+.word-diff > span {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #dfe7d6;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.word-diff small {
+  font-size: 10px;
+  color: inherit;
+}
+.diff-correct {
+  background: #edf4e4;
+  color: #35632d;
+}
+.diff-substitution {
+  background: #fff1da;
+  color: #8a501b;
+}
+.diff-missing {
+  background: #e9f0ff;
+  color: #385d8c;
+}
+.diff-extra {
+  background: #ffe8e4;
+  color: #973d31;
+}
+#my-note h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 800px) {
+  .topbar .global-search {
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .global-search input {
+    font-size: 11px;
+    min-width: 0;
+  }
+  .global-search button {
+    padding: 10px;
+  }
+  .word-diff > span {
+    font-size: 12px;
+  }
+}

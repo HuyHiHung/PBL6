@@ -2,14 +2,14 @@
 
 | Thuộc tính | Giá trị |
 |---|---|
-| Phiên bản | 1.2 |
+| Phiên bản | 1.3 |
 | Ngày lập | 19/09/2026 |
-| Trạng thái | Đã triển khai database local bằng 11 migration và tích hợp ba HTTP service; xem database-verification.md và backend-verification.md |
+| Trạng thái | Đã triển khai database local bằng 15 migration và tích hợp ba HTTP service; xem database-verification.md và backend-verification.md |
 | Phạm vi | Database cho Web người học và Web Admin; không thêm chức năng ngoài MVP |
-| Căn cứ | [SRS 0.4](../srs.md), [Kế hoạch web 1.3](../web-mvp-plan.md) |
+| Căn cứ | [SRS 0.5](../srs.md), [Kế hoạch web 1.3](../web-mvp-plan.md) |
 | Môi trường | Supabase local qua CLI/Docker khi phát triển; Supabase Cloud khi deploy; cùng lịch sử migration |
 
-Thiết kế gồm **33 bảng nghiệp vụ: 4 Identity, 16 Content và 13 Learning**, chưa tính bảng do Supabase quản lý. Database local đã được dựng từ migration, có bootstrap và kiểm thử tích hợp. [Kết quả database](database-verification.md) và [kết quả backend](backend-verification.md) phân biệt phần đã chạy với Google/Cloud còn cần triển khai; [hướng dẫn local](local-development.md) mô tả lệnh vận hành.
+Thiết kế gồm **38 bảng nghiệp vụ: 4 Identity, 18 Content và 16 Learning**, chưa tính bảng do Supabase quản lý. Database local đã được dựng từ migration, có bootstrap và kiểm thử tích hợp. [Kết quả database](database-verification.md) và [kết quả backend](backend-verification.md) phân biệt phần đã chạy với Google/Cloud còn cần triển khai; [hướng dẫn local](local-development.md) mô tả lệnh vận hành.
 
 ## 1. Quyền sở hữu và quy ước
 
@@ -638,7 +638,7 @@ Khi mới có bộ migration đầu tiên, DB-20 cần bổ sung fixture phiên 
 | ADM-03 | daily_views, submitted attempts, reviewed session items; API tổng hợp đúng quyền |
 | BR-07–12 | Revision/snapshot bất biến, request_dedup, row_version, khóa và transaction |
 
-Thiết kế không bổ sung thanh toán, VIP, bình luận, thông báo, Dictation hoặc chuỗi ngày học. Những phần mở rộng và xác nhận với giảng viên giữ trạng thái tại SRS; phê duyệt thiết kế database không tự mở rộng phạm vi MVP.
+Thiết kế không bổ sung thanh toán, VIP, bình luận, thông báo hoặc chuỗi ngày học. Những phần mở rộng và xác nhận với giảng viên giữ trạng thái tại SRS; phê duyệt thiết kế database không tự mở rộng phạm vi MVP.
 
 ## 12. Lịch sử tài liệu
 
@@ -646,3 +646,24 @@ Thiết kế không bổ sung thanh toán, VIP, bình luận, thông báo, Dicta
 |---|---|
 | 1.0 | Lưu thiết kế theo plan: 33 bảng/3 schema, ERD, từ điển dữ liệu, ràng buộc, snapshot, giao dịch, quyền, index, 8 nhóm migration và 21 ca kiểm thử cần triển khai |
 | 1.1 | Ghi nhận 10 file migration hiện thực 8 nhóm, local Docker, bootstrap, 22 ca kiểm thử; bổ sung creation_xid và cách khóa CMS thực tế; liên kết báo cáo để không nhầm kiểm thử database với nghiệm thu toàn MVP |
+
+
+## 15. Mở rộng tìm kiếm, ghi chú và Dictation — 20/09/2026
+
+Đợt này thêm 5 bảng và 4 migration, nâng tổng lên 38 bảng/15 migration. Các số 33 bảng ở nhóm migration và ca nghiệm thu ban đầu là mốc lịch sử trước mở rộng. [Plan và hợp đồng API](feature-expansion-plan.md), [kiểm chứng](feature-expansion-verification.md).
+
+| Bảng | Cột và ràng buộc chính |
+|---|---|
+| content.dictations | uuid, lesson_id FK RESTRICT, status draft/published/hidden, position > 0, published_revision_id, timestamps, row_version; pointer composite đúng cha và đã xuất bản |
+| content.dictation_revisions | uuid, dictation_id FK, revision_no, title 1–300, instructions ≤5000, audio_asset_id FK RESTRICT, transcript, published_at/created_by; unique cha+revision; partial unique một draft |
+| learning.lesson_notes | uuid, user_id/lesson_id logic, content 1–5000, title_snapshot, lesson_revision_id logic, timestamps/version; unique user+lesson; sequence version chống ABA |
+| learning.dictation_attempts | uuid, owner và ID nguồn logic, title/instructions/audio snapshot, answer, status, policy1, result JSONB, submitted/cancelled timestamps/reason, creation_xid, timestamps/version; partial unique user+dictation khi in_progress |
+| learning.dictation_attempt_keys | attempt_id PK/FK RESTRICT, transcript_snapshot; chỉ insert cùng transaction tạo attempt |
+
+Quan hệ: lessons 1—N dictations 1—N revisions; media_assets 1—N revisions; dictation_attempts 1—1 keys. Notes/attempts không FK tới Content/Identity. Mỗi bảng mới bật RLS, chỉ runtime đúng service có policy; anon/authenticated không có quyền. Backend lọc owner trên mọi thao tác cá nhân.
+
+Index: dictations(lesson_id,status,position,id), revisions(audio_asset_id), notes(user_id,updated_at DESC,id), attempts(user_id,created_at DESC,id), các unique/partial unique nêu trên. Search đọc trực tiếp dữ liệu xuất bản, dùng content.search_normalize → extensions.unaccent/NFC/lowercase, không materialized index hoặc Elasticsearch.
+
+Trigger bảo vệ revision đã xuất bản, pointer đúng cha, root không chuyển bài, audio ready, transcript 1–200 từ; root/revision dùng Content write lock và touch trigger. Attempts đã hoàn tất và public snapshot không sửa/xóa; private keys không sửa/xóa, deferred trigger bắt buộc đủ keys. Lưu bản chép dùng optimistic version; nộp khóa row, claim/finish_request và chấm trong transaction. Transcript/kết quả lịch sử giữ policy1.
+
+Thứ tự: 20260920000200 tạo normalization/bảng/constraint/grants/RLS → 00300 note_versions → 00400 search_permissions → 00500 dictation_apostrophes. Mật khẩu runtime vẫn do môi trường cấp, không nằm trong migration.

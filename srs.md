@@ -2,8 +2,8 @@
 
 | Thuộc tính | Giá trị |
 |---|---|
-| Phiên bản | 0.4 |
-| Ngày cập nhật | 19/09/2026 |
+| Phiên bản | 0.5 |
+| Ngày cập nhật | 20/09/2026 |
 | Trạng thái | Đề xuất phạm vi MVP để nhóm thống nhất sản phẩm |
 | Đối tượng đọc | Thành viên nhóm, giảng viên hướng dẫn, người thiết kế và kiểm thử |
 | Căn cứ | SRS 0.1; NHOM_5.docx; Kế hoạch PBL6_CNCNPM 2026_2027.docx; yêu cầu tập trung hoàn thiện chức năng của người dùng |
@@ -67,7 +67,7 @@ Tài liệu học phần yêu cầu **Web Admin, Web người học và app mobi
 
 ### 2.2. Phần mở rộng
 
-**P1:** Mục tiêu và chuỗi ngày học (FR-09), Dictation (FR-11), sắp xếp từ, nhiều bộ flashcard do người học tự tổ chức, phiên học hằng ngày có danh sách cố định và tiếp tục phiên dở.
+**P1:** Mục tiêu và chuỗi ngày học (FR-09), sắp xếp từ, nhiều bộ flashcard do người học tự tổ chức, phiên học hằng ngày có danh sách cố định và tiếp tục phiên dở.
 
 **Đề xuất chưa làm trong MVP:** Thanh toán/VIP, bình luận, email nhắc học, hộp thông báo, kiểm tra đầu vào, tra từ bằng dịch vụ ngoài, thử thách, AI, chấm phát âm/bài viết, bảng xếp hạng, thi đấu, học offline và đồng bộ thời gian thực.
 
@@ -294,7 +294,7 @@ Người học được chọn hoạt động bất kỳ, không bị ép thực
 
 **Nghiệm thu:** Dữ liệu thẻ/câu sai khớp với màn hình ôn; người mới có hành động bắt đầu học; người đã hoàn thành toàn bộ nội dung vẫn có đường dẫn ôn tập. Phiên học hằng ngày đầy đủ trong bản 0.1 được thu gọn thành màn hình này theo đề xuất 0.2.
 
-## 6. Chức năng mở rộng chưa tính vào nghiệm thu MVP
+## 6. Phạm vi mở rộng và ba chức năng được bổ sung
 
 ### FR-09 Mục tiêu hằng ngày và chuỗi ngày học
 
@@ -302,9 +302,21 @@ Nếu chọn triển khai: đặt mục tiêu theo số thẻ đã ôn hoặc s�
 
 ### FR-11 Nghe chép chính tả
 
-Nếu chọn triển khai: câu ngắn có audio/transcript, người học nghe rồi nhập lại, nộp mới thấy transcript và từ thiếu/thừa/sai. Giữ lịch sử từng lần thử. Cần đặc tả riêng cách so khớp dấu câu, từ viết tắt, đáp án tương đương, tính điểm và liên kết danh sách câu sai; chưa mặc định dùng AI hay nhận diện giọng nói.
+Đã chuyển vào phạm vi triển khai. Editor có content.write biên soạn bài luyện riêng thuộc bài học, chọn MP3/M4A và transcript 1–200 từ; content.publish xuất bản/ẩn. Phiên bản đã xuất bản bất biến. Người đăng nhập luyện từ bài hoặc thư viện Dictation, lọc lộ trình/chủ đề, 20 mục/trang; nghe lại ở 0,75×/1×/1,25×, lưu bản chép, tiếp tục, nộp hoặc hủy. Mỗi người chỉ có một lượt đang làm trên một Dictation.
 
-Hai chức năng này được giữ để theo dõi định hướng, không xem là đã hoàn thiện đặc tả hoặc bắt buộc cho bản MVP hiện tại.
+Transcript chỉ xuất hiện sau nộp. Chuẩn hóa NFC, lowercase và dấu nháy cong; bỏ dấu câu ngoài từ, giữ nháy trong từ. Căn chỉnh từ với chi phí sai/thiếu/thừa bằng 1, hòa ưu tiên diagonal → thiếu → thừa. Điểm max(0,100*(1−(sai+thiếu+thừa)/số từ chuẩn)), hiển thị một chữ số thập phân. Không quy đổi contraction/số, không ngưỡng đỗ, không cập nhật tiến độ/quiz/câu sai. Lưu kết quả và policy version, không chấm lại lịch sử. Bản chép tối đa 10.000 ký tự; nộp từ 1–1.000 từ.
+
+Lưu dùng expectedVersion; nộp nhận bản chép cuối cùng và version, chấm trong cùng transaction. Bắt đầu/nộp có Idempotency-Key. Ẩn nội dung/cha chặn tiếp tục lượt ở yêu cầu kế tiếp; kết quả đã nộp vẫn đọc được. Có lịch sử riêng, thông báo lỗi mạng/audio. Không AI hoặc nhận diện giọng nói.
+
+### FR-12 Tìm kiếm học liệu
+
+Tìm tên lộ trình/chủ đề/bài và từ/ nghĩa tiếng Việt từ snapshot của bài đang xuất bản, cha còn khả dụng. Khách thấy metadata, chỉ thấy từ vựng bài preview. Không tìm transcript/đáp án/thân bài/ghi chú. Không phân biệt hoa/thường/dấu; khớp chuỗi con, escape wildcard, chưa sửa lỗi chính tả. Từ khóa 2–100 ký tự sau trim; debounce 300 ms, hủy request cũ; 20 kết quả/trang. Ưu tiên khớp toàn bộ → đầu chuỗi → chứa, rồi tên/ID ổn định. Route #/search giữ query/type/course/page; các kết quả mở đúng danh mục/bài nguồn.
+
+### FR-13 Ghi chú cá nhân
+
+Một ghi chú riêng/người/bài, văn bản thuần tối đa 5.000 ký tự, nút Lưu và trạng thái rõ ràng. Có cảnh báo chưa lưu, xóa xác nhận, expectedVersion cho cập nhật/xóa; stale trả 409, kể cả sau xóa/tạo lại. Không tạo ghi chú rỗng khi chỉ mở bài. Trang #/notes sắp mới nhất, 20 mục/trang, tên bài/trích đoạn/thời gian. Giữ theo lesson_id qua các phiên bản và cảnh báo khác phiên bản lúc lưu. Bài ẩn vẫn đọc/sửa/xóa ghi chú cũ, không tạo mới hoặc mở bài. Không Markdown/HTML thực thi/ảnh/chia sẻ.
+
+**Nghiệm thu:** AT-12 và AT-28–30 là bắt buộc; chi tiết hợp đồng dữ liệu, quy tắc và bằng chứng tại [kế hoạch mở rộng](docs/feature-expansion-plan.md). FR-09 vẫn hoãn.
 
 ## 7. Quản lý nội dung trên Web Admin
 
@@ -446,7 +458,7 @@ Các mã AT-01–15 được giữ để đối chiếu bản 0.1; AT-11 điều
 | AT-09 | Timeout sau gửi, nhấn nộp hai lần và thao tác từ hai thiết bị | Một kết quả; không nhân đôi lịch ôn/câu sai; dữ liệu cũ không ghi đè dữ liệu mới | BR-08, BR-11, BR-12 |
 | AT-10 | Lưu nháp, xuất bản, sửa đáp án rồi ẩn nội dung đã có lượt làm | Nháp không public; lịch sử giữ nguyên; lượt dở xử lý theo CMS-02 | CMS-01–03, BR-07, BR-09 |
 | AT-11 | Mở Học hôm nay với người mới, có dữ liệu ôn và học hết bài | Có hành động phù hợp; bộ đếm khớp; không tạo kết quả học độc lập | FR-10 |
-| AT-12 | Dictation đúng/thiếu/thừa từ | Theo đặc tả bổ sung; chưa thuộc MVP | FR-11, P1 |
+| AT-12 | Dictation đúng/sai/thiếu/thừa từ, lưu dở/nộp/lịch sử | Đúng policy 1, không lộ transcript trước nộp; retry không chấm hai lần | FR-11 |
 | AT-13 | Đổi ngày và hoàn thành mục tiêu học | Theo đặc tả bổ sung; chưa thuộc MVP | FR-09, P1 |
 | AT-14 | Audio lỗi, mất mạng khi nộp, email gửi lỗi | Thông báo rõ; thử lại đúng thao tác; không báo thành công giả | FR-02, AUTH-01, AUTH-03, NFR-05 |
 | AT-15 | Chạy toàn bộ luồng chính trên hệ thống đã triển khai | Web Admin, web và app hoạt động với cùng dữ liệu; tải thử theo ngưỡng được xác nhận riêng | NFR-01–02, NFR-07 |
@@ -492,7 +504,7 @@ Các màn hình có thể ghép hợp lý thành tab hoặc trang chi tiết; s�
 - [ ] Phạm vi chức năng MVP và các thay đổi đề cương đã được nhóm thống nhất, giảng viên xác nhận những điểm liên quan.
 - [ ] Toàn bộ AUTH, GUEST, FR-01–08, FR-10 rút gọn, CMS và ADM hoạt động theo tài liệu trên cả bề mặt được yêu cầu.
 - [ ] Có bộ nội dung đủ mục 2.3 đã được rà soát, không dùng nội dung giữ chỗ trong demo.
-- [ ] Các ca AT bắt buộc đạt; AT-12/13 không bắt buộc nếu chưa chọn P1. AT-15 có ghi rõ môi trường và giới hạn đã đo.
+- [ ] Các ca AT bắt buộc đạt; AT-13 không bắt buộc nếu chưa chọn P1; AT-12 và AT-28–30 bắt buộc. AT-15 có ghi rõ môi trường và giới hạn đã đo.
 - [ ] Không còn lỗi làm mất/nhân đôi kết quả, lộ đáp án sớm, vượt quyền hoặc chặn chu trình học cốt lõi.
 - [ ] Ba sản phẩm đã được triển khai, app cài và dùng được; có tài khoản thử theo vai trò và hướng dẫn demo.
 - [ ] Có hướng dẫn dữ liệu mẫu, sao lưu/khôi phục, kiểm thử và vận hành theo yêu cầu học phần.
@@ -545,3 +557,13 @@ Ngoài ba nhóm trên, nhóm cần chốt ngân sách, môi trường hỗ trợ
 | 0.2 | Hoàn thiện yêu cầu chức năng MVP; bổ sung tài khoản/quyền/khách; làm rõ hoàn thành bài/chủ đề, chấm điểm, lịch ôn, tiếp tục lượt dở, hai thiết bị, nội dung thay đổi, CMS/Admin và nghiệm thu; thu gọn FR-10; giữ P1 riêng; không lập lịch phát triển |
 | 0.3 | Bổ sung AUTH-05 đăng nhập Google cho MVP web, quy tắc dùng chung tài khoản/phiên/quyền và AT-23–27; làm rõ mật khẩu ứng dụng với tài khoản Google; liên kết kế hoạch web riêng, giữ phạm vi mobile của toàn sản phẩm |
 | 0.4 | Ghi nhận DEC-13–18 về Supabase local/cloud, migration chung, ba schema, Auth/Storage và bảo toàn dữ liệu; liên kết tài liệu thiết kế database; giữ nguyên danh sách chức năng và các ca AT |
+
+| 0.5 | Đưa FR-11 Dictation vào triển khai; bổ sung FR-12 tìm kiếm, FR-13 ghi chú; snapshot, optimistic version, kiểm thử mở rộng |
+
+### Nghiệm thu mở rộng
+
+| Mã | Nội dung | Kết quả yêu cầu |
+|---|---|---|
+| AT-28 | Tìm kiếm không dấu, wildcard, phân trang, ẩn cha/đổi phiên bản, khách | Đúng thứ tự/phạm vi, không rò rỉ dữ liệu kín |
+| AT-29 | Ghi chú hai người/hai tab, HTML nhập, đổi phiên bản/ẩn bài | Riêng tư, text thuần, stale 409, giữ nội dung cũ |
+| AT-30 | CMS/quyền Dictation, bắt đầu/nộp đồng thời, migration | Một lượt mở, kết quả bất biến, không mất dữ liệu trước nâng cấp |

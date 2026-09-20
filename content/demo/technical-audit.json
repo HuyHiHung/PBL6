@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-20",
+  "scope": "Five technical English packs only; excludes A1 and dictation fixtures",
+  "status": "ready_for_draft_import",
+  "review_type": "Assistant editorial audit plus automated checks; not independent expert certification",
+  "findings": [
+    {
+      "id": "AUD-01",
+      "severity": "medium",
+      "status": "fixed",
+      "description": "Three contextual questions lacked use_reading; passages are now attached for software-development quiz 4, data-quality-questions quiz 2 and robotics-devices quiz 4."
+    },
+    {
+      "id": "AUD-02",
+      "severity": "high",
+      "status": "fixed",
+      "description": "Added persistent keys for all 340 questions and 294 vocabulary entries. UUID mapping no longer depends on current array position."
+    },
+    {
+      "id": "AUD-03",
+      "severity": "low",
+      "status": "fixed",
+      "description": "Replaced the awkward millimetre example with a natural bilingual sentence."
+    },
+    {
+      "id": "AUD-04",
+      "severity": "medium",
+      "status": "fixed",
+      "description": "Removed cyclic answer-position patterns by deterministic option ordering; all 204 correct-answer texts and option sets were verified unchanged."
+    },
+    {
+      "id": "AUD-05",
+      "severity": "high",
+      "status": "addressed_in_importer",
+      "description": "Authored fields are mapped to supported CMS blocks/snapshots; answer keys are stored separately; topic-test passages and question ownership are preserved."
+    },
+    {
+      "id": "AUD-06",
+      "severity": "medium",
+      "status": "documented",
+      "description": "Text-only demo with fictional media descriptions; no audio or real engineering diagrams. Not a proficiency certification or operating guide."
+    }
+  ],
+  "counts": {
+    "courses": 5,
+    "topics": 16,
+    "lessons": 36,
+    "vocabulary_entries": 294,
+    "lesson_revisions": 36,
+    "lesson_revision_vocabulary": 294,
+    "questions": 340,
+    "question_revisions": 340,
+    "question_options": 612,
+    "question_answer_keys": 340,
+    "assessments": 52,
+    "assessment_revisions": 52,
+    "assessment_revision_questions": 340
+  },
+  "plan_sha256": "ae9086d5a7c0273360ef9be2f4b721ac8ebe615231d5b6e071017771e630669b",
+  "sources": {
+    "english-it": {
+      "sha256": "171d917a3d022e5404d34d97d4f13fbc53e972ab48bbf90c6278fc8e5c7c0624",
+      "stats": {
+        "topics": 4,
+        "lessons": 12,
+        "vocabulary_entries": 102,
+        "questions": 100,
+        "minutes": 280,
+        "unique_vocabulary": 102
+      }
+    },
+    "english-data-ai": {
+      "sha256": "8161b0bf1eb63c291b56f809b8052582484e24a33bda2a538663ed9d8975332f",
+      "stats": {
+        "topics": 3,
+        "lessons": 6,
+        "vocabulary_entries": 48,
+        "questions": 60,
+        "minutes": 150,
+        "unique_vocabulary": 48
+      }
+    },
+    "english-electronics": {
+      "sha256": "c06c027225bb4f107bff7b2a8335ff15b54a30646334fd748985358644a5368a",
+      "stats": {
+        "topics": 3,
+        "lessons": 6,
+        "vocabulary_entries": 48,
+        "questions": 60,
+        "minutes": 150,
+        "unique_vocabulary": 48
+      }
+    },
+    "english-robotics": {
+      "sha256": "b4e934381c93eb59cdfebc1b1b442f952368451afc12d04002575a774b341e2c",
+      "stats": {
+        "topics": 3,
+        "lessons": 6,
+        "vocabulary_entries": 48,
+        "questions": 60,
+        "minutes": 150,
+        "unique_vocabulary": 48
+      }
+    },
+    "english-mechanical": {
+      "sha256": "044235b0cc8f7966343261ea417756a672132fd261c97491ea6658a33d490289",
+      "stats": {
+        "topics": 3,
+        "lessons": 6,
+        "vocabulary_entries": 48,
+        "questions": 60,
+        "minutes": 150,
+        "unique_vocabulary": 48
+      }
+    }
+  },
+  "database_verification": {
+    "status": "passed_rolled_back",
+    "target": "Supabase local pbl6",
+    "draft_import": true,
+    "idempotent_rerun": true,
+    "publication_constraints": true,
+    "uuid_collision_rejected": true,
+    "changed_source_rejected": true,
+    "cms_drift_rejected": true,
+    "rollback_checked_with_isolated_test_ids": true,
+    "permanent_import_performed": true,
+    "tests": {
+      "offline": 14,
+      "database": 1
+    }
+  },
+  "import_execution": {
+    "verified_at": "2026-09-20T15:38:28.605Z",
+    "target": "pbl6-local",
+    "status": "drafts-imported",
+    "courses_committed": 5,
+    "idempotent_rerun": "5/5 skip-identical",
+    "draft_status_verified": true,
+    "published_revisions": 0,
+    "local_receipt": ".local/technical-import-result.json"
+  }
+}

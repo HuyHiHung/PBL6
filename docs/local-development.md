@@ -112,3 +112,8 @@ npm run db:start
 Stop thông thường giữ dữ liệu. Không thêm `--no-backup` khi còn dữ liệu cần giữ. Khi Docker không kết nối, mở Docker Desktop và kiểm tra Linux containers. Khi trùng cổng 54320–54324, kiểm tra project/container đang dùng trước; không dừng hoặc xóa volume dự án khác. Khi đổi cổng/project ID, phải cập nhật guard local trong scripts có chủ đích.
 
 Stack local dùng cấu hình phát triển; không đưa các container này cùng credential demo lên Internet. Supabase Cloud sẽ dùng cùng SQL migrations, runtime password/OAuth/SMTP riêng, kiểm tra lịch sử và dry-run trước `db push`. Không chạy bootstrap/demo seed lên public. Chưa deploy Cloud/AWS trong bước này.
+
+
+## Mở rộng ngày 20/09/2026
+
+Đã thêm tìm kiếm học liệu, ghi chú cá nhân và Dictation. [Plan và hợp đồng endpoint](feature-expansion-plan.md), [kết quả kiểm chứng](feature-expansion-verification.md). Local nâng cấp bằng `npm run db:migrate`, `npm run db:dictation-demo`, `npm run build` rồi khởi động lại backend. Route web: `#/search`, `#/notes`, `#/dictation`, `#/dictation-attempt/:id`; CMS Dictation nằm trong màn hình sửa bài. Audio mẫu có lời đọc riêng, không dùng fixture im lặng của quiz.

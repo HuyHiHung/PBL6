@@ -26,7 +26,10 @@
     "web:build:local": "tsc -p apps/web/tsconfig.json && node scripts/frontend-local.mjs build",
     "web:typecheck": "tsc -p apps/web/tsconfig.json",
     "web:test": "playwright test",
-    "web:format": "prettier --write apps/web scripts/frontend-local.mjs tests/web playwright.config.ts"
+    "web:format": "prettier --write apps/web scripts/frontend-local.mjs tests/web playwright.config.ts",
+    "db:dictation-demo": "node scripts/bootstrap-dictation.mjs",
+    "db:test:clean": "node scripts/check-clean-migrations.mjs",
+    "features:test": "node --test --test-concurrency=1 tests/expansion.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",
