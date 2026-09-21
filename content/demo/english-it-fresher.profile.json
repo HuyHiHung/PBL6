@@ -1,0 +1,24 @@
+{
+  "slug": "english-it-fresher",
+  "course_key": "sprout-it-fresher-workday",
+  "field": "CNTT / Phần mềm — Fresher",
+  "scores": {
+    "reading": 5,
+    "communication": 5,
+    "writing": 5
+  },
+  "outcome": "Giao tiếp xuyên suốt một ticket từ onboarding đến QA handoff.",
+  "require_dialogue": true,
+  "vocabulary_per_lesson": [
+    8,
+    8
+  ],
+  "expected": {
+    "topics": 4,
+    "lessons": 8,
+    "vocabulary_entries": 64,
+    "questions": 80,
+    "minutes": 200
+  }
+}
+

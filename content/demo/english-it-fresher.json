@@ -1,0 +1,1741 @@
+{
+  "schema_version": 1,
+  "status": "authored_demo_pack_not_imported",
+  "provenance": "Biên soạn mới cho Sprout ngày 20/09/2026, dành cho fresher phát triển phần mềm trong nhóm dùng tiếng Anh. Gói bổ trợ nối tiếp IT English — Vocabulary at Work. Mức A2–B1 là mục tiêu ngôn ngữ, chưa được thẩm định độc lập. Nhân vật, ticket, API, giờ hẹn, chính sách review và dữ kiện kiểm thử đều giả lập để luyện ngôn ngữ; quy trình thực tế tùy nhóm. Chưa import DB; không thay đổi bản IT đã import. Thuật ngữ được đối chiếu tài liệu chính thức ở cuối gói, hội thoại và bài tập là nội dung tự biên soạn.",
+  "audio_status": "not_included",
+  "course": {
+    "key": "sprout-it-fresher-workday",
+    "title": "IT English — A Fresher's Workday",
+    "level": "A2–B1",
+    "description": "Tiếng Anh cho fresher phần mềm: nhận quyền truy cập và ticket, cập nhật tiến độ, hỏi trợ giúp, viết PR, phản hồi review, báo lỗi API và bàn giao QA.",
+    "objectives": "Dùng 64 mục từ/cụm từ theo bài trong 8 tình huống làm việc; tạo tin nhắn, PR description và QA handoff có bối cảnh, bằng chứng, yêu cầu rõ; phân biệt quan sát với suy đoán.",
+    "estimated_minutes": 200,
+    "topics": [
+      {
+        "key": "fresher-onboarding-tickets",
+        "title": "Joining a Team and Picking Up Work",
+        "objectives": "Hoàn thành giao tiếp ngày đầu và làm rõ ticket trước khi bắt tay vào code.",
+        "test_passage": "Nam joins the course team. He can open the repository, but his local app cannot start because a required configuration value is missing. He will check the setup guide and ask his mentor for the approved value without sharing credentials. His first ticket, DEV-30, adds a level filter. Nam is the assignee. The criteria require filtering by one selected level and showing all courses when no level is selected. Combining several levels is outside the scope. Nam estimates half a day if the existing API supports one-level filtering; he still needs to confirm that API behavior.",
+        "test": [
+          {
+            "type": "single_choice",
+            "prompt": "What currently prevents Nam's local app from starting?",
+            "options": [
+              "The level filter has already been released",
+              "The repository invitation is missing",
+              "A required configuration value is missing"
+            ],
+            "answer": "C",
+            "explanation": "Nam có quyền repo nhưng thiếu giá trị cấu hình để chạy local.",
+            "use_reading": true,
+            "lesson_key": "fresher-access-setup",
+            "key": "fresher-onboarding-tickets-test-01"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose repository or estimate: A place holding source code and its history is a ___.",
+            "answers": [
+              "repository"
+            ],
+            "explanation": "Repository chứa mã nguồn và lịch sử thay đổi.",
+            "lesson_key": "fresher-access-setup",
+            "key": "fresher-onboarding-tickets-test-02"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which next action fits Nam's setup problem?",
+            "options": [
+              "Ask a teammate to post their password",
+              "Assume the production database is broken",
+              "Check the guide and ask for the approved configuration value"
+            ],
+            "answer": "C",
+            "explanation": "Đây là bước Nam dự định làm theo bài đọc.",
+            "use_reading": true,
+            "lesson_key": "fresher-access-setup",
+            "key": "fresher-onboarding-tickets-test-03"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose credentials or dependencies: Passwords and tokens used to prove identity are ___.",
+            "answers": [
+              "credentials"
+            ],
+            "explanation": "Credentials dùng cho xác thực; không phải thư viện phụ thuộc.",
+            "lesson_key": "fresher-access-setup",
+            "key": "fresher-onboarding-tickets-test-04"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which setup update is supported by the passage?",
+            "options": [
+              "I can open the repo, but the app needs a configuration value",
+              "The app is running successfully on production",
+              "I have no repository access at all"
+            ],
+            "answer": "A",
+            "explanation": "Câu đúng phân biệt repo access với local setup.",
+            "use_reading": true,
+            "lesson_key": "fresher-access-setup",
+            "key": "fresher-onboarding-tickets-test-05"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What should DEV-30 do when no level is selected?",
+            "options": [
+              "Ask the user to choose several levels",
+              "Show only advanced courses",
+              "Show all courses"
+            ],
+            "answer": "C",
+            "explanation": "Tiêu chí đã xác định trường hợp không chọn level.",
+            "use_reading": true,
+            "lesson_key": "fresher-ticket-scope",
+            "key": "fresher-onboarding-tickets-test-06"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose assignee or credential: Nam is responsible for DEV-30, so he is its ___.",
+            "answers": [
+              "assignee"
+            ],
+            "explanation": "Assignee là người được giao ticket.",
+            "lesson_key": "fresher-ticket-scope",
+            "key": "fresher-onboarding-tickets-test-07"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which behavior is outside DEV-30's scope?",
+            "options": [
+              "Filtering by one level",
+              "Showing all courses with no level selected",
+              "Combining several levels"
+            ],
+            "answer": "C",
+            "explanation": "Bài đọc loại việc kết hợp nhiều level khỏi scope.",
+            "use_reading": true,
+            "lesson_key": "fresher-ticket-scope",
+            "key": "fresher-onboarding-tickets-test-08"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose estimate or approval: A prediction of the effort or time needed is an ___.",
+            "answers": [
+              "estimate"
+            ],
+            "explanation": "Estimate là dự tính công sức hoặc thời gian, không phải approval.",
+            "lesson_key": "fresher-ticket-scope",
+            "key": "fresher-onboarding-tickets-test-09"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What must Nam still confirm before relying on his estimate?",
+            "options": [
+              "Whether his name is on the ticket",
+              "Whether the API supports one-level filtering",
+              "Whether no selection should show all courses"
+            ],
+            "answer": "B",
+            "explanation": "Bài đọc đã xác nhận assignee và empty selection; API behavior còn mở.",
+            "use_reading": true,
+            "lesson_key": "fresher-ticket-scope",
+            "key": "fresher-onboarding-tickets-test-10"
+          }
+        ],
+        "lessons": [
+          {
+            "key": "fresher-access-setup",
+            "title": "Day One: Access and Local Setup",
+            "objectives": "Xin đúng quyền truy cập; mô tả bước thiết lập đã thử; phân biệt cấu hình với thông tin xác thực.",
+            "grammar": "Xin phép: Could you grant me access to [resource]? — Bạn có thể cấp cho tôi quyền truy cập [tài nguyên] không? Nêu hiện trạng: I can open the guide, but I cannot access the repository yet. Dùng yet với điều chưa làm được. Credential là danh từ đếm được, thường dùng credentials; access thường không đếm được. Không gửi token/password khi hỏi trợ giúp; nói tên biến cấu hình là đủ.",
+            "reading": "Linh joins a team building a course-search feature. She can read the onboarding guide, but the repository invitation has not arrived. Her mentor, Mai, asks the repository owner to check the invitation. Once access is available, Linh will install the dependencies listed in the guide. The sample configuration names an environment variable, API_BASE_URL. It does not contain a password. Linh will use the approved test URL and run the app in her local environment. She will report the setup step and error message if startup fails.",
+            "reading_task": "Nêu vướng mắc đầu tiên và hai việc sau khi có quyền. Gợi ý: chưa nhận lời mời repo; cài dependencies theo guide rồi cấu hình URL kiểm thử và chạy local. API_BASE_URL trong bài là tên biến, không phải mật khẩu.",
+            "dialogue": "Linh: I can read the guide, but I have not received the repository invitation yet.\nMai: Thanks. I will ask the owner to check it.\nLinh: Could you also confirm the approved test URL?\nMai: Yes. Use the URL in the setup guide. Do not post credentials here.\nLinh: Understood. I will report the exact step if startup fails.",
+            "practice": "Viết tin nhắn 40–60 từ xin quyền vào repo giả lập course-web. Nêu đã đọc guide, chưa có invitation, nhờ kiểm tra và bước sẽ làm sau đó. Mẫu: Hi Mai, I have read the setup guide, but I have not received an invitation to course-web yet. Could you ask the owner to check my access? Once I can open the repository, I will install the listed dependencies and try the local setup. Tự chấm 0–2 điểm/tiêu chí: đủ bối cảnh; yêu cầu rõ; bước tiếp theo; lịch sự và không kèm credentials. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What currently prevents Linh from opening the repository?",
+                "options": [
+                  "The invitation has not arrived",
+                  "The local app has failed to start",
+                  "The test URL has expired"
+                ],
+                "answer": "A",
+                "explanation": "Bài đọc nêu chưa có lời mời; chưa có bằng chứng lỗi khởi động hoặc URL hết hạn.",
+                "use_reading": true,
+                "key": "fresher-access-setup-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose permission or configuration: Could you check my ___ to view this repository?",
+                "answers": [
+                  "permission"
+                ],
+                "explanation": "Permission là quyền truy cập; configuration là cấu hình.",
+                "key": "fresher-access-setup-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What does API_BASE_URL represent in this reading?",
+                "options": [
+                  "A password for the repository",
+                  "The name of an environment variable",
+                  "The name of a dependency"
+                ],
+                "answer": "B",
+                "explanation": "Bài đọc nêu rõ đây là tên biến môi trường.",
+                "use_reading": true,
+                "key": "fresher-access-setup-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose dependencies or credentials: Install the ___ listed in the setup guide.",
+                "answers": [
+                  "dependencies"
+                ],
+                "explanation": "Dependencies là các thành phần phần mềm phụ thuộc cần cài.",
+                "key": "fresher-access-setup-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which access request gives the teammate enough context?",
+                "options": [
+                  "I have read the guide, but the repo invitation is missing. Could you check it?",
+                  "Please fix my laptop; the repository is definitely broken.",
+                  "Send me your password so I can finish setup."
+                ],
+                "answer": "A",
+                "explanation": "Câu đúng nêu việc đã thử, vướng mắc và yêu cầu cụ thể.",
+                "key": "fresher-access-setup-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-access-setup-vocab-onboarding",
+                "word": "onboarding",
+                "part_of_speech": "noun",
+                "meaning": "quá trình làm quen công việc và nhóm",
+                "collocation": "complete onboarding",
+                "example": "My onboarding includes a short project introduction.",
+                "example_vi": "Phần làm quen công việc của tôi gồm một buổi giới thiệu project ngắn."
+              },
+              {
+                "key": "fresher-access-setup-vocab-repository",
+                "word": "repository",
+                "part_of_speech": "noun",
+                "meaning": "kho lưu mã nguồn và lịch sử thay đổi; thường gọi là repo",
+                "collocation": "access a repository",
+                "example": "I cannot access the team repository yet.",
+                "example_vi": "Tôi chưa truy cập được kho mã nguồn của nhóm."
+              },
+              {
+                "key": "fresher-access-setup-vocab-permission",
+                "word": "permission",
+                "part_of_speech": "noun",
+                "meaning": "quyền được thực hiện một thao tác",
+                "collocation": "request permission",
+                "example": "Could you check my permission to view this repository?",
+                "example_vi": "Bạn có thể kiểm tra quyền xem kho mã nguồn của tôi không?"
+              },
+              {
+                "key": "fresher-access-setup-vocab-credential",
+                "word": "credential",
+                "part_of_speech": "noun",
+                "meaning": "thông tin dùng để xác thực; thường dùng số nhiều credentials",
+                "collocation": "share credentials",
+                "example": "Do not share your credentials in the team chat.",
+                "example_vi": "Đừng chia sẻ thông tin xác thực của bạn trong kênh chat nhóm."
+              },
+              {
+                "key": "fresher-access-setup-vocab-dependency",
+                "word": "dependency",
+                "part_of_speech": "noun",
+                "meaning": "thư viện hoặc thành phần phần mềm mà project cần để hoạt động",
+                "collocation": "install dependencies",
+                "example": "The setup guide lists the required dependencies.",
+                "example_vi": "Hướng dẫn thiết lập liệt kê các thành phần phụ thuộc cần thiết."
+              },
+              {
+                "key": "fresher-access-setup-vocab-environment-variable",
+                "word": "environment variable",
+                "part_of_speech": "noun phrase",
+                "meaning": "biến môi trường dùng để truyền giá trị cấu hình cho chương trình",
+                "collocation": "set an environment variable",
+                "example": "Set the environment variable shown in the setup guide.",
+                "example_vi": "Đặt biến môi trường được nêu trong hướng dẫn thiết lập."
+              },
+              {
+                "key": "fresher-access-setup-vocab-configuration",
+                "word": "configuration",
+                "part_of_speech": "noun",
+                "meaning": "cấu hình điều khiển cách chương trình hoạt động",
+                "collocation": "check the configuration",
+                "example": "I checked the configuration before starting the app.",
+                "example_vi": "Tôi đã kiểm tra cấu hình trước khi khởi động ứng dụng."
+              },
+              {
+                "key": "fresher-access-setup-vocab-local-environment",
+                "word": "local environment",
+                "part_of_speech": "noun phrase",
+                "meaning": "môi trường chạy trên máy của người phát triển",
+                "collocation": "set up a local environment",
+                "example": "My local environment is ready for testing.",
+                "example_vi": "Môi trường trên máy của tôi đã sẵn sàng để kiểm thử."
+              }
+            ]
+          },
+          {
+            "key": "fresher-ticket-scope",
+            "title": "Understanding a Ticket and Its Acceptance Criteria",
+            "objectives": "Đọc ticket; hỏi rõ phạm vi, edge case và tiêu chí chấp nhận; đưa ước lượng có điều kiện.",
+            "grammar": "Làm rõ: Should [behavior] happen when [condition]? Xác nhận: Just to confirm, [summary]. Hỏi phạm vi: Is [feature] in scope? — [Tính năng] có nằm trong phạm vi không? Estimate là ước lượng có thể thay đổi khi có thông tin mới. Acceptance criteria nói về điều kiện cụ thể của ticket; Definition of Done trong Scrum mô tả chuẩn chất lượng chung của Increment, không đồng nhất hai khái niệm.",
+            "reading": "DEV-21 asks for course search by title. Linh is the assignee. The user story says that a learner wants to find a course without reading the whole list. The acceptance criteria say: ignore letter case, show matching course titles, and show 'No courses found' when there are no matches. Sorting by price is outside the scope. The ticket does not say what an empty search should do. Linh asks the product owner to clarify that edge case before giving a final estimate. Her first estimate is one working day, assuming the existing search API can be used.",
+            "reading_task": "Liệt kê một việc ngoài scope và một câu hỏi còn mở. Gợi ý: sắp xếp theo giá ngoài scope; cần hỏi hành vi khi ô tìm kiếm rỗng. Ước lượng một ngày phụ thuộc việc dùng được API hiện có.",
+            "dialogue": "Linh: Should an empty search show all courses or a message?\nProduct owner: Good question. Please show all courses.\nLinh: Just to confirm, price sorting is outside this ticket?\nProduct owner: Correct. I will update the acceptance criteria.\nLinh: Thanks. My estimate is one working day if we can use the existing API.",
+            "practice": "Đóng vai fresher nhận ticket lọc khóa theo level nhưng chưa rõ khi không chọn level. Viết 3 câu hỏi về hành vi rỗng, phạm vi và API; kết thúc bằng ước lượng có điều kiện. Mẫu: Should an empty filter show all levels? Is sorting included? Can I use the existing API? I estimate one day if the API already supports this filter. Tự chấm 0–2 điểm/tiêu chí: edge case; scope; dependency; estimate có điều kiện. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which feature is outside DEV-21?",
+                "options": [
+                  "Sorting by price",
+                  "Showing a no-results message",
+                  "Ignoring letter case"
+                ],
+                "answer": "A",
+                "explanation": "Ticket loại sắp xếp theo giá khỏi phạm vi.",
+                "use_reading": true,
+                "key": "fresher-ticket-scope-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose assignee or reviewer: The person assigned to a ticket is its ___.",
+                "answers": [
+                  "assignee"
+                ],
+                "explanation": "Assignee là người được giao ticket; reviewer xem xét thay đổi.",
+                "key": "fresher-ticket-scope-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which behavior still needs clarification in the reading?",
+                "options": [
+                  "Matching titles without regard to letter case",
+                  "A search with no matches",
+                  "An empty search"
+                ],
+                "answer": "C",
+                "explanation": "Chỉ hành vi tìm kiếm rỗng chưa được mô tả trong bài đọc; hội thoại minh họa bước làm rõ sau đó.",
+                "use_reading": true,
+                "key": "fresher-ticket-scope-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Complete the phrase: acceptance ___ (choose criteria or credentials).",
+                "answers": [
+                  "criteria"
+                ],
+                "explanation": "Acceptance criteria là các điều kiện chấp nhận công việc.",
+                "key": "fresher-ticket-scope-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which estimate communicates its assumption?",
+                "options": [
+                  "It is certainly finished even though work has not started",
+                  "One day, regardless of any API changes",
+                  "One working day if the existing API supports this search"
+                ],
+                "answer": "C",
+                "explanation": "Câu đúng cho biết thời lượng dự kiến và điều kiện có thể ảnh hưởng.",
+                "key": "fresher-ticket-scope-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-ticket-scope-vocab-ticket",
+                "word": "ticket",
+                "part_of_speech": "noun",
+                "meaning": "mục công việc được ghi lại trong hệ thống theo dõi",
+                "collocation": "pick up a ticket",
+                "example": "I will pick up the search ticket today.",
+                "example_vi": "Hôm nay tôi sẽ nhận ticket tìm kiếm."
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-assignee",
+                "word": "assignee",
+                "part_of_speech": "noun",
+                "meaning": "người được giao phụ trách ticket",
+                "collocation": "change the assignee",
+                "example": "Linh is the assignee for DEV-21.",
+                "example_vi": "Linh là người được giao phụ trách DEV-21."
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-user-story",
+                "word": "user story",
+                "part_of_speech": "noun phrase",
+                "meaning": "mô tả nhu cầu từ góc nhìn người dùng và giá trị mong muốn",
+                "collocation": "write a user story",
+                "example": "This user story explains why learners need search.",
+                "example_vi": "User story này giải thích vì sao người học cần tìm kiếm."
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-acceptance-criteria",
+                "word": "acceptance criteria",
+                "part_of_speech": "plural noun phrase",
+                "meaning": "các điều kiện cụ thể để chấp nhận tính năng hoặc công việc",
+                "collocation": "clarify the acceptance criteria",
+                "example": "Could we clarify the acceptance criteria before I start?",
+                "example_vi": "Chúng ta có thể làm rõ tiêu chí chấp nhận trước khi tôi bắt đầu không?"
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-scope",
+                "word": "scope",
+                "part_of_speech": "noun",
+                "meaning": "phạm vi công việc đã thống nhất",
+                "collocation": "confirm the scope",
+                "example": "Please confirm whether sorting is in scope.",
+                "example_vi": "Hãy xác nhận việc sắp xếp có nằm trong phạm vi không."
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-edge-case",
+                "word": "edge case",
+                "part_of_speech": "noun phrase",
+                "meaning": "trường hợp ở biên hoặc ít gặp cần xem xét",
+                "collocation": "test an edge case",
+                "example": "An empty search term is one edge case to discuss.",
+                "example_vi": "Cụm tìm kiếm rỗng là một trường hợp biên cần trao đổi."
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-priority",
+                "word": "priority",
+                "part_of_speech": "noun",
+                "meaning": "mức ưu tiên xử lý so với các công việc khác",
+                "collocation": "set the priority",
+                "example": "The team sets the priority of this ticket.",
+                "example_vi": "Nhóm xác định mức ưu tiên của ticket này."
+              },
+              {
+                "key": "fresher-ticket-scope-vocab-estimate",
+                "word": "estimate",
+                "part_of_speech": "noun",
+                "meaning": "ước lượng công sức hoặc thời gian theo thông tin hiện có",
+                "collocation": "revise an estimate",
+                "example": "I will revise the estimate after we confirm the scope.",
+                "example_vi": "Tôi sẽ điều chỉnh ước lượng sau khi chúng ta xác nhận phạm vi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fresher-daily-collaboration",
+        "title": "Daily Updates and Getting Unblocked",
+        "objectives": "Đưa cập nhật có điều kiện và hỏi trợ giúp để người nhận có thể hành động.",
+        "test_passage": "At stand-up, Nam reports that the level-filter layout is complete. The API test is blocked because the test service is unavailable. He has checked the endpoint URL and restarted his local client, but the failure remains. He can review the wording with sample data as a workaround. He posts a short log excerpt without tokens and asks Mai to help check service health. His current ETA is 4 p.m. if the service recovers by 1 p.m. He will update the team at 1 p.m. regardless. He proposes a ten-minute pairing session at 11 a.m. UTC+7.",
+        "test": [
+          {
+            "type": "single_choice",
+            "prompt": "Which part of Nam's work is complete?",
+            "options": [
+              "The production release",
+              "All real-API tests",
+              "The level-filter layout"
+            ],
+            "answer": "C",
+            "explanation": "Chỉ layout được báo hoàn tất.",
+            "use_reading": true,
+            "lesson_key": "fresher-standup-blockers",
+            "key": "fresher-daily-collaboration-test-01"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose blocker or diff: The unavailable test service is a ___.",
+            "answers": [
+              "blocker"
+            ],
+            "explanation": "Dịch vụ không hoạt động đang chặn kiểm thử.",
+            "lesson_key": "fresher-standup-blockers",
+            "key": "fresher-daily-collaboration-test-02"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What is the condition attached to the 4 p.m. ETA?",
+            "options": [
+              "The service recovers by 1 p.m.",
+              "Mai approves a production release at 11 a.m.",
+              "The team cancels all tests"
+            ],
+            "answer": "A",
+            "explanation": "ETA phụ thuộc dịch vụ phục hồi trước hoặc lúc 1 p.m.",
+            "use_reading": true,
+            "lesson_key": "fresher-standup-blockers",
+            "key": "fresher-daily-collaboration-test-03"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Complete the phrase: remaining ___ (choose work or credentials) means the tasks still to do.",
+            "answers": [
+              "work"
+            ],
+            "explanation": "Remaining work là phần việc còn lại.",
+            "lesson_key": "fresher-standup-blockers",
+            "key": "fresher-daily-collaboration-test-04"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "If the service remains down at 1 p.m., what update fits the agreement?",
+            "options": [
+              "No update is needed until the service recovers",
+              "Everything is complete because the layout works",
+              "The blocker remains; the 4 p.m. ETA is at risk and I need a revised plan"
+            ],
+            "answer": "C",
+            "explanation": "Nam đã hẹn cập nhật dù blocker còn; cần báo rủi ro của ETA.",
+            "use_reading": true,
+            "lesson_key": "fresher-standup-blockers",
+            "key": "fresher-daily-collaboration-test-05"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What has Nam already tried?",
+            "options": [
+              "Changing the user's permissions",
+              "Rolling back production",
+              "Checking the endpoint URL and restarting his local client"
+            ],
+            "answer": "C",
+            "explanation": "Đây là hai việc đã thử được nêu trong bài.",
+            "use_reading": true,
+            "lesson_key": "fresher-async-help",
+            "key": "fresher-daily-collaboration-test-06"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose context or approval: Background that helps someone understand a request is ___.",
+            "answers": [
+              "context"
+            ],
+            "explanation": "Context giúp hiểu vấn đề trước khi trả lời.",
+            "lesson_key": "fresher-async-help",
+            "key": "fresher-daily-collaboration-test-07"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which request matches Nam's proposed session?",
+            "options": [
+              "Let's meet sometime tomorrow.",
+              "Please stay online until I finish every task.",
+              "Could we pair for ten minutes at 11 a.m. UTC+7?"
+            ],
+            "answer": "C",
+            "explanation": "Giờ, múi giờ và thời lượng khớp đề xuất trong bài.",
+            "use_reading": true,
+            "lesson_key": "fresher-async-help",
+            "key": "fresher-daily-collaboration-test-08"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose workaround or root cause: Using sample data to continue wording review is a ___.",
+            "answers": [
+              "workaround"
+            ],
+            "explanation": "Đây là cách tiếp tục tạm thời, không phải nguyên nhân gốc.",
+            "lesson_key": "fresher-async-help",
+            "key": "fresher-daily-collaboration-test-09"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What does reviewing sample data fail to prove?",
+            "options": [
+              "That the real test service is healthy",
+              "That the wording can be reviewed",
+              "That Nam can describe his next step"
+            ],
+            "answer": "A",
+            "explanation": "Sample data không chứng minh dịch vụ thật hoạt động.",
+            "use_reading": true,
+            "lesson_key": "fresher-async-help",
+            "key": "fresher-daily-collaboration-test-10"
+          }
+        ],
+        "lessons": [
+          {
+            "key": "fresher-standup-blockers",
+            "title": "Daily Stand-up: Progress, Blockers, and ETA",
+            "objectives": "Cập nhật ngắn gắn với mục tiêu nhóm; nói rõ blocker, công việc còn lại và mốc cập nhật tiếp.",
+            "grammar": "Việc đã xong: I have finished [work]. Việc còn lại: I still need to [action]. Bị chặn: I am blocked by [issue]. Hẹn cập nhật: I will update you by [time]. ETA là dự kiến, không phải cam kết chắc chắn. Trong Scrum, Daily Scrum là 15 phút để kiểm tra tiến độ hướng tới Sprint Goal và điều chỉnh kế hoạch; không bắt buộc lần lượt trả lời ba câu hỏi Yesterday/Today/Blockers. Dùng khung ba câu đó ở đây chỉ để luyện nói.",
+            "reading": "The team's Sprint Goal is to make course search usable. At the morning stand-up, Linh says that the search field is complete and the empty-state test is in progress. She cannot test real results because her staging account has no search access. That missing access is her blocker. Minh will check the account after the meeting. Linh can still test the layout with sample data. Her current ETA is 3 p.m. if access is restored before noon. She will post another update at noon even if the blocker remains.",
+            "reading_task": "Viết 4 ý: đã xong, còn làm, blocker, mốc cập nhật. Gợi ý: xong search field; còn kiểm thử empty state và kết quả thực; thiếu quyền search trên staging; cập nhật lúc trưa. 3 p.m. là ETA có điều kiện.",
+            "dialogue": "Linh: The search field is complete. I am testing the empty state.\nMinh: Is anything blocking the real-data test?\nLinh: Yes. My staging account has no search access. Could you check it after stand-up?\nMinh: I will follow up with you then.\nLinh: Thanks. I will test the layout with sample data and update the team at noon.",
+            "practice": "Nói 45–60 giây: làm gì để góp phần vào Sprint Goal, việc đã xong, blocker và next step. Sau đó giả sử tới trưa vẫn thiếu quyền, viết cập nhật mới. Mẫu: Access is still blocked, so the 3 p.m. ETA is at risk. The layout checks passed with sample data. I need help confirming the account permissions. I will update the estimate after access is restored. Tự chấm 0–2 điểm/tiêu chí: tiến độ có bằng chứng; blocker cụ thể; next step; ETA minh bạch. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What is Linh's blocker?",
+                "options": [
+                  "The team has no sample data",
+                  "The search field has not been created",
+                  "Her staging account lacks search access"
+                ],
+                "answer": "C",
+                "explanation": "Bài đọc nói thiếu quyền search; search field đã xong và có sample data.",
+                "use_reading": true,
+                "key": "fresher-standup-blockers-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose in progress or complete: Work that is still being done is ___.",
+                "answers": [
+                  "in progress"
+                ],
+                "explanation": "In progress là đang làm, không phải đã hoàn tất.",
+                "key": "fresher-standup-blockers-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "When will Linh update the team even if access is still missing?",
+                "options": [
+                  "At noon",
+                  "Only after the feature is released",
+                  "At 3 p.m. only if every test passes"
+                ],
+                "answer": "A",
+                "explanation": "Mốc cập nhật là trưa; 3 p.m. là ETA có điều kiện.",
+                "use_reading": true,
+                "key": "fresher-standup-blockers-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose blocker or approval: A problem that prevents progress is a ___.",
+                "answers": [
+                  "blocker"
+                ],
+                "explanation": "Blocker ngăn công việc tiếp tục.",
+                "key": "fresher-standup-blockers-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which statement about a Daily Scrum is accurate?",
+                "options": [
+                  "Its structure can vary while focusing on the Sprint Goal and next plan",
+                  "It is a compulsory detailed status report to a manager",
+                  "It requires the same three questions in every team"
+                ],
+                "answer": "A",
+                "explanation": "Scrum Guide cho phép Developers chọn cấu trúc phù hợp; khung luyện nói không phải quy định bắt buộc.",
+                "key": "fresher-standup-blockers-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-standup-blockers-vocab-sprint-goal",
+                "word": "Sprint Goal",
+                "part_of_speech": "noun phrase",
+                "meaning": "mục tiêu chung của Sprint trong Scrum",
+                "collocation": "work toward the Sprint Goal",
+                "example": "Our Sprint Goal is to make course search usable.",
+                "example_vi": "Mục tiêu Sprint của chúng tôi là làm cho chức năng tìm khóa học dùng được."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-daily-stand-up",
+                "word": "daily stand-up",
+                "part_of_speech": "noun phrase",
+                "meaning": "buổi trao đổi ngắn hằng ngày của nhóm; tên gọi và cách tổ chức tùy nhóm",
+                "collocation": "give an update at the daily stand-up",
+                "example": "I will mention the delay at the daily stand-up.",
+                "example_vi": "Tôi sẽ nêu việc chậm tiến độ trong buổi trao đổi ngắn hằng ngày."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-blocker",
+                "word": "blocker",
+                "part_of_speech": "noun",
+                "meaning": "vướng mắc đang ngăn công việc tiếp tục",
+                "collocation": "raise a blocker",
+                "example": "Missing test access is a blocker for me.",
+                "example_vi": "Thiếu quyền truy cập kiểm thử đang ngăn tôi tiếp tục công việc."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-in-progress",
+                "word": "in progress",
+                "part_of_speech": "adjective phrase",
+                "meaning": "đang được thực hiện",
+                "collocation": "still in progress",
+                "example": "The search tests are still in progress.",
+                "example_vi": "Các bài kiểm thử tìm kiếm vẫn đang được thực hiện."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-eta",
+                "word": "ETA",
+                "part_of_speech": "abbreviation, noun",
+                "meaning": "estimated time of arrival; trong cập nhật công việc thường là thời điểm dự kiến xong",
+                "collocation": "give an ETA",
+                "example": "My current ETA is 3 p.m. if access is restored.",
+                "example_vi": "Hiện tôi dự kiến xong lúc 3 giờ chiều nếu quyền truy cập được khôi phục."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-dependency",
+                "word": "dependency",
+                "part_of_speech": "noun",
+                "meaning": "công việc hoặc điều kiện khác mà phần việc đang phụ thuộc vào",
+                "collocation": "identify a dependency",
+                "example": "The API response format is a dependency for this task.",
+                "example_vi": "Định dạng phản hồi API là một yếu tố mà công việc này đang phụ thuộc vào."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-follow-up",
+                "word": "follow up",
+                "part_of_speech": "phrasal verb",
+                "meaning": "trao đổi hoặc kiểm tra tiếp sau lần trước",
+                "collocation": "follow up with a teammate",
+                "example": "I will follow up with Minh after the meeting.",
+                "example_vi": "Tôi sẽ trao đổi tiếp với Minh sau cuộc họp."
+              },
+              {
+                "key": "fresher-standup-blockers-vocab-remaining-work",
+                "word": "remaining work",
+                "part_of_speech": "noun phrase",
+                "meaning": "phần việc còn lại",
+                "collocation": "describe the remaining work",
+                "example": "The remaining work is to test the empty state.",
+                "example_vi": "Phần việc còn lại là kiểm thử trạng thái không có kết quả."
+              }
+            ]
+          },
+          {
+            "key": "fresher-async-help",
+            "title": "Asking for Help in Chat and Across Time Zones",
+            "objectives": "Viết yêu cầu trợ giúp có context, việc đã thử, bằng chứng và câu hỏi rõ; xác nhận giờ hẹn.",
+            "grammar": "Nhờ hỗ trợ: Could you help me understand [problem]? Nêu đã thử: I have tried [action], but [result]. Phân biệt quan sát với suy đoán: The log shows [fact]. It may be related to [hypothesis]. Hẹn giờ: Would 2 p.m. UTC+7 work for you? Follow up là động từ; follow-up note dùng dạng có gạch nối làm tính từ. Không kết luận root cause chỉ từ một dòng stack trace.",
+            "reading": "Linh is testing DEV-21 locally. A test fails with the message 'Search service unavailable'. She checked the configuration and restarted the local service, but the same error remains. The stack trace mentions the search handler; it does not prove which change caused the failure. Linh shares a short log excerpt with credentials removed. She asks whether she should check the local service health first. A sample response lets her continue the layout work as a workaround, but it does not verify the real integration. She proposes a ten-minute pairing session at 2 p.m. UTC+7.",
+            "reading_task": "Chọn hai việc đã thử, một bằng chứng và giới hạn của workaround. Gợi ý: kiểm tra cấu hình, restart service; thông báo lỗi hoặc stack trace; sample response chỉ giúp làm layout, chưa chứng minh tích hợp thật hoạt động.",
+            "dialogue": "Linh: DEV-21 fails locally with 'Search service unavailable'. I checked the configuration and restarted the service.\nMai: Does the log show which request failed?\nLinh: I have added a short excerpt without credentials. Could you help me choose the next check?\nMai: Let's check the service health together.\nLinh: Would 2 p.m. UTC+7 work for a ten-minute pairing session?\nMai: Yes, that time works for me.",
+            "practice": "Viết tin nhắn trợ giúp 60–90 từ cho một bài test không chạy. Dùng thứ tự Context → Tried → Observed → Ask → Availability. Mẫu: I am testing the course list locally. I checked the test configuration and restarted the service, but the same error remains. The log says 'Search service unavailable'. I have attached a short excerpt without credentials. Should I check service health next? Could we pair for ten minutes at 2 p.m. UTC+7? Tự chấm 0–2 điểm/tiêu chí: context/đã thử; bằng chứng; câu hỏi cụ thể; múi giờ và thời lượng. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Which action has Linh already tried?",
+                "options": [
+                  "Deploying to production",
+                  "Changing the API contract",
+                  "Restarting the local service"
+                ],
+                "answer": "C",
+                "explanation": "Restart local service được nêu rõ trong bài; hai hành động kia không có.",
+                "use_reading": true,
+                "key": "fresher-async-help-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose workaround or approval: A temporary way to keep working is a ___.",
+                "answers": [
+                  "workaround"
+                ],
+                "explanation": "Workaround giúp tạm tiếp tục; không đồng nghĩa đã sửa nguyên nhân.",
+                "key": "fresher-async-help-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What does the sample response allow Linh to verify?",
+                "options": [
+                  "All production accounts have permission",
+                  "The layout using sample data",
+                  "The real API integration works correctly"
+                ],
+                "answer": "B",
+                "explanation": "Sample data chỉ hỗ trợ kiểm tra layout trong tình huống.",
+                "use_reading": true,
+                "key": "fresher-async-help-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Complete: Please include your time ___ (choose zone or trace).",
+                "answers": [
+                  "zone"
+                ],
+                "explanation": "Time zone giúp người ở nơi khác hiểu đúng giờ hẹn.",
+                "key": "fresher-async-help-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What can Linh conclude from the stack trace alone?",
+                "options": [
+                  "The latest developer definitely caused the error",
+                  "Production must be rolled back immediately",
+                  "It mentions the search handler, but the cause is not yet confirmed"
+                ],
+                "answer": "C",
+                "explanation": "Vị trí xuất hiện lỗi không tự chứng minh nguyên nhân; cần kiểm tra thêm.",
+                "use_reading": true,
+                "key": "fresher-async-help-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-async-help-vocab-context",
+                "word": "context",
+                "part_of_speech": "noun",
+                "meaning": "bối cảnh giúp người khác hiểu vấn đề",
+                "collocation": "provide context",
+                "example": "Please provide context before asking for help.",
+                "example_vi": "Hãy cung cấp bối cảnh trước khi nhờ trợ giúp."
+              },
+              {
+                "key": "fresher-async-help-vocab-attempt",
+                "word": "attempt",
+                "part_of_speech": "noun",
+                "meaning": "một lần hoặc cách đã thử",
+                "collocation": "describe an attempt",
+                "example": "My first attempt used the sample configuration.",
+                "example_vi": "Lần thử đầu tiên của tôi dùng cấu hình mẫu."
+              },
+              {
+                "key": "fresher-async-help-vocab-log",
+                "word": "log",
+                "part_of_speech": "noun",
+                "meaning": "bản ghi sự kiện hoặc thông báo của hệ thống",
+                "collocation": "check the logs",
+                "example": "The logs show that the service stopped at noon.",
+                "example_vi": "Các bản ghi cho thấy dịch vụ đã dừng vào buổi trưa."
+              },
+              {
+                "key": "fresher-async-help-vocab-stack-trace",
+                "word": "stack trace",
+                "part_of_speech": "noun phrase",
+                "meaning": "thông tin về chuỗi lời gọi hàm tại thời điểm lỗi trong nhiều môi trường lập trình",
+                "collocation": "read a stack trace",
+                "example": "The stack trace mentions the search handler.",
+                "example_vi": "Thông tin chuỗi lời gọi hàm có nhắc đến hàm xử lý tìm kiếm."
+              },
+              {
+                "key": "fresher-async-help-vocab-workaround",
+                "word": "workaround",
+                "part_of_speech": "noun",
+                "meaning": "cách xử lý tạm để tiếp tục công việc; chưa phải sửa nguyên nhân",
+                "collocation": "use a workaround",
+                "example": "The sample response is a temporary workaround.",
+                "example_vi": "Phản hồi mẫu là một cách xử lý tạm thời."
+              },
+              {
+                "key": "fresher-async-help-vocab-clarification",
+                "word": "clarification",
+                "part_of_speech": "noun",
+                "meaning": "sự làm rõ thông tin chưa hiểu",
+                "collocation": "ask for clarification",
+                "example": "I need clarification on the error message.",
+                "example_vi": "Tôi cần được làm rõ thông báo lỗi."
+              },
+              {
+                "key": "fresher-async-help-vocab-pair-programming",
+                "word": "pair programming",
+                "part_of_speech": "noun phrase",
+                "meaning": "hai người cùng cộng tác trực tiếp vào một công việc lập trình",
+                "collocation": "try pair programming",
+                "example": "Could we try pair programming for this failing test?",
+                "example_vi": "Chúng ta có thể cùng lập trình để xử lý bài kiểm thử đang lỗi này không?"
+              },
+              {
+                "key": "fresher-async-help-vocab-time-zone",
+                "word": "time zone",
+                "part_of_speech": "noun phrase",
+                "meaning": "múi giờ",
+                "collocation": "confirm the time zone",
+                "example": "Please include your time zone in the meeting request.",
+                "example_vi": "Hãy ghi múi giờ của bạn trong lời mời họp."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fresher-change-review",
+        "title": "Sharing Changes and Handling Feedback",
+        "objectives": "Viết PR rõ phạm vi và báo đúng trạng thái review/CI trước khi tích hợp.",
+        "test_passage": "Nam commits the level-filter change locally and then pushes his branch. He opens a draft PR targeting main because the empty-selection test is not finished. The diff also includes an unrelated formatting change. Mai asks him to remove that unrelated change and add the missing test. Nam does both and pushes again. The test and build checks pass. Mai still asks whether the user-facing message matches the acceptance criteria; she has not approved yet. The team's policy requires reviewer approval and all required checks. Nam will answer with the exact message and request another review.",
+        "test": [
+          {
+            "type": "single_choice",
+            "prompt": "Where is Nam's first commit recorded before he pushes?",
+            "options": [
+              "In his local Git history",
+              "Automatically in the production environment",
+              "Only in a chat message"
+            ],
+            "answer": "A",
+            "explanation": "Commit local và push lên remote là hai thao tác khác nhau.",
+            "use_reading": true,
+            "lesson_key": "fresher-git-pr",
+            "key": "fresher-change-review-test-01"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose branch or payload: A separate line of development within a repository is a ___.",
+            "answers": [
+              "branch"
+            ],
+            "explanation": "Branch là nhánh phát triển trong repo.",
+            "lesson_key": "fresher-git-pr",
+            "key": "fresher-change-review-test-02"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Why is the PR initially marked as draft?",
+            "options": [
+              "Every required review has already approved it",
+              "No source code exists in the repository",
+              "The empty-selection test is unfinished"
+            ],
+            "answer": "C",
+            "explanation": "Draft thể hiện còn việc kiểm thử trong tình huống.",
+            "use_reading": true,
+            "lesson_key": "fresher-git-pr",
+            "key": "fresher-change-review-test-03"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose pull or status: A ___ request proposes changes for review and integration.",
+            "answers": [
+              "pull"
+            ],
+            "explanation": "Pull request là đề nghị review/tích hợp thay đổi.",
+            "lesson_key": "fresher-git-pr",
+            "key": "fresher-change-review-test-04"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What is the target branch of the PR?",
+            "options": [
+              "The staging server",
+              "main",
+              "The local test account"
+            ],
+            "answer": "B",
+            "explanation": "Bài đọc nêu PR targeting main.",
+            "use_reading": true,
+            "lesson_key": "fresher-git-pr",
+            "key": "fresher-change-review-test-05"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which change did Mai ask Nam to remove?",
+            "options": [
+              "The level-filter behavior",
+              "Unrelated formatting",
+              "The missing-test requirement"
+            ],
+            "answer": "B",
+            "explanation": "Mai yêu cầu bỏ formatting không liên quan khỏi diff.",
+            "use_reading": true,
+            "lesson_key": "fresher-review-ci",
+            "key": "fresher-change-review-test-06"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose reviewer or assignee: A person examining a pull request is a ___.",
+            "answers": [
+              "reviewer"
+            ],
+            "explanation": "Reviewer là người xem xét PR.",
+            "lesson_key": "fresher-review-ci",
+            "key": "fresher-change-review-test-07"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Why is the PR not yet ready under this team's policy?",
+            "options": [
+              "Both test and build checks are failing",
+              "The branch has never been pushed",
+              "Reviewer approval is still missing"
+            ],
+            "answer": "C",
+            "explanation": "Checks đã đạt nhưng Mai chưa approve.",
+            "use_reading": true,
+            "lesson_key": "fresher-review-ci",
+            "key": "fresher-change-review-test-08"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose CI or ETA: Automated integration checks commonly run in ___.",
+            "answers": [
+              "CI"
+            ],
+            "explanation": "CI là tích hợp liên tục; ETA là dự kiến thời điểm.",
+            "lesson_key": "fresher-review-ci",
+            "key": "fresher-change-review-test-09"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What is the most useful reply to Mai's remaining question?",
+            "options": [
+              "Mark the conversation resolved without answering",
+              "Say that green checks prove every requirement is met",
+              "Quote the actual message, compare it with the criteria, and request review"
+            ],
+            "answer": "C",
+            "explanation": "Cần trả lời nội dung được hỏi; checks xanh không thay review tiêu chí.",
+            "lesson_key": "fresher-review-ci",
+            "key": "fresher-change-review-test-10"
+          }
+        ],
+        "lessons": [
+          {
+            "key": "fresher-git-pr",
+            "title": "From a Branch to a Clear Pull Request",
+            "objectives": "Mô tả branch, commit, push và PR; viết mô tả thay đổi, kiểm thử và phần chưa xong.",
+            "grammar": "Mô tả mục đích: This PR adds [behavior] so that [benefit]. Báo kiểm thử: I tested [case] in [environment]. Xin góp ý sớm: This is a draft PR; I would like feedback on [part]. Commit ghi thay đổi vào lịch sử Git local; push gửi lên remote; mở PR để đề nghị review/tích hợp. Push không tự đồng nghĩa đã merge hoặc deploy. Fork là repository riêng có quan hệ với repo gốc; branch thuộc một repository.",
+            "reading": "Linh creates the branch search-empty-state for DEV-21. She adds an empty-state message and a test, then makes a commit. After the local test passes, she pushes the branch to the team repository. She opens a draft pull request with main as the base branch because the real-data check is still pending. Her description explains the change, links DEV-21, and lists what she tested. The diff includes a source file and a test file. Later, Git reports a merge conflict in the source file. Linh asks the reviewer about the intended behavior before resolving it.",
+            "reading_task": "Sắp xếp commit, push, mở PR; nêu vì sao còn draft. Gợi ý: commit → push → PR; kiểm thử dữ liệu thật chưa xong. Merge conflict cần hiểu hành vi mong muốn, không chọn toàn bộ một phía một cách máy móc.",
+            "dialogue": "Linh: I opened a draft PR for DEV-21. The local empty-state test passes.\nMai: What is still pending?\nLinh: The real-data check. Could you review the message wording first?\nMai: Yes. There is also a conflict in the source file.\nLinh: Could we confirm the intended behavior before I resolve it?\nMai: Let's compare both changes and then rerun the relevant tests.",
+            "practice": "Viết PR description 4 mục: Why, Changes, Tested, Pending. Mẫu: Why: Learners need a clear no-results message. Changes: Added the empty state and its test. Tested: No matches in the local environment. Pending: Real-data check on staging; this PR remains a draft. Đổi ngữ cảnh sang form đăng ký và tự viết bản thứ hai. Tự chấm 0–2 điểm/tiêu chí: lý do; phạm vi; bằng chứng test; giới hạn/pending. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Why is Linh's pull request a draft?",
+                "options": [
+                  "The real-data check is still pending",
+                  "No local test has passed",
+                  "The change is already in production"
+                ],
+                "answer": "A",
+                "explanation": "Bài đọc nêu local test đạt nhưng real-data check chưa xong.",
+                "use_reading": true,
+                "key": "fresher-git-pr-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose base or local: The target of a pull request is its ___ branch.",
+                "answers": [
+                  "base"
+                ],
+                "explanation": "Base branch là nhánh đích để tích hợp.",
+                "key": "fresher-git-pr-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is the correct order in Linh's workflow?",
+                "options": [
+                  "Commit, push, open a pull request",
+                  "Open a pull request, deploy, create the first local change",
+                  "Push automatically means merge to main"
+                ],
+                "answer": "A",
+                "explanation": "Đây là trình tự cụ thể trong bài; push không tự merge.",
+                "use_reading": true,
+                "key": "fresher-git-pr-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose diff or credential: The display of changed lines is the ___.",
+                "answers": [
+                  "diff"
+                ],
+                "explanation": "Diff hiển thị các khác biệt giữa phiên bản.",
+                "key": "fresher-git-pr-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What should Linh do before resolving the conflict?",
+                "options": [
+                  "Delete the test because conflicts make tests unnecessary",
+                  "Keep every line from her branch without reviewing",
+                  "Confirm the intended behavior and compare both changes"
+                ],
+                "answer": "C",
+                "explanation": "Hiểu hai thay đổi và hành vi cần giữ giúp xử lý xung đột đúng.",
+                "use_reading": true,
+                "key": "fresher-git-pr-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-git-pr-vocab-branch",
+                "word": "branch",
+                "part_of_speech": "noun",
+                "meaning": "nhánh phát triển trong một repository",
+                "collocation": "create a branch",
+                "example": "I created a branch for the search change.",
+                "example_vi": "Tôi đã tạo một nhánh cho thay đổi tìm kiếm."
+              },
+              {
+                "key": "fresher-git-pr-vocab-commit",
+                "word": "commit",
+                "part_of_speech": "noun",
+                "meaning": "mốc ghi lại thay đổi trong lịch sử Git",
+                "collocation": "create a commit",
+                "example": "This commit adds the empty-state message.",
+                "example_vi": "Commit này thêm thông báo khi không có kết quả."
+              },
+              {
+                "key": "fresher-git-pr-vocab-push",
+                "word": "push",
+                "part_of_speech": "verb",
+                "meaning": "gửi dữ liệu Git và cập nhật tham chiếu lên repository từ xa",
+                "collocation": "push a branch",
+                "example": "I will push my branch after the local tests pass.",
+                "example_vi": "Tôi sẽ đẩy nhánh của mình lên sau khi kiểm thử trên máy đạt."
+              },
+              {
+                "key": "fresher-git-pr-vocab-pull-request",
+                "word": "pull request",
+                "part_of_speech": "noun phrase",
+                "meaning": "đề nghị xem xét và tích hợp thay đổi trên GitHub; viết tắt PR",
+                "collocation": "open a pull request",
+                "example": "I opened a pull request for DEV-21.",
+                "example_vi": "Tôi đã mở một pull request cho DEV-21."
+              },
+              {
+                "key": "fresher-git-pr-vocab-diff",
+                "word": "diff",
+                "part_of_speech": "noun",
+                "meaning": "phần hiển thị khác biệt giữa các phiên bản",
+                "collocation": "review the diff",
+                "example": "The diff includes one source file and one test file.",
+                "example_vi": "Phần khác biệt gồm một tệp mã nguồn và một tệp kiểm thử."
+              },
+              {
+                "key": "fresher-git-pr-vocab-base-branch",
+                "word": "base branch",
+                "part_of_speech": "noun phrase",
+                "meaning": "nhánh đích mà pull request đề nghị tích hợp thay đổi vào",
+                "collocation": "check the base branch",
+                "example": "The base branch for this pull request is main.",
+                "example_vi": "Nhánh đích của pull request này là main."
+              },
+              {
+                "key": "fresher-git-pr-vocab-merge-conflict",
+                "word": "merge conflict",
+                "part_of_speech": "noun phrase",
+                "meaning": "xung đột khi Git không thể tự kết hợp một số thay đổi",
+                "collocation": "resolve a merge conflict",
+                "example": "I need help resolving a merge conflict in the search file.",
+                "example_vi": "Tôi cần giúp giải quyết xung đột gộp trong tệp tìm kiếm."
+              },
+              {
+                "key": "fresher-git-pr-vocab-draft-pull-request",
+                "word": "draft pull request",
+                "part_of_speech": "noun phrase",
+                "meaning": "pull request đánh dấu đang làm, chưa sẵn sàng để merge",
+                "collocation": "open a draft pull request",
+                "example": "I opened a draft pull request to ask for early feedback.",
+                "example_vi": "Tôi đã mở pull request dạng nháp để xin góp ý sớm."
+              }
+            ]
+          },
+          {
+            "key": "fresher-review-ci",
+            "title": "Responding to Code Review and CI Results",
+            "objectives": "Phản hồi review có dẫn chứng; phân biệt góp ý nhỏ, yêu cầu sửa và status check; báo đúng phạm vi test.",
+            "grammar": "Tiếp nhận: Thanks for pointing that out. I have added [change]. Hỏi lại: Could you explain which case this should cover? Không đồng ý có lý do: I see the concern. Would [alternative] address it? Nit thường là góp ý nhỏ nhưng hỏi lại nếu không rõ có bắt buộc không. Resolve conversation chỉ đánh dấu trạng thái trao đổi, không chứng minh lỗi đã được sửa. CI có thể chạy test, lint hoặc build tùy project; checks xanh không đảm bảo không còn bug. Approval không tự đồng nghĩa đủ mọi điều kiện merge.",
+            "reading": "Mai reviews Linh's pull request. She asks for a test covering a blank search and leaves a nit about a variable name. Linh adds the missing regression test and renames the variable. The first CI run fails because the expected message in the test differs from the agreed text. Linh checks the acceptance criteria, corrects the expectation, and pushes a new commit. The test check now passes, but the required build check is still pending. She replies with the changes and asks Mai to review again. This team's policy requires approval and all required checks before merging.",
+            "reading_task": "Nêu nguyên nhân CI fail được xác nhận trong bài, việc đã sửa và điều kiện còn thiếu. Gợi ý: expected message sai so với text đã thống nhất; sửa expectation; còn build check và review/approval theo policy nhóm giả lập.",
+            "dialogue": "Mai: Please add a blank-search test. Nit: could this variable have a clearer name?\nLinh: Thanks. I added the test and renamed the variable.\nMai: What happened with CI?\nLinh: The expected message was wrong. I checked the criteria and corrected it. Tests pass now; the build check is still pending.\nMai: Please request another review when the checks finish.\nLinh: Will do. I will keep the PR open until the merge requirements are met.",
+            "practice": "Viết phản hồi cho góp ý 'Please cover an expired session'. Mẫu: Thanks for pointing that out. I added an expired-session test and checked that the app shows the agreed sign-in message. The test check passes, but the build check is still pending. Could you review the new test when you have time? Tự chấm 0–2 điểm/tiêu chí: phản hồi tôn trọng; thay đổi cụ thể; kết quả đúng mức; yêu cầu tiếp theo. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Why did the first CI run fail in the reading?",
+                "options": [
+                  "The required build check had passed",
+                  "The reviewer had approved every change",
+                  "The test expected a different message from the agreed text"
+                ],
+                "answer": "C",
+                "explanation": "Lỗi cụ thể là expected message không khớp text đã thống nhất.",
+                "use_reading": true,
+                "key": "fresher-review-ci-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose regression or permission: A bug that breaks previously working behavior is a ___.",
+                "answers": [
+                  "regression"
+                ],
+                "explanation": "Regression là lỗi làm hỏng hành vi trước đó hoạt động.",
+                "key": "fresher-review-ci-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What is still pending after the test check passes?",
+                "options": [
+                  "The required build check",
+                  "Creating the first branch",
+                  "Reading the ticket for the first time"
+                ],
+                "answer": "A",
+                "explanation": "Build check vẫn pending trong bài.",
+                "use_reading": true,
+                "key": "fresher-review-ci-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Complete the abbreviation: continuous integration = ___ (write two letters).",
+                "answers": [
+                  "CI"
+                ],
+                "explanation": "CI là viết tắt của continuous integration.",
+                "key": "fresher-review-ci-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which reply best handles an unclear review comment?",
+                "options": [
+                  "All review suggestions are optional, so I will ignore this.",
+                  "Could you show the case this change should cover?",
+                  "I resolved the conversation, so the code must be correct."
+                ],
+                "answer": "B",
+                "explanation": "Câu hỏi cụ thể giúp hiểu review; trạng thái resolve không chứng minh tính đúng.",
+                "key": "fresher-review-ci-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-review-ci-vocab-reviewer",
+                "word": "reviewer",
+                "part_of_speech": "noun",
+                "meaning": "người xem xét thay đổi",
+                "collocation": "request a reviewer",
+                "example": "I asked Mai to be the reviewer.",
+                "example_vi": "Tôi đã nhờ Mai xem xét thay đổi."
+              },
+              {
+                "key": "fresher-review-ci-vocab-nit",
+                "word": "nit",
+                "part_of_speech": "noun, informal",
+                "meaning": "góp ý nhỏ, thường về cách trình bày; mức bắt buộc tùy quy ước nhóm",
+                "collocation": "leave a nit",
+                "example": "The reviewer left a nit about the variable name.",
+                "example_vi": "Người review góp ý nhỏ về tên biến."
+              },
+              {
+                "key": "fresher-review-ci-vocab-suggestion",
+                "word": "suggestion",
+                "part_of_speech": "noun",
+                "meaning": "đề xuất thay đổi",
+                "collocation": "discuss a suggestion",
+                "example": "Could you explain this suggestion with an example?",
+                "example_vi": "Bạn có thể giải thích đề xuất này bằng ví dụ không?"
+              },
+              {
+                "key": "fresher-review-ci-vocab-resolve",
+                "word": "resolve",
+                "part_of_speech": "verb",
+                "meaning": "đánh dấu trao đổi đã được xử lý hoặc giải quyết vấn đề, tùy ngữ cảnh",
+                "collocation": "resolve a conversation",
+                "example": "I will resolve the conversation after we agree on the fix.",
+                "example_vi": "Tôi sẽ đánh dấu trao đổi đã xử lý sau khi chúng ta thống nhất cách sửa."
+              },
+              {
+                "key": "fresher-review-ci-vocab-ci",
+                "word": "CI",
+                "part_of_speech": "abbreviation, noun",
+                "meaning": "continuous integration; tích hợp liên tục, thường có các bước kiểm tra tự động",
+                "collocation": "run CI checks",
+                "example": "The CI checks run when I push this change.",
+                "example_vi": "Các bước kiểm tra CI chạy khi tôi đẩy thay đổi này lên."
+              },
+              {
+                "key": "fresher-review-ci-vocab-status-check",
+                "word": "status check",
+                "part_of_speech": "noun phrase",
+                "meaning": "kết quả hoặc trạng thái kiểm tra gắn với một commit hay pull request",
+                "collocation": "pass a status check",
+                "example": "One required status check is still pending.",
+                "example_vi": "Một kiểm tra bắt buộc vẫn đang chờ kết quả."
+              },
+              {
+                "key": "fresher-review-ci-vocab-regression",
+                "word": "regression",
+                "part_of_speech": "noun",
+                "meaning": "lỗi xuất hiện lại hoặc làm hỏng hành vi trước đó vốn hoạt động",
+                "collocation": "prevent a regression",
+                "example": "The new test helps prevent a regression.",
+                "example_vi": "Bài kiểm thử mới giúp ngăn lỗi cũ tái xuất hiện."
+              },
+              {
+                "key": "fresher-review-ci-vocab-approval",
+                "word": "approval",
+                "part_of_speech": "noun",
+                "meaning": "sự chấp thuận của người review",
+                "collocation": "request approval",
+                "example": "I will request approval after addressing the comments.",
+                "example_vi": "Tôi sẽ xin chấp thuận sau khi xử lý các góp ý."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fresher-api-qa-delivery",
+        "title": "From API Evidence to QA Handoff",
+        "objectives": "Truyền bằng chứng lỗi API và bàn giao đúng phiên bản, phạm vi kiểm thử, người phụ trách.",
+        "test_passage": "On staging build 1.0, a viewer account calls GET /courses?level=beginner and receives 200 with a list. PATCH /courses/42 returns 403 with 'Edit permission required'. The team confirms that viewers may read but not edit courses. Nam records the method, path, role, and status without recording token values. His handoff note says the single-level filter and empty selection passed, but a slow-network check is still pending. A known issue is a clipped label on a small screen. QA will test that screen size. Mai owns the release decision after QA; there is no production deployment yet.",
+        "test": [
+          {
+            "type": "single_choice",
+            "prompt": "Which request succeeds for the viewer account?",
+            "options": [
+              "PATCH /courses/42",
+              "Every request that edits a course",
+              "GET /courses?level=beginner"
+            ],
+            "answer": "C",
+            "explanation": "Lượt GET nhận 200 và danh sách.",
+            "use_reading": true,
+            "lesson_key": "fresher-api-evidence",
+            "key": "fresher-api-qa-delivery-test-01"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose authorization or authentication: Deciding whether a viewer may edit is ___.",
+            "answers": [
+              "authorization"
+            ],
+            "explanation": "Authorization xét quyền; authentication xác thực danh tính.",
+            "lesson_key": "fresher-api-evidence",
+            "key": "fresher-api-qa-delivery-test-02"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "How should Nam describe the PATCH result?",
+            "options": [
+              "It proves the viewer's password expired",
+              "It proves all course reads are broken",
+              "403 is consistent with the confirmed read-only role in this scenario"
+            ],
+            "answer": "C",
+            "explanation": "Nhóm xác nhận viewer không có quyền sửa; không suy ra lỗi mật khẩu hoặc đọc.",
+            "use_reading": true,
+            "lesson_key": "fresher-api-evidence",
+            "key": "fresher-api-qa-delivery-test-03"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose payload or priority: Data in the body of a response is commonly called its ___.",
+            "answers": [
+              "payload"
+            ],
+            "explanation": "Payload thường chỉ dữ liệu trong body yêu cầu/phản hồi.",
+            "lesson_key": "fresher-api-evidence",
+            "key": "fresher-api-qa-delivery-test-04"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which evidence is appropriate for the report?",
+            "options": [
+              "A copied access token and no description",
+              "Only the statement 'the API is bad'",
+              "Method, path, role, build, and observed status"
+            ],
+            "answer": "C",
+            "explanation": "Bằng chứng xác định ngữ cảnh và kết quả mà không lộ token.",
+            "lesson_key": "fresher-api-evidence",
+            "key": "fresher-api-qa-delivery-test-05"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which check is still pending?",
+            "options": [
+              "The slow-network check",
+              "The empty-selection check",
+              "The single-level filter check"
+            ],
+            "answer": "A",
+            "explanation": "Hai kiểm tra chức năng đã đạt; slow network còn chờ.",
+            "use_reading": true,
+            "lesson_key": "fresher-qa-handoff",
+            "key": "fresher-api-qa-delivery-test-06"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose staging or production: The environment used for build 1.0 in this passage is ___.",
+            "answers": [
+              "staging"
+            ],
+            "explanation": "Build đang ở staging, chưa deploy production.",
+            "use_reading": true,
+            "lesson_key": "fresher-qa-handoff",
+            "key": "fresher-api-qa-delivery-test-07"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "What should QA inspect on the small screen?",
+            "options": [
+              "A missing repository invitation",
+              "An expired password",
+              "The clipped label"
+            ],
+            "answer": "C",
+            "explanation": "Known issue là nhãn bị cắt trên màn hình nhỏ.",
+            "use_reading": true,
+            "lesson_key": "fresher-qa-handoff",
+            "key": "fresher-api-qa-delivery-test-08"
+          },
+          {
+            "type": "fill_blank",
+            "prompt": "Choose rollback or review: Returning to a previous version according to a plan is a ___.",
+            "answers": [
+              "rollback"
+            ],
+            "explanation": "Rollback là quay về phiên bản/trạng thái trước theo kế hoạch.",
+            "lesson_key": "fresher-qa-handoff",
+            "key": "fresher-api-qa-delivery-test-09"
+          },
+          {
+            "type": "single_choice",
+            "prompt": "Which handoff statement correctly describes the release state?",
+            "options": [
+              "Nam has already performed a production rollback",
+              "Production is live because one API call returned 200",
+              "QA checks remain, and Mai will decide on release afterward"
+            ],
+            "answer": "C",
+            "explanation": "Bài đọc nói chưa triển khai production; Mai quyết định sau QA.",
+            "use_reading": true,
+            "lesson_key": "fresher-qa-handoff",
+            "key": "fresher-api-qa-delivery-test-10"
+          }
+        ],
+        "lessons": [
+          {
+            "key": "fresher-api-evidence",
+            "title": "Reporting an API Problem with Evidence",
+            "objectives": "Nêu endpoint, trạng thái HTTP, môi trường và quan sát; phân biệt lỗi xác thực, phân quyền và suy đoán nguyên nhân.",
+            "grammar": "Báo quan sát: GET /courses returns 401 in staging. Hỏi làm rõ: Does this role have permission to [action]? Authentication xác thực danh tính; authorization xét quyền. Theo ý nghĩa chuẩn, 401 cho biết thiếu thông tin xác thực hợp lệ; 403 là máy chủ hiểu nhưng từ chối thực hiện, thường liên quan quyền. 404 có thể là không tìm thấy tài nguyên; 500 là lỗi phía máy chủ chưa chỉ rõ nguyên nhân. Timeout của client không nhất thiết đi kèm một HTTP status code. Báo mã quan sát được và xem hợp đồng API/log để kiểm chứng nguyên nhân.",
+            "reading": "On staging build 0.8, Linh sends GET /courses with an expired test token. The response status is 401, and the response payload contains the message 'Session expired'. She signs in again with the approved test account and receives 200 for the same endpoint. Later, that account sends PATCH /courses/42 and receives 403 with 'Edit permission required'. The account can view courses but cannot edit them. Linh reports the method, path, build, role, and observed results. She does not include the token value. These observations concern the test account on staging, not every user in production.",
+            "reading_task": "Lập bảng 3 lượt gọi: phương thức/path → mã → quan sát. Gợi ý: GET /courses token cũ → 401/session expired; GET sau đăng nhập lại → 200; PATCH /courses/42 → 403/edit permission required. Không suy rộng sang production.",
+            "dialogue": "Linh: GET /courses returned 401 with 'Session expired' on staging build 0.8.\nMai: What happened after signing in again?\nLinh: The same endpoint returned 200. PATCH /courses/42 still returned 403.\nMai: Does this test role have edit permission?\nLinh: No, it can only view courses. I will include the role and results in the ticket, without the token.",
+            "practice": "Viết báo cáo 50–80 từ cho tình huống khác: build 0.9 staging, viewer gọi GET /profile nhận 200 nhưng PATCH /profile nhận 403, chưa xác nhận role có quyền sửa. Mẫu: On staging build 0.9, GET /profile returns 200 for the viewer account. PATCH /profile returns 403. I have not confirmed whether this role should have edit permission. Could you clarify the intended access rules? I have included the request method and path, without credentials. Tự chấm 0–2 điểm/tiêu chí: môi trường/build; endpoint/mã; quan sát tách suy đoán; câu hỏi/quyền. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "What changes after Linh signs in again?",
+                "options": [
+                  "GET /courses returns 200",
+                  "PATCH /courses/42 automatically returns 200",
+                  "The account gains edit permission"
+                ],
+                "answer": "A",
+                "explanation": "Đăng nhập lại khôi phục xác thực trong tình huống, không cấp thêm quyền sửa.",
+                "use_reading": true,
+                "key": "fresher-api-evidence-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose authentication or authorization: Checking whether a known role may edit a course is ___.",
+                "answers": [
+                  "authorization"
+                ],
+                "explanation": "Authorization quyết định quyền với hành động hoặc tài nguyên.",
+                "key": "fresher-api-evidence-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which result is linked to the expired token in the reading?",
+                "options": [
+                  "200 from the first request",
+                  "401 from GET /courses",
+                  "403 from PATCH /courses/42"
+                ],
+                "answer": "B",
+                "explanation": "Token hết hạn gắn với lượt GET nhận 401.",
+                "use_reading": true,
+                "key": "fresher-api-evidence-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose request or response: Data returned by a server is part of its ___.",
+                "answers": [
+                  "response"
+                ],
+                "explanation": "Response là phản hồi từ máy chủ.",
+                "key": "fresher-api-evidence-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Which report avoids an unsupported conclusion?",
+                "options": [
+                  "All production users are blocked because one staging role got 403",
+                  "A client timeout always proves the server returned 500",
+                  "PATCH returns 403 for this staging role; please confirm its edit permission"
+                ],
+                "answer": "C",
+                "explanation": "Nêu phạm vi quan sát và câu hỏi cụ thể, không suy rộng hoặc tự gán HTTP code.",
+                "key": "fresher-api-evidence-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-api-evidence-vocab-endpoint",
+                "word": "endpoint",
+                "part_of_speech": "noun",
+                "meaning": "điểm truy cập API; thường được xác định bởi phương thức và đường dẫn",
+                "collocation": "call an endpoint",
+                "example": "The client calls the GET /courses endpoint.",
+                "example_vi": "Ứng dụng khách gọi endpoint GET /courses."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-request",
+                "word": "request",
+                "part_of_speech": "noun",
+                "meaning": "yêu cầu được gửi đến máy chủ",
+                "collocation": "send a request",
+                "example": "This request asks for the course list.",
+                "example_vi": "Yêu cầu này xin danh sách khóa học."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-response",
+                "word": "response",
+                "part_of_speech": "noun",
+                "meaning": "phản hồi mà máy chủ trả về",
+                "collocation": "inspect a response",
+                "example": "The response contains an empty list.",
+                "example_vi": "Phản hồi chứa một danh sách rỗng."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-payload",
+                "word": "payload",
+                "part_of_speech": "noun",
+                "meaning": "dữ liệu mang trong yêu cầu hoặc phản hồi, thường chỉ phần body",
+                "collocation": "inspect the payload",
+                "example": "The response payload contains a message field.",
+                "example_vi": "Dữ liệu trong body phản hồi chứa trường message."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-status-code",
+                "word": "status code",
+                "part_of_speech": "noun phrase",
+                "meaning": "mã biểu thị kết quả xử lý yêu cầu HTTP",
+                "collocation": "check the status code",
+                "example": "The status code is 401 in this test.",
+                "example_vi": "Mã trạng thái là 401 trong lần kiểm thử này."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-authentication",
+                "word": "authentication",
+                "part_of_speech": "noun",
+                "meaning": "xác thực danh tính",
+                "collocation": "check authentication",
+                "example": "Authentication failed because the test token expired.",
+                "example_vi": "Việc xác thực thất bại vì token kiểm thử đã hết hạn."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-authorization",
+                "word": "authorization",
+                "part_of_speech": "noun",
+                "meaning": "kiểm tra hoặc quyết định quyền truy cập tài nguyên, thao tác",
+                "collocation": "check authorization",
+                "example": "Authorization rules prevent this role from editing courses.",
+                "example_vi": "Các quy tắc phân quyền ngăn vai trò này sửa khóa học."
+              },
+              {
+                "key": "fresher-api-evidence-vocab-timeout",
+                "word": "timeout",
+                "part_of_speech": "noun",
+                "meaning": "tình trạng vượt quá thời gian chờ được đặt",
+                "collocation": "report a timeout",
+                "example": "The client reports a timeout after ten seconds.",
+                "example_vi": "Ứng dụng khách báo quá thời gian chờ sau mười giây."
+              }
+            ]
+          },
+          {
+            "key": "fresher-qa-handoff",
+            "title": "QA Handoff, Release Notes, and Known Issues",
+            "objectives": "Viết bàn giao có build, môi trường, test result, known issue, owner và bước tiếp; phân biệt staging với production.",
+            "grammar": "Bàn giao: Ready for QA on [environment/build]. Báo giới hạn: I have checked [cases], but [case] is still pending. Nhờ hành động: Could you verify [case] before [milestone]? Deployment là đưa phiên bản lên môi trường; không tự đồng nghĩa phát hành tới mọi người dùng. Smoke test kiểm tra nhanh chức năng chính, không thay toàn bộ regression testing. Rollback có thể phức tạp nếu có thay đổi dữ liệu; fresher báo người phụ trách theo quy trình thay vì tự cam kết có thể quay lại an toàn.",
+            "reading": "Build 0.9 is deployed to staging, not production. Linh's handoff note lists DEV-21, the build, and the test account role. Search by title, mixed letter case, and the no-results message passed her checks. She documents a known issue: the search button label wraps onto two lines on a narrow screen. QA will run a smoke test and check the layout at the agreed screen sizes. Mai is the release owner. Mai will decide whether to proceed after reviewing the QA results and the known issue. The team has a rollback plan, but Linh is not asked to deploy or roll back production.",
+            "reading_task": "Tìm 3 kết quả đã kiểm tra, một known issue và người quyết định release. Gợi ý: title search/case/no-results đạt; nhãn nút xuống hai dòng; Mai. Chưa có production deployment trong bài.",
+            "dialogue": "Linh: DEV-21 is ready for QA on staging build 0.9. The three search checks passed.\nQA: Are there any known issues?\nLinh: The button label wraps on a narrow screen. I included it in the handoff note.\nQA: We will check the agreed screen sizes and post the results.\nLinh: Thanks. Mai will review those results before deciding on the production release.",
+            "practice": "Viết handoff 6 mục: Ticket, Environment/build, Checked, Known issues, Pending/ask, Owner. Mẫu: Ticket: DEV-21. Environment: staging 0.9. Checked: title search, mixed case, no results. Known issue: button label wraps on narrow screens. Pending: QA layout check at agreed sizes. Owner: Mai decides on release after QA. Tự chấm 0–2 điểm/tiêu chí: xác định bản cần test; bằng chứng/giới hạn; việc cần QA; owner và trạng thái release rõ. Tổng 8.",
+            "quiz": [
+              {
+                "type": "single_choice",
+                "prompt": "Where is build 0.9 deployed in the reading?",
+                "options": [
+                  "Staging",
+                  "Production",
+                  "Only the learner's phone"
+                ],
+                "answer": "A",
+                "explanation": "Bài đọc nói staging và chưa lên production.",
+                "use_reading": true,
+                "key": "fresher-qa-handoff-quiz-01"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose smoke or stack: A quick check of key functions is a ___ test.",
+                "answers": [
+                  "smoke"
+                ],
+                "explanation": "Smoke test kiểm tra nhanh một số chức năng quan trọng.",
+                "key": "fresher-qa-handoff-quiz-02"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "What known issue does Linh report?",
+                "options": [
+                  "The test account cannot sign in",
+                  "The search button label wraps on a narrow screen",
+                  "Every search request returns 500"
+                ],
+                "answer": "B",
+                "explanation": "Known issue được mô tả cụ thể là nhãn nút xuống dòng.",
+                "use_reading": true,
+                "key": "fresher-qa-handoff-quiz-03"
+              },
+              {
+                "type": "fill_blank",
+                "prompt": "Choose handoff or payload: Notes that help the next person continue the work form a ___ note.",
+                "answers": [
+                  "handoff"
+                ],
+                "explanation": "Handoff note truyền thông tin bàn giao.",
+                "key": "fresher-qa-handoff-quiz-04"
+              },
+              {
+                "type": "single_choice",
+                "prompt": "Who decides whether to proceed with the release?",
+                "options": [
+                  "Linh automatically, because the code was merged",
+                  "Mai, after reviewing QA results and the known issue",
+                  "Any learner who can open staging"
+                ],
+                "answer": "B",
+                "explanation": "Mai là release owner trong tình huống này; không suy ra mọi công ty đều phân quyền giống nhau.",
+                "use_reading": true,
+                "key": "fresher-qa-handoff-quiz-05"
+              }
+            ],
+            "estimated_minutes": 20,
+            "vocabulary": [
+              {
+                "key": "fresher-qa-handoff-vocab-qa",
+                "word": "QA",
+                "part_of_speech": "abbreviation, noun",
+                "meaning": "quality assurance; đảm bảo chất lượng; trong hội thoại nhóm có thể chỉ người/nhóm QA",
+                "collocation": "hand over to QA",
+                "example": "I will hand this change over to QA with test notes.",
+                "example_vi": "Tôi sẽ bàn giao thay đổi này cho QA cùng ghi chú kiểm thử."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-staging",
+                "word": "staging",
+                "part_of_speech": "noun",
+                "meaning": "môi trường trước production để kiểm thử tích hợp hoặc kiểm tra bản phát hành",
+                "collocation": "test on staging",
+                "example": "The fix is available on staging.",
+                "example_vi": "Bản sửa đã có trên môi trường staging."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-production",
+                "word": "production",
+                "part_of_speech": "noun",
+                "meaning": "môi trường phục vụ người dùng thực tế",
+                "collocation": "deploy to production",
+                "example": "The release owner will deploy to production after approval.",
+                "example_vi": "Người phụ trách phát hành sẽ triển khai lên production sau khi được chấp thuận."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-deployment",
+                "word": "deployment",
+                "part_of_speech": "noun",
+                "meaning": "việc đưa phiên bản phần mềm lên một môi trường",
+                "collocation": "check a deployment",
+                "example": "The staging deployment finished at 2 p.m.",
+                "example_vi": "Việc triển khai lên staging hoàn tất lúc 2 giờ chiều."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-smoke-test",
+                "word": "smoke test",
+                "part_of_speech": "noun phrase",
+                "meaning": "kiểm tra nhanh một số chức năng quan trọng để phát hiện lỗi lớn",
+                "collocation": "run a smoke test",
+                "example": "QA will run a smoke test before deeper testing.",
+                "example_vi": "QA sẽ kiểm tra nhanh các chức năng chính trước khi kiểm thử sâu hơn."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-rollback",
+                "word": "rollback",
+                "part_of_speech": "noun",
+                "meaning": "việc quay về phiên bản hoặc trạng thái trước theo kế hoạch",
+                "collocation": "prepare a rollback",
+                "example": "The release owner prepared a rollback plan.",
+                "example_vi": "Người phụ trách phát hành đã chuẩn bị kế hoạch quay về phiên bản trước."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-known-issue",
+                "word": "known issue",
+                "part_of_speech": "noun phrase",
+                "meaning": "vấn đề đã biết và được ghi nhận",
+                "collocation": "document a known issue",
+                "example": "The handoff note documents one known issue.",
+                "example_vi": "Ghi chú bàn giao ghi nhận một vấn đề đã biết."
+              },
+              {
+                "key": "fresher-qa-handoff-vocab-handoff",
+                "word": "handoff",
+                "part_of_speech": "noun",
+                "meaning": "việc bàn giao công việc và thông tin cần để tiếp tục",
+                "collocation": "write a handoff note",
+                "example": "The handoff note includes the build and test results.",
+                "example_vi": "Ghi chú bàn giao gồm bản build và kết quả kiểm thử."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "references": [
+    {
+      "title": "GitHub Docs — GitHub flow",
+      "url": "https://docs.github.com/en/get-started/using-github/github-flow",
+      "note": "Đối chiếu branch, commit/push, PR, review và merge; dùng trong bài From a Branch to a Clear Pull Request. Đọc ngày 20/09/2026."
+    },
+    {
+      "title": "GitHub Docs — Forks",
+      "url": "https://docs.github.com/en/pull-requests/reference/forks",
+      "note": "Phân biệt fork là repository riêng với branch trong một repository."
+    },
+    {
+      "title": "GitHub Docs — Status checks",
+      "url": "https://docs.github.com/en/pull-requests/reference/status-checks",
+      "note": "Đối chiếu checks và điều kiện merge; policy approval/checks trong tình huống là quy ước của nhóm giả lập."
+    },
+    {
+      "title": "GitHub Docs — Understanding GitHub Actions",
+      "url": "https://docs.github.com/en/actions/get-started/understand-github-actions",
+      "note": "Đối chiếu CI và workflow tự động. Không yêu cầu học cú pháp cấu hình Actions trong bộ tiếng Anh này."
+    },
+    {
+      "title": "Scrum Guide — November 2020",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "note": "Đối chiếu Sprint Goal, Daily Scrum 15 phút, quyền chọn cấu trúc trao đổi và Definition of Done. Không mặc định mọi nhóm IT dùng Scrum."
+    },
+    {
+      "title": "MDN — HTTP response status codes",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+      "note": "Đối chiếu ý nghĩa mã 200/401/403/404/500. Nguyên nhân cụ thể của các lượt gọi trong bài là dữ kiện giả lập, không suy ra chỉ từ mã trạng thái."
+    },
+    {
+      "title": "Atlassian — User stories",
+      "url": "https://www.atlassian.com/agile/project-management/user-stories",
+      "note": "Đối chiếu nhu cầu người dùng và giá trị của user story; ticket DEV-21/DEV-30 là nội dung tự biên soạn."
+    },
+    {
+      "title": "Atlassian — Acceptance criteria",
+      "url": "https://www.atlassian.com/work-management/project-management/acceptance-criteria",
+      "note": "Đối chiếu điều kiện chấp nhận cụ thể của công việc; phân biệt với Definition of Done dựa thêm trên Scrum Guide."
+    }
+  ]
+}
+

@@ -1,0 +1,1980 @@
+{
+  "schema_version": 1,
+  "schema": "sprout_toeic_materials_v1",
+  "key": "sprout-toeic-lr-foundation",
+  "title": "TOEIC Listening & Reading — 500–700",
+  "status": "authored_not_imported",
+  "target": "Mục tiêu học 500–700: củng cố ngữ pháp, từ vựng công sở, hiểu thông tin chính và chi tiết, bắt đầu suy luận và đối chiếu tài liệu. Đây là định hướng biên soạn, không phải band được ETS hiệu chỉnh hoặc cam kết điểm.",
+  "audience": "Người học cần củng cố nền tảng để hướng tới tổng điểm TOEIC Listening & Reading 500–700; chọn bài theo điểm yếu từng kỹ năng, không chỉ tổng điểm.",
+  "provenance": "Biên soạn mới cho Sprout ngày 20/09/2026. Tình huống, tổ chức, nhân vật, tài liệu và câu hỏi đều giả lập. Đối chiếu cấu trúc bài thi bằng tài liệu ETS; không phải đề thi chính thức hay sản phẩm được ETS chứng nhận. Chưa thẩm định độc lập độ khó. Điều chỉnh thành bộ 500–700 theo yêu cầu người dùng; giữ key của các câu nền tảng để bảo toàn định danh.",
+  "exam_reference": {
+    "variant": "TOEIC Listening & Reading, standard paper-delivered 200-question format",
+    "verified_on": "2026-09-20",
+    "listening_minutes": 45,
+    "reading_minutes": 75,
+    "parts": [
+      {
+        "part": 1,
+        "name": "Photographs",
+        "questions": 6
+      },
+      {
+        "part": 2,
+        "name": "Question–Response",
+        "questions": 25
+      },
+      {
+        "part": 3,
+        "name": "Conversations",
+        "questions": 39
+      },
+      {
+        "part": 4,
+        "name": "Talks",
+        "questions": 30
+      },
+      {
+        "part": 5,
+        "name": "Incomplete Sentences",
+        "questions": 30
+      },
+      {
+        "part": 6,
+        "name": "Text Completion",
+        "questions": 16
+      },
+      {
+        "part": 7,
+        "name": "Reading Comprehension",
+        "questions": 54
+      }
+    ],
+    "score_note": "Bài thi chính thức dùng thang 5–495 mỗi kỹ năng, tổng 10–990; chuyển điểm dựa trên từng đề. Gói tự biên soạn chỉ thống kê số đúng và lỗi, không quy đổi điểm."
+  },
+  "scope_note": "Gói khởi đầu 8 bài, không mô phỏng đủ độ dài/tỉ lệ câu của đề thật. Chưa gồm mọi dạng nâng cao: câu hỏi kết hợp hình/bảng ở Listening, câu chèn vị trí trong Part 7, toàn bộ loại văn bản hoặc accent. 24 câu Listening mới là kịch bản để duyệt/thu âm; 3 câu Part 1 còn cần ảnh. 36 câu Reading dùng được bằng văn bản. Không tính điểm nghe khi cho người học đọc transcript.",
+  "counts": {
+    "units": 8,
+    "vocabulary_entries": 64,
+    "questions": 60,
+    "listening_script_questions": 24,
+    "reading_questions": 36,
+    "photo_briefs": 3,
+    "minutes": 260,
+    "by_part": {
+      "1": 3,
+      "2": 9,
+      "3": 6,
+      "4": 6,
+      "5": 12,
+      "6": 8,
+      "7": 16
+    }
+  },
+  "units": [
+    {
+      "key": "toeic-p1-scenes",
+      "part": 1,
+      "title": "Part 1 — People, Actions, and Positions",
+      "minutes": 25,
+      "objectives": "Phân biệt hành động, trạng thái và vị trí; mô tả những gì quan sát được mà không suy đoán nghề nghiệp hoặc ý định.",
+      "lesson": "Nhận diện chủ thể → động từ → vật/vị trí. Present continuous (is carrying) tả hành động đang diễn ra; passive (are arranged) có thể tả trạng thái sắp xếp. Phân biệt 'is putting on a jacket' (đang mặc vào) với 'is wearing a jacket' (đang mặc trên người). Không chọn câu chỉ vì nghe thấy tên một vật có trong ảnh; kiểm tra cả động tác và giới từ.",
+      "strategy": [
+        "Trước khi nghe, quan sát người, vật và quan hệ không gian.",
+        "Khi luyện, giải thích phần nào của từng câu không khớp.",
+        "Trong bản này, dùng scene brief để luyện từ và duyệt câu; cần ảnh thật cùng audio trước khi đo kỹ năng nghe–nhìn."
+      ],
+      "practice": "Viết hai câu cho một cảnh nơi làm việc: một câu về hành động và một câu về vị trí. Mẫu: A clerk is carrying a box. Two folders are on the counter. Tự kiểm chủ thể, số ít/số nhiều, động từ và giới từ.",
+      "groups": [
+        {
+          "key": "toeic-p1-box",
+          "kind": "photo_brief",
+          "scene_brief": "Ảnh cần tạo: một người đứng thẳng ở cạnh bàn trong phòng kho, đang ôm một hộp carton bằng cả hai tay. Trên bàn không có hộp. Không có xe, không có người ngồi, không có đồ uống. Tránh logo/chữ đọc được.",
+          "items": [
+            {
+              "key": "toeic-p1-box-q1",
+              "type": "single_choice",
+              "prompt": "Choose the statement that matches the planned scene.",
+              "options": [
+                "Some boxes are being loaded into a truck.",
+                "A person is holding a box.",
+                "A person is pouring a drink.",
+                "A person is sitting at a desk."
+              ],
+              "answer": "B",
+              "explanation": "Holding a box khớp hai tay đang ôm hộp; ba hành động khác không xuất hiện.",
+              "evidence": "đang ôm một hộp carton bằng cả hai tay"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_image_and_audio"
+        },
+        {
+          "key": "toeic-p1-meeting",
+          "kind": "photo_brief",
+          "scene_brief": "Ảnh cần tạo: phòng họp trống, sáu ghế đặt quanh một bàn dài. Không có người, máy chiếu, bàn ăn hoặc thang. Cửa sổ ở tường phía sau.",
+          "items": [
+            {
+              "key": "toeic-p1-meeting-q1",
+              "type": "single_choice",
+              "prompt": "Choose the statement that matches the planned scene.",
+              "options": [
+                "Meals are being served to guests.",
+                "Several people are leaving the room.",
+                "Chairs are arranged around a table.",
+                "A worker is repairing a projector."
+              ],
+              "answer": "C",
+              "explanation": "Are arranged tả cách ghế được xếp. Phòng trống nên không có người rời đi, sửa máy hoặc phục vụ đồ ăn.",
+              "evidence": "sáu ghế đặt quanh một bàn dài"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_image_and_audio"
+        },
+        {
+          "key": "toeic-p1-ladder",
+          "kind": "photo_brief",
+          "scene_brief": "Ảnh cần tạo: một chiếc thang tựa vào tường ở cạnh giá kệ. Hai hộp đóng nắp xếp chồng trên sàn. Không có người hoặc cây; không có ai leo thang.",
+          "items": [
+            {
+              "key": "toeic-p1-ladder-q1",
+              "type": "single_choice",
+              "prompt": "Choose the statement that matches the planned scene.",
+              "options": [
+                "Some boxes are floating in water.",
+                "A ladder is leaning against a wall.",
+                "A person is watering a plant.",
+                "A worker is climbing a ladder."
+              ],
+              "answer": "B",
+              "explanation": "Leaning against mô tả thang tựa vào tường; không có người leo hoặc tưới cây.",
+              "evidence": "một chiếc thang tựa vào tường"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_image_and_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p1-scenes-vocab-arrange",
+          "word": "arrange",
+          "part_of_speech": "verb",
+          "meaning": "sắp xếp",
+          "collocation": "arrange the chairs",
+          "example": "The chairs are arranged in rows.",
+          "example_vi": "Những chiếc ghế được xếp thành hàng."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-carry",
+          "word": "carry",
+          "part_of_speech": "verb",
+          "meaning": "mang, vác",
+          "collocation": "carry a box",
+          "example": "A worker is carrying a box.",
+          "example_vi": "Một nhân viên đang mang một chiếc hộp."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-shelf",
+          "word": "shelf",
+          "part_of_speech": "noun",
+          "meaning": "kệ; số nhiều shelves",
+          "collocation": "on a shelf",
+          "example": "The folders are on a shelf.",
+          "example_vi": "Những tập hồ sơ nằm trên kệ."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-counter",
+          "word": "counter",
+          "part_of_speech": "noun",
+          "meaning": "quầy",
+          "collocation": "behind the counter",
+          "example": "A clerk is standing behind the counter.",
+          "example_vi": "Một nhân viên đang đứng sau quầy."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-lean",
+          "word": "lean",
+          "part_of_speech": "verb",
+          "meaning": "dựa, nghiêng",
+          "collocation": "lean against a wall",
+          "example": "A ladder is leaning against the wall.",
+          "example_vi": "Một chiếc thang đang dựa vào tường."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-stack",
+          "word": "stack",
+          "part_of_speech": "verb",
+          "meaning": "xếp chồng",
+          "collocation": "stack the boxes",
+          "example": "Two boxes are stacked beside the door.",
+          "example_vi": "Hai chiếc hộp được xếp chồng cạnh cửa."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-inspect",
+          "word": "inspect",
+          "part_of_speech": "verb",
+          "meaning": "kiểm tra kỹ",
+          "collocation": "inspect the equipment",
+          "example": "A technician is inspecting the equipment.",
+          "example_vi": "Một kỹ thuật viên đang kiểm tra thiết bị."
+        },
+        {
+          "key": "toeic-p1-scenes-vocab-occupied",
+          "word": "occupied",
+          "part_of_speech": "adjective",
+          "meaning": "đang có người sử dụng",
+          "collocation": "an occupied seat",
+          "example": "Only one seat is occupied.",
+          "example_vi": "Chỉ có một chỗ ngồi đang có người."
+        }
+      ]
+    },
+    {
+      "key": "toeic-p2-responses",
+      "part": 2,
+      "title": "Part 2 — Questions, Requests, and Indirect Replies",
+      "minutes": 30,
+      "objectives": "Chọn phản hồi phù hợp với mục đích câu nói; nhận ra câu trả lời gián tiếp và tránh bẫy lặp từ.",
+      "lesson": "Who thường hỏi người, where hỏi nơi, when hỏi thời gian; nhưng câu đáp đúng có thể gián tiếp: 'Ask Mina—she has the schedule.' Với yêu cầu lịch sự, nhận lời hoặc đề xuất phương án thay thế có thể hợp lý. Không phải mọi câu mở đầu bằng do/can đều cần yes/no. Chú ý phủ định và câu lựa chọn; đừng chọn chỉ vì từ hoặc âm giống nhau.",
+      "strategy": [
+        "Nghe toàn bộ câu hỏi/phát biểu và ba phản hồi.",
+        "Xác định người hỏi cần thông tin hay muốn người nghe làm việc gì.",
+        "Khi chữa, viết một câu giải thích vì sao đáp án thực hiện đúng chức năng giao tiếp."
+      ],
+      "practice": "Đổi câu hỏi trực tiếp thành một phản hồi gián tiếp hợp lý. Ví dụ: When will the room be ready? → The receptionist has the latest schedule. Luyện theo cặp: một người đọc câu hỏi và A/B/C đúng một lần; người kia không nhìn bản chữ.",
+      "groups": [
+        {
+          "key": "toeic-p2-where",
+          "kind": "question_response",
+          "transcript": "Where will the training session take place?",
+          "items": [
+            {
+              "key": "toeic-p2-where-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "In the room beside reception.",
+                "It lasts about an hour.",
+                "The new trainer starts tomorrow."
+              ],
+              "answer": "A",
+              "explanation": "Where hỏi địa điểm; một giờ là thời lượng, trainer là người.",
+              "evidence": "Where will the training session take place?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-when",
+          "kind": "question_response",
+          "transcript": "When is the expense report due?",
+          "items": [
+            {
+              "key": "toeic-p2-when-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "By noon on Friday.",
+                "In the finance folder.",
+                "It was very expensive."
+              ],
+              "answer": "A",
+              "explanation": "Due hỏi hạn nộp; expensive gần âm nhưng không trả lời thời gian.",
+              "evidence": "When is the expense report due?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-who",
+          "kind": "question_response",
+          "transcript": "Who can approve this purchase?",
+          "items": [
+            {
+              "key": "toeic-p2-who-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "We bought three chairs.",
+                "Mina handles orders like this.",
+                "On the second floor."
+              ],
+              "answer": "B",
+              "explanation": "Mina là người phụ trách; các đáp án kia là số lượng và nơi chốn.",
+              "evidence": "Who can approve this purchase?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-request",
+          "kind": "question_response",
+          "transcript": "Could you send me the revised agenda?",
+          "items": [
+            {
+              "key": "toeic-p2-request-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "No, the train was on time.",
+                "The meeting room is large.",
+                "Sure, I'll email it now."
+              ],
+              "answer": "C",
+              "explanation": "Đây là yêu cầu gửi agenda; câu nhận lời và nêu cách gửi phù hợp.",
+              "evidence": "Could you send me the revised agenda?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-choice",
+          "kind": "question_response",
+          "transcript": "Would you prefer the morning or afternoon session?",
+          "items": [
+            {
+              "key": "toeic-p2-choice-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "It was held last week.",
+                "Either one works for me.",
+                "Yes, the session is free."
+              ],
+              "answer": "B",
+              "explanation": "Câu hỏi lựa chọn chấp nhận đáp án 'cái nào cũng được'; yes không chỉ ra lựa chọn.",
+              "evidence": "Would you prefer the morning or afternoon session?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-indirect",
+          "kind": "question_response",
+          "transcript": "Is the meeting room available at two?",
+          "items": [
+            {
+              "key": "toeic-p2-indirect-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "Let me check the booking calendar.",
+                "The table seats eight people.",
+                "Two copies should be enough."
+              ],
+              "answer": "A",
+              "explanation": "Người trả lời chưa biết và sẽ kiểm tra lịch; capacity và số bản sao không trả lời availability.",
+              "evidence": "Is the meeting room available at two?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-suggestion",
+          "kind": "question_response",
+          "transcript": "Why don't we take the shuttle to the venue?",
+          "items": [
+            {
+              "key": "toeic-p2-suggestion-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The venue has three meeting rooms.",
+                "Good idea; parking there is limited.",
+                "Because the report was late."
+              ],
+              "answer": "B",
+              "explanation": "Why don't we là lời đề xuất trong câu này; Good idea nhận lời và nêu lý do.",
+              "evidence": "Why don't we take the shuttle to the venue?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-statement",
+          "kind": "question_response",
+          "transcript": "The printer near my desk has stopped working.",
+          "items": [
+            {
+              "key": "toeic-p2-statement-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "You can use the one in reception.",
+                "I printed the report yesterday.",
+                "The desk was delivered on Monday."
+              ],
+              "answer": "A",
+              "explanation": "Phản hồi đúng đưa giải pháp cho vấn đề đang nêu; hai câu khác không hỗ trợ vấn đề.",
+              "evidence": "The printer near my desk has stopped working."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p2-negative",
+          "kind": "question_response",
+          "transcript": "Didn't you confirm the appointment yesterday?",
+          "items": [
+            {
+              "key": "toeic-p2-negative-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The appointment lasts twenty minutes.",
+                "I tried, but the office was closed.",
+                "The office is on King Street."
+              ],
+              "answer": "B",
+              "explanation": "Câu đúng làm rõ đã thử nhưng chưa xác nhận được; nơi chốn/thời lượng không trả lời việc xác nhận.",
+              "evidence": "Didn't you confirm the appointment yesterday?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p2-responses-vocab-appointment",
+          "word": "appointment",
+          "part_of_speech": "noun",
+          "meaning": "cuộc hẹn",
+          "collocation": "make an appointment",
+          "example": "I have an appointment at ten.",
+          "example_vi": "Tôi có cuộc hẹn lúc mười giờ."
+        },
+        {
+          "key": "toeic-p2-responses-vocab-reschedule",
+          "word": "reschedule",
+          "part_of_speech": "verb",
+          "meaning": "đổi lịch",
+          "collocation": "reschedule a meeting",
+          "example": "Can we reschedule the meeting?",
+          "example_vi": "Chúng ta có thể đổi lịch cuộc họp không?"
+        },
+        {
+          "key": "toeic-p2-responses-vocab-available",
+          "word": "available",
+          "part_of_speech": "adjective",
+          "meaning": "sẵn sàng; còn trống",
+          "collocation": "be available on Monday",
+          "example": "The room is available on Monday.",
+          "example_vi": "Phòng còn trống vào thứ Hai."
+        },
+        {
+          "key": "toeic-p2-responses-vocab-confirm",
+          "word": "confirm",
+          "part_of_speech": "verb",
+          "meaning": "xác nhận",
+          "collocation": "confirm a booking",
+          "example": "Please confirm the booking by email.",
+          "example_vi": "Vui lòng xác nhận đặt chỗ qua email."
+        },
+        {
+          "key": "toeic-p2-responses-vocab-colleague",
+          "word": "colleague",
+          "part_of_speech": "noun",
+          "meaning": "đồng nghiệp",
+          "collocation": "ask a colleague",
+          "example": "A colleague can help you with the form.",
+          "example_vi": "Một đồng nghiệp có thể giúp bạn điền mẫu."
+        },
+        {
+          "key": "toeic-p2-responses-vocab-deadline",
+          "word": "deadline",
+          "part_of_speech": "noun",
+          "meaning": "hạn chót",
+          "collocation": "meet a deadline",
+          "example": "The deadline is Friday afternoon.",
+          "example_vi": "Hạn chót là chiều thứ Sáu."
+        },
+        {
+          "key": "toeic-p2-responses-vocab-extension",
+          "word": "extension",
+          "part_of_speech": "noun",
+          "meaning": "số máy nhánh; sự gia hạn tùy ngữ cảnh",
+          "collocation": "call extension 204",
+          "example": "Please call extension 204.",
+          "example_vi": "Vui lòng gọi số máy nhánh 204."
+        },
+        {
+          "key": "toeic-p2-responses-vocab-prefer",
+          "word": "prefer",
+          "part_of_speech": "verb",
+          "meaning": "thích hơn",
+          "collocation": "prefer the morning",
+          "example": "Would you prefer the morning session?",
+          "example_vi": "Bạn có thích buổi sáng hơn không?"
+        }
+      ]
+    },
+    {
+      "key": "toeic-p3-conversations",
+      "part": 3,
+      "title": "Part 3 — Purpose, Details, and the Next Action",
+      "minutes": 30,
+      "objectives": "Theo dõi hội thoại hai/ba người; nối cách diễn đạt tương đương và xác định bước tiếp theo.",
+      "lesson": "Đọc trước câu hỏi nếu điều kiện bài luyện cho phép. Ghi vai trò, vấn đề và giải pháp, không cố ghi mọi từ. 'Move the reservation to Thursday' tương đương reschedule. 'We only have blue ones left' gợi ý màu khác đã hết, nhưng chỉ kết luận trong phạm vi hội thoại. Câu hỏi next action cần hành động người nói nhận làm, không phải mọi hành động được nhắc.",
+      "strategy": [
+        "Tách purpose, detail và next action thành ba ô ghi chú.",
+        "Đối chiếu chủ thể: ai nói sẽ làm gì?",
+        "Phần tự luyện này có nhóm ba câu/hội thoại; chưa có audio hoặc câu kết hợp đồ họa."
+      ],
+      "practice": "Sau khi chữa, tóm tắt hội thoại trong ba câu: problem → agreed change → next action. Không chép nguyên transcript; dùng từ đồng nghĩa.",
+      "groups": [
+        {
+          "key": "toeic-p3-room",
+          "kind": "conversation",
+          "transcript": "Receptionist: Good morning, Green Hall. How can I help?\nCustomer: I booked a meeting room for Tuesday, but our trainer cannot come that day. Is Thursday available?\nReceptionist: Yes. Room B is free on Thursday, and it seats twelve people.\nCustomer: That's enough for our group of ten. Please move the booking to Thursday.\nReceptionist: Certainly. I'll send a revised confirmation this afternoon.",
+          "items": [
+            {
+              "key": "toeic-p3-room-q1",
+              "type": "single_choice",
+              "prompt": "Why is the customer calling?",
+              "options": [
+                "To change a room reservation",
+                "To cancel a meal order",
+                "To report missing equipment",
+                "To apply for a training job"
+              ],
+              "answer": "A",
+              "explanation": "Khách đã đặt phòng thứ Ba và muốn chuyển sang thứ Năm vì trainer bận.",
+              "evidence": "Please move the booking to Thursday."
+            },
+            {
+              "key": "toeic-p3-room-q2",
+              "type": "single_choice",
+              "prompt": "How many people are in the customer's group?",
+              "options": [
+                "Twelve",
+                "Eight",
+                "Ten",
+                "Twenty"
+              ],
+              "answer": "C",
+              "explanation": "Phòng có sức chứa 12 nhưng nhóm có 10; phân biệt capacity và số người tham dự.",
+              "evidence": "our group of ten"
+            },
+            {
+              "key": "toeic-p3-room-q3",
+              "type": "single_choice",
+              "prompt": "What will the receptionist do this afternoon?",
+              "options": [
+                "Meet the trainer at the station",
+                "Inspect the room with ten guests",
+                "Send an updated confirmation",
+                "Order additional chairs"
+              ],
+              "answer": "C",
+              "explanation": "Revised confirmation được diễn đạt lại thành updated confirmation.",
+              "evidence": "I'll send a revised confirmation this afternoon."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p3-chairs",
+          "kind": "conversation",
+          "transcript": "Alex: The sales team needs six chairs before Friday. Do we have any left in the storage room?\nPriya: Only two, and one of those is damaged.\nSam: I called our supplier this morning. They have blue chairs in stock and can deliver five on Thursday.\nAlex: Great. Five new chairs and the usable one in storage will be enough.\nPriya: I'll email the supplier to confirm the delivery address.",
+          "items": [
+            {
+              "key": "toeic-p3-chairs-q1",
+              "type": "single_choice",
+              "prompt": "What are the speakers mainly discussing?",
+              "options": [
+                "Choosing a new storage building",
+                "Getting enough chairs for a team",
+                "Moving a Friday meeting online",
+                "Hiring a delivery driver"
+              ],
+              "answer": "B",
+              "explanation": "Hội thoại tập trung nhu cầu sáu ghế và cách đáp ứng.",
+              "evidence": "The sales team needs six chairs before Friday."
+            },
+            {
+              "key": "toeic-p3-chairs-q2",
+              "type": "single_choice",
+              "prompt": "How many usable chairs are currently in storage?",
+              "options": [
+                "Two",
+                "Five",
+                "One",
+                "Six"
+              ],
+              "answer": "C",
+              "explanation": "Có hai ghế nhưng một hỏng, nên chỉ một dùng được.",
+              "evidence": "Only two, and one of those is damaged."
+            },
+            {
+              "key": "toeic-p3-chairs-q3",
+              "type": "single_choice",
+              "prompt": "What will Priya confirm?",
+              "options": [
+                "The date of a job interview",
+                "The number of sales staff",
+                "The blue chairs' price",
+                "The delivery address"
+              ],
+              "answer": "D",
+              "explanation": "Priya nhận gửi email xác nhận địa chỉ giao; không có dữ kiện cô sẽ hỏi giá.",
+              "evidence": "I'll email the supplier to confirm the delivery address."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p3-conversations-vocab-reservation",
+          "word": "reservation",
+          "part_of_speech": "noun",
+          "meaning": "việc đặt chỗ",
+          "collocation": "change a reservation",
+          "example": "I need to change my reservation.",
+          "example_vi": "Tôi cần thay đổi đặt chỗ."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-delay",
+          "word": "delay",
+          "part_of_speech": "noun",
+          "meaning": "sự chậm trễ",
+          "collocation": "a delivery delay",
+          "example": "We are sorry about the delivery delay.",
+          "example_vi": "Chúng tôi xin lỗi về việc giao hàng chậm."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-replacement",
+          "word": "replacement",
+          "part_of_speech": "noun",
+          "meaning": "vật hoặc người thay thế",
+          "collocation": "send a replacement",
+          "example": "We will send a replacement tomorrow.",
+          "example_vi": "Chúng tôi sẽ gửi hàng thay thế vào ngày mai."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-receipt",
+          "word": "receipt",
+          "part_of_speech": "noun",
+          "meaning": "biên lai",
+          "collocation": "keep a receipt",
+          "example": "Please keep your receipt.",
+          "example_vi": "Vui lòng giữ biên lai."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-refund",
+          "word": "refund",
+          "part_of_speech": "noun",
+          "meaning": "khoản hoàn tiền",
+          "collocation": "request a refund",
+          "example": "The customer requested a refund.",
+          "example_vi": "Khách hàng đã yêu cầu hoàn tiền."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-in-stock",
+          "word": "in stock",
+          "part_of_speech": "adjective phrase",
+          "meaning": "còn hàng",
+          "collocation": "be in stock",
+          "example": "The blue chairs are still in stock.",
+          "example_vi": "Những chiếc ghế màu xanh vẫn còn hàng."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-delivery",
+          "word": "delivery",
+          "part_of_speech": "noun",
+          "meaning": "việc giao hàng",
+          "collocation": "arrange delivery",
+          "example": "We can arrange delivery for Thursday.",
+          "example_vi": "Chúng tôi có thể sắp xếp giao hàng vào thứ Năm."
+        },
+        {
+          "key": "toeic-p3-conversations-vocab-instead",
+          "word": "instead",
+          "part_of_speech": "adverb",
+          "meaning": "thay vào đó",
+          "collocation": "choose another time instead",
+          "example": "Could we meet on Tuesday instead?",
+          "example_vi": "Thay vào đó, chúng ta có thể gặp vào thứ Ba không?"
+        }
+      ]
+    },
+    {
+      "key": "toeic-p4-talks",
+      "part": 4,
+      "title": "Part 4 — Announcements and Recorded Messages",
+      "minutes": 30,
+      "objectives": "Nhận diện người nghe, lý do thông báo, thay đổi và hành động cần làm.",
+      "lesson": "Các đoạn thông báo thường nêu vấn đề/thay đổi rồi đưa hướng dẫn. Phân biệt giờ cũ với giờ mới và lý do với hành động. Một câu đầu như 'Attention, visitors' cho biết đối tượng nghe; không tự suy ra chức danh người nói nếu không có bằng chứng. Với voicemail, ghi tên người được nhắc, yêu cầu và mốc thời gian.",
+      "strategy": [
+        "Dự đoán bối cảnh từ câu hỏi, sau đó xác nhận bằng nội dung.",
+        "Đánh dấu các từ chỉ chuyển ý hoặc thay đổi như instead, now, due to.",
+        "Đoạn talk chỉ có một người nói; bản này là script để thu âm, không phải audio."
+      ],
+      "practice": "Tạo thông báo 40–60 từ về việc đổi phòng học. Nêu phòng cũ, phòng mới, lý do và việc người nghe cần làm. Dùng bài mẫu để luyện nhận diện bốn thông tin.",
+      "groups": [
+        {
+          "key": "toeic-p4-entrance",
+          "kind": "talk",
+          "transcript": "Attention, visitors to the Westbrook Museum. The main entrance is temporarily closed for maintenance today. Please use the side entrance on Lake Street. Our guided tours will begin in the courtyard rather than the lobby. The first tour starts at ten thirty, as scheduled. Staff members wearing green badges can help you find the courtyard. Thank you for your patience.",
+          "items": [
+            {
+              "key": "toeic-p4-entrance-q1",
+              "type": "single_choice",
+              "prompt": "Why is the main entrance closed?",
+              "options": [
+                "Maintenance is taking place",
+                "A tour group has filled the lobby",
+                "The building has been sold",
+                "The museum has closed permanently"
+              ],
+              "answer": "A",
+              "explanation": "Thông báo nêu đóng tạm vì bảo trì, không phải đóng vĩnh viễn.",
+              "evidence": "closed for maintenance today"
+            },
+            {
+              "key": "toeic-p4-entrance-q2",
+              "type": "single_choice",
+              "prompt": "Where will guided tours begin?",
+              "options": [
+                "At the main entrance",
+                "In the courtyard",
+                "Inside the gift shop",
+                "In the lobby"
+              ],
+              "answer": "B",
+              "explanation": "Courtyard là điểm mới; lobby là nơi được thay thế.",
+              "evidence": "in the courtyard rather than the lobby"
+            },
+            {
+              "key": "toeic-p4-entrance-q3",
+              "type": "single_choice",
+              "prompt": "What can visitors do if they need directions?",
+              "options": [
+                "Return after the last tour",
+                "Call a supplier on Lake Street",
+                "Wait for an email confirmation",
+                "Ask staff wearing green badges"
+              ],
+              "answer": "D",
+              "explanation": "Người có thẻ xanh có thể chỉ đường đến courtyard.",
+              "evidence": "Staff members wearing green badges can help you"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic-p4-workshop",
+          "kind": "talk",
+          "transcript": "Hello, this is Dana from the city business center. I'm calling about the customer-service workshop you registered for. Because the instructor's flight has been delayed, the workshop will start at eleven instead of nine tomorrow morning. The venue remains Room 4 at the business center. If the new time does not suit you, please call us before five today to transfer your registration to next month's session at no extra charge. We will also send these details by email.",
+          "items": [
+            {
+              "key": "toeic-p4-workshop-q1",
+              "type": "single_choice",
+              "prompt": "What is the purpose of the message?",
+              "options": [
+                "To announce a change in a workshop's start time",
+                "To advertise a newly opened hotel",
+                "To cancel all future workshops",
+                "To request payment for a flight"
+              ],
+              "answer": "A",
+              "explanation": "Workshop chuyển giờ từ 9 sang 11; không bị hủy toàn bộ.",
+              "evidence": "the workshop will start at eleven instead of nine"
+            },
+            {
+              "key": "toeic-p4-workshop-q2",
+              "type": "single_choice",
+              "prompt": "What does Dana explicitly say will remain the same?",
+              "options": [
+                "The original start time",
+                "The instructor's arrival time",
+                "The venue",
+                "The email delivery time"
+              ],
+              "answer": "C",
+              "explanation": "Dana nói venue remains Room 4. Giờ bắt đầu đã đổi; giờ đến của instructor và giờ gửi email không được khẳng định giữ nguyên.",
+              "evidence": "The venue remains Room 4"
+            },
+            {
+              "key": "toeic-p4-workshop-q3",
+              "type": "single_choice",
+              "prompt": "What should a participant do to attend next month's session instead?",
+              "options": [
+                "Arrive at nine tomorrow",
+                "Pay an additional registration fee",
+                "Contact the airline directly",
+                "Call the center before five today"
+              ],
+              "answer": "D",
+              "explanation": "Cần gọi trước 5 giờ hôm nay; transfer không thu thêm phí.",
+              "evidence": "please call us before five today to transfer your registration"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p4-talks-vocab-announcement",
+          "word": "announcement",
+          "part_of_speech": "noun",
+          "meaning": "thông báo",
+          "collocation": "make an announcement",
+          "example": "The manager made an announcement.",
+          "example_vi": "Quản lý đã đưa ra một thông báo."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-entrance",
+          "word": "entrance",
+          "part_of_speech": "noun",
+          "meaning": "lối vào",
+          "collocation": "use the side entrance",
+          "example": "Visitors should use the side entrance.",
+          "example_vi": "Khách nên dùng lối vào bên hông."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-maintenance",
+          "word": "maintenance",
+          "part_of_speech": "noun",
+          "meaning": "việc bảo trì",
+          "collocation": "scheduled maintenance",
+          "example": "The elevator is closed for maintenance.",
+          "example_vi": "Thang máy đóng để bảo trì."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-shuttle",
+          "word": "shuttle",
+          "part_of_speech": "noun",
+          "meaning": "xe đưa đón",
+          "collocation": "take the shuttle",
+          "example": "The shuttle leaves every twenty minutes.",
+          "example_vi": "Xe đưa đón khởi hành mỗi hai mươi phút."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-venue",
+          "word": "venue",
+          "part_of_speech": "noun",
+          "meaning": "địa điểm tổ chức",
+          "collocation": "change the venue",
+          "example": "The venue has changed to the city hall.",
+          "example_vi": "Địa điểm đã chuyển sang tòa thị chính."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-register",
+          "word": "register",
+          "part_of_speech": "verb",
+          "meaning": "đăng ký",
+          "collocation": "register online",
+          "example": "Please register online before Friday.",
+          "example_vi": "Vui lòng đăng ký trực tuyến trước thứ Sáu."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-postpone",
+          "word": "postpone",
+          "part_of_speech": "verb",
+          "meaning": "hoãn",
+          "collocation": "postpone an event",
+          "example": "The outdoor event has been postponed.",
+          "example_vi": "Sự kiện ngoài trời đã bị hoãn."
+        },
+        {
+          "key": "toeic-p4-talks-vocab-participant",
+          "word": "participant",
+          "part_of_speech": "noun",
+          "meaning": "người tham gia",
+          "collocation": "welcome participants",
+          "example": "All participants will receive a badge.",
+          "example_vi": "Tất cả người tham gia sẽ nhận thẻ tên."
+        }
+      ]
+    },
+    {
+      "key": "toeic-p5-grammar",
+      "part": 5,
+      "title": "Part 5 — Word Forms, Verb Patterns, and Connectors",
+      "minutes": 35,
+      "objectives": "Dùng vị trí trong câu để chọn loại từ; phân biệt giới từ, liên từ, thì và cấu trúc động từ.",
+      "lesson": "Sau mạo từ/tính từ thường cần danh từ; trạng từ có thể bổ nghĩa động từ. Kiểm tra chủ ngữ và dấu hiệu thời gian trước khi chọn động từ. 'Because' đứng trước mệnh đề; 'because of' đứng trước cụm danh từ. 'Despite' + cụm danh từ/V-ing; 'although' + mệnh đề. 'Responsible for', 'interested in', 'look forward to + V-ing' là các cụm cần học theo khối. Đừng chỉ dịch nghĩa rồi bỏ qua cấu trúc.",
+      "strategy": [
+        "Xác định câu hỏi thiên về ngữ pháp hay từ vựng.",
+        "Loại đáp án sai vị trí/chức năng trước khi so nghĩa.",
+        "Ghi lỗi theo nhóm: word form, subject–verb, tense, preposition, connector, verb pattern."
+      ],
+      "practice": "Với mỗi câu sai, ghi cấu trúc quyết định đáp án và tạo một câu mới cùng cấu trúc. Mẫu: responsible for + noun/V-ing → Our team is responsible for updating the schedule. Lượt 1 không bấm giờ, ghi loại từ/cấu trúc. Lượt 2 dùng một câu mới do giáo viên tạo để kiểm tra vận dụng; câu đã nhớ đáp án không tính là tiến bộ độc lập.",
+      "groups": [
+        {
+          "key": "toeic-p5-drill",
+          "kind": "sentences",
+          "items": [
+            {
+              "key": "toeic-p5-q01",
+              "type": "single_choice",
+              "prompt": "Please submit your ___ through the company website.",
+              "options": [
+                "applying",
+                "apply",
+                "application",
+                "applicable"
+              ],
+              "answer": "C",
+              "explanation": "Your cần danh từ làm tân ngữ của submit. Application là đơn; apply là động từ, applicable là tính từ, applying không phù hợp nghĩa đơn ứng tuyển ở đây.",
+              "evidence": "submit your ___"
+            },
+            {
+              "key": "toeic-p5-q02",
+              "type": "single_choice",
+              "prompt": "The new software allows staff to process orders more ___.",
+              "options": [
+                "efficient",
+                "efficiency",
+                "efficiencies",
+                "efficiently"
+              ],
+              "answer": "D",
+              "explanation": "Chỗ trống bổ nghĩa process orders nên cần trạng từ efficiently; efficient là tính từ, hai dạng efficiency là danh từ.",
+              "evidence": "process orders more ___"
+            },
+            {
+              "key": "toeic-p5-q03",
+              "type": "single_choice",
+              "prompt": "Each of the new employees ___ an access card.",
+              "options": [
+                "to receive",
+                "receives",
+                "receive",
+                "receiving"
+              ],
+              "answer": "B",
+              "explanation": "Chủ ngữ each là số ít nên dùng receives; of the new employees không làm chủ ngữ thành số nhiều.",
+              "evidence": "Each of the new employees"
+            },
+            {
+              "key": "toeic-p5-q04",
+              "type": "single_choice",
+              "prompt": "The office has been at this address ___ 2022.",
+              "options": [
+                "by",
+                "for",
+                "since",
+                "during"
+              ],
+              "answer": "C",
+              "explanation": "Since đi với mốc bắt đầu 2022; for đi với khoảng thời gian. Has been phù hợp sự việc kéo dài đến hiện tại.",
+              "evidence": "has been ... 2022"
+            },
+            {
+              "key": "toeic-p5-q05",
+              "type": "single_choice",
+              "prompt": "The outdoor reception was moved indoors ___ heavy rain.",
+              "options": [
+                "although",
+                "unless",
+                "because of",
+                "because"
+              ],
+              "answer": "C",
+              "explanation": "Sau chỗ trống là cụm danh từ heavy rain nên because of phù hợp; because/although/unless cần mệnh đề trong cách dùng này.",
+              "evidence": "___ heavy rain"
+            },
+            {
+              "key": "toeic-p5-q06",
+              "type": "single_choice",
+              "prompt": "Employees must obtain approval before ___ travel tickets.",
+              "options": [
+                "purchased",
+                "purchases",
+                "purchasing",
+                "purchase"
+              ],
+              "answer": "C",
+              "explanation": "Before ở đây là giới từ, theo sau bởi V-ing khi không có chủ ngữ riêng. Before purchasing = trước khi mua.",
+              "evidence": "before ___ travel tickets"
+            },
+            {
+              "key": "toeic-p5-q07",
+              "type": "single_choice",
+              "prompt": "This month, the team is responsible ___ training new staff.",
+              "options": [
+                "for",
+                "from",
+                "with",
+                "at"
+              ],
+              "answer": "A",
+              "explanation": "Cụm cố định be responsible for + noun/V-ing.",
+              "evidence": "responsible ___ training"
+            },
+            {
+              "key": "toeic-p5-q08",
+              "type": "single_choice",
+              "prompt": "The revised application form ___ to all managers yesterday.",
+              "options": [
+                "has send",
+                "will send",
+                "was sent",
+                "is sending"
+              ],
+              "answer": "C",
+              "explanation": "Form nhận hành động gửi nên dùng bị động; yesterday xác định quá khứ. Was sent đúng thì và cấu trúc.",
+              "evidence": "form ... yesterday"
+            },
+            {
+              "key": "toeic-p5-q09",
+              "type": "single_choice",
+              "prompt": "Please contact the reception desk ___ you need assistance.",
+              "options": [
+                "despite",
+                "if",
+                "therefore",
+                "during"
+              ],
+              "answer": "B",
+              "explanation": "If + mệnh đề diễn tả điều kiện cần hỗ trợ. Despite/during không nối trực tiếp mệnh đề; therefore không phù hợp nối như câu này.",
+              "evidence": "___ you need assistance"
+            },
+            {
+              "key": "toeic-p5-q10",
+              "type": "single_choice",
+              "prompt": "The new printer is ___ than the old model.",
+              "options": [
+                "quietest",
+                "quieter",
+                "quietly",
+                "quiet"
+              ],
+              "answer": "B",
+              "explanation": "Than chỉ so sánh hơn; quieter là dạng so sánh hơn của quiet.",
+              "evidence": "___ than the old model"
+            },
+            {
+              "key": "toeic-p5-q11",
+              "type": "single_choice",
+              "prompt": "All visitors are required ___ in at reception.",
+              "options": [
+                "signed",
+                "signing",
+                "to sign",
+                "sign"
+              ],
+              "answer": "C",
+              "explanation": "Cấu trúc be required to + động từ nguyên mẫu.",
+              "evidence": "are required ___ in"
+            },
+            {
+              "key": "toeic-p5-q12",
+              "type": "single_choice",
+              "prompt": "The annual review will take place ___ June 15.",
+              "options": [
+                "on",
+                "in",
+                "at",
+                "for"
+              ],
+              "answer": "A",
+              "explanation": "On dùng với ngày cụ thể; in June chỉ tháng, at dùng giờ ở các ví dụ cơ bản.",
+              "evidence": "___ June 15"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p5-grammar-vocab-application",
+          "word": "application",
+          "part_of_speech": "noun",
+          "meaning": "đơn đăng ký; đơn ứng tuyển",
+          "collocation": "submit an application",
+          "example": "Please submit your application online.",
+          "example_vi": "Vui lòng nộp đơn trực tuyến."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-applicant",
+          "word": "applicant",
+          "part_of_speech": "noun",
+          "meaning": "người nộp đơn, ứng viên",
+          "collocation": "contact an applicant",
+          "example": "We will contact each applicant next week.",
+          "example_vi": "Chúng tôi sẽ liên hệ từng ứng viên vào tuần tới."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-efficient",
+          "word": "efficient",
+          "part_of_speech": "adjective",
+          "meaning": "hiệu quả về thời gian/công sức",
+          "collocation": "an efficient process",
+          "example": "The new process is more efficient.",
+          "example_vi": "Quy trình mới hiệu quả hơn."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-efficiently",
+          "word": "efficiently",
+          "part_of_speech": "adverb",
+          "meaning": "một cách hiệu quả",
+          "collocation": "work efficiently",
+          "example": "The team works efficiently.",
+          "example_vi": "Nhóm làm việc hiệu quả."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-responsible",
+          "word": "responsible",
+          "part_of_speech": "adjective",
+          "meaning": "chịu trách nhiệm",
+          "collocation": "be responsible for",
+          "example": "Mina is responsible for training.",
+          "example_vi": "Mina chịu trách nhiệm đào tạo."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-approval",
+          "word": "approval",
+          "part_of_speech": "noun",
+          "meaning": "sự chấp thuận",
+          "collocation": "receive approval",
+          "example": "The order requires approval.",
+          "example_vi": "Đơn hàng cần được chấp thuận."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-complete",
+          "word": "complete",
+          "part_of_speech": "verb",
+          "meaning": "hoàn thành",
+          "collocation": "complete a form",
+          "example": "Please complete the form before noon.",
+          "example_vi": "Vui lòng hoàn thành mẫu trước buổi trưa."
+        },
+        {
+          "key": "toeic-p5-grammar-vocab-annual",
+          "word": "annual",
+          "part_of_speech": "adjective",
+          "meaning": "hằng năm",
+          "collocation": "an annual review",
+          "example": "The annual review takes place in June.",
+          "example_vi": "Đợt đánh giá hằng năm diễn ra vào tháng Sáu."
+        }
+      ]
+    },
+    {
+      "key": "toeic-p6-text",
+      "part": 6,
+      "title": "Part 6 — Meaning Across a Whole Message",
+      "minutes": 35,
+      "objectives": "Chọn từ và câu dựa vào liên kết toàn đoạn; kiểm tra đại từ, thời gian và quan hệ nguyên nhân/kết quả.",
+      "lesson": "Đọc nhanh mục đích văn bản rồi xử lý từng chỗ trống. Với câu chèn, đọc cả câu trước và sau để tìm thông tin nối tiếp, không chọn chỉ vì đúng ngữ pháp. 'Therefore' nối hệ quả; 'however' nối tương phản. Sau khi chọn, đọc lại toàn văn để kiểm tra sự nhất quán về thời gian, địa điểm và đối tượng.",
+      "strategy": [
+        "Xác định ai viết cho ai và muốn người đọc làm gì.",
+        "Đánh dấu mốc thời gian và từ thay thế như it, this, these.",
+        "Mỗi đoạn dưới có 4 chỗ trống, trong đó có một câu hoàn chỉnh."
+      ],
+      "practice": "Sau khi làm, giải thích riêng câu chèn: câu trước cung cấp vấn đề gì, câu chèn thêm thông tin gì, câu sau dùng thông tin ấy thế nào?",
+      "groups": [
+        {
+          "key": "toeic-p6-cafeteria",
+          "kind": "text_completion",
+          "documents": [
+            {
+              "key": "toeic-p6-cafeteria-doc",
+              "title": "Email — Temporary lunch arrangements",
+              "body": "To: All staff\nSubject: Cafeteria renovation\n\nThe cafeteria will be closed from May 6 to May 10 for [1]. During this period, boxed lunches will be sold in the meeting room on the ground floor. [2] Please use this entrance when collecting your lunch.\n\nTo help us prepare enough meals, employees are asked to [3] their orders by 10 a.m. each day. The temporary menu contains fewer choices than the regular menu. [4], vegetarian meals will still be available.\n\nThank you for your patience."
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic-p6-cafeteria-q1",
+              "type": "single_choice",
+              "prompt": "Choose the word for [1].",
+              "options": [
+                "renovation",
+                "renovate",
+                "renovates",
+                "renovated"
+              ],
+              "answer": "A",
+              "explanation": "Sau for cần danh từ chỉ mục đích đóng cửa; renovation là việc cải tạo. Các phương án còn lại là dạng động từ, không phù hợp cấu trúc ở đây.",
+              "evidence": "closed ... for [1]"
+            },
+            {
+              "key": "toeic-p6-cafeteria-q2",
+              "type": "single_choice",
+              "prompt": "Choose the sentence for [2].",
+              "options": [
+                "Employees will collect their meals on the top floor.",
+                "Lunch orders must be placed after 2 p.m.",
+                "The room has a separate entrance facing the courtyard.",
+                "The regular cafeteria will remain open all week."
+              ],
+              "answer": "C",
+              "explanation": "This entrance ở câu sau cần một lối vào vừa được giới thiệu; các câu khác mâu thuẫn thời hạn hoặc địa điểm.",
+              "evidence": "Please use this entrance when collecting your lunch."
+            },
+            {
+              "key": "toeic-p6-cafeteria-q3",
+              "type": "single_choice",
+              "prompt": "Choose the word for [3].",
+              "options": [
+                "submission",
+                "submitting",
+                "submitted",
+                "submit"
+              ],
+              "answer": "D",
+              "explanation": "Are asked to + động từ nguyên mẫu, nên submit.",
+              "evidence": "are asked to [3] their orders"
+            },
+            {
+              "key": "toeic-p6-cafeteria-q4",
+              "type": "single_choice",
+              "prompt": "Choose the word for [4].",
+              "options": [
+                "However",
+                "Otherwise",
+                "Similarly",
+                "Therefore"
+              ],
+              "answer": "A",
+              "explanation": "Ít lựa chọn hơn nhưng vẫn có món chay là quan hệ tương phản; không phải kết quả hay điều kiện ngược lại.",
+              "evidence": "fewer choices ... vegetarian meals will still be available"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        },
+        {
+          "key": "toeic-p6-confirmation",
+          "kind": "text_completion",
+          "documents": [
+            {
+              "key": "toeic-p6-confirmation-doc",
+              "title": "Email — Workshop confirmation",
+              "body": "Dear Ms. Chen,\n\nThank you for registering for our presentation-skills workshop on August 12. Your payment [1] yesterday, so your place is now confirmed. The workshop begins at 9 a.m. in Room 6.\n\nPlease arrive fifteen minutes early to collect your badge. [2] We will use this device for an editing activity during the afternoon session.\n\nIf you have any dietary [3], please let us know by August 5. We can then notify the catering team [4] the event.\n\nBest regards,\nRobin Lee\nTraining coordinator"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic-p6-confirmation-q1",
+              "type": "single_choice",
+              "prompt": "Choose the phrase for [1].",
+              "options": [
+                "is receiving",
+                "has receive",
+                "will receive",
+                "was received"
+              ],
+              "answer": "D",
+              "explanation": "Payment được nhận, yesterday là quá khứ nên dùng was received.",
+              "evidence": "Your payment [1] yesterday"
+            },
+            {
+              "key": "toeic-p6-confirmation-q2",
+              "type": "single_choice",
+              "prompt": "Choose the sentence for [2].",
+              "options": [
+                "All payments must be made at the door.",
+                "Please bring a laptop with a fully charged battery.",
+                "The lunch menu will be posted next month.",
+                "There is no afternoon session."
+              ],
+              "answer": "B",
+              "explanation": "This device tham chiếu laptop; các câu khác không giới thiệu thiết bị hoặc mâu thuẫn bài.",
+              "evidence": "We will use this device for an editing activity"
+            },
+            {
+              "key": "toeic-p6-confirmation-q3",
+              "type": "single_choice",
+              "prompt": "Choose the word for [3].",
+              "options": [
+                "requiring",
+                "require",
+                "requirements",
+                "required"
+              ],
+              "answer": "C",
+              "explanation": "Sau tính từ dietary cần danh từ; dietary requirements là yêu cầu ăn uống.",
+              "evidence": "any dietary [3]"
+            },
+            {
+              "key": "toeic-p6-confirmation-q4",
+              "type": "single_choice",
+              "prompt": "Choose the word for [4].",
+              "options": [
+                "throughout",
+                "before",
+                "onto",
+                "among"
+              ],
+              "answer": "B",
+              "explanation": "Báo nhu cầu trước 5/8 giúp thông báo catering trước sự kiện 12/8. Throughout là suốt sự kiện, không hợp kế hoạch chuẩn bị ở đây.",
+              "evidence": "let us know by August 5 ... workshop on August 12"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p6-text-vocab-effective",
+          "word": "effective",
+          "part_of_speech": "adjective",
+          "meaning": "có hiệu lực; hiệu quả tùy ngữ cảnh",
+          "collocation": "effective from Monday",
+          "example": "The new policy is effective from Monday.",
+          "example_vi": "Chính sách mới có hiệu lực từ thứ Hai."
+        },
+        {
+          "key": "toeic-p6-text-vocab-notify",
+          "word": "notify",
+          "part_of_speech": "verb",
+          "meaning": "thông báo cho",
+          "collocation": "notify employees",
+          "example": "We will notify employees by email.",
+          "example_vi": "Chúng tôi sẽ thông báo cho nhân viên qua email."
+        },
+        {
+          "key": "toeic-p6-text-vocab-therefore",
+          "word": "therefore",
+          "part_of_speech": "adverb",
+          "meaning": "vì vậy",
+          "collocation": "therefore, we recommend",
+          "example": "The room is small; therefore, we recommend early booking.",
+          "example_vi": "Phòng nhỏ; vì vậy, chúng tôi khuyên đặt chỗ sớm."
+        },
+        {
+          "key": "toeic-p6-text-vocab-however",
+          "word": "however",
+          "part_of_speech": "adverb",
+          "meaning": "tuy nhiên",
+          "collocation": "however, some changes remain",
+          "example": "The office is open; however, the kitchen is closed.",
+          "example_vi": "Văn phòng mở; tuy nhiên, bếp đóng."
+        },
+        {
+          "key": "toeic-p6-text-vocab-update",
+          "word": "update",
+          "part_of_speech": "noun",
+          "meaning": "thông tin cập nhật",
+          "collocation": "send an update",
+          "example": "We will send an update this afternoon.",
+          "example_vi": "Chúng tôi sẽ gửi thông tin cập nhật vào chiều nay."
+        },
+        {
+          "key": "toeic-p6-text-vocab-alternative",
+          "word": "alternative",
+          "part_of_speech": "noun",
+          "meaning": "phương án thay thế",
+          "collocation": "offer an alternative",
+          "example": "We can offer an alternative venue.",
+          "example_vi": "Chúng tôi có thể đề xuất một địa điểm thay thế."
+        },
+        {
+          "key": "toeic-p6-text-vocab-renovation",
+          "word": "renovation",
+          "part_of_speech": "noun",
+          "meaning": "việc cải tạo",
+          "collocation": "during renovation",
+          "example": "The lobby is closed during renovation.",
+          "example_vi": "Sảnh đóng trong thời gian cải tạo."
+        },
+        {
+          "key": "toeic-p6-text-vocab-inconvenience",
+          "word": "inconvenience",
+          "part_of_speech": "noun",
+          "meaning": "sự bất tiện",
+          "collocation": "apologize for the inconvenience",
+          "example": "We apologize for the inconvenience.",
+          "example_vi": "Chúng tôi xin lỗi vì sự bất tiện."
+        }
+      ]
+    },
+    {
+      "key": "toeic-p7-single",
+      "part": 7,
+      "title": "Part 7 — Emails, Notices, and Supported Inferences",
+      "minutes": 35,
+      "objectives": "Tìm mục đích, điều kiện, hạn chót và suy luận có bằng chứng trong một văn bản.",
+      "lesson": "Đọc câu hỏi để biết cần tìm gì, sau đó dò đúng đoạn và kiểm tra nghĩa. Đáp án thường paraphrase: complimentary = free; eligible = meets the conditions. Với suy luận, chỉ chọn kết luận được hỗ trợ bởi văn bản. Phân biệt người nhận email với người viết và người được nhắc. Không chọn số/ngày chỉ vì chúng có xuất hiện trong bài.",
+      "strategy": [
+        "Gạch bằng chứng cho từng đáp án.",
+        "Đánh dấu ngoại lệ: only, except, at least, no later than.",
+        "Với NOT/indicated/suggested, xác định chính xác nhiệm vụ thay vì chỉ tìm từ trùng."
+      ],
+      "practice": "Sau mỗi đoạn, ghi một câu purpose và ba ô who/when/action. Khi chữa, giải thích vì sao mỗi distractor không được văn bản hỗ trợ.",
+      "groups": [
+        {
+          "key": "toeic-p7-library",
+          "kind": "single_passage",
+          "documents": [
+            {
+              "key": "toeic-p7-library-doc",
+              "title": "Notice — Evening membership offer",
+              "body": "Westbridge Library\nEvening Membership Offer\n\nCurrent members who renew online by September 20 will receive a complimentary ticket to one October author talk. The offer is not available to new members. After renewing, eligible members must choose a talk through their account by September 25. Seats are limited and allocated in the order requests are received. A confirmation email will be sent within two working days. For help with online renewal, visit the front desk during opening hours."
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic-p7-library-q1",
+              "type": "single_choice",
+              "prompt": "Who can receive a free author-talk ticket under this offer?",
+              "options": [
+                "All new members who register in October",
+                "Current members who renew online by September 20",
+                "Anyone who visits the front desk",
+                "Only authors speaking at the library"
+              ],
+              "answer": "B",
+              "explanation": "Cần vừa là current member, vừa renew online đúng hạn; new members bị loại.",
+              "evidence": "Current members who renew online by September 20"
+            },
+            {
+              "key": "toeic-p7-library-q2",
+              "type": "single_choice",
+              "prompt": "What must an eligible member do by September 25?",
+              "options": [
+                "Send the library a book review",
+                "Collect a printed membership card",
+                "Attend the October talk",
+                "Select a talk through their account"
+              ],
+              "answer": "D",
+              "explanation": "25/9 là hạn chọn talk, không phải hạn renew 20/9 hay ngày dự talk tháng Mười.",
+              "evidence": "choose a talk through their account by September 25"
+            },
+            {
+              "key": "toeic-p7-library-q3",
+              "type": "single_choice",
+              "prompt": "What is suggested about members who delay choosing a talk?",
+              "options": [
+                "They will automatically receive two tickets",
+                "Their membership will be canceled",
+                "They must pay an online renewal penalty",
+                "They may find that their preferred talk has no seats left"
+              ],
+              "answer": "D",
+              "explanation": "Chỗ giới hạn và cấp theo thứ tự yêu cầu nên chọn muộn có thể hết chỗ; không có hủy membership/phạt.",
+              "evidence": "Seats are limited and allocated in the order requests are received."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        },
+        {
+          "key": "toeic-p7-email",
+          "kind": "single_passage",
+          "documents": [
+            {
+              "key": "toeic-p7-email-doc",
+              "title": "Email — Updated visitor schedule",
+              "body": "To: Jun Park\nFrom: Elena Ruiz\nSubject: Client visit on November 8\n\nHi Jun,\nThe client team will now arrive at 10:30 a.m., half an hour later than planned. I have moved the product demonstration to 11 a.m. The lunch reservation at 12:30 remains unchanged. Please replace the old schedule in the welcome folders with the revised version attached to this email. We expect eight visitors, but please prepare two extra folders in case their colleagues join them. I will meet the visitors in reception.\nThanks,\nElena"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic-p7-email-q1",
+              "type": "single_choice",
+              "prompt": "Why did Elena send this email?",
+              "options": [
+                "To ask Jun to reserve a different restaurant",
+                "To cancel the product demonstration",
+                "To reject a client's contract proposal",
+                "To communicate changes and request preparation for a visit"
+              ],
+              "answer": "D",
+              "explanation": "Email thông báo giờ mới và nhờ thay lịch/chuẩn bị folders.",
+              "evidence": "Please replace the old schedule ... with the revised version"
+            },
+            {
+              "key": "toeic-p7-email-q2",
+              "type": "single_choice",
+              "prompt": "When was the client team originally expected to arrive?",
+              "options": [
+                "10 a.m.",
+                "11 a.m.",
+                "10:30 a.m.",
+                "12:30 p.m."
+              ],
+              "answer": "A",
+              "explanation": "Giờ mới 10:30 trễ 30 phút, suy ra giờ cũ 10:00; 11 là demo và 12:30 là lunch.",
+              "evidence": "10:30 a.m., half an hour later than planned"
+            },
+            {
+              "key": "toeic-p7-email-q3",
+              "type": "single_choice",
+              "prompt": "How many welcome folders should Jun prepare?",
+              "options": [
+                "Ten",
+                "Twelve",
+                "Eight",
+                "Two"
+              ],
+              "answer": "A",
+              "explanation": "Tám khách dự kiến cộng hai bộ dự phòng = mười.",
+              "evidence": "eight visitors ... two extra folders"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p7-single-vocab-eligible",
+          "word": "eligible",
+          "part_of_speech": "adjective",
+          "meaning": "đủ điều kiện",
+          "collocation": "be eligible for",
+          "example": "Members are eligible for a discount.",
+          "example_vi": "Thành viên đủ điều kiện nhận giảm giá."
+        },
+        {
+          "key": "toeic-p7-single-vocab-complimentary",
+          "word": "complimentary",
+          "part_of_speech": "adjective",
+          "meaning": "miễn phí, được tặng kèm",
+          "collocation": "complimentary breakfast",
+          "example": "The room includes complimentary breakfast.",
+          "example_vi": "Phòng bao gồm bữa sáng miễn phí."
+        },
+        {
+          "key": "toeic-p7-single-vocab-valid",
+          "word": "valid",
+          "part_of_speech": "adjective",
+          "meaning": "còn hiệu lực, hợp lệ",
+          "collocation": "valid until Friday",
+          "example": "This offer is valid until Friday.",
+          "example_vi": "Ưu đãi này có hiệu lực đến thứ Sáu."
+        },
+        {
+          "key": "toeic-p7-single-vocab-fee",
+          "word": "fee",
+          "part_of_speech": "noun",
+          "meaning": "khoản phí",
+          "collocation": "pay a fee",
+          "example": "There is no registration fee.",
+          "example_vi": "Không có phí đăng ký."
+        },
+        {
+          "key": "toeic-p7-single-vocab-requirement",
+          "word": "requirement",
+          "part_of_speech": "noun",
+          "meaning": "yêu cầu cần đáp ứng",
+          "collocation": "meet a requirement",
+          "example": "Please read the entry requirements.",
+          "example_vi": "Vui lòng đọc các yêu cầu tham gia."
+        },
+        {
+          "key": "toeic-p7-single-vocab-attachment",
+          "word": "attachment",
+          "part_of_speech": "noun",
+          "meaning": "tệp đính kèm",
+          "collocation": "open an attachment",
+          "example": "The schedule is in the attachment.",
+          "example_vi": "Lịch nằm trong tệp đính kèm."
+        },
+        {
+          "key": "toeic-p7-single-vocab-request",
+          "word": "request",
+          "part_of_speech": "noun",
+          "meaning": "yêu cầu, đề nghị",
+          "collocation": "submit a request",
+          "example": "Submit your request by Wednesday.",
+          "example_vi": "Gửi yêu cầu trước hoặc trong thứ Tư."
+        },
+        {
+          "key": "toeic-p7-single-vocab-renew",
+          "word": "renew",
+          "part_of_speech": "verb",
+          "meaning": "gia hạn",
+          "collocation": "renew a membership",
+          "example": "You can renew your membership online.",
+          "example_vi": "Bạn có thể gia hạn tư cách thành viên trực tuyến."
+        }
+      ]
+    },
+    {
+      "key": "toeic-p7-multiple",
+      "part": 7,
+      "title": "Part 7 — Connecting Two or Three Documents",
+      "minutes": 40,
+      "objectives": "Đối chiếu đơn hàng, email và thông báo; giải quyết câu hỏi cần thông tin từ nhiều tài liệu.",
+      "lesson": "Gắn nhãn mỗi tài liệu bằng mục đích và ngày: yêu cầu ban đầu, thay đổi, xác nhận cuối. Dùng tên người, mã đơn hàng và item để nối dữ kiện. Thông tin mới hơn có thể thay thông tin cũ nhưng chỉ trong phạm vi được cập nhật. Với tính toán, ghi dữ kiện từ từng nguồn trước khi cộng/trừ; không thêm thuế/phí khi bài không nêu.",
+      "strategy": [
+        "Xem câu hỏi nào cần một văn bản, câu nào cần hai hoặc ba.",
+        "Đối chiếu mã đơn, mặt hàng, ngày và số lượng.",
+        "Sau khi chọn, ghi bằng chứng ở từng tài liệu thay vì chỉ một từ trùng."
+      ],
+      "practice": "Lập bảng Original → Change → Final cho số lượng, thời gian hoặc giá. Nếu một thông tin không có trong tài liệu, ghi 'not stated' thay vì tự bổ sung. Bước chuyển tiếp cuối bộ 500–700: tự chỉ ra câu nào cần một tài liệu và câu nào cần nối hai hoặc ba nguồn.",
+      "groups": [
+        {
+          "key": "toeic-p7-double-order",
+          "kind": "double_passage",
+          "documents": [
+            {
+              "key": "toeic-p7-order-doc",
+              "title": "Document 1 — Purchase order PO-318",
+              "body": "Buyer: Norfield Training\nSupplier: Eastbay Office Supplies\nDate: March 3\n\nItem: A5 notebooks\nQuantity: 40\nUnit price: $3\nSubtotal: $120\nDelivery fee: $10\nTotal due: $130\nDelivery requested: March 8\nDelivery location: Main reception\nPayment due: March 15\nNo additional charges apply."
+            },
+            {
+              "key": "toeic-p7-order-email",
+              "title": "Document 2 — Supplier email, March 4",
+              "body": "To: Norfield Training\nSubject: Update to PO-318\n\nThank you for your order. We currently have only 30 A5 notebooks in stock. We can deliver those on March 8 and send the remaining 10 on March 11. We will charge the $10 delivery fee only once; there will be no other changes to the prices or payment deadline. Please confirm whether this split delivery is acceptable.\nBest regards,\nAmir Patel"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic-p7-double-q1",
+              "type": "single_choice",
+              "prompt": "Why did the supplier write the email?",
+              "options": [
+                "To request approval for a split delivery",
+                "To change the delivery location",
+                "To announce a higher unit price",
+                "To ask for payment before March 8"
+              ],
+              "answer": "A",
+              "explanation": "Email báo thiếu hàng và hỏi khách có chấp nhận hai lượt giao không.",
+              "evidence": "Please confirm whether this split delivery is acceptable."
+            },
+            {
+              "key": "toeic-p7-double-q2",
+              "type": "single_choice",
+              "prompt": "How many notebooks would arrive on March 11 under the proposed plan?",
+              "options": [
+                "Forty",
+                "Ten",
+                "Thirty",
+                "Fifty"
+              ],
+              "answer": "B",
+              "explanation": "Lượt sau gồm remaining 10; tổng order vẫn 40.",
+              "evidence": "send the remaining 10 on March 11"
+            },
+            {
+              "key": "toeic-p7-double-q3",
+              "type": "single_choice",
+              "prompt": "What total amount would Norfield pay if it accepts the proposal?",
+              "options": [
+                "$100",
+                "$130",
+                "$140",
+                "$120"
+              ],
+              "answer": "B",
+              "explanation": "40 × $3 = $120, cộng phí $10 một lần = $130; không thay giá hoặc thêm phí.",
+              "evidence": "Order: Total due: $130. Email: delivery fee only once; no other changes to the prices."
+            },
+            {
+              "key": "toeic-p7-double-q4",
+              "type": "single_choice",
+              "prompt": "When would payment be due under the proposed arrangement?",
+              "options": [
+                "March 11",
+                "March 15",
+                "March 8",
+                "March 4"
+              ],
+              "answer": "B",
+              "explanation": "Order ghi 15/3; email giữ payment deadline nên không lấy ngày giao làm hạn trả.",
+              "evidence": "Order: Payment due: March 15. Email: no other changes to ... payment deadline."
+            },
+            {
+              "key": "toeic-p7-double-q5",
+              "type": "single_choice",
+              "prompt": "Where is the first shipment expected to be delivered?",
+              "options": [
+                "Main reception",
+                "A branch office opened in April",
+                "The supplier's storage room",
+                "The buyer's cafeteria"
+              ],
+              "answer": "A",
+              "explanation": "Order ghi Main reception; email không thay địa điểm.",
+              "evidence": "Delivery location: Main reception"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        },
+        {
+          "key": "toeic-p7-triple-event",
+          "kind": "triple_passage",
+          "documents": [
+            {
+              "key": "toeic-p7-event-program",
+              "title": "Document 1 — Original workshop program",
+              "body": "Brookfield Business Center — June 18\n9:00–9:45: Customer Communication — Room A\n10:00–10:45: Budget Basics — Room B\n11:00–11:45: Presentation Design — Room A\nRegistration desk: Main lobby, from 8:30 a.m.\nParticipants must bring a laptop for Presentation Design."
+            },
+            {
+              "key": "toeic-p7-event-notice",
+              "title": "Document 2 — Update sent June 16",
+              "body": "Room B will be unavailable on June 18 because of repairs. Budget Basics will take place in Room C at its original time. All other sessions remain unchanged. The registration desk will still open in the main lobby at 8:30 a.m."
+            },
+            {
+              "key": "toeic-p7-event-email",
+              "title": "Document 3 — Email from supervisor, June 17",
+              "body": "Hi Rosa,\nPlease attend Budget Basics and Presentation Design on June 18. We need your help preparing next month's financial slides. You do not need to attend the earlier communication session. Please collect your badge at least fifteen minutes before your first session and bring the equipment requested in the program. Send me a short summary of both sessions by the end of June 19.\nThanks,\nDrew"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic-p7-triple-q1",
+              "type": "single_choice",
+              "prompt": "Where should Rosa attend her first session?",
+              "options": [
+                "Room A",
+                "Room B",
+                "Room C",
+                "The main lobby"
+              ],
+              "answer": "C",
+              "explanation": "Email chọn Budget Basics trước; program đặt lúc 10 giờ; update chuyển từ B sang C.",
+              "evidence": "Email: attend Budget Basics and Presentation Design. Notice: Budget Basics ... Room C."
+            },
+            {
+              "key": "toeic-p7-triple-q2",
+              "type": "single_choice",
+              "prompt": "By what time should Rosa collect her badge at the latest?",
+              "options": [
+                "9:45 a.m.",
+                "10:45 a.m.",
+                "8:15 a.m.",
+                "10 a.m."
+              ],
+              "answer": "A",
+              "explanation": "Buổi đầu 10 giờ, yêu cầu ít nhất 15 phút trước nên chậm nhất 9:45. 8:30 là giờ quầy mở, không phải hạn bắt buộc tới.",
+              "evidence": "Program: 10:00 Budget Basics. Email: at least fifteen minutes before your first session."
+            },
+            {
+              "key": "toeic-p7-triple-q3",
+              "type": "single_choice",
+              "prompt": "What should Rosa bring?",
+              "options": [
+                "A laptop",
+                "A receipt for a hotel reservation",
+                "Printed copies of next month's financial slides",
+                "A replacement projector"
+              ],
+              "answer": "A",
+              "explanation": "Email yêu cầu mang thiết bị trong program; Presentation Design yêu cầu laptop.",
+              "evidence": "Program: bring a laptop for Presentation Design. Email: bring the equipment requested."
+            },
+            {
+              "key": "toeic-p7-triple-q4",
+              "type": "single_choice",
+              "prompt": "Why was one room changed?",
+              "options": [
+                "Rosa requested a smaller room",
+                "The workshop date changed",
+                "Repairs will make Room B unavailable",
+                "The instructor canceled Budget Basics"
+              ],
+              "answer": "C",
+              "explanation": "Thông báo nêu repairs, giữ giờ và phiên học.",
+              "evidence": "Room B will be unavailable ... because of repairs."
+            },
+            {
+              "key": "toeic-p7-triple-q5",
+              "type": "single_choice",
+              "prompt": "What does Drew ask Rosa to do after attending?",
+              "options": [
+                "Send a summary of both sessions by June 19",
+                "Lead the communication session that morning",
+                "Submit her travel receipts on June 18",
+                "Reserve Room B for the following week"
+              ],
+              "answer": "A",
+              "explanation": "Drew muốn bản tóm tắt hai buổi trước khi hết 19/6.",
+              "evidence": "Send me a short summary of both sessions by the end of June 19."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic-p7-multiple-vocab-invoice",
+          "word": "invoice",
+          "part_of_speech": "noun",
+          "meaning": "hóa đơn yêu cầu thanh toán",
+          "collocation": "issue an invoice",
+          "example": "We will issue an invoice after delivery.",
+          "example_vi": "Chúng tôi sẽ xuất hóa đơn sau khi giao hàng."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-purchase-order",
+          "word": "purchase order",
+          "part_of_speech": "noun phrase",
+          "meaning": "đơn đặt mua do bên mua phát hành",
+          "collocation": "send a purchase order",
+          "example": "Please send the purchase order today.",
+          "example_vi": "Vui lòng gửi đơn đặt mua hôm nay."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-quantity",
+          "word": "quantity",
+          "part_of_speech": "noun",
+          "meaning": "số lượng",
+          "collocation": "check the quantity",
+          "example": "The quantity on the invoice is incorrect.",
+          "example_vi": "Số lượng trên hóa đơn không đúng."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-shipment",
+          "word": "shipment",
+          "part_of_speech": "noun",
+          "meaning": "lô hàng",
+          "collocation": "track a shipment",
+          "example": "You can track the shipment online.",
+          "example_vi": "Bạn có thể theo dõi lô hàng trực tuyến."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-revised",
+          "word": "revised",
+          "part_of_speech": "adjective",
+          "meaning": "đã được sửa đổi",
+          "collocation": "a revised schedule",
+          "example": "Please use the revised schedule.",
+          "example_vi": "Vui lòng dùng lịch đã sửa đổi."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-balance",
+          "word": "balance",
+          "part_of_speech": "noun",
+          "meaning": "số tiền còn lại cần thanh toán; số dư tùy ngữ cảnh",
+          "collocation": "pay the remaining balance",
+          "example": "The remaining balance is fifty dollars.",
+          "example_vi": "Số tiền còn lại cần trả là năm mươi đô la."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-due",
+          "word": "due",
+          "part_of_speech": "adjective",
+          "meaning": "đến hạn",
+          "collocation": "payment is due",
+          "example": "Payment is due on June 15.",
+          "example_vi": "Khoản thanh toán đến hạn vào ngày 15 tháng Sáu."
+        },
+        {
+          "key": "toeic-p7-multiple-vocab-discrepancy",
+          "word": "discrepancy",
+          "part_of_speech": "noun",
+          "meaning": "sự không khớp giữa các thông tin",
+          "collocation": "report a discrepancy",
+          "example": "Please report any discrepancy in the invoice.",
+          "example_vi": "Vui lòng báo bất kỳ điểm không khớp nào trong hóa đơn."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "ETS — About the TOEIC Listening and Reading Test",
+      "url": "https://www.ets.org/toeic/about/listening-reading.html",
+      "note": "Tên 7 Part, 100 câu mỗi kỹ năng, thời gian Listening/Reading; nguồn mô tả cấu trúc chính thức, không phải nội dung các câu tự biên soạn."
+    },
+    {
+      "title": "ETS — TOEIC Listening & Reading Examinee Handbook",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-test-examinee-handbook.pdf",
+      "note": "Đối chiếu số câu theo Part và thang điểm; bảng chuyển số đúng sang điểm phụ thuộc từng đề, không dùng quy đổi tuyến tính cho gói này."
+    },
+    {
+      "title": "ETS — Preparation Materials",
+      "url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "note": "Nguồn bài mẫu chính thức để người học tiếp tục luyện với media của ETS. Chỉ liên kết, không chép đề hoặc nhúng lại tài nguyên."
+    },
+    {
+      "title": "ETS — Listening & Reading Score Descriptors",
+      "url": "https://www.ets.org/pdfs/toeic/toeic-listening-reading-score-descriptors.pdf",
+      "note": "Tham khảo phân biệt hiểu trực tiếp, diễn đạt tương đương và suy luận; ETS mô tả theo từng kỹ năng, không xác nhận hai band tổng điểm do project chọn."
+    }
+  ],
+  "band": {
+    "min": 500,
+    "max": 700
+  },
+  "entry_guidance": "Bắt đầu ở đây nếu còn nhầm loại từ, liên từ, số liệu hoặc thời gian trong đoạn ngắn. Người đạt tổng 700 nhưng Reading yếu vẫn có thể ôn chọn lọc bộ này.",
+  "progression": "Học có hướng dẫn → tự làm không mở đáp án → chữa bằng chứng → luyện lại bằng câu mới. Khi các dạng nền tảng ổn định, chuyển sang bộ 700–990; không dùng phần trăm của 60 câu đã học để suy ra điểm thi."
+}

@@ -1,10 +1,10 @@
 # Kế hoạch triển khai Sprout Mobile
 
-Ngày lập: 20/09/2026. Trạng thái: **đề xuất triển khai**, chưa tạo ứng dụng hoặc nghiệm thu mobile. Kế hoạch tổ chức theo đầu ra và phụ thuộc, không chia theo tuần, phù hợp định hướng trong SRS.
+Ngày lập: 20/09/2026. Đây là kế hoạch gốc theo đầu ra và phụ thuộc, không chia theo tuần. **Cập nhật triển khai:** đã tạo mã nguồn `apps/mobile` và kiểm thử tự động; chưa nghiệm thu trên thiết bị hoặc phát hành APK. Người dùng hiện yêu cầu chuẩn bị app/hướng dẫn trước khi có điện thoại. Xem [hướng dẫn chạy](docs/mobile-development.md) và [bằng chứng kiểm thử](docs/mobile-verification.md).
 
 Phương án mặc định theo SRS: bàn giao **app Android cài được**, dùng chung tài khoản, nội dung và dữ liệu học với web. iOS là hướng mở rộng; chưa cam kết kiểm thử hoặc phát hành iOS. Framework và cách phát hành dưới đây là đề xuất kỹ thuật, không phải quyết định đã được người dùng xác nhận.
 
-## 1. Căn cứ và hiện trạng
+## 1. Căn cứ và hiện trạng tại thời điểm lập plan
 
 - [SRS 0.5](srs.md) yêu cầu mobile có các chức năng người học MVP; quản trị nội dung/tài khoản tiếp tục qua Web Admin.
 - Web hiện dùng React/TypeScript/Vite tại `apps/web`; repository chưa có `apps/mobile` hay cấu hình build native.

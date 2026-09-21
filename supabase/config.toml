@@ -43,7 +43,7 @@ enabled = false
 [auth]
 enabled = true
 site_url = "http://localhost:5173"
-additional_redirect_urls = ["http://localhost:5173/auth/callback", "http://localhost:5174/auth/callback"]
+additional_redirect_urls = ["http://localhost:5173/auth/callback", "http://localhost:5174/auth/callback", "sprout://auth/callback", "sprout://auth/callback?mode=recovery"]
 jwt_expiry = 3600
 enable_refresh_token_rotation = true
 refresh_token_reuse_interval = 10

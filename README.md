@@ -57,10 +57,20 @@ Học liệu bootstrap gồm một bài và quiz 5 câu. Audio quiz cũ là fixt
 - [Thiết kế database và ERD](docs/database-design.md)
 - [Plan MVP web](web-mvp-plan.md)
 - [Plan MVP mobile: Android, chức năng, tích hợp và nghiệm thu](mobile-mvp-plan.md)
+- [Mobile: chạy development build và chuẩn bị APK](docs/mobile-development.md)
+- [Mobile: kết quả kiểm thử và phần chưa nghiệm thu](docs/mobile-verification.md)
 - [Đề xuất cải thiện MVP và tiêu chí hoàn thành](docs/mvp-improvements.md)
 - [SRS](srs.md)
 
 Chỉ dùng stack và tài khoản bootstrap này để phát triển local. Deploy public dùng Supabase Cloud với cùng migration và cấu hình/secret riêng.
+
+## App Android
+
+Mã nguồn React Native/Expo nằm trong `apps/mobile`, có bốn tab Hôm nay/Khám phá/Ôn tập/Cá nhân và các luồng học dùng chung API với web. Đã kiểm thử client, màn hình bằng React Native renderer và API local; chưa nghiệm thu APK hoặc điện thoại thật.
+
+Khi Supabase/backend local đang chạy, dùng `npm run mobile:configure` để tạo cấu hình public. Có Android SDK và thiết bị/emulator thì chạy `npm run mobile:configure -- --reverse`, sau đó `npm run mobile:android`. Các lần sau dùng `npm run mobile:dev -- --reverse`. Xem [hướng dẫn đầy đủ](docs/mobile-development.md), đặc biệt phần Java/SDK và Auth callback.
+
+Kiểm thử: `npm run mobile:typecheck`, `npm run mobile:test`, `npm run mobile:test:ui`, `npm run mobile:test:api` (cần build/backend local). `npm run mobile:export` tạo bundle Hermes, không tạo APK. Web/mobile dùng React 19.2.3 tương thích Expo; package-lock quản lý chung npm workspaces.
 
 ## Ba tính năng bổ sung
 

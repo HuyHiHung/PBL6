@@ -3,10 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "workspaces": ["apps/mobile", "packages/api-client"],
   "engines": {
     "node": ">=22"
   },
   "scripts": {
+    "mobile:dev": "node scripts/mobile-local.mjs",
+    "mobile:configure": "node scripts/mobile-local.mjs configure",
+    "mobile:android": "npm run android --workspace @sprout/mobile",
+    "mobile:typecheck": "npm run typecheck --workspace @sprout/mobile",
+    "mobile:export": "npm run export --workspace @sprout/mobile",
+    "mobile:test": "node --import tsx --test tests/mobile/*.test.ts",
+    "mobile:test:ui": "npm test --workspace @sprout/mobile",
+    "mobile:test:api": "node --test --test-concurrency=1 tests/mobile-api.test.mjs",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "backend:start": "node scripts/backend-local.mjs",
@@ -49,8 +58,12 @@
     "hono": "4.13.8",
     "lucide-react": "1.47.0",
     "postgres": "3.4.9",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "zod": "4.6.5"
+  },
+  "overrides": {
+    "react-native-reanimated": "4.5.1",
+    "react-native-worklets": "0.10.1"
   }
 }

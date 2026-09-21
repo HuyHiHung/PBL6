@@ -1,0 +1,2041 @@
+{
+  "schema_version": 1,
+  "schema": "sprout_toeic_materials_v1",
+  "key": "sprout-toeic-lr-700-990",
+  "title": "TOEIC Listening & Reading — 700–990",
+  "status": "authored_not_imported",
+  "target": "Mục tiêu học 700–990: nâng độ chính xác với phản hồi gián tiếp, ý định, điều kiện, paraphrase, suy luận và nhiều tài liệu. Đây là khoảng mục tiêu rộng do project chọn, không phải chứng nhận độ khó hoặc cam kết đạt 990.",
+  "audience": "Người đã nắm ngữ pháp và đọc hiểu cơ bản, muốn nâng kỹ năng TOEIC Listening & Reading từ khoảng 700 lên mức cao hơn; vẫn ôn bộ 500–700 ở kỹ năng còn yếu.",
+  "provenance": "Biên soạn mới cho Sprout ngày 21/09/2026. Toàn bộ 60 câu, hội thoại và tài liệu trong bộ này là nội dung mới so với bộ 500–700; nhân vật, tổ chức và số liệu giả lập. Tham khảo cấu trúc/score descriptors của ETS, không phải đề thi chính thức hoặc sản phẩm được ETS chứng nhận. Chưa thẩm định độc lập độ khó.",
+  "exam_reference": {
+    "variant": "TOEIC Listening & Reading, standard paper-delivered 200-question format",
+    "verified_on": "2026-09-20",
+    "listening_minutes": 45,
+    "reading_minutes": 75,
+    "parts": [
+      {
+        "part": 1,
+        "name": "Photographs",
+        "questions": 6
+      },
+      {
+        "part": 2,
+        "name": "Question–Response",
+        "questions": 25
+      },
+      {
+        "part": 3,
+        "name": "Conversations",
+        "questions": 39
+      },
+      {
+        "part": 4,
+        "name": "Talks",
+        "questions": 30
+      },
+      {
+        "part": 5,
+        "name": "Incomplete Sentences",
+        "questions": 30
+      },
+      {
+        "part": 6,
+        "name": "Text Completion",
+        "questions": 16
+      },
+      {
+        "part": 7,
+        "name": "Reading Comprehension",
+        "questions": 54
+      }
+    ],
+    "score_note": "Bài thi chính thức dùng thang 5–495 mỗi kỹ năng, tổng 10–990; chuyển điểm dựa trên từng đề. Gói tự biên soạn chỉ thống kê số đúng và lỗi, không quy đổi điểm."
+  },
+  "scope_note": "8 bài trọng tâm, chưa phải đề 200 câu hoặc chương trình đầy đủ để đạt 990. 36 câu Reading dùng được bằng chữ; 24 câu Listening có script, còn chờ audio và 3 ảnh Part 1. Có 2 bảng dữ liệu cho Listening và 1 câu đặt vị trí câu trong Part 7. Chưa kiểm chứng độ khó nghe, accent hoặc tốc độ. Không tính đọc transcript thành điểm nghe.",
+  "counts": {
+    "units": 8,
+    "vocabulary_entries": 64,
+    "questions": 60,
+    "listening_script_questions": 24,
+    "reading_questions": 36,
+    "photo_briefs": 3,
+    "minutes": 315,
+    "by_part": {
+      "1": 3,
+      "2": 9,
+      "3": 6,
+      "4": 6,
+      "5": 12,
+      "6": 8,
+      "7": 16
+    }
+  },
+  "units": [
+    {
+      "key": "toeic700-p1-scenes",
+      "part": 1,
+      "title": "Part 1 — Precise Actions and Spatial Relationships",
+      "minutes": 25,
+      "objectives": "Phân biệt những mô tả gần đúng nhưng sai chủ thể, vị trí hoặc trạng thái; tránh suy đoán từ cảnh tĩnh.",
+      "lesson": "So sánh toàn mệnh đề: không chỉ có ladder mà phải đúng leaned against/being carried. Trạng thái bị động (has been suspended) khác hành động đang diễn ra (is being installed). Một ảnh trống không chứng minh nơi đó đã đóng cửa vĩnh viễn. Học các quan hệ adjacent to, beyond, beneath và alongside qua mô tả cụ thể.",
+      "strategy": [
+        "Tách mỗi lựa chọn thành subject/action/location rồi chỉ đúng phần sai.",
+        "Phân biệt vật đang có ở vị trí với người đang đặt nó vào vị trí.",
+        "Chỉ dùng scene brief để duyệt; ảnh/audio cần kiểm tra trước khi làm bài nghe."
+      ],
+      "practice": "Tạo ba distractor cho cùng cảnh, mỗi câu chỉ sai một quan hệ. Giải thích vì sao biết một danh từ trong ảnh chưa đủ để chọn đáp án.",
+      "groups": [
+        {
+          "key": "toeic700-p1-cart",
+          "kind": "photo_brief",
+          "scene_brief": "Ảnh cần tạo: một xe đẩy thấp đứng yên bên ngoài cửa kho đang mở, sát lối vào. Hai thùng gỗ đóng kín nằm trên xe. Một nhân viên đứng ở phía trong kho, hai tay trống, nhìn về kệ, không chạm xe. Không có người tháo/mở thùng.",
+          "items": [
+            {
+              "key": "toeic700-p1-cart-q1",
+              "type": "single_choice",
+              "prompt": "Choose the statement that matches the planned scene.",
+              "options": [
+                "An employee is pushing a cart out of the warehouse.",
+                "A worker is carrying a crate through the doorway.",
+                "Some crates have been placed on a cart near an entrance.",
+                "Some crates are being opened beside a shelving unit."
+              ],
+              "answer": "C",
+              "explanation": "Crates trên xe là trạng thái có thật. Người không đẩy xe, mở hay mang thùng; các lựa chọn sai dùng vật đúng nhưng gán hành động không có.",
+              "evidence": "Hai thùng gỗ đóng kín nằm trên xe ... hai tay trống"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_image_and_audio"
+        },
+        {
+          "key": "toeic700-p1-terrace",
+          "kind": "photo_brief",
+          "scene_brief": "Ảnh cần tạo: sân hiên ngoài trời có ba bàn không người ngồi. Hai ô lớn đang mở che phía trên hai bàn. Vượt quá lan can thấp là một khu vườn. Không có người gấp ô, không có ghế xếp chồng, bàn không nằm trong vườn.",
+          "items": [
+            {
+              "key": "toeic700-p1-terrace-q1",
+              "type": "single_choice",
+              "prompt": "Choose the statement that matches the planned scene.",
+              "options": [
+                "Several tables are arranged beyond the railing.",
+                "Workers are folding umbrellas beside the railing.",
+                "Chairs have been stacked on top of the tables.",
+                "Open umbrellas shade some unoccupied tables."
+              ],
+              "answer": "D",
+              "explanation": "Ô mở che bàn trống. Beyond the railing sai vị trí: vườn ở ngoài lan can còn bàn ở trên sân hiên.",
+              "evidence": "Hai ô lớn đang mở che phía trên hai bàn"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_image_and_audio"
+        },
+        {
+          "key": "toeic700-p1-display",
+          "kind": "photo_brief",
+          "scene_brief": "Ảnh cần tạo: phòng trưng bày không người. Một biển không có chữ đọc được được treo từ trần bằng hai dây, phía trên quầy. Bốn hộp xếp ngay hàng dưới quầy. Không có thang, biển không dựa tường và không ai lắp biển.",
+          "items": [
+            {
+              "key": "toeic700-p1-display-q1",
+              "type": "single_choice",
+              "prompt": "Choose the statement that matches the planned scene.",
+              "options": [
+                "A ladder is positioned beneath a sign.",
+                "Boxes are aligned on top of a counter.",
+                "A sign is being attached to a wall.",
+                "A sign is suspended above a counter."
+              ],
+              "answer": "D",
+              "explanation": "Suspended above khớp biển treo trên quầy. Hộp ở dưới chứ không trên quầy; không có thang hoặc người lắp.",
+              "evidence": "Một biển ... được treo từ trần ... phía trên quầy"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_image_and_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p1-scenes-vocab-adjacent",
+          "word": "adjacent",
+          "part_of_speech": "adjective",
+          "meaning": "liền kề",
+          "collocation": "adjacent to the entrance",
+          "example": "A cart is adjacent to the entrance.",
+          "example_vi": "Một xe đẩy ở sát lối vào."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-overlook",
+          "word": "overlook",
+          "part_of_speech": "verb",
+          "meaning": "nhìn ra; bỏ sót tùy ngữ cảnh",
+          "collocation": "overlook the courtyard",
+          "example": "The balcony overlooks the courtyard.",
+          "example_vi": "Ban công nhìn ra sân trong."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-suspend",
+          "word": "suspend",
+          "part_of_speech": "verb",
+          "meaning": "treo; đình chỉ tùy ngữ cảnh",
+          "collocation": "be suspended from",
+          "example": "A light is suspended from the ceiling.",
+          "example_vi": "Một đèn được treo từ trần nhà."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-unoccupied",
+          "word": "unoccupied",
+          "part_of_speech": "adjective",
+          "meaning": "không có người sử dụng",
+          "collocation": "an unoccupied bench",
+          "example": "The benches are unoccupied.",
+          "example_vi": "Các ghế dài không có người ngồi."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-dismantle",
+          "word": "dismantle",
+          "part_of_speech": "verb",
+          "meaning": "tháo rời",
+          "collocation": "dismantle a display",
+          "example": "Workers are dismantling the display.",
+          "example_vi": "Các công nhân đang tháo dỡ khu trưng bày."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-align",
+          "word": "align",
+          "part_of_speech": "verb",
+          "meaning": "căn thẳng, xếp ngay hàng",
+          "collocation": "align the containers",
+          "example": "The containers are aligned along the wall.",
+          "example_vi": "Những thùng chứa được xếp thẳng dọc tường."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-protrude",
+          "word": "protrude",
+          "part_of_speech": "verb",
+          "meaning": "nhô ra",
+          "collocation": "protrude from a pocket",
+          "example": "A ruler protrudes from the pocket.",
+          "example_vi": "Một chiếc thước nhô ra khỏi túi."
+        },
+        {
+          "key": "toeic700-p1-scenes-vocab-railing",
+          "word": "railing",
+          "part_of_speech": "noun",
+          "meaning": "lan can",
+          "collocation": "lean against a railing",
+          "example": "Two bicycles are leaning against the railing.",
+          "example_vi": "Hai xe đạp đang dựa vào lan can."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p2-intent",
+      "part": 2,
+      "title": "Part 2 — Indirect Replies, Assumptions, and Constraints",
+      "minutes": 35,
+      "objectives": "Hiểu câu trả lời không lặp cấu trúc câu hỏi; nhận ra từ chối mềm, điều kiện và sửa giả định.",
+      "lesson": "Câu trả lời có thể sửa tiền đề: 'Who approved it?' → 'It is still under review.' Một lịch bận có thể là lời từ chối gián tiếp. Phân biệt câu có liên quan chủ đề với phản hồi giải quyết đúng ý người nói. Không suy rằng any indirect reply đều đúng: kiểm tra quan hệ logic, thời gian và vai trò.",
+      "strategy": [
+        "Diễn đạt nhu cầu của người hỏi bằng tiếng Việt trước khi xem lời giải.",
+        "Thử khôi phục câu bị lược: 'I have another commitment' ngụ ý gì trong ngữ cảnh?",
+        "Chỉ ra distractor trả lời nhầm câu hỏi nào hoặc dựa vào giả định chưa xác nhận."
+      ],
+      "practice": "Với ba câu, viết lại đáp án gián tiếp thành một câu trực tiếp giữ nguyên ý; sau đó đổi lại sang cách nói lịch sự tự nhiên.",
+      "groups": [
+        {
+          "key": "toeic700-p2-approval",
+          "kind": "question_response",
+          "transcript": "Who authorized the additional shipment?",
+          "items": [
+            {
+              "key": "toeic700-p2-approval-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The shipment arrived at the loading dock.",
+                "It hasn't been approved yet.",
+                "We usually receive two shipments a week."
+              ],
+              "answer": "B",
+              "explanation": "Đáp án sửa giả định đã được duyệt; hai câu khác nói về shipment nhưng không xử lý authorization.",
+              "evidence": "Who authorized the additional shipment?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-coverage",
+          "kind": "question_response",
+          "transcript": "Can you cover the reception desk after lunch?",
+          "items": [
+            {
+              "key": "toeic700-p2-coverage-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "I'm scheduled to lead the client briefing then.",
+                "The reception area has new furniture.",
+                "Lunch is usually served downstairs."
+              ],
+              "answer": "A",
+              "explanation": "Lịch chủ trì briefing trùng giờ là lý do gián tiếp không nhận trực quầy.",
+              "evidence": "Can you cover the reception desk after lunch?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-cost",
+          "kind": "question_response",
+          "transcript": "Wouldn't extending the trial be less expensive than replacing the system?",
+          "items": [
+            {
+              "key": "toeic700-p2-cost-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "We replaced the monitors last spring.",
+                "The replacement has a monthly service charge.",
+                "Only if the supplier waives the monthly support fee."
+              ],
+              "answer": "C",
+              "explanation": "Only if đưa điều kiện để so sánh chi phí đúng; một phí riêng không đủ trả lời so sánh toàn bộ.",
+              "evidence": "Wouldn't extending the trial be less expensive than replacing the system?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-deadline",
+          "kind": "question_response",
+          "transcript": "Why has the announcement been postponed again?",
+          "items": [
+            {
+              "key": "toeic700-p2-deadline-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The announcement will appear on the intranet.",
+                "Legal still needs to sign off on the wording.",
+                "We posted last month's notice online."
+              ],
+              "answer": "B",
+              "explanation": "Chưa có legal sign-off giải thích lý do hoãn; nơi đăng không giải thích vì sao.",
+              "evidence": "Why has the announcement been postponed again?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-dispatch",
+          "kind": "question_response",
+          "transcript": "Should we expedite both packages or just the sample?",
+          "items": [
+            {
+              "key": "toeic700-p2-dispatch-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "Both packages contain product information.",
+                "The client only needs the sample before Monday.",
+                "We dispatched a sample last Tuesday."
+              ],
+              "answer": "B",
+              "explanation": "Hạn nhu cầu chỉ áp dụng sample nên ngụ ý chỉ cần giao nhanh sample.",
+              "evidence": "Should we expedite both packages or just the sample?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-route",
+          "kind": "question_response",
+          "transcript": "How long will it take to get the revised contract signed?",
+          "items": [
+            {
+              "key": "toeic700-p2-route-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The revision changes the payment terms.",
+                "The contract runs for twelve months.",
+                "That depends on whether the director is back tomorrow."
+              ],
+              "answer": "C",
+              "explanation": "Depends on nêu yếu tố quyết định thời gian chờ ký; twelve months là thời hạn hợp đồng, không thời gian lấy chữ ký.",
+              "evidence": "How long will it take to get the revised contract signed?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-tentative",
+          "kind": "question_response",
+          "transcript": "So the training date is confirmed for the fifteenth?",
+          "items": [
+            {
+              "key": "toeic700-p2-tentative-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The previous course had fifteen participants.",
+                "That's the date we're holding, pending the trainer's reply.",
+                "We received the attendance list yesterday."
+              ],
+              "answer": "B",
+              "explanation": "Holding pending reply nghĩa là tạm giữ, chưa chốt; câu đáp sửa mức chắc chắn trong câu hỏi.",
+              "evidence": "So the training date is confirmed for the fifteenth?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-proposal",
+          "kind": "question_response",
+          "transcript": "Couldn't we use the unused office as a meeting room?",
+          "items": [
+            {
+              "key": "toeic700-p2-proposal-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The office used to belong to the sales team.",
+                "The current meeting room is often booked.",
+                "We'd have to check its occupancy limit first."
+              ],
+              "answer": "C",
+              "explanation": "Câu đúng nêu kiểm tra cần thiết trước khi thực hiện đề xuất; thông tin lịch sử không quyết định được.",
+              "evidence": "Couldn't we use the unused office as a meeting room?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p2-document",
+          "kind": "question_response",
+          "transcript": "Where did you put the final version of the proposal?",
+          "items": [
+            {
+              "key": "toeic700-p2-document-q1",
+              "type": "single_choice",
+              "prompt": "Choose the best response.",
+              "options": [
+                "The proposal describes our maintenance service.",
+                "The original version was ten pages long.",
+                "The client requested another revision this morning."
+              ],
+              "answer": "C",
+              "explanation": "Câu đáp ngụ ý chưa có final ổn định vì client yêu cầu sửa; nội dung hoặc độ dài bản đầu không xử lý giả định final.",
+              "evidence": "Where did you put the final version of the proposal?"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p2-intent-vocab-tentative",
+          "word": "tentative",
+          "part_of_speech": "adjective",
+          "meaning": "tạm thời, chưa chốt",
+          "collocation": "a tentative date",
+          "example": "The date is still tentative.",
+          "example_vi": "Ngày vẫn chưa được chốt."
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-delegate",
+          "word": "delegate",
+          "part_of_speech": "verb",
+          "meaning": "giao việc hoặc ủy nhiệm",
+          "collocation": "delegate the task",
+          "example": "Could you delegate the task to someone else?",
+          "example_vi": "Bạn có thể giao việc đó cho người khác không?"
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-constraint",
+          "word": "constraint",
+          "part_of_speech": "noun",
+          "meaning": "điều kiện hạn chế",
+          "collocation": "a budget constraint",
+          "example": "We need to consider the budget constraint.",
+          "example_vi": "Chúng ta cần cân nhắc hạn chế ngân sách."
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-reconsider",
+          "word": "reconsider",
+          "part_of_speech": "verb",
+          "meaning": "xem xét lại",
+          "collocation": "reconsider a decision",
+          "example": "Would you reconsider the deadline?",
+          "example_vi": "Bạn có thể xem xét lại hạn chót không?"
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-commitment",
+          "word": "commitment",
+          "part_of_speech": "noun",
+          "meaning": "cam kết; lịch đã nhận",
+          "collocation": "a prior commitment",
+          "example": "I have a prior commitment that afternoon.",
+          "example_vi": "Tôi đã có lịch hẹn vào chiều đó."
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-authorize",
+          "word": "authorize",
+          "part_of_speech": "verb",
+          "meaning": "cho phép chính thức",
+          "collocation": "authorize a purchase",
+          "example": "Only the director can authorize this purchase.",
+          "example_vi": "Chỉ giám đốc được phép phê duyệt việc mua này."
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-expedite",
+          "word": "expedite",
+          "part_of_speech": "verb",
+          "meaning": "đẩy nhanh tiến độ xử lý",
+          "collocation": "expedite delivery",
+          "example": "We can expedite delivery for an extra fee.",
+          "example_vi": "Chúng tôi có thể giao nhanh hơn với một khoản phí."
+        },
+        {
+          "key": "toeic700-p2-intent-vocab-feasible",
+          "word": "feasible",
+          "part_of_speech": "adjective",
+          "meaning": "khả thi",
+          "collocation": "a feasible alternative",
+          "example": "That seems like a feasible alternative.",
+          "example_vi": "Đó có vẻ là một phương án thay thế khả thi."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p3-decisions",
+      "part": 3,
+      "title": "Part 3 — Speaker Intent and Decisions with a Table",
+      "minutes": 40,
+      "objectives": "Theo dõi ba người, ý định ẩn và tiêu chí lựa chọn; nối hội thoại với bảng dữ liệu có sẵn.",
+      "lesson": "Theo dõi đề xuất nào được nêu, bị bác bỏ hay được chấp nhận. Câu 'That leaves us very little room' trong trao đổi ngân sách có thể nói biên dự phòng chứ không phải kích thước phòng. Với bảng, chuyển điều kiện trong lời nói thành bộ lọc; một phương án đúng cần đáp ứng tất cả điều kiện, không chỉ giá hoặc capacity.",
+      "strategy": [
+        "Ghi tên người với hành động đã nhận, không suy từ người nói đầu.",
+        "Câu ý định phải nối với lượt lời trước/sau.",
+        "Đọc tiêu đề/cột của bảng rồi áp điều kiện nghe được; đừng chọn chỉ vì tên được nhắc."
+      ],
+      "practice": "Lập bảng proposed/rejected/agreed và một câu giải thích lý do cho mỗi thay đổi. Với bài có bảng, viết các điều kiện thành danh sách trước khi loại lựa chọn.",
+      "groups": [
+        {
+          "key": "toeic700-p3-budget",
+          "kind": "conversation",
+          "transcript": "Nora: The exhibition organizer has offered us a corner booth. It would be much more visible, but the upgrade is six hundred dollars.\nEli: We have eight hundred left in the event budget, and shipping the display will cost at least three hundred.\nNora: That leaves us very little room.\nSara: We could keep the standard booth and rent an extra screen. The screen rental is two hundred, with delivery included. We can use it to show the product demonstrations.\nEli: That would leave three hundred for unexpected costs, assuming shipping stays at three hundred.\nNora: Let's do that. Visibility is useful, but I don't want to spend our contingency funds before the event starts.\nSara: I'll ask the rental company to hold a screen until tomorrow while you get the purchase approved.",
+          "items": [
+            {
+              "key": "toeic700-p3-budget-q1",
+              "type": "single_choice",
+              "prompt": "What does Nora mean by 'That leaves us very little room'?",
+              "options": [
+                "The display cannot fit through the venue entrance",
+                "The proposed upgrade would not leave enough budget for other needs",
+                "The corner booth has inadequate floor space",
+                "The event schedule is nearly full"
+              ],
+              "answer": "B",
+              "explanation": "Ngân sách còn 800, upgrade 600 và shipping ít nhất 300: thiếu tiền; room ở đây là khả năng xoay xở ngân sách.",
+              "evidence": "eight hundred left ... upgrade is six hundred ... shipping ... at least three hundred"
+            },
+            {
+              "key": "toeic700-p3-budget-q2",
+              "type": "single_choice",
+              "prompt": "Which arrangement do the speakers agree on?",
+              "options": [
+                "Upgrade the booth and cancel shipping",
+                "Use only printed demonstrations at the corner booth",
+                "Keep the standard booth and rent a screen",
+                "Purchase a screen instead of renting one"
+              ],
+              "answer": "C",
+              "explanation": "Let's do that chấp nhận đề xuất standard booth + rental200; không phải upgrade600.",
+              "evidence": "We could keep the standard booth and rent an extra screen ... Let's do that."
+            },
+            {
+              "key": "toeic700-p3-budget-q3",
+              "type": "single_choice",
+              "prompt": "What will Sara do next?",
+              "options": [
+                "Pay the shipping invoice immediately",
+                "Request a temporary hold on rental equipment",
+                "Increase the event's contingency budget",
+                "Approve the additional purchase herself"
+              ],
+              "answer": "B",
+              "explanation": "Sara sẽ ask rentalcompany holdscreen, còn purchaseapproval do người khác xử lý.",
+              "evidence": "I'll ask the rental company to hold a screen until tomorrow"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p3-venue",
+          "kind": "conversation",
+          "graphic": {
+            "title": "Available rooms — daily rates; projector included in all rooms",
+            "columns": [
+              "Room",
+              "Capacity",
+              "Step-free access",
+              "Daily rate"
+            ],
+            "rows": [
+              [
+                "Cedar",
+                "30",
+                "Yes",
+                "$280"
+              ],
+              [
+                "Maple",
+                "40",
+                "No",
+                "$290"
+              ],
+              [
+                "Willow",
+                "36",
+                "Yes",
+                "$320"
+              ],
+              [
+                "Oak",
+                "50",
+                "Yes",
+                "$410"
+              ]
+            ]
+          },
+          "transcript": "Organizer: We now expect thirty-four participants, including someone who needs step-free access. Our room budget is three hundred and fifty dollars.\nAssistant: The room we used last time seats only thirty. We should change it.\nOrganizer: Agreed. Of the rooms meeting those requirements, let's take the least expensive one. We don't need to pay for unused capacity.\nAssistant: I'll ask the venue to move our reservation, but shall I tell the participants now?\nOrganizer: Wait until the venue confirms it in writing. I don't want to send a second correction if the room becomes unavailable.\nAssistant: Understood. I'll request that confirmation today.",
+          "items": [
+            {
+              "key": "toeic700-p3-venue-q1",
+              "type": "single_choice",
+              "prompt": "Look at the table. Which room best meets the organizer's requirements?",
+              "options": [
+                "Cedar",
+                "Oak",
+                "Willow",
+                "Maple"
+              ],
+              "answer": "C",
+              "explanation": "Cần ít nhất34, step-free và ≤350; Cedar thiếu chỗ, Maple không accessible, Oak quá ngân sách; Willow đạt.",
+              "evidence": "thirty-four ... step-free ... three hundred and fifty; table: Willow 36/Yes/$320"
+            },
+            {
+              "key": "toeic700-p3-venue-q2",
+              "type": "single_choice",
+              "prompt": "Why does the organizer say, 'We don't need to pay for unused capacity'?",
+              "options": [
+                "To insist on the largest available room",
+                "To request fewer participants",
+                "To question whether accessibility is necessary",
+                "To explain a preference for the least costly suitable room"
+              ],
+              "answer": "D",
+              "explanation": "Câu đi sau yêu cầu chọn rẻ nhất trong các phòng đạt điều kiện; không loại accessibility hoặc giảm khách.",
+              "evidence": "Of the rooms meeting those requirements, let's take the least expensive one."
+            },
+            {
+              "key": "toeic700-p3-venue-q3",
+              "type": "single_choice",
+              "prompt": "When should the assistant notify participants?",
+              "options": [
+                "As soon as the assistant sees the table",
+                "Only after all participants have paid",
+                "After the venue confirms the new room in writing",
+                "Before asking the venue to change the reservation"
+              ],
+              "answer": "C",
+              "explanation": "Có điều kiện xác nhận bằng văn bản trước khi gửi thông báo khách.",
+              "evidence": "Wait until the venue confirms it in writing."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p3-decisions-vocab-contingency",
+          "word": "contingency",
+          "part_of_speech": "noun",
+          "meaning": "phương án/dự phòng cho tình huống có thể xảy ra",
+          "collocation": "a contingency plan",
+          "example": "We need a contingency plan for bad weather.",
+          "example_vi": "Chúng ta cần kế hoạch dự phòng khi thời tiết xấu."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-waive",
+          "word": "waive",
+          "part_of_speech": "verb",
+          "meaning": "miễn một yêu cầu hoặc khoản phí",
+          "collocation": "waive a fee",
+          "example": "The hotel agreed to waive the change fee.",
+          "example_vi": "Khách sạn đồng ý miễn phí đổi."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-allocate",
+          "word": "allocate",
+          "part_of_speech": "verb",
+          "meaning": "phân bổ",
+          "collocation": "allocate resources",
+          "example": "We allocated two staff members to the desk.",
+          "example_vi": "Chúng tôi phân công hai nhân viên trực quầy."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-revised",
+          "word": "revised",
+          "part_of_speech": "adjective",
+          "meaning": "đã sửa đổi",
+          "collocation": "a revised proposal",
+          "example": "Please review the revised proposal.",
+          "example_vi": "Vui lòng xem đề xuất đã chỉnh sửa."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-accommodate",
+          "word": "accommodate",
+          "part_of_speech": "verb",
+          "meaning": "đáp ứng nhu cầu; chứa được",
+          "collocation": "accommodate a request",
+          "example": "The venue can accommodate the revised schedule.",
+          "example_vi": "Địa điểm có thể đáp ứng lịch đã điều chỉnh."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-shortfall",
+          "word": "shortfall",
+          "part_of_speech": "noun",
+          "meaning": "phần thiếu so với mức cần",
+          "collocation": "a staffing shortfall",
+          "example": "We have a staffing shortfall on Friday.",
+          "example_vi": "Chúng tôi thiếu nhân sự vào thứ Sáu."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-reassure",
+          "word": "reassure",
+          "part_of_speech": "verb",
+          "meaning": "trấn an, làm yên tâm",
+          "collocation": "reassure a client",
+          "example": "The manager reassured the client about delivery.",
+          "example_vi": "Quản lý trấn an khách hàng về việc giao hàng."
+        },
+        {
+          "key": "toeic700-p3-decisions-vocab-trade-off",
+          "word": "trade-off",
+          "part_of_speech": "noun",
+          "meaning": "sự đánh đổi giữa các lợi ích",
+          "collocation": "consider a trade-off",
+          "example": "A larger room involves a cost trade-off.",
+          "example_vi": "Phòng lớn hơn kéo theo sự đánh đổi về chi phí."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p4-conditions",
+      "part": 4,
+      "title": "Part 4 — Conditional Instructions and Implied Purpose",
+      "minutes": 40,
+      "objectives": "Phân biệt thông báo hiện tại và thay đổi có điều kiện; theo dõi ngoại lệ và đề xuất ngầm.",
+      "lesson": "Các từ unless, provided that, pending và contingent on quyết định hành động có hiệu lực khi nào. Không biến dự kiến thành sự thật. Câu 'There is no need to call us individually' thường nhằm hướng người nghe dùng kênh đã định, không khẳng định mọi hỗ trợ bị dừng. Với bảng và lịch sửa, giữ cái không thay đổi rồi cập nhật đúng mục được nói.",
+      "strategy": [
+        "Ghi trạng thái hiện tại và điều kiện để đổi sang trạng thái tiếp theo.",
+        "Đánh dấu ngoại lệ áp dụng cho ai và thời gian nào.",
+        "Xác định purpose bằng toàn đoạn, không dựa vào một danh từ nổi bật."
+      ],
+      "practice": "Viết lại hướng dẫn thành if/then; đánh dấu một hành động phải làm ngay và một hành động chỉ làm khi có xác nhận.",
+      "groups": [
+        {
+          "key": "toeic700-p4-shuttle",
+          "kind": "talk",
+          "transcript": "This is a message for employees using the north parking lot. Resurfacing is scheduled to begin on Monday, but the contractor will proceed only if the ground is dry. Until you receive a confirmation email on Sunday evening, please assume that normal parking arrangements remain in effect. If the work goes ahead, use the temporary lot beside the sports center. A complimentary shuttle will run from that lot to the main entrance every fifteen minutes from seven to nine in the morning. Employees arriving after nine may claim reimbursement for the public bus fare by submitting a receipt. Taxi fares will not be reimbursed. We have posted a map on the staff portal, so there is no need to call reception individually for directions.",
+          "items": [
+            {
+              "key": "toeic700-p4-shuttle-q1",
+              "type": "single_choice",
+              "prompt": "What should employees assume before receiving the Sunday email?",
+              "options": [
+                "Their usual parking arrangements still apply",
+                "The north lot is already closed",
+                "Taxi costs will be reimbursed automatically",
+                "They must reserve a place on the shuttle"
+              ],
+              "answer": "A",
+              "explanation": "Normal arrangements remain cho đến confirmation; kế hoạch phụ thuộc grounddry.",
+              "evidence": "Until you receive a confirmation email ... normal parking arrangements remain in effect."
+            },
+            {
+              "key": "toeic700-p4-shuttle-q2",
+              "type": "single_choice",
+              "prompt": "If work proceeds, which expense may be reimbursed for an employee arriving at 10 a.m.?",
+              "options": [
+                "A taxi fare from the temporary lot",
+                "An unrecorded private parking charge",
+                "A public bus fare supported by a receipt",
+                "A fee for reserving the complimentary shuttle"
+              ],
+              "answer": "C",
+              "explanation": "Sau9 dùng publicbus córeceipt; taxi bị loại rõ.",
+              "evidence": "Employees arriving after nine ... public bus fare ... submitting a receipt"
+            },
+            {
+              "key": "toeic700-p4-shuttle-q3",
+              "type": "single_choice",
+              "prompt": "Why does the speaker mention the staff portal?",
+              "options": [
+                "To direct employees to existing route information",
+                "To explain why the shuttle ends at nine",
+                "To announce that the resurfacing has been canceled",
+                "To require everyone to apply for reimbursement online"
+              ],
+              "answer": "A",
+              "explanation": "Map đã posted để tránh gọi reception từng người hỏi đường.",
+              "evidence": "posted a map on the staff portal ... no need to call reception individually for directions"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        },
+        {
+          "key": "toeic700-p4-workshops",
+          "kind": "talk",
+          "graphic": {
+            "title": "Original afternoon program",
+            "columns": [
+              "Session",
+              "Start",
+              "Room"
+            ],
+            "rows": [
+              [
+                "Client Retention",
+                "1:00 p.m.",
+                "A"
+              ],
+              [
+                "Supply Planning",
+                "2:00 p.m.",
+                "B"
+              ],
+              [
+                "Data Presentation",
+                "3:00 p.m.",
+                "C"
+              ]
+            ]
+          },
+          "transcript": "Before we break for lunch, I have two changes to the afternoon program. The instructor for Supply Planning has been delayed, so that session will begin thirty minutes later than listed. To avoid interfering with the room's next booking, it will move to Room D. The Data Presentation session will stay at its published time and location. Anyone attending both sessions should leave Supply Planning ten minutes before Data Presentation begins; the instructor has agreed to email the final exercise to those participants. Please do not ask the Data Presentation instructor to delay the start, as the room has another booking immediately afterward.",
+          "items": [
+            {
+              "key": "toeic700-p4-workshops-q1",
+              "type": "single_choice",
+              "prompt": "Look at the program. When and where will Supply Planning now begin?",
+              "options": [
+                "2:30 p.m. in Room D",
+                "3:00 p.m. in Room C",
+                "2:00 p.m. in Room D",
+                "2:30 p.m. in Room B"
+              ],
+              "answer": "A",
+              "explanation": "Bảng giờ cũ2p.m.; lời nói dời30min và chuyển D, phải áp cả hai thay đổi.",
+              "evidence": "Supply Planning ... thirty minutes later ... move to Room D; table: 2:00 p.m."
+            },
+            {
+              "key": "toeic700-p4-workshops-q2",
+              "type": "single_choice",
+              "prompt": "When should someone attending both sessions leave Supply Planning?",
+              "options": [
+                "2:20 p.m.",
+                "3:30 p.m.",
+                "2:50 p.m.",
+                "3:10 p.m."
+              ],
+              "answer": "C",
+              "explanation": "DataPresentation giữ3p.m.; ra trước10min là2:50.",
+              "evidence": "Data Presentation ... stay at its published time ... leave ... ten minutes before"
+            },
+            {
+              "key": "toeic700-p4-workshops-q3",
+              "type": "single_choice",
+              "prompt": "What arrangement is offered to participants who leave early?",
+              "options": [
+                "They will receive the final exercise by email",
+                "They can repeat the whole program free of charge",
+                "Their next session will start ten minutes late",
+                "They will receive a refund for both sessions"
+              ],
+              "answer": "A",
+              "explanation": "Instructor đồng ý email finalexercise; không thay giờ buổi sau.",
+              "evidence": "email the final exercise to those participants"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "needs_audio"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p4-conditions-vocab-disruption",
+          "word": "disruption",
+          "part_of_speech": "noun",
+          "meaning": "sự gián đoạn",
+          "collocation": "minimize disruption",
+          "example": "The work will take place at night to minimize disruption.",
+          "example_vi": "Công việc sẽ diễn ra ban đêm để giảm gián đoạn."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-contingent",
+          "word": "contingent",
+          "part_of_speech": "adjective",
+          "meaning": "phụ thuộc vào điều kiện",
+          "collocation": "contingent on approval",
+          "example": "The move is contingent on approval.",
+          "example_vi": "Việc chuyển địa điểm phụ thuộc vào sự chấp thuận."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-retain",
+          "word": "retain",
+          "part_of_speech": "verb",
+          "meaning": "giữ lại",
+          "collocation": "retain the original schedule",
+          "example": "We will retain the original schedule for now.",
+          "example_vi": "Hiện chúng tôi sẽ giữ lịch ban đầu."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-designate",
+          "word": "designate",
+          "part_of_speech": "verb",
+          "meaning": "chỉ định",
+          "collocation": "designate an entrance",
+          "example": "A separate entrance has been designated for deliveries.",
+          "example_vi": "Một lối riêng đã được chỉ định cho việc giao hàng."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-reimburse",
+          "word": "reimburse",
+          "part_of_speech": "verb",
+          "meaning": "hoàn trả khoản đã chi",
+          "collocation": "reimburse travel expenses",
+          "example": "The company will reimburse approved travel expenses.",
+          "example_vi": "Công ty sẽ hoàn trả chi phí đi lại đã được duyệt."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-briefing",
+          "word": "briefing",
+          "part_of_speech": "noun",
+          "meaning": "buổi phổ biến thông tin ngắn",
+          "collocation": "attend a briefing",
+          "example": "Please attend the safety briefing first.",
+          "example_vi": "Vui lòng dự buổi phổ biến an toàn trước."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-restriction",
+          "word": "restriction",
+          "part_of_speech": "noun",
+          "meaning": "hạn chế, quy định giới hạn",
+          "collocation": "lift a restriction",
+          "example": "The parking restriction will be lifted at noon.",
+          "example_vi": "Hạn chế đỗ xe sẽ được dỡ bỏ vào buổi trưa."
+        },
+        {
+          "key": "toeic700-p4-conditions-vocab-interim",
+          "word": "interim",
+          "part_of_speech": "adjective",
+          "meaning": "tạm thời trong giai đoạn chuyển tiếp",
+          "collocation": "an interim arrangement",
+          "example": "The shuttle is an interim arrangement.",
+          "example_vi": "Xe đưa đón là phương án tạm thời."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p5-precision",
+      "part": 5,
+      "title": "Part 5 — Complex Structures and Precise Word Choice",
+      "minutes": 40,
+      "objectives": "Xử lý mệnh đề rút gọn, đảo ngữ, đại từ quan hệ, collocation và điều kiện hợp đồng.",
+      "lesson": "Tìm cấu trúc toàn câu trước khi dịch. Had + subject + past participle có thể thay if trong điều kiện quá khứ. Phân biệt giới từ + cụm danh từ với liên từ + mệnh đề. Trong từ vựng, xem đúng collocation và vai trò ngữ nghĩa: prospective clients là khách tiềm năng, không phải perspective. Cấu trúc phức tạp chỉ là một trọng tâm luyện, không phải mẹo bảo đảm điểm cao.",
+      "strategy": [
+        "Khoanh động từ chính và ranh giới mệnh đề.",
+        "Kiểm tra cả cú pháp lẫn quan hệ logic giữa hai vế.",
+        "Sau khi chữa, giải thích riêng vì sao mỗi phương án còn lại sai."
+      ],
+      "practice": "Viết lại ba câu phức thành hai câu đơn mà giữ nghĩa; sau đó ghép lại. Ghi lỗi theo cấu trúc, collocation hoặc nhầm loại từ.",
+      "groups": [
+        {
+          "key": "toeic700-p5-drill",
+          "kind": "sentences",
+          "items": [
+            {
+              "key": "toeic700-p5-q01",
+              "type": "single_choice",
+              "prompt": "___ we known about the restriction earlier, we would have selected another venue.",
+              "options": [
+                "Had",
+                "Should",
+                "Were",
+                "Have"
+              ],
+              "answer": "A",
+              "explanation": "Đảo ngữ điều kiện loại ba: Had we known = If we had known. Were không đi trực tiếp với known ở cấu trúc này.",
+              "evidence": "___ we known ... would have selected"
+            },
+            {
+              "key": "toeic700-p5-q02",
+              "type": "single_choice",
+              "prompt": "The supplier, ___ revised proposal includes on-site training, has been shortlisted.",
+              "options": [
+                "whose",
+                "which",
+                "whom",
+                "who"
+              ],
+              "answer": "A",
+              "explanation": "Whose bổ nghĩa sở hữu cho revised proposal; supplier có proposal. Who/whom không bổ nghĩa danh từ theo cách này.",
+              "evidence": "supplier, ___ revised proposal"
+            },
+            {
+              "key": "toeic700-p5-q03",
+              "type": "single_choice",
+              "prompt": "The revised procedure is expected to ___ reduce processing time.",
+              "options": [
+                "substantial",
+                "substance",
+                "substantiate",
+                "substantially"
+              ],
+              "answer": "D",
+              "explanation": "Cần trạng từ bổ nghĩa reduce; substantially là đáng kể. Substantiate là động từ chứng minh.",
+              "evidence": "to ___ reduce processing time"
+            },
+            {
+              "key": "toeic700-p5-q04",
+              "type": "single_choice",
+              "prompt": "The agreement remains valid ___ both parties approve the proposed amendment.",
+              "options": [
+                "in spite of",
+                "despite",
+                "regardless",
+                "provided that"
+              ],
+              "answer": "D",
+              "explanation": "Provided that nối mệnh đề điều kiện. Despite/in spite of cần cụm danh từ hoặc V-ing; regardless không tự nối mệnh đề như vậy.",
+              "evidence": "___ both parties approve"
+            },
+            {
+              "key": "toeic700-p5-q05",
+              "type": "single_choice",
+              "prompt": "Neither of the two proposals ___ the minimum security requirements.",
+              "options": [
+                "to meet",
+                "meets",
+                "meet",
+                "meeting"
+              ],
+              "answer": "B",
+              "explanation": "Neither làm chủ ngữ số ít trong văn phong chuẩn; cần động từ hữu hạn meets.",
+              "evidence": "Neither of the two proposals"
+            },
+            {
+              "key": "toeic700-p5-q06",
+              "type": "single_choice",
+              "prompt": "The director has yet ___ the additional expenditure.",
+              "options": [
+                "authorization",
+                "authorized",
+                "to authorize",
+                "authorizing"
+              ],
+              "answer": "C",
+              "explanation": "Have yet to + infinitive diễn đạt chưa thực hiện việc dự kiến.",
+              "evidence": "has yet ___"
+            },
+            {
+              "key": "toeic700-p5-q07",
+              "type": "single_choice",
+              "prompt": "The brochure is intended for ___ clients who have not previously used our service.",
+              "options": [
+                "prospective",
+                "perspective",
+                "prospectively",
+                "prospect"
+              ],
+              "answer": "A",
+              "explanation": "Prospective clients là khách hàng tiềm năng; perspective là góc nhìn, prospectively là trạng từ.",
+              "evidence": "___ clients who have not previously used our service"
+            },
+            {
+              "key": "toeic700-p5-q08",
+              "type": "single_choice",
+              "prompt": "Exceptions may be granted at the manager's ___.",
+              "options": [
+                "discretion",
+                "discreetly",
+                "discretionary",
+                "discrete"
+              ],
+              "answer": "A",
+              "explanation": "At someone's discretion là theo quyền quyết định của người đó; cần danh từ.",
+              "evidence": "at the manager's ___"
+            },
+            {
+              "key": "toeic700-p5-q09",
+              "type": "single_choice",
+              "prompt": "___ the final inspection, the equipment was cleared for shipment.",
+              "options": [
+                "Passes",
+                "Having passed",
+                "Has passed",
+                "To passing"
+              ],
+              "answer": "B",
+              "explanation": "Cụm phân từ hoàn thành nêu việc thiết bị đã qua kiểm tra trước khi được phép gửi. Chủ thể ngầm trùng equipment.",
+              "evidence": "___ the final inspection, the equipment was cleared"
+            },
+            {
+              "key": "toeic700-p5-q10",
+              "type": "single_choice",
+              "prompt": "All reimbursement requests are subject ___ review by the finance department.",
+              "options": [
+                "with",
+                "on",
+                "to",
+                "for"
+              ],
+              "answer": "C",
+              "explanation": "Be subject to + noun là chịu/được xét theo điều kiện đó.",
+              "evidence": "subject ___ review"
+            },
+            {
+              "key": "toeic700-p5-q11",
+              "type": "single_choice",
+              "prompt": "The notice supersedes all earlier instructions ___ the relocation.",
+              "options": [
+                "concern",
+                "concerned",
+                "concerning",
+                "concerns"
+              ],
+              "answer": "C",
+              "explanation": "Concerning dùng như giới từ nghĩa là về/liên quan đến relocation; concerned cần cấu trúc khác.",
+              "evidence": "instructions ___ the relocation"
+            },
+            {
+              "key": "toeic700-p5-q12",
+              "type": "single_choice",
+              "prompt": "___ the temporary staffing shortfall, all orders were dispatched on schedule.",
+              "options": [
+                "Notwithstanding",
+                "Whereas",
+                "Nevertheless",
+                "Unless"
+              ],
+              "answer": "A",
+              "explanation": "Notwithstanding + cụm danh từ = mặc dù. Unless/whereas cần mệnh đề; nevertheless là trạng từ nối, không nhận trực tiếp cụm danh từ như vậy.",
+              "evidence": "___ the temporary staffing shortfall"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p5-precision-vocab-compliance",
+          "word": "compliance",
+          "part_of_speech": "noun",
+          "meaning": "sự tuân thủ",
+          "collocation": "ensure compliance with",
+          "example": "The review ensures compliance with the policy.",
+          "example_vi": "Việc rà soát bảo đảm tuân thủ chính sách."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-provision",
+          "word": "provision",
+          "part_of_speech": "noun",
+          "meaning": "điều khoản; việc cung cấp tùy ngữ cảnh",
+          "collocation": "a contract provision",
+          "example": "This provision applies to late deliveries.",
+          "example_vi": "Điều khoản này áp dụng cho việc giao chậm."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-eligible",
+          "word": "eligible",
+          "part_of_speech": "adjective",
+          "meaning": "đủ điều kiện",
+          "collocation": "be eligible for reimbursement",
+          "example": "Only approved trips are eligible for reimbursement.",
+          "example_vi": "Chỉ chuyến đi được duyệt mới đủ điều kiện hoàn chi phí."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-substantially",
+          "word": "substantially",
+          "part_of_speech": "adverb",
+          "meaning": "đáng kể",
+          "collocation": "substantially reduce costs",
+          "example": "The new system substantially reduces costs.",
+          "example_vi": "Hệ thống mới giảm chi phí đáng kể."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-prospective",
+          "word": "prospective",
+          "part_of_speech": "adjective",
+          "meaning": "tiềm năng, có khả năng trong tương lai",
+          "collocation": "prospective clients",
+          "example": "The brochure is intended for prospective clients.",
+          "example_vi": "Tờ giới thiệu dành cho khách hàng tiềm năng."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-notwithstanding",
+          "word": "notwithstanding",
+          "part_of_speech": "preposition",
+          "meaning": "bất chấp, mặc dù",
+          "collocation": "notwithstanding the delay",
+          "example": "Notwithstanding the delay, the project met its budget.",
+          "example_vi": "Mặc dù chậm, dự án vẫn đạt yêu cầu ngân sách."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-subject-to",
+          "word": "subject to",
+          "part_of_speech": "adjective phrase",
+          "meaning": "chịu sự chi phối hoặc phụ thuộc điều kiện",
+          "collocation": "subject to approval",
+          "example": "All changes are subject to approval.",
+          "example_vi": "Mọi thay đổi đều cần được chấp thuận."
+        },
+        {
+          "key": "toeic700-p5-precision-vocab-pertain",
+          "word": "pertain",
+          "part_of_speech": "verb",
+          "meaning": "liên quan",
+          "collocation": "pertain to the agreement",
+          "example": "The comments pertain to the delivery agreement.",
+          "example_vi": "Các góp ý liên quan đến thỏa thuận giao hàng."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p6-cohesion",
+      "part": 6,
+      "title": "Part 6 — Conditions, Reference, and Paragraph Logic",
+      "minutes": 40,
+      "objectives": "Theo dõi thông tin mới thay thế thông tin cũ; chọn câu chèn dựa vào quan hệ tham chiếu và điều kiện.",
+      "lesson": "Với đoạn dài, tóm tắt chức năng từng câu: quy định → ngoại lệ → lý do → hành động. Đại từ this/these cần antecedent rõ, nhưng một câu đúng tham chiếu vẫn có thể sai mốc thời gian. Kiểm tra lại toàn văn sau khi điền; không biến kế hoạch contingent thành quyết định đã áp dụng.",
+      "strategy": [
+        "Đánh dấu effective date, exceptions và phạm vi áp dụng.",
+        "Với câu chèn, thử đọc liền câu trước và sau.",
+        "Phân biệt tương phản, kết quả và bổ sung thay vì chọn từ nối quen mắt."
+      ],
+      "practice": "Vẽ chuỗi điều kiện → người áp dụng → hành động. Viết lại nội dung thành email ngắn mà không bỏ ngoại lệ.",
+      "groups": [
+        {
+          "key": "toeic700-p6-portal",
+          "kind": "text_completion",
+          "documents": [
+            {
+              "key": "toeic700-p6-portal-doc",
+              "title": "Memo — Transition to the supplier portal",
+              "body": "To: Purchasing staff\nSubject: Supplier portal transition\n\nStarting October 1, all new purchase requests must be submitted through the supplier portal. Requests approved before that date will continue under the existing process. This notice [1] our August memo, which proposed switching every open request to the new system.\n\nWe changed the plan after identifying a risk of duplicate orders. [2] This arrangement will allow the finance team to reconcile outstanding invoices without recreating records already approved.\n\nThe portal checks required fields before accepting a request, [3] reducing the number of incomplete submissions. Staff should nevertheless verify quantities and delivery dates; automated validation does not establish that these details are commercially appropriate.\n\nTraining materials will be available on September 24. Access for new users remains [4] on completion of the short training module. If your account is not active after you finish the module, contact purchasing support rather than submitting the same request by email."
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic700-p6-portal-q1",
+              "type": "single_choice",
+              "prompt": "Choose the word for [1].",
+              "options": [
+                "anticipates",
+                "complies",
+                "supersedes",
+                "resembles"
+              ],
+              "answer": "C",
+              "explanation": "Thông báo mới thay phương án tháng Tám; supersedes là thay thế hiệu lực. Complies cần with và không diễn đạt thay bản cũ.",
+              "evidence": "August memo ... switching every open request; now approved requests continue under existing process"
+            },
+            {
+              "key": "toeic700-p6-portal-q2",
+              "type": "single_choice",
+              "prompt": "Choose the sentence for [2].",
+              "options": [
+                "The finance team will stop processing invoices on October 1.",
+                "Previously approved requests will therefore retain their original records.",
+                "Training will be postponed until every open order is delivered.",
+                "All previously approved requests must be entered into the portal again."
+              ],
+              "answer": "B",
+              "explanation": "Arrangement sau đó giúp reconcile mà không recreate records; giữ records phù hợp chính sách và tránh duplicate.",
+              "evidence": "without recreating records already approved"
+            },
+            {
+              "key": "toeic700-p6-portal-q3",
+              "type": "single_choice",
+              "prompt": "Choose the word for [3].",
+              "options": [
+                "otherwise",
+                "thereby",
+                "whereas",
+                "instead"
+              ],
+              "answer": "B",
+              "explanation": "Kiểm tra required fields qua đó giảm incomplete submissions; thereby nối hệ quả với V-ing. Whereas cần mệnh đề.",
+              "evidence": "checks required fields ... reducing the number of incomplete submissions"
+            },
+            {
+              "key": "toeic700-p6-portal-q4",
+              "type": "single_choice",
+              "prompt": "Choose the word for [4].",
+              "options": [
+                "incidental",
+                "consecutive",
+                "contingent",
+                "prospective"
+              ],
+              "answer": "C",
+              "explanation": "Contingent on = phụ thuộc vào điều kiện; account chỉ cấp sau khi hoàn thành module.",
+              "evidence": "Access ... on completion of the short training module"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        },
+        {
+          "key": "toeic700-p6-venue",
+          "kind": "text_completion",
+          "documents": [
+            {
+              "key": "toeic700-p6-venue-doc",
+              "title": "Email — Revised venue proposal",
+              "body": "Dear Ms. Iqbal,\n\nFollowing your request for a quieter meeting area, we have placed a temporary hold on the East Suite for November 14. The suite accommodates your group of 45 and is separated from the exhibition floor by a corridor. It is not completely soundproof; [1], it is generally quieter than the open-plan area you originally selected.\n\nThe quoted rate includes basic audiovisual equipment but excludes a technician. If you require on-site technical support, a separate fee will apply. [2] Please indicate this preference when you return the acceptance form so that we can reserve an appropriate staff member.\n\nThe hold will remain in effect until 4 p.m. on Friday. Unless we [3] your signed acceptance by then, the suite will be released to other clients. Your existing reservation will remain unchanged until the new arrangement has been confirmed in writing.\n\nWe hope this alternative meets your needs and would welcome any further requests for [4] before the deadline.\n\nBest regards,\nVenue Services"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic700-p6-venue-q1",
+              "type": "single_choice",
+              "prompt": "Choose the word for [1].",
+              "options": [
+                "likewise",
+                "otherwise",
+                "nevertheless",
+                "consequently"
+              ],
+              "answer": "C",
+              "explanation": "Không hoàn toàn cách âm nhưng vẫn yên hơn là tương phản; không phải kết quả tất yếu.",
+              "evidence": "not completely soundproof ... generally quieter"
+            },
+            {
+              "key": "toeic700-p6-venue-q2",
+              "type": "single_choice",
+              "prompt": "Choose the sentence for [2].",
+              "options": [
+                "You may choose support for the entire event or only the opening session.",
+                "The East Suite is directly on the exhibition floor.",
+                "No technician will be available on the date of your event.",
+                "All technical support is already included in the quoted rate."
+              ],
+              "answer": "A",
+              "explanation": "This preference cần lựa chọn mức hỗ trợ; câu đúng giới thiệu hai lựa chọn. Các câu khác mâu thuẫn dịch vụ/địa điểm.",
+              "evidence": "Please indicate this preference ... reserve an appropriate staff member"
+            },
+            {
+              "key": "toeic700-p6-venue-q3",
+              "type": "single_choice",
+              "prompt": "Choose the word for [3].",
+              "options": [
+                "received",
+                "will receive",
+                "receive",
+                "receiving"
+              ],
+              "answer": "C",
+              "explanation": "Unless trong điều kiện tương lai thường dùng hiện tại đơn, chủ ngữ we → receive.",
+              "evidence": "Unless we ... by then, the suite will be released"
+            },
+            {
+              "key": "toeic700-p6-venue-q4",
+              "type": "single_choice",
+              "prompt": "Choose the word for [4].",
+              "options": [
+                "clarify",
+                "clarifies",
+                "clarification",
+                "clarified"
+              ],
+              "answer": "C",
+              "explanation": "Requests for + danh từ; clarification là làm rõ. Những dạng còn lại không phù hợp vị trí.",
+              "evidence": "requests for [4]"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p6-cohesion-vocab-transition",
+          "word": "transition",
+          "part_of_speech": "noun",
+          "meaning": "giai đoạn chuyển đổi",
+          "collocation": "during the transition",
+          "example": "Support will remain available during the transition.",
+          "example_vi": "Hỗ trợ vẫn có trong giai đoạn chuyển đổi."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-supersede",
+          "word": "supersede",
+          "part_of_speech": "verb",
+          "meaning": "thay thế và làm bản cũ hết hiệu lực",
+          "collocation": "supersede earlier instructions",
+          "example": "This notice supersedes earlier instructions.",
+          "example_vi": "Thông báo này thay thế hướng dẫn trước."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-pending",
+          "word": "pending",
+          "part_of_speech": "preposition",
+          "meaning": "trong lúc chờ",
+          "collocation": "pending confirmation",
+          "example": "The booking is on hold pending confirmation.",
+          "example_vi": "Đặt chỗ đang tạm giữ trong lúc chờ xác nhận."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-nevertheless",
+          "word": "nevertheless",
+          "part_of_speech": "adverb",
+          "meaning": "tuy vậy",
+          "collocation": "nevertheless, the plan remains",
+          "example": "Costs rose; nevertheless, the plan remains viable.",
+          "example_vi": "Chi phí tăng; tuy vậy, kế hoạch vẫn khả thi."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-thereby",
+          "word": "thereby",
+          "part_of_speech": "adverb",
+          "meaning": "qua đó",
+          "collocation": "thereby reducing delays",
+          "example": "The form checks addresses, thereby reducing delays.",
+          "example_vi": "Mẫu kiểm tra địa chỉ, qua đó giảm chậm trễ."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-subsequent",
+          "word": "subsequent",
+          "part_of_speech": "adjective",
+          "meaning": "tiếp theo, xảy ra sau",
+          "collocation": "subsequent orders",
+          "example": "The discount applies to subsequent orders.",
+          "example_vi": "Giảm giá áp dụng cho các đơn hàng tiếp theo."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-clarification",
+          "word": "clarification",
+          "part_of_speech": "noun",
+          "meaning": "sự làm rõ",
+          "collocation": "request clarification",
+          "example": "Please request clarification before signing.",
+          "example_vi": "Vui lòng yêu cầu làm rõ trước khi ký."
+        },
+        {
+          "key": "toeic700-p6-cohesion-vocab-implement",
+          "word": "implement",
+          "part_of_speech": "verb",
+          "meaning": "triển khai, thực hiện",
+          "collocation": "implement a procedure",
+          "example": "We will implement the procedure next month.",
+          "example_vi": "Chúng tôi sẽ triển khai quy trình vào tháng tới."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p7-single",
+      "part": 7,
+      "title": "Part 7 — Exceptions, Implications, and Sentence Placement",
+      "minutes": 45,
+      "objectives": "Đọc điều kiện quyền lợi; phân biệt điều được khẳng định với suy luận; đặt câu theo liên kết logic.",
+      "lesson": "Đáp án suy luận cần chuỗi bằng chứng ngắn nhưng đủ, không cần chắc chắn mọi chi tiết ngoài bài. Với điều khoản, xét cả điều kiện đủ và ngoại lệ. Câu chèn phải gắn được hai phía: danh từ/đại từ và dòng lập luận, không chỉ cùng chủ đề.",
+      "strategy": [
+        "Đánh dấu only, unless, except và thời hạn có điều kiện.",
+        "Viết điều không thể kết luận bên cạnh điều có bằng chứng.",
+        "Với insertion, thử từng vị trí và xác định antecedent của this/these."
+      ],
+      "practice": "Tóm tắt mỗi văn bản bằng một rule và một exception. Với câu chèn, nêu vì sao ba vị trí còn lại làm mạch thông tin kém hợp lý.",
+      "groups": [
+        {
+          "key": "toeic700-p7-membership",
+          "kind": "single_passage",
+          "documents": [
+            {
+              "key": "toeic700-p7-membership-doc",
+              "title": "Notice — Professional membership benefits",
+              "body": "Harbor Skills Center — Membership Update\n\nAnnual members may reserve one complimentary workshop place per quarter, provided that their membership remains active on the workshop date. Unused places do not carry forward. The benefit applies to standard workshops; specialist certification courses are excluded even when they appear in the same booking calendar.\n\nReservations can be changed without charge until five working days before a workshop. After that deadline, a place may be transferred once to another eligible annual member, subject to availability of the required materials. The benefit itself is nontransferable: the original member cannot use the transfer to obtain an additional complimentary place in the same quarter. If no eligible substitute is found, the place is forfeited rather than credited to a later quarter.\n\nMembers whose renewal is pending may make a provisional reservation. It becomes confirmed only when payment is recorded. A payment reminder is not a confirmation, and staff cannot hold a provisional place beyond the published booking deadline. Members should check the status in their account before making travel arrangements."
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic700-p7-membership-q1",
+              "type": "single_choice",
+              "prompt": "Which statement about a late transfer is supported?",
+              "options": [
+                "It does not restore the original member's complimentary entitlement for that quarter",
+                "It allows the original member to claim a second complimentary workshop",
+                "It automatically moves an unused place to the next quarter",
+                "It can be made to any person willing to pay for materials"
+              ],
+              "answer": "A",
+              "explanation": "Quy định nói không được lấy thêm free place cùng quarter; substitute phải eligible annualmember và có materials.",
+              "evidence": "cannot use the transfer to obtain an additional complimentary place in the same quarter"
+            },
+            {
+              "key": "toeic700-p7-membership-q2",
+              "type": "single_choice",
+              "prompt": "Why should a member with a provisional booking avoid relying on a payment reminder?",
+              "options": [
+                "It means the workshop has been canceled",
+                "It removes the need for membership renewal",
+                "It extends the booking deadline automatically",
+                "It does not establish that the booking has been confirmed"
+              ],
+              "answer": "D",
+              "explanation": "Reminder không bằng confirmation; phải payment recorded và kiểm tra account.",
+              "evidence": "A payment reminder is not a confirmation"
+            },
+            {
+              "key": "toeic700-p7-membership-q3",
+              "type": "single_choice",
+              "prompt": "Which booking is excluded from the complimentary benefit even if the member is otherwise eligible?",
+              "options": [
+                "A standard workshop reserved early in the quarter",
+                "A standard workshop during an active membership",
+                "A specialist certification course listed in the shared calendar",
+                "A provisional standard-workshop booking later confirmed by payment"
+              ],
+              "answer": "C",
+              "explanation": "Shared calendar không làm certificationcourse trở thành standardworkshop đủ quyền lợi.",
+              "evidence": "specialist certification courses are excluded even when they appear in the same booking calendar"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        },
+        {
+          "key": "toeic700-p7-report",
+          "kind": "single_passage",
+          "documents": [
+            {
+              "key": "toeic700-p7-report-doc",
+              "title": "Internal report — Pilot booking process",
+              "body": "[A] During the six-week pilot, the new booking form reduced incomplete submissions by 30 percent compared with the previous six weeks. The number of total submissions was similar in both periods, so the reduction is unlikely to be explained solely by lower demand.\n\n[B] However, the pilot involved only two branches whose staff had received additional training. The results therefore do not establish that the same reduction would occur across the entire organization without comparable support.\n\n[C] The review team recommends extending the pilot to three branches with different staffing patterns before making the form mandatory. These locations would help test whether the improvement persists under more varied conditions. The team does not recommend abandoning the current form during this second phase; both systems should remain available until the evidence is reviewed.\n\n[D] Branch managers are asked to nominate a coordinator by May 12. The coordinator will document unusual cases as well as routine processing times, since a faster average can conceal problems affecting a small group of users."
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic700-p7-report-q1",
+              "type": "single_choice",
+              "prompt": "What limitation does the report identify?",
+              "options": [
+                "The review team found no reduction in incomplete submissions",
+                "The form was never used by trained staff",
+                "The pilot results may depend partly on conditions not shared by every branch",
+                "The number of submissions fell by 30 percent"
+              ],
+              "answer": "C",
+              "explanation": "Chỉ hai branch có extra training nên chưa thể suy rộng tất cả; total submissions tương tự.",
+              "evidence": "only two branches whose staff had received additional training"
+            },
+            {
+              "key": "toeic700-p7-report-q2",
+              "type": "single_choice",
+              "prompt": "At which position would this sentence fit best? 'This narrower setting limits how broadly the findings can be applied.'",
+              "options": [
+                "[C]",
+                "[D]",
+                "[B]",
+                "[A]"
+              ],
+              "answer": "A",
+              "explanation": "Narrower setting tham chiếu hai branch đã train ở đoạn ngay trước C; sau đó là đề xuất mở rộng pilot để xử lý hạn chế. B chưa giới thiệu training/narrowsetting.",
+              "evidence": "only two branches ... not establish ... entire organization"
+            },
+            {
+              "key": "toeic700-p7-report-q3",
+              "type": "single_choice",
+              "prompt": "Why will coordinators record unusual cases?",
+              "options": [
+                "The second phase will exclude routine requests",
+                "The existing form has already been withdrawn",
+                "The team wants to replace all timing measurements with complaints",
+                "An average improvement may obscure difficulties experienced by some users"
+              ],
+              "answer": "D",
+              "explanation": "Fasteraverage có thể che vấn đề ở nhóm nhỏ; cần ghi cả unusualcases và routine times.",
+              "evidence": "a faster average can conceal problems affecting a small group of users"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p7-single-vocab-entitlement",
+          "word": "entitlement",
+          "part_of_speech": "noun",
+          "meaning": "quyền được hưởng theo điều kiện",
+          "collocation": "a membership entitlement",
+          "example": "Guest access is a membership entitlement.",
+          "example_vi": "Quyền cho khách vào là một quyền lợi thành viên."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-discretion",
+          "word": "discretion",
+          "part_of_speech": "noun",
+          "meaning": "quyền tự quyết trong giới hạn",
+          "collocation": "at the manager's discretion",
+          "example": "Exceptions are granted at the manager's discretion.",
+          "example_vi": "Ngoại lệ được chấp thuận theo quyền quyết định của quản lý."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-redeem",
+          "word": "redeem",
+          "part_of_speech": "verb",
+          "meaning": "đổi để sử dụng quyền lợi",
+          "collocation": "redeem a voucher",
+          "example": "The voucher can be redeemed online.",
+          "example_vi": "Phiếu có thể được đổi trực tuyến."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-nontransferable",
+          "word": "nontransferable",
+          "part_of_speech": "adjective",
+          "meaning": "không được chuyển nhượng",
+          "collocation": "a nontransferable pass",
+          "example": "The annual pass is nontransferable.",
+          "example_vi": "Thẻ năm không được chuyển nhượng."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-consecutive",
+          "word": "consecutive",
+          "part_of_speech": "adjective",
+          "meaning": "liên tiếp",
+          "collocation": "three consecutive days",
+          "example": "The pass is valid for three consecutive days.",
+          "example_vi": "Thẻ có hiệu lực trong ba ngày liên tiếp."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-exempt",
+          "word": "exempt",
+          "part_of_speech": "adjective",
+          "meaning": "được miễn",
+          "collocation": "be exempt from a fee",
+          "example": "Student members are exempt from this fee.",
+          "example_vi": "Thành viên sinh viên được miễn phí này."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-assertion",
+          "word": "assertion",
+          "part_of_speech": "noun",
+          "meaning": "khẳng định",
+          "collocation": "support an assertion",
+          "example": "The figures do not support that assertion.",
+          "example_vi": "Các số liệu không hỗ trợ khẳng định đó."
+        },
+        {
+          "key": "toeic700-p7-single-vocab-implication",
+          "word": "implication",
+          "part_of_speech": "noun",
+          "meaning": "hàm ý; hệ quả có thể suy ra",
+          "collocation": "consider an implication",
+          "example": "We should consider the implication of the change.",
+          "example_vi": "Chúng ta nên cân nhắc hệ quả của thay đổi."
+        }
+      ]
+    },
+    {
+      "key": "toeic700-p7-multiple",
+      "part": 7,
+      "title": "Part 7 — Reconciliation and Conditional Changes Across Documents",
+      "minutes": 50,
+      "objectives": "Đối chiếu ba nguồn để xác định trạng thái cuối, số tiền và điều kiện được áp dụng; loại thông tin đã bị thay thế.",
+      "lesson": "Lập bảng từng nguồn → thông tin thêm/sửa → hiệu lực. Một email đề xuất chưa được đồng ý không tự sửa hợp đồng; một xác nhận có thể chỉ nhận một phần đề xuất. Khi tính tiền, phân biệt invoice, credit và tiền đã trả; đừng tính credit hai lần. Luôn nêu tài liệu chứa điều kiện và tài liệu xác nhận điều kiện đã được đáp ứng.",
+      "strategy": [
+        "Đánh dấu proposed, accepted và confirmed ở mỗi tài liệu.",
+        "Theo dõi net amount và deadline riêng; giảm tiền không tự đổi hạn.",
+        "Với nhiều người, xác định vai trò người có thẩm quyền chấp thuận."
+      ],
+      "practice": "Lập bảng amount/date/location cho từng phiên bản, gạch thông tin hết hiệu lực. Với mỗi đáp án, ghi ít nhất hai nguồn khi câu hỏi cần nối dữ kiện.",
+      "groups": [
+        {
+          "key": "toeic700-p7-double",
+          "kind": "double_passage",
+          "documents": [
+            {
+              "key": "toeic700-p7-invoice",
+              "title": "Document 1 — Invoice INV-742, April 2",
+              "body": "Supplier: Rowe Office Furnishings\nBuyer: Linton Training\n24 folding chairs at $45 each: $1,080\nDelivery: $60\nTotal: $1,140\nDeposit already received: $300\nOutstanding balance: $840\nPayment due: April 20\n\nTerms: Report damaged items within five working days of delivery. Where a credit is agreed, it reduces the outstanding balance; it is not an additional cash refund of the deposit. Replacement deliveries are free of charge. Unless expressly amended in writing, the original payment deadline remains in effect."
+            },
+            {
+              "key": "toeic700-p7-credit",
+              "title": "Document 2 — Email confirming adjustment, April 8",
+              "body": "Dear Ms. Bell,\nThank you for reporting the two damaged chairs within the required period. As agreed by phone, you will retain the 22 usable chairs, and we will collect the damaged pair. We have issued a $90 credit note against INV-742 rather than arranging replacements. The original delivery charge remains payable, and collection will incur no additional charge.\nYou asked whether the balance could be paid a week later. We are unable to extend the payment period on this occasion. Please deduct the credit from the outstanding balance shown on your invoice; no further deduction of your deposit is necessary.\nRegards,\nDaniel Rowe"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic700-p7-double-q1",
+              "type": "single_choice",
+              "prompt": "How much remains payable after the agreed adjustment?",
+              "options": [
+                "$750",
+                "$840",
+                "$450",
+                "$690"
+              ],
+              "answer": "A",
+              "explanation": "Outstanding840 đã trừ deposit300; trừ credit90 còn750. Không trừ deposit lần hai hoặc miễn delivery60.",
+              "evidence": "Invoice: outstanding $840. Email: $90 credit; no further deduction of deposit."
+            },
+            {
+              "key": "toeic700-p7-double-q2",
+              "type": "single_choice",
+              "prompt": "By what date is the adjusted balance due?",
+              "options": [
+                "Five working days after collection",
+                "April 27",
+                "April 20",
+                "April 8"
+              ],
+              "answer": "C",
+              "explanation": "Invoice20/4; email từ chối gia hạn thêm tuần, không chuyển27/4.",
+              "evidence": "Invoice: Payment due April 20. Email: unable to extend the payment period."
+            },
+            {
+              "key": "toeic700-p7-double-q3",
+              "type": "single_choice",
+              "prompt": "Which action has the supplier agreed to take?",
+              "options": [
+                "Send two replacement chairs and issue the credit as well",
+                "Refund the full deposit separately",
+                "Waive the original delivery fee",
+                "Collect the damaged chairs without an extra collection fee"
+              ],
+              "answer": "D",
+              "explanation": "Email chọn credit thay replacement; collectionfree nhưng originaldelivery vẫn phải trả.",
+              "evidence": "collect the damaged pair ... collection will incur no additional charge"
+            },
+            {
+              "key": "toeic700-p7-double-q4",
+              "type": "single_choice",
+              "prompt": "What is implied about Ms. Bell's damage report?",
+              "options": [
+                "It met the invoice's reporting deadline",
+                "It automatically extended the payment deadline",
+                "It requested a refund for all 24 chairs",
+                "It was submitted after the invoice was fully paid"
+              ],
+              "answer": "A",
+              "explanation": "Invoice yêu cầu5workingdays; email xác nhận reportwithinrequiredperiod.",
+              "evidence": "Invoice: within five working days. Email: within the required period."
+            },
+            {
+              "key": "toeic700-p7-double-q5",
+              "type": "single_choice",
+              "prompt": "Why does the email mention that no further deduction of the deposit is necessary?",
+              "options": [
+                "The supplier has canceled the deposit payment",
+                "The deposit has already been accounted for in the invoiced balance",
+                "The credit note equals the deposit",
+                "The deposit is being returned in cash"
+              ],
+              "answer": "B",
+              "explanation": "Invoice1140−300=840; khuyến cáo tránh double deduction.",
+              "evidence": "Deposit already received $300; outstanding balance $840"
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        },
+        {
+          "key": "toeic700-p7-triple",
+          "kind": "triple_passage",
+          "documents": [
+            {
+              "key": "toeic700-p7-agreement",
+              "title": "Document 1 — Training venue agreement, July 1",
+              "body": "Client: Vela Consulting\nEvent: September 9, 40 participants\nRoom: South Hall\nRoom fee: $600\nCatering: $18 per confirmed participant\nDeposit received: $400\nFinal participant count due: September 2\nBalance due: September 6\n\nA room change requested by September 1 is free of administrative charges, but the new room's listed fee applies. Catering is charged according to the final count received by September 2. Counts cannot be reduced after that date. The deposit is deducted once from the final invoice."
+            },
+            {
+              "key": "toeic700-p7-proposal",
+              "title": "Document 2 — Venue proposal, August 30",
+              "body": "Dear Lena,\nThe South Hall is scheduled for urgent repairs. We can offer the West Suite at its listed fee of $720. It seats up to 48 people and has the same audiovisual facilities. Alternatively, the North Room is $650 but accommodates only 36.\nIf you confirm the West Suite by September 1, we will apply a $60 courtesy discount to its room fee. This discount does not apply to catering. Neither option has been booked for you yet. Your existing deposit will transfer to the confirmed booking. Please reply with your choice.\nVenue team"
+            },
+            {
+              "key": "toeic700-p7-confirmed",
+              "title": "Document 3 — Venue confirmation, September 3",
+              "body": "Dear Lena,\nWe received your acceptance of the West Suite on August 31 and have applied the courtesy discount. We also received your final catering count of 44 yesterday morning. The menu and per-person price remain unchanged.\nThe event date and balance-payment deadline remain as stated in the original agreement. No room-change administration fee applies. Please note that your request this morning to reduce the catering count to 42 cannot be accommodated; the confirmed count of 44 will be used for billing. The final invoice will show the transferred deposit as a deduction.\nVenue team"
+            }
+          ],
+          "items": [
+            {
+              "key": "toeic700-p7-triple-q1",
+              "type": "single_choice",
+              "prompt": "What room fee will be charged before deducting the deposit?",
+              "options": [
+                "$600",
+                "$720",
+                "$650",
+                "$660"
+              ],
+              "answer": "D",
+              "explanation": "West720−courtesy60=660; acceptance31/8 đủ hạn1/9. South600 không còn áp dụng.",
+              "evidence": "Proposal: West Suite $720; $60 discount by September 1. Confirmation: accepted August 31; discount applied."
+            },
+            {
+              "key": "toeic700-p7-triple-q2",
+              "type": "single_choice",
+              "prompt": "What final balance should the invoice show?",
+              "options": [
+                "$992",
+                "$1,052",
+                "$1,452",
+                "$1,016"
+              ],
+              "answer": "B",
+              "explanation": "Room660 + catering44×18=792 →1452; trừ deposit400 đúng một lần =1052. Không dùng request42 bị từ chối.",
+              "evidence": "Agreement: $18 per participant, deposit $400. Proposal: $720−$60. Confirmation: bill 44."
+            },
+            {
+              "key": "toeic700-p7-triple-q3",
+              "type": "single_choice",
+              "prompt": "Which request was NOT accepted?",
+              "options": [
+                "Applying the timely-confirmation discount",
+                "Reducing the billable catering count to 42",
+                "Moving the deposit to the new booking",
+                "Changing the venue to the West Suite"
+              ],
+              "answer": "B",
+              "explanation": "Confirmation trực tiếp từ chối giảm42; ba nội dung khác được nhận.",
+              "evidence": "request ... reduce ... to 42 cannot be accommodated"
+            },
+            {
+              "key": "toeic700-p7-triple-q4",
+              "type": "single_choice",
+              "prompt": "When must Vela pay the remaining balance?",
+              "options": [
+                "August 31",
+                "September 9",
+                "September 6",
+                "September 2"
+              ],
+              "answer": "C",
+              "explanation": "Agreement6/9; confirmation giữ deadline, không nhầm event9/9 hoặc finalcount2/9.",
+              "evidence": "Agreement: Balance due September 6. Confirmation: deadline remain as ... original agreement."
+            },
+            {
+              "key": "toeic700-p7-triple-q5",
+              "type": "single_choice",
+              "prompt": "Why would the North Room fail to meet the confirmed event's needs?",
+              "options": [
+                "It requires an additional deposit larger than $400",
+                "Its audiovisual equipment is unavailable",
+                "Its capacity is smaller than the confirmed participant count",
+                "Its fee exceeds the West Suite's undiscounted fee"
+              ],
+              "answer": "C",
+              "explanation": "Northcapacity36 < final44, cần nối proposal với confirmation; không có thông tin thiết bị không dùng được.",
+              "evidence": "Proposal: North Room accommodates only36. Confirmation: final count44."
+            }
+          ],
+          "media": {
+            "audio": null,
+            "image": null
+          },
+          "delivery_status": "text_ready"
+        }
+      ],
+      "vocabulary": [
+        {
+          "key": "toeic700-p7-multiple-vocab-amendment",
+          "word": "amendment",
+          "part_of_speech": "noun",
+          "meaning": "sự sửa đổi; văn bản sửa đổi",
+          "collocation": "a contract amendment",
+          "example": "Both parties approved the amendment.",
+          "example_vi": "Hai bên đã chấp thuận sửa đổi."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-reconcile",
+          "word": "reconcile",
+          "part_of_speech": "verb",
+          "meaning": "đối chiếu để làm khớp",
+          "collocation": "reconcile the invoices",
+          "example": "Please reconcile the invoices with the receipts.",
+          "example_vi": "Vui lòng đối chiếu hóa đơn với biên lai."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-outstanding",
+          "word": "outstanding",
+          "part_of_speech": "adjective",
+          "meaning": "chưa thanh toán hoặc chưa giải quyết",
+          "collocation": "an outstanding balance",
+          "example": "The outstanding balance is due next week.",
+          "example_vi": "Số dư chưa thanh toán đến hạn vào tuần tới."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-credit-note",
+          "word": "credit note",
+          "part_of_speech": "noun phrase",
+          "meaning": "chứng từ ghi giảm số tiền người mua phải trả",
+          "collocation": "issue a credit note",
+          "example": "The supplier issued a credit note for the damaged items.",
+          "example_vi": "Nhà cung cấp phát hành chứng từ giảm tiền cho hàng hỏng."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-offset",
+          "word": "offset",
+          "part_of_speech": "verb",
+          "meaning": "bù trừ",
+          "collocation": "offset an additional cost",
+          "example": "The discount will offset the delivery charge.",
+          "example_vi": "Khoản giảm giá sẽ bù trừ phí giao hàng."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-prorated",
+          "word": "prorated",
+          "part_of_speech": "adjective",
+          "meaning": "được tính theo phần thời gian hoặc mức sử dụng",
+          "collocation": "a prorated fee",
+          "example": "The first month's fee is prorated.",
+          "example_vi": "Phí tháng đầu được tính theo phần thời gian sử dụng."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-stipulate",
+          "word": "stipulate",
+          "part_of_speech": "verb",
+          "meaning": "quy định rõ",
+          "collocation": "stipulate a deadline",
+          "example": "The agreement stipulates a payment deadline.",
+          "example_vi": "Thỏa thuận quy định rõ hạn thanh toán."
+        },
+        {
+          "key": "toeic700-p7-multiple-vocab-discrepancy",
+          "word": "discrepancy",
+          "part_of_speech": "noun",
+          "meaning": "sự không khớp",
+          "collocation": "resolve a discrepancy",
+          "example": "We resolved the discrepancy in the quantities.",
+          "example_vi": "Chúng tôi đã xử lý chênh lệch về số lượng."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "ETS — About the TOEIC Listening and Reading Test",
+      "url": "https://www.ets.org/toeic/about/listening-reading.html",
+      "note": "Tên 7 Part, 100 câu mỗi kỹ năng, thời gian Listening/Reading; nguồn mô tả cấu trúc chính thức, không phải nội dung các câu tự biên soạn."
+    },
+    {
+      "title": "ETS — TOEIC Listening & Reading Examinee Handbook",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-test-examinee-handbook.pdf",
+      "note": "Đối chiếu số câu theo Part và thang điểm; bảng chuyển số đúng sang điểm phụ thuộc từng đề, không dùng quy đổi tuyến tính cho gói này."
+    },
+    {
+      "title": "ETS — Preparation Materials",
+      "url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "note": "Nguồn bài mẫu chính thức để người học tiếp tục luyện với media của ETS. Chỉ liên kết, không chép đề hoặc nhúng lại tài nguyên."
+    },
+    {
+      "title": "ETS — Listening & Reading Score Descriptors",
+      "url": "https://www.ets.org/pdfs/toeic/toeic-listening-reading-score-descriptors.pdf",
+      "note": "Tham khảo xu hướng kỹ năng: đáp gián tiếp, diễn đạt tương đương, suy luận và nối thông tin. Nguồn mô tả điểm từng kỹ năng, không xác nhận band tổng 700–990 hoặc độ khó của câu biên soạn."
+    }
+  ],
+  "band": {
+    "min": 700,
+    "max": 990
+  },
+  "entry_guidance": "Chọn bộ này khi đã giải thích được bằng chứng ở bài nền tảng và ít nhầm ngữ pháp cơ bản. Xem điểm Listening và Reading riêng nếu có kết quả thi; tổng 700 không có nghĩa hai kỹ năng đều mạnh.",
+  "progression": "Chặng 700–850: luyện có hướng dẫn, paraphrase và điều kiện; chặng 850–990: tự giải thích distractor, nối nhiều nguồn và luyện thời gian với câu mới. Hai chặng là cách tổ chức học trong cùng bộ, chưa phải chuẩn đầu ra đã hiệu chỉnh."
+}
+

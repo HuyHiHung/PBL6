@@ -1,10 +1,27 @@
 # Học liệu demo Sprout
 
+## TOEIC Listening & Reading — 500–700 và 700–990
+
+[Lộ trình hai bộ và trạng thái tài nguyên](toeic-curriculum.md).
+
+| Bộ mục tiêu | Trọng tâm | Bản người học | Đáp án / nguồn | Quy mô |
+|---|---|---|---|---|
+| 500–700 | Ngữ pháp nền, thông tin trực tiếp, paraphrase cơ bản, đối chiếu bước đầu | [Học](toeic-500-700.md) | [Đáp án](toeic-500-700-review.md) · [JSON](toeic-500-700.json) | 8 bài, 64 mục từ, 60 câu, 260 phút |
+| 700–990 | Đáp gián tiếp, ý định, điều kiện/ngoại lệ, bảng dữ liệu, câu chèn và nối nhiều nguồn | [Học](toeic-700-990.md) | [Đáp án](toeic-700-990-review.md) · [JSON](toeic-700-990.json) | 8 bài, 64 mục từ, 60 câu mới, 315 phút |
+
+Tổng **16 bài, 128 mục từ theo bài, 120 câu**. Mỗi bộ bao quát 7 Part, có 36 câu Reading dùng ngay và 24 câu Listening còn chờ audio/ảnh. Hai khoảng điểm là mục tiêu biên soạn, không phải cam kết kết quả hay đề đủ 200 câu. Chưa import DB. Bản Foundation cũ được chuyển thành bộ 500–700, giữ key; hai liên kết Markdown cũ dẫn sang hai bộ mới, không còn JSON Foundation riêng.
+
+```sh
+node scripts/render-toeic-materials.mjs
+node scripts/render-toeic-materials.mjs --check
+node --test tests/toeic-materials.test.mjs
+```
+
 ## Demo 5 nhóm ngành kỹ thuật
 
 Bắt đầu tại [danh mục kỹ thuật](technical-demo.md): bảng đánh giá nhu cầu tiếng Anh, lộ trình và liên kết đến từng khóa. Tổng cộng **5 khóa, 16 topic, 36 bài, 294 mục từ theo bài và 340 câu hỏi**; thời lượng gợi ý 880 phút. Mục từ có thể lặp giữa các bài/ngành theo ngữ cảnh; không gọi đây là 294 từ duy nhất.
 
-Đã có [báo cáo audit và hướng dẫn import bản nháp](technical-audit.md). Công cụ mặc định dry-run; đã thử ràng buộc DB trong transaction rollback, chưa import vĩnh viễn. Snapshot audit có hash từng khóa để phát hiện nội dung thay đổi trước import.
+Đã có [báo cáo audit và hướng dẫn import bản nháp](technical-audit.md). Năm khóa đã được import vào Supabase local ở trạng thái draft ngày 20/09/2026 và kiểm tra chạy lại không trùng. Snapshot audit có hash từng khóa để phát hiện nội dung thay đổi trước import.
 
 | Nhóm ngành | Bản đọc | JSON nguồn | Quy mô |
 |---|---|---|---|
@@ -31,9 +48,24 @@ node --test tests/materials-import.test.mjs
 
 Lệnh đầu kiểm tra toàn bộ dữ liệu trước khi tạo Markdown của năm khóa và danh mục. `--check` chỉ đọc và báo lỗi nếu dữ liệu không hợp lệ hoặc Markdown chưa đồng bộ. Danh sách, điểm định hướng và quy mô kỳ vọng nằm trong `technical-catalog.json`; công cụ đếm mục từ theo bài và cho phép cùng từ xuất hiện ở bài khác. JSON và danh mục là nguồn biên soạn; các Markdown tương ứng được tạo tự động.
 
-Gói học liệu chưa nhập CMS hoặc xuất bản. Áp dụng ánh xạ phía dưới cho cả năm khóa; không đưa nguyên JSON chứa đáp án vào frontend người học. Bản A1 bên dưới là bộ bổ trợ riêng, không tính vào tổng demo kỹ thuật.
+Năm khóa đã nhập DB local dạng bản nháp, chưa xuất bản. Trạng thái trong JSON/bản Markdown nguồn mô tả gói biên soạn; trạng thái triển khai xem báo cáo audit phía trên. Áp dụng ánh xạ phía dưới cho cả năm khóa; không đưa nguyên JSON chứa đáp án vào frontend người học. Bản A1 và IT Fresher bên dưới là các bộ bổ trợ riêng, không tính vào tổng demo năm khóa.
 
 Mỗi câu hỏi và mục từ trong năm khóa kỹ thuật có `key` ổn định. Giữ key khi sửa hoặc đổi thứ tự; chỉ cấp key mới cho đối tượng mới. Không dùng thứ tự mảng để tái sinh key. Nếu sửa nguồn sau audit, cần rà soát và cập nhật snapshot trước khi dùng importer.
+
+## Bổ trợ IT — A Fresher's Workday
+
+[Học liệu đầy đủ](english-it-fresher.md) · [JSON nguồn](english-it-fresher.json) · [Định hướng, mẫu câu và nguồn nghiên cứu](it-fresher-research.md).
+
+Gồm **4 topic, 8 bài, 64 mục từ/cụm từ theo bài, 80 câu hỏi, 200 phút**. Dành cho fresher phần mềm đã biết từ cơ bản: onboarding và ticket → daily update và hỏi trợ giúp → Git/PR và code review/CI → API và QA handoff. Mỗi bài có 8 mục từ Anh–Việt, bài đọc, hội thoại, mẫu thực hành, rubric tự chấm và quiz 5 câu; mỗi topic có bài đọc riêng và kiểm tra 10 câu. Có 63 từ/cụm từ khác nhau: `dependency` được học ở hai ngữ cảnh.
+
+Gói mới **chưa import DB**. Giữ riêng để không thay đổi hash/biên nhận của bản IT đã import. `technical-catalog.json` và importer năm khóa chưa bao gồm gói bổ trợ này; muốn đưa vào DB cần chuẩn bị kế hoạch import bổ sung và audit riêng, hoặc tạo nội dung qua CMS. Không sửa hash audit cũ để ép import lại. Các key mới bắt đầu bằng `fresher-`; course key riêng `sprout-it-fresher-workday`.
+
+```sh
+node scripts/render-it-fresher-materials.mjs
+node scripts/render-it-fresher-materials.mjs --check
+```
+
+JSON là nguồn để sửa; Markdown được sinh tự động. Profile đếm kỳ vọng nằm trong `english-it-fresher.profile.json`; điểm kỹ năng là định hướng biên soạn, không phải khảo sát. Công cụ dùng lại validator của học liệu kỹ thuật và kiểm tra key không trùng với năm khóa cũ, không kết nối DB.
 
 ## Bộ nền tảng A1
 
