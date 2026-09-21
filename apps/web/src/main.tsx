@@ -26,7 +26,8 @@ import {
 import type { Session } from "@supabase/supabase-js";
 import { auth, api, go, ApiError, type Row } from "./api";
 import { AuthPage, Profile } from "./auth";
-import { Notice, useLoad, Load } from "./ui";
+import { Notice, Load } from "./ui";
+import { useProfile } from "./session";
 import {
   Home,
   Catalog,
@@ -120,10 +121,7 @@ function App() {
       subscription.unsubscribe();
     };
   }, []);
-  const profile = useLoad<Row | null>(
-    () => (session ? api("identity", "/v1/me") : Promise.resolve(null)),
-    [session?.access_token],
-  );
+  const profile = useProfile(session);
   const me = profile.data ?? null;
   const part = route.split("?")[0].split("/").filter(Boolean);
   const screen = part[0] ?? "home";
@@ -182,7 +180,7 @@ function App() {
         </a>
       </div>
     );
-  else if (session && (profile.loading || profile.error))
+  else if (session && !me && (profile.loading || profile.error))
     page = (
       <>
         <Load state={profile}>
@@ -263,7 +261,7 @@ function App() {
         );
     }
   return (
-    <UserContext.Provider value={me}>
+    <UserContext.Provider key={session?.user.id ?? "guest"} value={me}>
       <div className="app-shell">
         <button
           className="mobile-toggle secondary"
@@ -352,6 +350,14 @@ function App() {
             </span>
           </div>
           <Notice>{authError}</Notice>
+          {me && profile.error && (
+            <div>
+              <Notice>{profile.error}</Notice>
+              <button className="secondary" onClick={profile.reload}>
+                Thử lại hồ sơ
+              </button>
+            </div>
+          )}
           {page}
           <footer>
             SPROUT ENGLISH <span>Những bước nhỏ tạo nên thay đổi lớn.</span>
