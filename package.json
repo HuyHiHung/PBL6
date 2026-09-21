@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/mobile", "packages/api-client"],
+  "workspaces": ["apps/mobile", "packages/api-client", "packages/typing-core"],
   "engines": {
     "node": ">=22"
   },
@@ -17,7 +17,10 @@
     "mobile:test:ui": "npm test --workspace @sprout/mobile",
     "mobile:test:api": "node --test --test-concurrency=1 tests/mobile-api.test.mjs",
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": "npm run build --workspace @sprout/typing-core && tsc",
+    "typing:test": "node --import tsx --test tests/typing-core/*.test.ts",
+    "typing:test:api": "node --test --test-concurrency=1 tests/typing-api.test.mjs",
+    "db:typing-demo": "node scripts/bootstrap-typing.mjs",
     "backend:start": "node scripts/backend-local.mjs",
     "backend:test": "node --test --test-concurrency=1 tests/backend.test.mjs",
     "db:start": "node scripts/supabase-local.mjs start",

@@ -22,6 +22,7 @@ import {
   ArrowUpRight,
   Headphones,
   StickyNote,
+  Gamepad2,
 } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
 import { auth, api, go, ApiError, type Row } from "./api";
@@ -50,6 +51,7 @@ import {
 } from "./expansion";
 import { canNavigate } from "./navigation";
 const Admin = lazy(() => import("./admin"));
+const TypingGame = lazy(() => import("./games/typing"));
 export const UserContext = createContext<Row | null>(null);
 export const useUser = () => useContext(UserContext);
 function App() {
@@ -156,6 +158,9 @@ function App() {
     ["/dictation", "Nghe & chép lại", Headphones],
     ["/notes", "Ghi chú", StickyNote],
     ["/cards", "Thẻ từ vựng", Layers],
+    ...(import.meta.env.VITE_TYPING_GAME_ENABLED !== "false"
+      ? [["/games/typing", "Mini game", Gamepad2] as const]
+      : []),
     ["/mistakes", "Ôn câu sai", ChartNoAxesCombined],
     ["/favorites", "Bài yêu thích", Bookmark],
     ["/history", "Lịch sử học", History],
@@ -197,6 +202,16 @@ function App() {
     page = <Profile me={me} reload={profile.reload} />;
   else
     switch (screen) {
+      case "games":
+        page =
+          part[1] === "typing" ? (
+            <Suspense fallback={<p>Đang mở vườn từ…</p>}>
+              <TypingGame path={part.slice(2)} />
+            </Suspense>
+          ) : (
+            <Notice>Không tìm thấy mini game.</Notice>
+          );
+        break;
       case "home":
         page = <Home />;
         break;
@@ -288,8 +303,18 @@ function App() {
               <a
                 key={path}
                 href={"#" + path}
-                className={route === path ? "active" : ""}
-                aria-current={route === path ? "page" : undefined}
+                className={
+                  route === path ||
+                  (path === "/games/typing" && route.startsWith(path + "/"))
+                    ? "active"
+                    : ""
+                }
+                aria-current={
+                  route === path ||
+                  (path === "/games/typing" && route.startsWith(path + "/"))
+                    ? "page"
+                    : undefined
+                }
               >
                 <Icon size={20} />
                 {label}

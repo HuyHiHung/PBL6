@@ -18,6 +18,18 @@ const bases = {
   learning: import.meta.env.VITE_LEARNING_URL,
 };
 const messages: Record<string, string> = {
+  SESSION_CHANGED: "Tài khoản đã thay đổi. Hãy mở lại mini game.",
+  INSUFFICIENT_WORDS:
+    "Chưa có đủ từ hợp lệ để chơi. Hãy thêm thẻ hoặc chọn bài khác.",
+  ACTIVE_GAME_EXISTS:
+    "Bạn đang có một lượt chưa kết thúc. Hãy mở và kết thúc lượt trước.",
+  SESSION_EXPIRED:
+    "Lượt chơi đã hết hạn lưu. Bạn vẫn có thể xem kết quả trên thiết bị này.",
+  SESSION_ALREADY_FINISHED: "Lượt chơi đã kết thúc ở một tab khác.",
+  SESSION_NOT_FOUND: "Không tìm thấy lượt chơi của bạn.",
+  INVALID_GAME_LOG:
+    "Không thể xác nhận kết quả lượt này. Hãy bắt đầu lượt mới.",
+  GAME_DISABLED: "Mini game đang tạm đóng lượt chơi mới.",
   AUTH_REQUIRED: "Hãy đăng nhập để tiếp tục.",
   INVALID_SESSION: "Phiên đã kết thúc. Vui lòng đăng nhập lại.",
   ACCOUNT_LOCKED: "Tài khoản đang bị khóa. Vui lòng liên hệ quản trị viên.",
@@ -54,10 +66,13 @@ export async function api<T = Row>(
   body?: unknown,
   key?: string,
   signal?: AbortSignal,
+  expectedUser?: string,
 ): Promise<T> {
   const {
     data: { session },
   } = await auth.auth.getSession();
+  if (expectedUser && session?.user.id !== expectedUser)
+    throw new ApiError(401, "SESSION_CHANGED");
   let response: Response;
   try {
     response = await fetch(bases[service] + path, {
@@ -85,6 +100,11 @@ export async function api<T = Row>(
     throw new Error("Không kết nối được máy chủ. Kiểm tra mạng rồi thử lại.");
   }
   const result = await response.json();
+  if (
+    expectedUser &&
+    (await auth.auth.getSession()).data.session?.user.id !== expectedUser
+  )
+    throw new ApiError(401, "SESSION_CHANGED");
   if (!response.ok)
     throw new ApiError(response.status, result.error?.code ?? "UNKNOWN_ERROR");
   return result;

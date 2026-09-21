@@ -205,3 +205,4 @@ export type Mistake = {
   prompt: string;
   explanation: string;
 };
+export type { TypingSource, TypingSnapshot, TypingStart, TypingFinish, TypingSession, TypingSourceList } from "./typing.js";

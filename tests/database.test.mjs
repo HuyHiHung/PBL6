@@ -50,9 +50,9 @@ async function cardSession(tx,{user=randomUUID(),cardId=randomUUID(),stage=0}={}
 }
 async function rate(tx,c,rating='remember',key=randomUUID()) {return (await tx`SELECT learning.rate_flashcard(${c.user},${c.item},${rating},${key}) AS result`)[0].result;}
 
-test('38 tables, RLS enabled, 3 restricted runtime roles, no cross-service foreign keys',async()=>{
+test('40 tables, RLS enabled, 3 restricted runtime roles, no cross-service foreign keys',async()=>{
   const tables=await admin`SELECT schemaname,count(*)::int AS count FROM pg_tables WHERE schemaname IN ('identity','content','learning') GROUP BY schemaname ORDER BY schemaname`;
-  assert.deepEqual(tables.map(r=>[r.schemaname,r.count]),[['content',18],['identity',4],['learning',16]]);
+  assert.deepEqual(tables.map(r=>[r.schemaname,r.count]),[['content',18],['identity',4],['learning',18]]);
   const [rls]=await admin`SELECT count(*)::int AS n FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname IN ('identity','content','learning') AND c.relkind='r' AND NOT c.relrowsecurity`;
   assert.equal(rls.n,0);
   const roles=await admin`SELECT rolname,rolsuper,rolbypassrls,rolcreaterole FROM pg_roles WHERE rolname LIKE 'app_%_runtime'`;

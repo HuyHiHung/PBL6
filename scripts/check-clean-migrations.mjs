@@ -58,9 +58,9 @@ try {
   await target.unsafe(readFileSync("supabase/seed.sql", "utf8"));
   const [r] =
     await target`SELECT count(*)::int AS tables FROM pg_tables WHERE schemaname IN ('identity','content','learning')`;
-  if (r.tables !== 38) throw new Error("Expected 38 business tables");
+  if (r.tables !== 40) throw new Error("Expected 40 business tables");
   console.log(
-    `PASS: ${files.length} migrations and seed applied to an empty isolated database with real Auth schema baseline; 38 business tables. Existing local database untouched.`,
+    `PASS: ${files.length} migrations and seed applied to an empty isolated database with real Auth schema baseline; 40 business tables. Existing local database untouched.`,
   );
 } finally {
   if (target) await target.end();

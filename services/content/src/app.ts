@@ -4,6 +4,7 @@ import { ApiError,baseApp,json,id,page,permission,internal,protect,principal,tex
 import type { AssessmentSnapshot,Catalog } from '../../../packages/backend/src/contracts.js';
 import { draftRoutes } from './drafts.js';
 import { expansionRoutes } from './expansion.js';
+import { typingRoutes } from './typing.js';
 
 const block=z.discriminatedUnion('type',[
   z.object({id:text,type:z.literal('text'),body:text}).strict(),z.object({id:text,type:z.literal('grammar'),body:text}).strict(),
@@ -42,6 +43,7 @@ export function createContent(cfg:Config,sql:DB) {
     return c.json({...info,objectives:r!.objectives,blocks,vocabulary:await Promise.all(vocab.map(async v=>({...v,snapshot:{...v.snapshot,audio_url:v.snapshot.audio_asset_id?await signed(v.snapshot.audio_asset_id):null}})))});
   });
   app.use('/internal/*',internal(cfg.contentToken));
+  typingRoutes(app,cfg,sql);
   app.get('/internal/catalog',async c=>c.json(await catalog()));
   app.get('/internal/lessons/:id',async c=>c.json(await lessonInfo(id(c))));
   app.get('/internal/media/:id',async c=>c.json({url:await signed(id(c))}));

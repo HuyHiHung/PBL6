@@ -80,3 +80,13 @@ Tìm kiếm học liệu tại `#/search`, ghi chú riêng tại `#/notes`, luy�
 - [Bằng chứng kiểm thử](docs/feature-expansion-verification.md)
 
 Sau nâng cấp chạy `npm run db:migrate`, build và khởi động lại backend. Kiểm thử thêm: `npm run features:test`, `npm run web:test`, `npm run db:test:clean` (database tạm, không reset dữ liệu đang dùng).
+
+## Mini game — Vườn từ vựng
+
+Đã thêm game nhìn từ tiếng Anh đang rơi rồi gõ lại tại `#/games/typing`, có 3 mạng, ba mức khó, điểm/combo, lịch sử và luyện lại từ bỏ lỡ. Dùng từ của bài published hoặc thẻ cá nhân. Kết quả được server kiểm tra; điểm game độc lập với quiz và lịch ôn tập.
+
+Sau khi chạy migration, dùng `npm run db:typing-demo` để thêm bộ demo 30 từ do dự án tự biên soạn. Build và khởi động lại backend rồi mở mục **Mini game** trên web. Bản đầu dành cho desktop có bàn phím vật lý.
+
+- [Thiết kế và kế hoạch](docs/typing-game-web-plan.md)
+- [Cách chạy, API, giới hạn và vận hành](docs/typing-game-web.md)
+- [Kiểm thử và nghiệm thu](docs/typing-game-verification.md)
