@@ -461,13 +461,30 @@ kbd {
   background: none;
   color: #f3cd72;
 }
-.typing-target-label {
+.typing-completed {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: max-content;
+  max-width: 30%;
+  max-height: 140px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  padding: 10px 15px;
+  border: 1px solid #b8d69b;
+  border-radius: 10px;
+  background: #e5efce;
+  color: #24472f;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 4px 14px #0002;
+}
+.typing-completed small {
   display: block;
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 8px;
-  letter-spacing: 1.5px;
-  color: #b2c39b;
-  margin-bottom: 3px;
+  font-size: 11px;
+  color: #536b40;
+  margin-bottom: 4px;
 }
 .typing-ground {
   position: absolute;

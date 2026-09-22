@@ -31,6 +31,15 @@ import {
   type PendingResult,
 } from "./client";
 import { Result, difficultyLabel } from "./result";
+import { WORD_MEANING_DISPLAY_SECONDS } from "./config";
+
+type CompletedWord = {
+  id: string;
+  answer: string;
+  meaning: string;
+  lane: number;
+  top: number;
+};
 
 type Phase =
   | "ready"
@@ -76,6 +85,8 @@ export function PlayGame({
     [saving, setSaving] = useState(false),
     [discarding, setDiscarding] = useState(false);
   const [leaving, setLeaving] = useState(false);
+  const [completedWords, setCompletedWords] = useState<CompletedWord[]>([]);
+  const meaningTimers = useRef(new Set<number>());
   const abandonKey = useRef(crypto.randomUUID());
   const [countdown, setCountdown] = useState(3),
     [sound, setSound] = useState(false),
@@ -219,6 +230,8 @@ export function PlayGame({
     return () => {
       alive.current = false;
       cancelled = true;
+      for (const timer of meaningTimers.current) clearTimeout(timer);
+      meaningTimers.current.clear();
       release?.();
       removeEventListener("blur", pause);
       document.removeEventListener("visibilitychange", hidden);
@@ -329,7 +342,31 @@ export function PlayGame({
       return;
     }
     const before = game.current.correct_keys;
+    const destroyedBefore = game.current.destroyed.length;
     applyInput(game.current, action);
+    if (
+      game.current.destroyed.length > destroyedBefore &&
+      WORD_MEANING_DISPLAY_SECONDS > 0
+    ) {
+      const id = game.current.destroyed.at(-1)!;
+      const index = game.current.items.findIndex((item) => item.id === id);
+      const item = game.current.items[index]!;
+      const node = nodes.current.get(index);
+      const bounds = stage.current?.getBoundingClientRect();
+      const top = Math.max(
+        18,
+        Math.min(
+          (node?.getBoundingClientRect().top ?? 18) - (bounds?.top ?? 0),
+          (stage.current?.clientHeight ?? 470) - 210,
+        ),
+      );
+      setCompletedWords((words) => [...words, { ...item, top }]);
+      const timer = window.setTimeout(() => {
+        meaningTimers.current.delete(timer);
+        setCompletedWords((words) => words.filter((word) => word.id !== id));
+      }, WORD_MEANING_DISPLAY_SECONDS * 1000);
+      meaningTimers.current.add(timer);
+    }
     events.current.push(action);
     sync();
     if (action.type === "char") beep(game.current.correct_keys === before);
@@ -363,8 +400,10 @@ export function PlayGame({
   useEffect(() => {
     if (leaving) go("/games/typing");
   }, [leaving]);
-  if (saved) return <Result session={saved} user={user} />;
-  if (phase === "finished") {
+  // Save immediately, but let the last word's meaning finish displaying.
+  if (saved && completedWords.length === 0)
+    return <Result session={saved} user={user} />;
+  if (phase === "finished" && completedWords.length === 0) {
     let result = game.current.outcome ? getResult(game.current) : null;
     if (!result && pending) {
       // Restore local result from the same deterministic replay after a failed save/reload.
@@ -445,7 +484,7 @@ export function PlayGame({
             {session.items.length} từ
           </p>
         </div>
-        <button className="secondary" onClick={abandon}>
+        <button className="secondary" onClick={abandon} disabled={!!ui.outcome}>
           <X size={16} />
           Kết thúc
         </button>
@@ -524,9 +563,6 @@ export function PlayGame({
                 data-testid="falling-word"
                 data-word={item.answer}
               >
-                {focused && (
-                  <span className="typing-target-label">ĐANG GÕ</span>
-                )}
                 <span>
                   <mark>{focused ? ui.buffer : ""}</mark>
                   {item.answer.slice(focused ? ui.buffer.length : 0)}
@@ -534,6 +570,22 @@ export function PlayGame({
               </div>
             );
           })}
+          {completedWords.map((word) => (
+            <div
+              key={word.id}
+              className="typing-completed"
+              style={{
+                left: `${((word.lane + 0.5) / 3) * 100}%`,
+                top: word.top,
+              }}
+              data-testid="completed-word"
+              data-word={word.answer}
+              role="status"
+            >
+              <small>{word.answer}</small>
+              <span>{word.meaning}</span>
+            </div>
+          ))}
           {ui.rest_until !== null && phase === "playing" && (
             <div className="typing-wave-message">
               <Sprout size={35} />

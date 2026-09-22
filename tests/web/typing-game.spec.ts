@@ -1,5 +1,6 @@
 import { test, expect, type Page } from "@playwright/test";
 import { randomUUID } from "node:crypto";
+import { WORD_MEANING_DISPLAY_SECONDS } from "../../apps/web/src/games/typing/config";
 // Node-only local fixtures; never bundled in the web app.
 // @ts-ignore local bootstrap helpers
 import { localStatus, apiRequest } from "../../scripts/local-lib.mjs";
@@ -85,6 +86,9 @@ async function solve(page: Page) {
     await expect(
       page.getByTestId("falling-word").filter({ hasText: word! }),
     ).toHaveCount(0);
+    await expect(
+      page.getByTestId("completed-word").filter({ hasText: word! }),
+    ).toContainText("Từ vựng để kiểm thử");
   }
 }
 test("play a complete real round, save score, review and reload history", async ({
@@ -96,6 +100,19 @@ test("play a complete real round, save score, review and reload history", async 
   await start(page);
   await page.screenshot({ path: ".local/typing-playing.png", fullPage: true });
   await solve(page);
+  const lastMeaning = page.getByTestId("completed-word").last();
+  await expect(lastMeaning).toBeVisible();
+  await page.screenshot({ path: ".local/typing-meaning.png", fullPage: true });
+  await expect(page.getByText("LƯỢT CHƠI ĐÃ LƯU", { exact: true })).toHaveCount(
+    0,
+  );
+  const waitingSince = Date.now();
+  await expect(page.getByTestId("completed-word")).toHaveCount(0, {
+    timeout: WORD_MEANING_DISPLAY_SECONDS * 1000 + 2000,
+  });
+  expect(Date.now() - waitingSince).toBeGreaterThan(
+    WORD_MEANING_DISPLAY_SECONDS * 1000 - 1000,
+  );
   await expect(
     page.getByText("LƯỢT CHƠI ĐÃ LƯU", { exact: true }),
   ).toBeVisible();
@@ -120,6 +137,8 @@ test("pause, scoped keyboard, navigation guard and token refresh keep the same g
     .first()
     .getAttribute("data-word");
   await stage.pressSequentially(word![0]);
+  await expect(page.getByText("ĐANG GÕ", { exact: true })).toHaveCount(0);
+  await expect(page.getByTestId("completed-word")).toHaveCount(0);
   await expect(page.locator(".typing-falling.locked mark")).toHaveText(
     word![0],
   );
