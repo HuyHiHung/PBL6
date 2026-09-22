@@ -9,7 +9,7 @@
 | 500–700 | Ngữ pháp nền, thông tin trực tiếp, paraphrase cơ bản, đối chiếu bước đầu | [Học](toeic-500-700.md) | [Đáp án](toeic-500-700-review.md) · [JSON](toeic-500-700.json) | 8 bài, 64 mục từ, 60 câu, 260 phút |
 | 700–990 | Đáp gián tiếp, ý định, điều kiện/ngoại lệ, bảng dữ liệu, câu chèn và nối nhiều nguồn | [Học](toeic-700-990.md) | [Đáp án](toeic-700-990-review.md) · [JSON](toeic-700-990.json) | 8 bài, 64 mục từ, 60 câu mới, 315 phút |
 
-Tổng **16 bài, 128 mục từ theo bài, 120 câu**. Mỗi bộ bao quát 7 Part, có 36 câu Reading dùng ngay và 24 câu Listening còn chờ audio/ảnh. Hai khoảng điểm là mục tiêu biên soạn, không phải cam kết kết quả hay đề đủ 200 câu. Chưa import DB. Bản Foundation cũ được chuyển thành bộ 500–700, giữ key; hai liên kết Markdown cũ dẫn sang hai bộ mới, không còn JSON Foundation riêng.
+Tổng **16 bài, 128 mục từ theo bài, 120 câu**. Mỗi bộ bao quát 7 Part, có 36 câu Reading dùng ngay và 24 câu Listening còn chờ audio/ảnh. Hai khoảng điểm là mục tiêu biên soạn, không phải cam kết kết quả hay đề đủ 200 câu. **Đã import DB local dạng draft ngày 22/09/2026**, chưa xuất bản; xem [biên bản và giới hạn import](toeic-import.md). Bản Foundation cũ được chuyển thành bộ 500–700, giữ key; hai liên kết Markdown cũ dẫn sang hai bộ mới, không còn JSON Foundation riêng.
 
 ```sh
 node scripts/render-toeic-materials.mjs

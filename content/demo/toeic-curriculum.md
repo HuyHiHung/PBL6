@@ -109,7 +109,7 @@ Trong lúc chờ media, người học có thể tìm bài mẫu chính thức c
 
 Hai bộ dùng schema riêng `sprout_toeic_materials_v1`: `band → units → groups → documents/transcript/scene_brief/graphic → items`. Câu hỏi giữ `key`, `options`, `answer`, `explanation`, `evidence`; nhóm giữ trạng thái media. Cấu trúc nhóm bảo toàn ba câu trên một hội thoại, bốn chỗ trống trong một đoạn và năm câu cho bộ đôi/ba văn bản. Công cụ đọc đúng hai JSON theo band, kiểm tra key không trùng giữa hai bộ trước khi ghi Markdown. Key của bộ nền tảng cũ được giữ; bộ cao dùng prefix `toeic700-`.
 
-Gói **chưa import DB**, chưa nằm trong importer kỹ thuật. Không ép các nhóm thành quiz 5 câu hoặc test 10 câu vì sẽ làm mất cấu trúc bài tập. Khi triển khai cần adapter riêng để lưu nguồn chung, tham chiếu nhóm và media; tách answer key khỏi payload người học. Không đổi schema/backend hoặc các khóa đã import trong đợt biên soạn này.
+Hai bộ **đã import DB local dạng draft ngày 22/09/2026** qua adapter riêng `scripts/toeic-import-plan.mjs`, chưa xuất bản. Có 2 khóa, 4 topic Listening/Reading, 16 bài và 120 câu giữ nguyên thứ tự nhóm. Passage chứa tài liệu/bảng; transcript và đáp án lưu riêng. Không ép số câu để đạt giới hạn quiz 5–10: Part 1/5 còn cần hỗ trợ cấu trúc trước khi xuất bản. DB chưa có entity nhóm hoặc trình phát nghe TOEIC đầy đủ; media vẫn thiếu. Xem [biên bản import và giới hạn triển khai](toeic-import.md). JSON nguồn được giữ nguyên để bảo toàn source hash; trạng thái triển khai local nằm trong biên bản này.
 
 ```sh
 node scripts/render-toeic-materials.mjs
