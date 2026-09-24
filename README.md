@@ -28,10 +28,10 @@ Mở **http://localhost:5173**; khu quản trị tại **http://localhost:5173/#
 | Công cụ | Địa chỉ |
 |---|---|
 | Web người học và quản trị | http://localhost:5173 |
-| Supabase Studio | http://127.0.0.1:54323 |
-| Supabase API/Auth/Storage | http://127.0.0.1:54321 |
-| Hộp thư local | http://127.0.0.1:54324 |
-| PostgreSQL | 127.0.0.1:54322 |
+| Supabase Studio | http://127.0.0.1:55323 |
+| Supabase API/Auth/Storage | http://127.0.0.1:55321 |
+| Hộp thư local | http://127.0.0.1:55324 |
+| PostgreSQL | 127.0.0.1:55322 |
 | Identity API | http://127.0.0.1:4001/health |
 | Content API | http://127.0.0.1:4002/health |
 | Learning API | http://127.0.0.1:4003/health |
@@ -46,8 +46,10 @@ Học liệu bootstrap gồm một bài và quiz 5 câu. Audio quiz cũ là fixt
 
 ## Tài liệu
 
-- [Demo tiếng Anh cho 5 nhóm ngành kỹ thuật: danh mục, đánh giá nhu cầu và học liệu](content/demo/technical-demo.md) — gói Markdown/JSON, chưa nhập CMS.
-- [Audit học liệu kỹ thuật và công cụ import bản nháp](content/demo/technical-audit.md) — đã kiểm chứng DB bằng transaction rollback, chưa import vĩnh viễn.
+- [Demo tiếng Anh cho 5 nhóm ngành kỹ thuật](content/demo/technical-demo.md) — đã xuất bản local 5 khóa, 16 chủ đề, 36 bài cùng 36 quiz và 16 kiểm tra chủ đề.
+- [Biên bản xuất bản và cách kiểm chứng](content/demo/technical-publication.md) — ngày 24/09/2026; học liệu văn bản, chưa bổ sung audio.
+- [Audit học liệu và lịch sử import](content/demo/technical-audit.md).
+- [Kết quả sửa bốn lỗi audit và kiểm thử](docs/audit-fixes-2026-09-24.md).
 
 - [Hướng dẫn Docker, database, migration và Google local](docs/local-development.md)
 - [Frontend: chạy, cấu trúc, cấu hình và kiểm thử](docs/frontend.md)

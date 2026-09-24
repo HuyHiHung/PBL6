@@ -348,7 +348,7 @@ export function RequireUser({
   allowIncomplete = false,
 }: PropsWithChildren<{ allowIncomplete?: boolean }>) {
   const session = useSession();
-  if (session.busy)
+  if (session.busy && !session.user)
     return (
       <Screen>
         <ActivityIndicator color={colors.green} />
@@ -378,7 +378,21 @@ export function RequireUser({
         <LinkButton title="Nhập tên hiển thị" to="/(tabs)/profile" />
       </Screen>
     );
-  return <>{children}</>;
+  return (
+    <>
+      {session.error && (
+        <View style={{ padding: 12 }}>
+          <Notice>{session.error}</Notice>
+          <Button
+            title="Kiểm tra lại phiên"
+            secondary
+            onPress={() => void session.reload()}
+          />
+        </View>
+      )}
+      {children}
+    </>
+  );
 }
 export function Pager({
   page,

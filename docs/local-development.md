@@ -20,11 +20,11 @@ npm run db:bootstrap
 npm run db:status
 ```
 
-Lần đầu Docker tải image nên có thể mất vài phút. Studio ở `http://127.0.0.1:54323`, Auth/Storage ở `http://127.0.0.1:54321`, hộp thư thử ở `http://127.0.0.1:54324`, Postgres cổng 54322. Studio kết nối tài khoản quản trị local; quyền Studio không đại diện cho quyền runtime.
+Lần đầu Docker tải image nên có thể mất vài phút. Studio ở `http://127.0.0.1:55323`, Auth/Storage ở `http://127.0.0.1:55321`, hộp thư thử ở `http://127.0.0.1:55324`, Postgres cổng 55322. Studio kết nối tài khoản quản trị local; quyền Studio không đại diện cho quyền runtime.
 
 `db:provision` tạo mật khẩu runtime ngẫu nhiên lần đầu và dùng lại khi chạy lại. File `.local/runtime.json` chứa URL cho Identity, Content, Learning; chỉ service tương ứng nhận credential của mình. Migration tạo role NOLOGIN và không chứa mật khẩu. Provision local bật LOGIN sau đó. Không dùng credential postgres hoặc Supabase service key làm kết nối nghiệp vụ của ba service.
 
-`db:bootstrap` chỉ chấp nhận project `pbl6` và endpoint 127.0.0.1:54321/54322 do CLI local trả về. Script không dùng một DATABASE_URL từ môi trường để âm thầm trỏ cloud. Tài khoản tạo qua Auth Admin API; bucket/object qua Storage API; profile, học liệu và thẻ tạo sau khi nhận UUID Auth thật. Chạy lại không đổi dữ liệu đã có.
+`db:bootstrap` chỉ chấp nhận project `pbl6` và endpoint 127.0.0.1:55321/55322 do CLI local trả về. Script không dùng một DATABASE_URL từ môi trường để âm thầm trỏ cloud. Tài khoản tạo qua Auth Admin API; bucket/object qua Storage API; profile, học liệu và thẻ tạo sau khi nhận UUID Auth thật. Chạy lại không đổi dữ liệu đã có.
 
 | File local bị Git bỏ qua | Nội dung |
 |---|---|
@@ -96,7 +96,7 @@ HTTP backend còn phải xác minh token/phiên/quyền hiện tại, khả dụ
 
 Email/password và hộp thư local đã bật, yêu cầu xác minh email đối với đăng ký thông thường. Để bật Google:
 
-1. Tạo OAuth web client trên Google Cloud; thêm callback **Google → Supabase**: `http://127.0.0.1:54321/auth/v1/callback`.
+1. Tạo OAuth web client trên Google Cloud; thêm callback **Google → Supabase**: `http://127.0.0.1:55321/auth/v1/callback`.
 2. Cung cấp biến môi trường `SUPABASE_AUTH_EXTERNAL_GOOGLE_CLIENT_ID` và `SUPABASE_AUTH_EXTERNAL_GOOGLE_SECRET` cho tiến trình CLI; không ghi secret vào config.toml.
 3. Đổi `auth.external.google.enabled` thành true rồi dừng/khởi động lại stack.
 4. Giữ callback **Supabase → ứng dụng** trong allow-list: `http://localhost:5173/auth/callback` và `http://localhost:5174/auth/callback`. Web/Admin chưa được xây trong bước database này.
@@ -109,7 +109,11 @@ npm run db:stop
 npm run db:start
 ```
 
-Stop thông thường giữ dữ liệu. Không thêm `--no-backup` khi còn dữ liệu cần giữ. Khi Docker không kết nối, mở Docker Desktop và kiểm tra Linux containers. Khi trùng cổng 54320–54324, kiểm tra project/container đang dùng trước; không dừng hoặc xóa volume dự án khác. Khi đổi cổng/project ID, phải cập nhật guard local trong scripts có chủ đích.
+Stop thông thường giữ dữ liệu. Không thêm `--no-backup` khi còn dữ liệu cần giữ. Khi Docker không kết nối, mở Docker Desktop và kiểm tra Linux containers. Khi trùng cổng 55320–55324, kiểm tra project/container đang dùng trước; không dừng hoặc xóa volume dự án khác. Khi đổi cổng/project ID, phải cập nhật guard local trong scripts có chủ đích.
+
+Từ 24/09/2026, project dùng dải **55320–55324** thay cho 54320–54324: Windows đã dành riêng dải 54228–54327 khiến Docker không bind được cổng cũ dù container từng báo healthy. Kiểm tra bằng `netsh interface ipv4 show excludedportrange protocol=tcp`. Không cần dừng WinNAT hoặc thay mạng toàn máy.
+
+Với checkout đang dùng cổng cũ: sao lưu DB/Storage trước, chạy `npm run db:stop`, `npm run db:start`, `npm run db:provision` (giữ mật khẩu runtime đã lưu), rồi `npm run mobile:configure`. Khởi động lại backend/web và đăng nhập lại vì địa chỉ Auth đã đổi. Không chạy `db:reset` hay import lại học liệu. `db:status` chỉ báo địa chỉ cấu hình; cần kiểm tra HTTP/Auth và `/health` của backend để xác nhận kết nối thực tế.
 
 Stack local dùng cấu hình phát triển; không đưa các container này cùng credential demo lên Internet. Supabase Cloud sẽ dùng cùng SQL migrations, runtime password/OAuth/SMTP riêng, kiểm tra lịch sử và dry-run trước `db push`. Không chạy bootstrap/demo seed lên public. Chưa deploy Cloud/AWS trong bước này.
 

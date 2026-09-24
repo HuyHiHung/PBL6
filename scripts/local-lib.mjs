@@ -11,8 +11,8 @@ export function localStatus() {
   const status = JSON.parse(raw.trim());
   const db = new URL(status.DB_URL);
   const api = new URL(status.API_URL);
-  if (db.hostname!=='127.0.0.1' || db.port!=='54322' || api.hostname!=='127.0.0.1' || api.port!=='54321') {
-    throw new Error('Local-only command: expected PBL6 ports 54321/54322 on 127.0.0.1');
+  if (db.hostname!=='127.0.0.1' || db.port!=='55322' || api.hostname!=='127.0.0.1' || api.port!=='55321') {
+    throw new Error('Local-only command: expected PBL6 ports 55321/55322 on 127.0.0.1');
   }
   const config = readFileSync('supabase/config.toml','utf8');
   if (!/^project_id\s*=\s*"pbl6"/m.test(config)) throw new Error('Expected Supabase project_id pbl6');

@@ -76,7 +76,9 @@ test('actual runtime connections are isolated and browser roles cannot read priv
 });
 test('seed/bootstrap use real Auth users; last active admin and append-only audit are protected',()=>isolated(identity,async tx=>{
   assert.equal((await tx`SELECT count(*)::int AS n FROM identity.profiles WHERE user_id IN (${fixture.admin.id},${fixture.editor.id},${fixture.learner.id})`)[0].n,3);
-  await rejected(tx,sp=>sp`UPDATE identity.profiles SET status='locked' WHERE user_id=${fixture.admin.id}`,/last_active_admin/);
+  // The local workspace may legitimately contain several administrators.
+  // Exercise removing the last active admin inside a rolled-back savepoint.
+  await rejected(tx,sp=>sp`UPDATE identity.profiles SET status='locked' WHERE role='admin' AND status='active'`,/last_active_admin/);
   await rejected(tx,sp=>sp`INSERT INTO identity.editor_permissions(user_id,permission_code,granted_by) VALUES(${fixture.learner.id},'reports.view',${fixture.admin.id})`,/editor_role_required/);
   await rejected(tx,sp=>sp`DELETE FROM identity.audit_events`,e=>e.code==='42501');
 }));

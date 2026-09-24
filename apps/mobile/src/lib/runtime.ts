@@ -23,7 +23,7 @@ export const configurationError =
     ? "Chưa có cấu hình kết nối. Chạy npm run mobile:configure ở thư mục gốc rồi khởi động lại Expo."
     : null;
 export const auth = createClient(
-  settings.supabase || "http://127.0.0.1:54321",
+  settings.supabase || "http://127.0.0.1:55321",
   settings.key || "not-configured",
   {
     auth: {

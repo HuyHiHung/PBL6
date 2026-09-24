@@ -12,4 +12,4 @@ if (action==='start') {
   }
 }
 const status=localStatus();
-console.log(JSON.stringify({project:'pbl6',api:status.API_URL,studio:status.STUDIO_URL,mail:status.MAILPIT_URL ?? status.INBUCKET_URL,postgres:'127.0.0.1:54322'},null,2));
+console.log(JSON.stringify({project:'pbl6',api:status.API_URL,studio:status.STUDIO_URL,mail:status.MAILPIT_URL ?? status.INBUCKET_URL,postgres:'127.0.0.1:55322'},null,2));

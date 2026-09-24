@@ -10,7 +10,7 @@ Sau khi Supabase và backend đã chạy theo README:
 npm run web:dev
 ```
 
-Mở **http://localhost:5173**. Khu quản trị: **http://localhost:5173/#/admin**. Dùng tài khoản bootstrap trong `.local/bootstrap.json`, hoặc đăng ký qua giao diện và mở email xác minh tại http://127.0.0.1:54324. Không công khai file tài khoản thử.
+Mở **http://localhost:5173**. Khu quản trị: **http://localhost:5173/#/admin**. Dùng tài khoản bootstrap trong `.local/bootstrap.json`, hoặc đăng ký qua giao diện và mở email xác minh tại http://127.0.0.1:55324. Không công khai file tài khoản thử.
 
 `web:dev` chỉ truyền URL và anon key public vào Vite; không truyền credential runtime hoặc service key vào biến `VITE_*`. Google hiện chưa bật: nút Google báo chưa khả dụng, không điều hướng người dùng sang trang lỗi của Auth.
 
@@ -30,7 +30,7 @@ Mở **http://localhost:5173**. Khu quản trị: **http://localhost:5173/#/admi
 
 Form quản trị sử dụng ô nhập, lựa chọn bài/tệp/từ vựng và checkbox câu hỏi. Không yêu cầu nhập JSON hoặc UUID. Bản đã xuất bản chỉ tạo phiên bản mới, không sửa trực tiếp. Nút bị ẩn theo quyền chỉ là UX; backend vẫn xác thực và phân quyền từng thao tác.
 
-Frontend không tính đáp án đúng. Chỉ hiển thị key/explanation khi backend cho phép. Dữ liệu được render dạng text của React, không chèn HTML từ nội dung. Cập nhật gửi expectedVersion; lỗi xung đột yêu cầu tải lại. Thao tác idempotent giữ key khi retry mạng trong phiên trang hiện tại. Không có hàng đợi offline; đáp án chưa bấm Lưu/Kiểm tra chưa được đồng bộ.
+Frontend không tính đáp án đúng. Chỉ hiển thị key/explanation khi backend cho phép. Dữ liệu được render dạng text của React, không chèn HTML từ nội dung. Quiz giữ version gốc của từng bản nhập; khi 409, tải snapshot mới mà giữ draft, yêu cầu đối chiếu nếu cùng câu đã đổi. Có cảnh báo rời trang khi còn đáp án chưa lưu. Thao tác idempotent giữ key khi retry mạng trong phiên trang hiện tại. Không có hàng đợi offline; đáp án chưa bấm Lưu/Kiểm tra chưa được đồng bộ.
 
 ## Cấu trúc mã
 

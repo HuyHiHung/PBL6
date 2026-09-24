@@ -28,7 +28,7 @@ console.log(
   "Mobile local configuration written (public values only). Use USB/ADB reverse for APIs and signed audio URLs.",
 );
 if (process.argv.includes("--reverse")) {
-  for (const port of [4001, 4002, 4003, 54321, 54324, 5173, 8081]) {
+  for (const port of [4001, 4002, 4003, 55321, 55324, 5173, 8081]) {
     const result = spawnSync("adb", ["reverse", `tcp:${port}`, `tcp:${port}`], {
       stdio: "inherit",
       windowsHide: true,

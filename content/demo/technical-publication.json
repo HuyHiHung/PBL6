@@ -1,0 +1,209 @@
+{
+  "mode": "apply",
+  "verified_at": "2026-09-24T02:29:37.073Z",
+  "publication_sha256": "9592904934192b1f6a0659eaf5c99a7c4b253ef8b4a7609fee8389a377e962b1",
+  "counts": {
+    "courses": 5,
+    "topics": 16,
+    "lessons": 36,
+    "vocabulary_entries": 294,
+    "lesson_revisions": 36,
+    "lesson_revision_vocabulary": 294,
+    "questions": 340,
+    "question_revisions": 340,
+    "question_options": 612,
+    "question_answer_keys": 340,
+    "assessments": 52,
+    "assessment_revisions": 52,
+    "assessment_revision_questions": 340
+  },
+  "courses": [
+    {
+      "id": "3769390d-6913-574e-8338-7a47b389b2f6",
+      "slug": "english-it",
+      "action": "publish",
+      "before": "draft",
+      "after": "published",
+      "topic_ids": [
+        "79f3358f-0c1a-5a6d-8c77-8af4bca8a26f",
+        "3415c312-55a1-572b-96db-4fa05be495ec",
+        "e547050c-aae3-5bd4-b8e0-80d5147d3eac",
+        "e13bd697-fd74-5581-8e34-280cff9a6e6f"
+      ],
+      "lesson_ids": [
+        "12a4158c-c2d8-5829-a946-a3eb00795445",
+        "535b2658-a6b6-54f4-a827-cb4fa09cd2e9",
+        "159b32e8-5af1-5ff8-b347-db284c08bba2",
+        "6efb1958-c88a-5033-878f-0b2a25ed62ac",
+        "1f6bb52b-5471-5d54-830d-686e18a2c231",
+        "3aaff388-18c7-5951-b560-3c4480533813",
+        "99fa525a-d79e-5eae-a6be-308635ea805b",
+        "ff62f757-e141-5d44-ac71-fa93a56f0c38",
+        "60d866dd-ed79-5ac4-a456-e5b028febe8b",
+        "1bc77f65-2f1f-5772-bf4d-827f14f7729b",
+        "833d10e2-66ad-55c8-a3f0-c04ff47afe98",
+        "642a9a14-625a-5549-9bbf-1aa209cc3111"
+      ],
+      "assessment_ids": [
+        "4d3a1620-d455-5d97-b40a-af7532242e8e",
+        "036ab0bb-7340-5405-b713-bd3f1ccd2027",
+        "aaf74cfa-9778-5cd7-8706-64238bb57a97",
+        "d9f0097c-c964-550a-994e-4b1e3f1edd31",
+        "5847eb53-b779-51e1-a87b-4f623c0d76a2",
+        "358c17d1-1c9c-5d1b-9837-c2932575e27b",
+        "21b937f1-ff76-5203-86a0-b8a7564a9cd4",
+        "a2d60174-d586-53ef-8fa4-c9a6376e99f1",
+        "ef46b97f-e0e3-5f9d-81d7-89de3efaaf27",
+        "8f530c03-4b1c-5952-a183-47ada7590df4",
+        "18b8ce48-7826-55b9-8a1a-42f9bbc68053",
+        "c56ebe35-b379-5a15-bc12-4fde65b6ae07",
+        "2607c87d-834b-57b3-88fa-2b582d47d7ec",
+        "e808014b-8944-53d9-bb2b-39c1e121ea26",
+        "7af04939-45aa-5bb2-bce6-acf7c2d4991f",
+        "3e3e5367-7860-5770-8e98-29b253cf1a37"
+      ]
+    },
+    {
+      "id": "1cea1eb8-b1bf-5a13-94f3-5e1d3b7530fd",
+      "slug": "english-data-ai",
+      "action": "publish",
+      "before": "draft",
+      "after": "published",
+      "topic_ids": [
+        "ec1ecc5e-aa17-56b1-844a-e2fc88af10af",
+        "facd285a-5bbb-53ef-b080-1033ad9223cb",
+        "d752890d-b7fc-5ed2-8429-e59ded1ac967"
+      ],
+      "lesson_ids": [
+        "9358af1d-1210-54fb-aa20-688304a6c7c1",
+        "e2518151-45db-57f2-8fad-f40e18a418b9",
+        "2a481e95-9c25-5f7d-bc22-a0242e9eb297",
+        "1a39e41f-73db-5a76-b231-90f51bdbdccc",
+        "38b29a55-dd3c-5815-ad11-6947e52fa12a",
+        "9848b462-1bb0-556c-871a-d879869e13fc"
+      ],
+      "assessment_ids": [
+        "c92d7b20-9e21-5be4-81c5-6368545849f3",
+        "946fbe14-9186-5141-b1a5-83ed4a0b6474",
+        "65cd4a06-45b1-5ed5-bdf2-9899b5f3994b",
+        "f86a9a45-56b5-5966-bdcf-f84dc42e585f",
+        "d366a878-4c04-54d0-9714-efc4d3ee5b3c",
+        "895fb9cf-7c9a-579c-aac9-410e3f093ff9",
+        "54671e36-a182-53d9-a5eb-14c06ac1a3e0",
+        "a8364576-b8be-5989-a567-e19f3d3a995d",
+        "161f14bc-c0ee-5c69-b03c-fc13bdac2ffd"
+      ]
+    },
+    {
+      "id": "88a35c1f-6f36-5b5a-a224-627897264490",
+      "slug": "english-electronics",
+      "action": "publish",
+      "before": "draft",
+      "after": "published",
+      "topic_ids": [
+        "3664189e-5a41-5bc8-b087-4365bb07f069",
+        "2a546c3c-f528-57c5-967c-6899c2571fb2",
+        "e13bcd64-6f2a-554b-91dd-b0967940d222"
+      ],
+      "lesson_ids": [
+        "48673357-7de0-5ef5-9e9f-449f6c451c91",
+        "df36abc3-4bf6-5cf5-b11c-79c13e82182c",
+        "b749e06f-d0a5-5c35-97b1-9aca34164906",
+        "86428a82-d42a-5bad-8da7-d3d0dddca45f",
+        "0fda0fff-37cc-5427-bf94-2af58bf8927e",
+        "51ca0192-8506-5313-a57a-70700fa212f7"
+      ],
+      "assessment_ids": [
+        "c8efa659-9636-5468-bd63-0a1eb181fe86",
+        "ab35e4c0-86d4-5f8e-8302-57b5042be2f3",
+        "5e3b3324-a246-5ae3-88b8-fdf1fd62202e",
+        "b3d7df73-bec4-54f1-90f8-cb652a9cc88d",
+        "25695d10-0808-5f4e-ace0-f4e3a349874e",
+        "e5e8a8cd-5a62-593e-ac29-cc229ae595fb",
+        "5b9548d8-04e6-5041-8621-88eb95267666",
+        "3c53060f-1774-59ab-b4c5-c49f33c24887",
+        "b92a20d7-29de-58ce-a734-1bc598e62ff1"
+      ]
+    },
+    {
+      "id": "647bffc6-fd72-5252-8246-663ee011cc23",
+      "slug": "english-robotics",
+      "action": "publish",
+      "before": "draft",
+      "after": "published",
+      "topic_ids": [
+        "f35f2ea2-4fa0-55fb-a912-b7cd2ca3c13b",
+        "ce902f3b-3d86-5beb-ac7b-086654610051",
+        "180028ee-ce93-5e2c-b742-c5e5827fb868"
+      ],
+      "lesson_ids": [
+        "7bc2b966-4398-5c53-80cd-541779192bdc",
+        "32cdd719-e79b-5347-812f-411d38e1aaaa",
+        "a48b0c6f-fe9d-5e4b-af03-76c5ec5fa94a",
+        "85a24676-d92c-51f2-b953-603785a60eb0",
+        "0eb24bc9-c961-5198-b5ae-c13aac5274e8",
+        "89638fb4-5381-5e3e-b876-318c2022bc62"
+      ],
+      "assessment_ids": [
+        "3b3f9cc2-3285-56d2-915e-0fd939d4fdfb",
+        "e78ee65e-1f08-5110-97c8-9831b2e7ea96",
+        "6e4fd53b-a045-5ba7-8a48-97f1c509e30c",
+        "2a2f036a-4820-5756-800f-9dda2e36ee81",
+        "d1f3061b-6ba9-56ad-a237-d939f07f1666",
+        "20e7f97a-e96f-54c7-9860-23ba833175f1",
+        "44c687f6-8e99-5987-9411-a39eb70c3fe5",
+        "0f756dcf-d60d-5df1-9597-69b8d5043e7e",
+        "b7abd2e6-5681-5e32-ba27-52da2b4b7ed8"
+      ]
+    },
+    {
+      "id": "a95439ab-fcea-5f0c-a50e-8d055374b442",
+      "slug": "english-mechanical",
+      "action": "publish",
+      "before": "draft",
+      "after": "published",
+      "topic_ids": [
+        "07d40603-4d14-5c60-8817-b42973a087fd",
+        "9eecdfdb-17e7-5737-8c11-39efaa82dde2",
+        "2702a8d5-1b30-5f5d-9b3a-c5e8beb733f2"
+      ],
+      "lesson_ids": [
+        "18ec50db-15b5-5f2c-8bf1-bf7b5f2b87e5",
+        "a4aff558-2717-593a-a919-4f6907164897",
+        "c33bbdb8-9c26-5511-84a1-338773c85a7f",
+        "5df709ef-07f9-563a-9d36-abd54d70700d",
+        "e53ee395-9487-5bf0-a63b-35ae83e68958",
+        "78c3b869-e541-5871-a82b-765080128274"
+      ],
+      "assessment_ids": [
+        "5835b2cc-20d6-530d-b64c-ee781f3f3c43",
+        "70440c2c-2365-5d7c-bfcc-5969ced81481",
+        "c5acef71-b644-5a98-beb6-97297c8a39c0",
+        "3273bda6-6f16-5861-85b2-8fcbe7b732a0",
+        "cba88d36-a9e3-535c-9ace-c9c107fa3c34",
+        "4f2c2e68-fb99-5603-b010-cceaf52ae2e1",
+        "9ff6b131-d4ef-5ce3-9dc2-b671d68d68a8",
+        "5183cd25-6961-5b1c-87f5-c96ffdb07d42",
+        "448c5afb-a921-5448-96c0-9dbfe1cc3760"
+      ]
+    }
+  ],
+  "committed": true,
+  "outside_business_data_unchanged": true,
+  "api_verification": {
+    "verified_at": "2026-09-24T02:30:41.347Z",
+    "courses": 5,
+    "topics": 16,
+    "lessons": 36,
+    "quizzes": 36,
+    "topic_tests": 16,
+    "questions": 340
+  },
+  "web_verification": {
+    "verified_at": "2026-09-24T02:30:19.293Z",
+    "courses": 5,
+    "lessons_rendered": 36,
+    "real_topic_conflict": true,
+    "page_errors": 0
+  }
+}

@@ -1,5 +1,7 @@
 # Kiểm chứng Sprout Mobile
 
+**Cập nhật 24/09/2026:** đã sửa giữ profile/draft khi xác thực nền lỗi tạm thời và chặn đánh giá phiên ôn cancelled. 18 test UI, 8 test client và 1 test API đạt; mobile typecheck đạt. Xem [biên bản sửa lỗi](audit-fixes-2026-09-24.md). Vẫn chưa nghiệm thu Android thật/APK; bảng bên dưới là kết quả lịch sử ngày 20/09.
+
 Ngày: 20/09/2026. Môi trường: Windows, Node 22.18.0, Supabase Docker local; Identity/Content/Learning tại cổng 4001/4002/4003. Thiết bị thật/emulator: **chưa có**, theo phản hồi người dùng chỉ chuẩn bị app và hướng dẫn chạy trước.
 
 ## Các kiểm tra đã thực hiện

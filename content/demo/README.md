@@ -21,7 +21,7 @@ node --test tests/toeic-materials.test.mjs
 
 Bắt đầu tại [danh mục kỹ thuật](technical-demo.md): bảng đánh giá nhu cầu tiếng Anh, lộ trình và liên kết đến từng khóa. Tổng cộng **5 khóa, 16 topic, 36 bài, 294 mục từ theo bài và 340 câu hỏi**; thời lượng gợi ý 880 phút. Mục từ có thể lặp giữa các bài/ngành theo ngữ cảnh; không gọi đây là 294 từ duy nhất.
 
-Đã có [báo cáo audit và hướng dẫn import bản nháp](technical-audit.md). Năm khóa đã được import vào Supabase local ở trạng thái draft ngày 20/09/2026 và kiểm tra chạy lại không trùng. Snapshot audit có hash từng khóa để phát hiện nội dung thay đổi trước import.
+Năm khóa đã import ngày 20/09 và **xuất bản trên Supabase local ngày 24/09/2026**, gồm đủ 36 bài, 36 quiz và 16 kiểm tra chủ đề. Xem [biên bản xuất bản](technical-publication.md) và [lịch sử audit/import](technical-audit.md). Snapshot audit giữ nguyên hash nguồn; trạng thái xuất bản nằm trong DB và biên bản triển khai.
 
 | Nhóm ngành | Bản đọc | JSON nguồn | Quy mô |
 |---|---|---|---|
@@ -48,7 +48,7 @@ node --test tests/materials-import.test.mjs
 
 Lệnh đầu kiểm tra toàn bộ dữ liệu trước khi tạo Markdown của năm khóa và danh mục. `--check` chỉ đọc và báo lỗi nếu dữ liệu không hợp lệ hoặc Markdown chưa đồng bộ. Danh sách, điểm định hướng và quy mô kỳ vọng nằm trong `technical-catalog.json`; công cụ đếm mục từ theo bài và cho phép cùng từ xuất hiện ở bài khác. JSON và danh mục là nguồn biên soạn; các Markdown tương ứng được tạo tự động.
 
-Năm khóa đã nhập DB local dạng bản nháp, chưa xuất bản. Trạng thái trong JSON/bản Markdown nguồn mô tả gói biên soạn; trạng thái triển khai xem báo cáo audit phía trên. Áp dụng ánh xạ phía dưới cho cả năm khóa; không đưa nguyên JSON chứa đáp án vào frontend người học. Bản A1 và IT Fresher bên dưới là các bộ bổ trợ riêng, không tính vào tổng demo năm khóa.
+Năm khóa đã xuất bản DB local. Trạng thái trong JSON/bản Markdown nguồn mô tả gói biên soạn; trạng thái triển khai xem biên bản xuất bản phía trên. Áp dụng ánh xạ phía dưới cho cả năm khóa; không đưa nguyên JSON chứa đáp án vào frontend người học. Bản A1 và IT Fresher bên dưới là các bộ bổ trợ riêng, không tính vào tổng demo năm khóa.
 
 Mỗi câu hỏi và mục từ trong năm khóa kỹ thuật có `key` ổn định. Giữ key khi sửa hoặc đổi thứ tự; chỉ cấp key mới cho đối tượng mới. Không dùng thứ tự mảng để tái sinh key. Nếu sửa nguồn sau audit, cần rà soát và cập nhật snapshot trước khi dùng importer.
 
@@ -93,7 +93,7 @@ JSON là nguồn để sửa; Markdown được sinh tự động. Profile đế
 
 Các project WordSteps, StudyPath, nhân vật, thời hạn và phiên bản trong học liệu là tình huống giả lập, không xác nhận tính năng hoặc tình trạng lỗi thực tế của Sprout.
 
-Để demo phần học từ: mở **Computers and Files**, học `upload` và `download`, che nghĩa để tự nhớ rồi làm quiz. Sau khi nhập CMS, thêm hai từ này vào flashcard và mở phần ôn tập. Phần IT là gói nội dung chưa nhập database, không kèm audio hoặc kịch bản nghe.
+Để demo phần học từ: mở **Computers and Files**, học `upload` và `download`, che nghĩa để tự nhớ rồi làm quiz; thêm hai từ vào flashcard và mở phần ôn tập. Khóa IT đã xuất bản local cùng bốn khóa kỹ thuật còn lại, không kèm audio hoặc kịch bản nghe.
 
 JSON IT dùng cùng quy ước câu hỏi và ánh xạ CMS bên dưới. Các trường bổ sung `part_of_speech`, `collocation`, `example_vi` phục vụ biên soạn: CMS hiện tại chưa có các cột riêng tương ứng. Khi nhập, giữ `word`, `meaning`, `example` cho vocabulary entry và trình bày loại từ/cụm từ/bản dịch trong block `text`. Trường `dialogue` tùy chọn được đưa vào block `text` để đọc phân vai, không phải block `audio`. Không đưa nguyên các trường bổ sung vào API vocabulary. Bài IT không có trường `listening`; bỏ qua bước tạo audio cho khóa này.
 

@@ -10,7 +10,8 @@ import {
   ArrowUpRight,
   GraduationCap,
 } from "lucide-react";
-import { api, mutate, go, date, statusText, type Row } from "./api";
+import { api, mutate, go, date, statusText, ApiError, type Row } from "./api";
+import { useUnsaved } from "./navigation";
 import {
   Title,
   Load,
@@ -468,30 +469,89 @@ export function Audio({ src }: { src?: string | null }) {
 export function Attempt({ id }: { id: string }) {
   const s = useLoad(() => api("learning", "/v1/attempts/" + id), [id]),
     a = useAction(),
-    [answers, setAnswers] = useState<Record<string, Row>>({}),
+    [answers, setAnswers] = useState<
+      Record<string, { answer: Row; version: number }>
+    >({}),
+    [needsRefresh, setNeedsRefresh] = useState(false),
     [confirm, setConfirm] = useState(false);
   const d = s.data;
   const active = d?.status === "in_progress";
+  const same = (left: Row | null, right: Row | null) =>
+    left?.option_key === right?.option_key &&
+    (left?.text ?? "") === (right?.text ?? "");
+  const changed = (item: Row) =>
+    !!answers[item.id] && !same(answers[item.id].answer, item.answer);
+  const dirty = !!d?.items.some(changed);
+  useUnsaved(dirty);
+  function edit(item: Row, answer: Row) {
+    setAnswers((old) => ({
+      ...old,
+      [item.id]: {
+        answer,
+        version: old[item.id]?.version ?? Number(item.answer_version),
+      },
+    }));
+  }
+  function discard(item: Row) {
+    setAnswers((old) => {
+      const next = { ...old };
+      delete next[item.id];
+      return next;
+    });
+  }
+  async function refreshSnapshot() {
+    setNeedsRefresh(true);
+    const next = await api("learning", "/v1/attempts/" + id);
+    s.setData(next);
+    setAnswers((old) =>
+      Object.fromEntries(
+        Object.entries(old).filter(([key, draft]) => {
+          const item = next.items.find((i: Row) => i.id === key);
+          return !item || !same(draft.answer, item.answer);
+        }),
+      ),
+    );
+    setNeedsRefresh(false);
+  }
+  async function reconcile(error: unknown): Promise<never> {
+    if (error instanceof ApiError && error.status === 409) {
+      try {
+        await refreshSnapshot();
+      } catch {
+        throw new Error(
+          "Chưa tải được bản máy chủ. Bản nhập được giữ; hãy tải lại dữ liệu trước khi lưu tiếp.",
+        );
+      }
+    }
+    throw error;
+  }
   async function save(item: Row) {
-    const answer = answers[item.id] ?? item.answer;
+    const draft = answers[item.id];
+    const answer = draft?.answer ?? item.answer;
     if (!answer) throw new Error("Hãy chọn hoặc nhập câu trả lời trước.");
+    if (
+      needsRefresh ||
+      (changed(item) && draft.version !== Number(item.answer_version))
+    )
+      throw new Error("Hãy đối chiếu bản máy chủ trước khi lưu tiếp.");
     const body = {
       answer,
       expectedVersion: Number(item.answer_version),
       attemptVersion: Number(d!.row_version),
     };
-    if (d!.kind === "topic_test") {
-      await api("learning", "/v1/items/" + item.id + "/answer", "PUT", body);
-      s.setData(await api("learning", "/v1/attempts/" + id));
-    } else
-      s.setData(
-        await mutate("learning", "/v1/items/" + item.id + "/check", body),
-      );
-    setAnswers((v) => {
-      const next = { ...v };
-      delete next[item.id];
-      return next;
-    });
+    try {
+      if (d!.kind === "topic_test") {
+        await api("learning", "/v1/items/" + item.id + "/answer", "PUT", body);
+        discard(item);
+        await refreshSnapshot();
+      } else
+        s.setData(
+          await mutate("learning", "/v1/items/" + item.id + "/check", body),
+        );
+      discard(item);
+    } catch (error) {
+      await reconcile(error);
+    }
   }
   return (
     <Load state={s}>
@@ -515,6 +575,11 @@ export function Attempt({ id }: { id: string }) {
             }
           />
           <Notice>{a.error}</Notice>
+          {needsRefresh && (
+            <button disabled={a.busy} onClick={() => a.run(refreshSnapshot)}>
+              Tải lại dữ liệu, giữ bản nhập
+            </button>
+          )}
           {d.status === "submitted" && (
             <div className="result card">
               <Check size={32} />
@@ -543,8 +608,11 @@ export function Attempt({ id }: { id: string }) {
             </Notice>
           )}
           {d.items.map((item: Row, index: number) => {
-            const answer = answers[item.id] ?? item.answer ?? {};
+            const draft = answers[item.id];
+            const answer = draft?.answer ?? item.answer ?? {};
             const locked = !active || item.checked;
+            const conflict =
+              changed(item) && draft.version !== Number(item.answer_version);
             return (
               <section className="card question" key={item.id}>
                 <div className="question-top">
@@ -579,10 +647,7 @@ export function Attempt({ id }: { id: string }) {
                           value={o.option_key}
                           checked={answer.option_key === o.option_key}
                           onChange={() =>
-                            setAnswers((v) => ({
-                              ...v,
-                              [item.id]: { option_key: o.option_key },
-                            }))
+                            edit(item, { option_key: o.option_key })
                           }
                         />
                         <span className="option-key">{o.option_key}</span>
@@ -597,25 +662,71 @@ export function Attempt({ id }: { id: string }) {
                       disabled={locked || a.busy}
                       value={answer.text ?? ""}
                       placeholder="Nhập đáp án của bạn"
-                      onChange={(e) =>
-                        setAnswers((v) => ({
-                          ...v,
-                          [item.id]: { text: e.target.value },
-                        }))
-                      }
+                      onChange={(e) => edit(item, { text: e.target.value })}
                     />
                   </label>
                 )}
                 {active && !item.checked && (
                   <button
                     className="secondary"
-                    disabled={a.busy}
+                    disabled={a.busy || needsRefresh || conflict}
                     onClick={() => a.run(() => save(item))}
                   >
                     {d.kind === "topic_test"
                       ? "Lưu đáp án"
                       : "Kiểm tra câu trả lời"}
                   </button>
+                )}
+                {changed(item) && <small>Bản nhập chưa lưu</small>}
+                {changed(item) && (conflict || locked) && (
+                  <div className="card">
+                    <Notice>
+                      {locked
+                        ? "Câu hoặc lượt làm đã kết thúc. Bản nhập chỉ được giữ để đối chiếu, không thể lưu đè."
+                        : "Câu trả lời đã đổi trên thiết bị khác."}
+                    </Notice>
+                    <p>
+                      Bản máy chủ:{" "}
+                      {item.answer?.option_key ??
+                        item.answer?.text ??
+                        "(trống)"}
+                    </p>
+                    <p className="preserve">
+                      Bản nhập:{" "}
+                      {draft.answer.option_key ??
+                        draft.answer.text ??
+                        "(trống)"}
+                    </p>
+                    <button
+                      className="secondary"
+                      disabled={a.busy}
+                      onClick={() => discard(item)}
+                    >
+                      Dùng bản máy chủ
+                    </button>
+                    {!locked && (
+                      <button
+                        className="secondary"
+                        disabled={a.busy || needsRefresh}
+                        onClick={() => {
+                          if (
+                            window.confirm(
+                              "Lần lưu tiếp theo sẽ thay câu trả lời trên máy chủ. Giữ bản nhập?",
+                            )
+                          )
+                            setAnswers((old) => ({
+                              ...old,
+                              [item.id]: {
+                                ...old[item.id],
+                                version: Number(item.answer_version),
+                              },
+                            }));
+                        }}
+                      >
+                        Giữ bản nhập để lưu lại
+                      </button>
+                    )}
+                  </div>
                 )}
                 {item.answer_key && (
                   <div className="explanation">
@@ -652,20 +763,24 @@ export function Attempt({ id }: { id: string }) {
               </label>
               <div className="actions">
                 <button
-                  disabled={a.busy || Object.keys(answers).length > 0}
+                  disabled={a.busy || dirty || needsRefresh}
                   onClick={() =>
                     a.run(async () => {
-                      s.setData(
-                        await mutate(
-                          "learning",
-                          "/v1/attempts/" + id + "/submit",
-                          {
-                            expectedVersion: Number(d.row_version),
-                            confirmBlank: confirm,
-                          },
-                        ),
-                      );
-                      window.scrollTo(0, 0);
+                      try {
+                        s.setData(
+                          await mutate(
+                            "learning",
+                            "/v1/attempts/" + id + "/submit",
+                            {
+                              expectedVersion: Number(d.row_version),
+                              confirmBlank: confirm,
+                            },
+                          ),
+                        );
+                        window.scrollTo(0, 0);
+                      } catch (error) {
+                        await reconcile(error);
+                      }
                     })
                   }
                 >
@@ -690,7 +805,7 @@ export function Attempt({ id }: { id: string }) {
                   Hủy lượt
                 </button>
               </div>
-              {Object.keys(answers).length > 0 && (
+              {dirty && (
                 <small>Hãy lưu những câu vừa thay đổi trước khi nộp.</small>
               )}
             </div>

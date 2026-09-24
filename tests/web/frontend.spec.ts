@@ -208,7 +208,7 @@ test("email signup, verification callback and password recovery work in the brow
     let id = "";
     await expect
       .poll(async () => {
-        const r = await request.get("http://127.0.0.1:54324/api/v1/messages");
+        const r = await request.get("http://127.0.0.1:55324/api/v1/messages");
         const data = await r.json();
         const mail = data.messages.find(
           (m: any) =>
@@ -219,7 +219,7 @@ test("email signup, verification callback and password recovery work in the brow
         return !!id;
       })
       .toBe(true);
-    const r = await request.get("http://127.0.0.1:54324/api/v1/message/" + id);
+    const r = await request.get("http://127.0.0.1:55324/api/v1/message/" + id);
     const mail = await r.json();
     const link = mail.HTML.match(
       /href="([^"]*\/auth\/v1\/verify[^\"]*)"/i,

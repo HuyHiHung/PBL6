@@ -7,6 +7,7 @@ import {
 import { Alert } from "react-native";
 import { NoteScreen } from "../src/features/expansion";
 import { AttemptScreen } from "../src/features/attempt";
+import { ReviewSessionScreen } from "../src/features/review";
 import { RequireUser } from "../src/components/ui";
 const mockApi = jest.fn(),
   mockMutate = jest.fn();
@@ -41,6 +42,41 @@ beforeEach(() => {
     error: "",
   };
 });
+test("cancelled review sessions with pending items never offer ratings", async () => {
+  mockApi.mockResolvedValue({
+    status: "cancelled",
+    items: [
+      {
+        id: "i",
+        status: "pending",
+        card_snapshot: { word: "hello", meaning: "xin chào" },
+      },
+    ],
+  });
+  render(<ReviewSessionScreen id="s" />);
+  await screen.findByText("Phiên đã hủy");
+  expect(screen.queryByText("Lật thẻ")).toBeNull();
+  expect(screen.queryByText("Đã nhớ")).toBeNull();
+  expect(screen.getByText("Về ôn tập")).toBeTruthy();
+});
+
+test("a rating rejected after remote cancellation reloads the terminal session", async () => {
+  const item = {
+    id: "i",
+    status: "pending",
+    card_snapshot: { word: "hello", meaning: "xin chào" },
+  };
+  mockApi
+    .mockResolvedValueOnce({ status: "in_progress", items: [item] })
+    .mockResolvedValue({ status: "cancelled", items: [item] });
+  mockMutate.mockRejectedValueOnce(new Error("ITEM_ALREADY_FINISHED"));
+  render(<ReviewSessionScreen id="s" />);
+  fireEvent.press(await screen.findByText("Lật thẻ"));
+  fireEvent.press(screen.getByText("Đã nhớ"));
+  await screen.findByText("Phiên đã hủy");
+  expect(screen.queryByText("Đã nhớ")).toBeNull();
+});
+
 test("note conflict keeps local text and blocks overwrite until the user reconciles", async () => {
   let note = {
     id: "n",

@@ -2,14 +2,14 @@
 project_id = "pbl6"
 [api]
 enabled = true
-port = 54321
+port = 55321
 schemas = ["public", "graphql_public"]
 extra_search_path = ["public", "extensions"]
 max_rows = 1000
 auto_expose_new_tables = false
 [db]
-port = 54322
-shadow_port = 54320
+port = 55322
+shadow_port = 55320
 major_version = 17
 health_timeout = "3m"
 [db.migrations]
@@ -22,11 +22,11 @@ sql_paths = ["./seed.sql"]
 enabled = false
 [studio]
 enabled = true
-port = 54323
+port = 55323
 api_url = "http://127.0.0.1"
 [local_smtp]
 enabled = true
-port = 54324
+port = 55324
 [storage]
 enabled = true
 file_size_limit = "10MiB"
@@ -62,4 +62,4 @@ max_frequency = "1s"
 enabled = false
 client_id = "env(SUPABASE_AUTH_EXTERNAL_GOOGLE_CLIENT_ID)"
 secret = "env(SUPABASE_AUTH_EXTERNAL_GOOGLE_SECRET)"
-redirect_uri = "http://127.0.0.1:54321/auth/v1/callback"
+redirect_uri = "http://127.0.0.1:55321/auth/v1/callback"

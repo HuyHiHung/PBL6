@@ -283,7 +283,10 @@ export function ReviewSessionScreen({ id }: { id: string }) {
     ),
     a = useAction(),
     [flipped, setFlipped] = useState<string | null>(null);
-  const item = s.data?.items.find((i) => i.status === "pending");
+  const item =
+    s.data?.status === "in_progress"
+      ? s.data.items.find((i) => i.status === "pending")
+      : undefined;
   return (
     <Screen onRefresh={() => void s.reload()} refreshing={s.busy && !!s.data}>
       <Title

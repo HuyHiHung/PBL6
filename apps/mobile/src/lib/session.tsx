@@ -22,6 +22,18 @@ type State = {
   setRecovery: (value: boolean) => Promise<void>;
 };
 const Context = createContext<State>(null!);
+const rejectedSession = (error: unknown) => {
+  const value = error as { status?: number; code?: string };
+  return (
+    value?.status === 401 ||
+    [
+      "ACCOUNT_LOCKED",
+      "EMAIL_NOT_VERIFIED",
+      "INVALID_SESSION",
+      "SESSION_REVOKED",
+    ].includes(value?.code ?? "")
+  );
+};
 export const useSession = () => useContext(Context);
 export function SessionProvider({ children }: PropsWithChildren) {
   const [user, setUser] = useState<Profile | null>(null),
@@ -43,6 +55,11 @@ export function SessionProvider({ children }: PropsWithChildren) {
       if (authError) throw authError;
       if (run !== generation.current) return;
       setAuthenticated(!!data.session);
+      const nextId = data.session?.user.id ?? null;
+      if (nextId !== accountId.current) {
+        accountId.current = nextId;
+        setUser(null);
+      }
       if (!data.session) {
         setUser(null);
         recoveryState(false);
@@ -50,14 +67,16 @@ export function SessionProvider({ children }: PropsWithChildren) {
         return;
       }
       const profile = await api<Profile>("identity", "/v1/me");
+      const recovering = (await secureStorage.getItem("recovery")) === "1";
       if (run === generation.current) {
+        if (profile.user_id !== nextId) return;
         setUser(profile);
         setError("");
-        recoveryState((await secureStorage.getItem("recovery")) === "1");
+        recoveryState(recovering);
       }
     } catch (e) {
       if (run === generation.current) {
-        setUser(null);
+        if (rejectedSession(e)) setUser(null);
         setError((e as Error).message);
       }
     } finally {
@@ -94,7 +113,10 @@ export function SessionProvider({ children }: PropsWithChildren) {
     });
     if (AppState.currentState === "active") auth.auth.startAutoRefresh();
     const stop = onApiAuthError((e) => {
+      if (!rejectedSession(e)) return;
+      generation.current++;
       setUser(null);
+      setBusy(false);
       setError(e.message);
     });
     return () => {
@@ -122,6 +144,8 @@ export function SessionProvider({ children }: PropsWithChildren) {
     const { error: e } = await auth.auth.signOut({ scope: "local" });
     if (e) throw e;
     await setRecovery(false);
+    generation.current++;
+    accountId.current = null;
     setUser(null);
     setAuthenticated(false);
     setError("");

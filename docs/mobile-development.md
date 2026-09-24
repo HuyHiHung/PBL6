@@ -44,7 +44,7 @@ npm run mobile:configure -- --reverse
 npm run mobile:android
 ```
 
-Lệnh đầu tạo `apps/mobile/.env.local` từ URL/anon key của Supabase local, không ghi service-role key. `--reverse` nối các cổng `4001/4002/4003/54321/54324/5173/8081` từ điện thoại về máy tính. Lệnh thứ hai chạy `expo run:android`, build và cài development app; cần SDK đầy đủ trước khi chạy.
+Lệnh đầu tạo `apps/mobile/.env.local` từ URL/anon key của Supabase local, không ghi service-role key. `--reverse` nối các cổng `4001/4002/4003/55321/55324/5173/8081` từ điện thoại về máy tính. Lệnh thứ hai chạy `expo run:android`, build và cài development app; cần SDK đầy đủ trước khi chạy.
 
 Các lần sau, khi app native đã cài:
 

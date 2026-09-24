@@ -1,5 +1,7 @@
 # Audit học liệu kỹ thuật và chuẩn bị import
 
+**Cập nhật 24/09/2026:** cả năm khóa đã được xuất bản trên local, gồm 16 chủ đề, 36 bài và 52 assessment. [Biên bản và kiểm chứng API/web](technical-publication.md). Nội dung phía dưới lưu lại kết quả audit/import ngày 20/09; các trạng thái draft ở đó là trạng thái tại thời điểm import. Hash JSON nguồn và biên nhận import được giữ nguyên.
+
 Ngày rà soát: **20/09/2026**. Phạm vi: năm khóa trong `technical-catalog.json`; không bao gồm học liệu A1, fixture bootstrap hoặc dictation hiện có.
 
 **Kết luận:** đã import và commit cả năm khóa vào **Supabase local pbl6** ở trạng thái **bản nháp** ngày 20/09/2026; chưa xuất bản. Đây là rà soát nội dung của trợ lý kết hợp kiểm tra tự động; chưa phải thẩm định độc lập của giáo viên/chuyên gia ngành.
